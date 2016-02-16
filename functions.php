@@ -551,14 +551,6 @@ function llorix_one_php_style() {
 	echo '</style>';
 }
 
-
-
-$pro_functions_path = llorix_one_get_file('/pro/functions.php');
-if (file_exists($pro_functions_path)) {
-	require $pro_functions_path;
-}
-
-
 function llorix_one_get_file($file){
 	$file_parts = pathinfo($file);
 	$accepted_ext = array('jpg','img','png','css','js');
