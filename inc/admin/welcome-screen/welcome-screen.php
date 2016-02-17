@@ -48,8 +48,8 @@ class Parallax_One_Welcome {
 	public function llorix_one_welcome_admin_notice() {
 		?>
 			<div class="updated notice is-dismissible">
-				<p><?php echo sprintf( esc_html__( 'Welcome! Thank you for choosing Llorix One! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'llorix-one' ), '<a href="' . esc_url( admin_url( 'themes.php?page=llorix-one-welcome' ) ) . '">', '</a>' ); ?></p>
-				<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=llorix-one-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with Llorix One', 'llorix-one' ); ?></a></p>
+				<p><?php echo sprintf( esc_html__( 'Welcome! Thank you for choosing Llorix One! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'llorix-one-lite' ), '<a href="' . esc_url( admin_url( 'themes.php?page=llorix-one-welcome' ) ) . '">', '</a>' ); ?></p>
+				<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=llorix-one-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with Llorix One', 'llorix-one-lite' ); ?></a></p>
 			</div>
 		<?php
 	}
@@ -82,7 +82,7 @@ class Parallax_One_Welcome {
 				'nr_actions_required' => $nr_actions_required,
 				'ajaxurl' => admin_url( 'admin-ajax.php' ),
 				'template_directory' => get_template_directory_uri(),
-				'no_required_actions_text' => __( 'Hooray! There are no required actions for you right now.','llorix-one' )
+				'no_required_actions_text' => __( 'Hooray! There are no required actions for you right now.','llorix-one-lite' )
 			) );
 		}
 	}
@@ -114,7 +114,7 @@ class Parallax_One_Welcome {
 			'nr_actions_required' => $nr_actions_required,
 			'aboutpage' => esc_url( admin_url( 'themes.php?page=llorix-one-welcome#actions_required' ) ),
 			'customizerpage' => esc_url( admin_url( 'customize.php#actions_required' ) ),
-			'themeinfo' => __('View Theme Info','llorix-one'),
+			'themeinfo' => __('View Theme Info','llorix-one-lite'),
 		) );
 	}
 	
@@ -160,10 +160,10 @@ class Parallax_One_Welcome {
 		?>
 
 		<ul class="parallax-one-nav-tabs" role="tablist">
-			<li role="presentation" class="active"><a href="#getting_started" aria-controls="getting_started" role="tab" data-toggle="tab"><?php esc_html_e( 'Getting started','llorix-one'); ?></a></li>
-			<li role="presentation" class="parallax-one-w-red-tab"><a href="#actions_required" aria-controls="actions_required" role="tab" data-toggle="tab"><?php esc_html_e( 'Actions required','llorix-one'); ?></a></li>
-			<li role="presentation"><a href="#github" aria-controls="github" role="tab" data-toggle="tab"><?php esc_html_e( 'Contribute','llorix-one'); ?></a></li>
-			<li role="presentation"><a href="#changelog" aria-controls="changelog" role="tab" data-toggle="tab"><?php esc_html_e( 'Changelog','llorix-one'); ?></a></li>
+			<li role="presentation" class="active"><a href="#getting_started" aria-controls="getting_started" role="tab" data-toggle="tab"><?php esc_html_e( 'Getting started','llorix-one-lite'); ?></a></li>
+			<li role="presentation" class="parallax-one-w-red-tab"><a href="#actions_required" aria-controls="actions_required" role="tab" data-toggle="tab"><?php esc_html_e( 'Actions required','llorix-one-lite'); ?></a></li>
+			<li role="presentation"><a href="#github" aria-controls="github" role="tab" data-toggle="tab"><?php esc_html_e( 'Contribute','llorix-one-lite'); ?></a></li>
+			<li role="presentation"><a href="#changelog" aria-controls="changelog" role="tab" data-toggle="tab"><?php esc_html_e( 'Changelog','llorix-one-lite'); ?></a></li>
 		</ul>
 
 		<div class="parallax-one-tab-content">

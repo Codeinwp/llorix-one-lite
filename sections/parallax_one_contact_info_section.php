@@ -15,7 +15,7 @@
 	if( !llorix_one_general_repeater_is_empty($llorix_one_contact_info_item) ){
 		$llorix_one_contact_info_item_decoded = json_decode($llorix_one_contact_info_item);
 	?>
-			<div class="contact-info" id="contactinfo" role="region" aria-label="<?php esc_html_e('Contact Info','llorix-one'); ?>">
+			<div class="contact-info" id="contactinfo" role="region" aria-label="<?php esc_html_e('Contact Info','llorix-one-lite'); ?>">
 				<div class="section-overlay-layer">
 					<div class="container">
 

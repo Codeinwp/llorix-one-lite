@@ -16,7 +16,7 @@
 				<?php
 					if( is_active_sidebar( 'footer-area' ) ){
 				?>
-						<div itemscope itemtype="http://schema.org/WPSideBar" role="complementary" id="sidebar-widgets-area-1" class="col-md-3 col-sm-6 col-xs-12 widget-box" aria-label="<?php esc_html_e('Widgets Area 1','llorix-one'); ?>">
+						<div itemscope itemtype="http://schema.org/WPSideBar" role="complementary" id="sidebar-widgets-area-1" class="col-md-3 col-sm-6 col-xs-12 widget-box" aria-label="<?php esc_html_e('Widgets Area 1','llorix-one-lite'); ?>">
 							<?php
 								dynamic_sidebar( 'footer-area' );
 							?>
@@ -26,7 +26,7 @@
 					}
 					if( is_active_sidebar( 'footer-area-2' ) ){
 				?>
-						<div itemscope itemtype="http://schema.org/WPSideBar" role="complementary" id="sidebar-widgets-area-2" class="col-md-3 col-sm-6 col-xs-12 widget-box" aria-label="<?php esc_html_e('Widgets Area 2','llorix-one'); ?>">
+						<div itemscope itemtype="http://schema.org/WPSideBar" role="complementary" id="sidebar-widgets-area-2" class="col-md-3 col-sm-6 col-xs-12 widget-box" aria-label="<?php esc_html_e('Widgets Area 2','llorix-one-lite'); ?>">
 							<?php
 								dynamic_sidebar( 'footer-area-2' );
 							?>
@@ -35,7 +35,7 @@
 					}
 					if( is_active_sidebar( 'footer-area-3' ) ){
 				?>
-						<div itemscope itemtype="http://schema.org/WPSideBar" role="complementary" id="sidebar-widgets-area-3" class="col-md-3 col-sm-6 col-xs-12 widget-box" aria-label="<?php esc_html_e('Widgets Area 3','llorix-one'); ?>">
+						<div itemscope itemtype="http://schema.org/WPSideBar" role="complementary" id="sidebar-widgets-area-3" class="col-md-3 col-sm-6 col-xs-12 widget-box" aria-label="<?php esc_html_e('Widgets Area 3','llorix-one-lite'); ?>">
 						   <?php
 								dynamic_sidebar( 'footer-area-3' );
 							?>
@@ -44,7 +44,7 @@
 					}
 					if( is_active_sidebar( 'footer-area-4' ) ){
 				?>
-						<div itemscope itemtype="http://schema.org/WPSideBar" role="complementary" id="sidebar-widgets-area-4" class="col-md-3 col-sm-6 col-xs-12 widget-box" aria-label="<?php esc_html_e('Widgets Area 4','llorix-one'); ?>">
+						<div itemscope itemtype="http://schema.org/WPSideBar" role="complementary" id="sidebar-widgets-area-4" class="col-md-3 col-sm-6 col-xs-12 widget-box" aria-label="<?php esc_html_e('Widgets Area 4','llorix-one-lite'); ?>">
 							<?php
 								dynamic_sidebar( 'footer-area-4' );
 							?>
@@ -70,8 +70,8 @@
 				
 					/* OPTIONAL FOOTER LINKS */
 					
-					echo '<div itemscope role="navigation" itemtype="http://schema.org/SiteNavigationElement" id="menu-secondary" aria-label="'.esc_html__('Secondary Menu','llorix-one').'">';
-						echo '<h1 class="screen-reader-text">'.esc_html__( 'Secondary Menu', 'llorix-one' ).'</h1>';
+					echo '<div itemscope role="navigation" itemtype="http://schema.org/SiteNavigationElement" id="menu-secondary" aria-label="'.esc_html__('Secondary Menu','llorix-one-lite').'">';
+						echo '<h1 class="screen-reader-text">'.esc_html__( 'Secondary Menu', 'llorix-one-lite' ).'</h1>';
 						wp_nav_menu( 
 							array( 
 								'theme_location'    => 'parallax_footer_menu',
@@ -107,7 +107,7 @@
 	        </div><!-- .footer-bottom-wrap -->
 
 	        <div class="powered-by">
-	            <a class="" href="http://themeisle.com/themes/llorix-one/" rel="nofollow">Llorix One </a> <?php esc_html_e('powered by','llorix-one'); ?> <a class="" href="http://wordpress.org/" rel="nofollow"><?php esc_html_e('WordPress','llorix-one'); ?></a>
+	            <a class="" href="http://themeisle.com/themes/llorix-one/" rel="nofollow">Llorix One </a> <?php esc_html_e('powered by','llorix-one-lite'); ?> <a class="" href="http://wordpress.org/" rel="nofollow"><?php esc_html_e('WordPress','llorix-one-lite'); ?></a>
 	        </div>
 
 	    </div><!-- container -->

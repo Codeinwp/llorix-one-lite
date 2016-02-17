@@ -17,7 +17,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" <?php body_class(); ?> dir="<?php if (is_rtl()) echo "rtl"; else echo "ltr"; ?>">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'llorix-one' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'llorix-one-lite' ); ?></a>
 	<!-- =========================
      PRE LOADER       
     ============================== -->
@@ -48,7 +48,7 @@
 
         <!-- COLOR OVER IMAGE -->
         <?php
-			$llorix_one_sticky_header = get_theme_mod('llorix_one_sticky_header','llorix-one');
+			$llorix_one_sticky_header = get_theme_mod('llorix_one_sticky_header','llorix-one-lite');
 			if( isset($llorix_one_sticky_header) && ($llorix_one_sticky_header != 1)){
 				$fixedheader = 'sticky-navigation-open';
 			} else {
@@ -78,11 +78,11 @@
 
 							if( !empty($llorix_one_very_top_header_phone) ){
 				        		echo '<div class="very-top-left">';
-				        		echo esc_html_e('Call us:', 'llorix-one') . ' ';
+				        		echo esc_html_e('Call us:', 'llorix-one-lite') . ' ';
 				        		echo '<span>' . esc_attr($llorix_one_very_top_header_phone) . '</span>';
 				        		echo '</div>';
 							} elseif ( isset( $wp_customize )   ) {
-								echo '<div class="very-top-left llorix_one_only_customizer">' . esc_html_e('Call us:', 'llorix-one') . '<span></span></div>';
+								echo '<div class="very-top-left llorix_one_only_customizer">' . esc_html_e('Call us:', 'llorix-one-lite') . '<span></span></div>';
 							}
 						?>
 		        		<div class="very-top-right">
@@ -120,8 +120,8 @@
                      
                         <!-- LOGO -->
 						
-                        <button title='<?php _e( 'Toggle Menu', 'llorix-one' ); ?>' aria-controls='menu-main-menu' aria-expanded='false' type="button" class="navbar-toggle menu-toggle" id="menu-toggle" data-toggle="collapse" data-target="#menu-primary">
-                            <span class="screen-reader-text"><?php esc_html_e('Toggle navigation','llorix-one'); ?></span>
+                        <button title='<?php _e( 'Toggle Menu', 'llorix-one-lite' ); ?>' aria-controls='menu-main-menu' aria-expanded='false' type="button" class="navbar-toggle menu-toggle" id="menu-toggle" data-toggle="collapse" data-target="#menu-primary">
+                            <span class="screen-reader-text"><?php esc_html_e('Toggle navigation','llorix-one-lite'); ?></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -175,7 +175,7 @@
                     </div>
                     
                     <!-- MENU -->
-					<div itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="<?php esc_html_e('Primary Menu','llorix-one') ?>" id="menu-primary" class="navbar-collapse collapse">
+					<div itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="<?php esc_html_e('Primary Menu','llorix-one-lite') ?>" id="menu-primary" class="navbar-collapse collapse">
 						<!-- LOGO ON STICKY NAV BAR -->
 						<div id="site-header-menu" class="site-header-menu">
 							<nav id="site-navigation" class="main-navigation" role="navigation">

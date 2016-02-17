@@ -4,7 +4,7 @@
  */
 ?>
 
-<article itemscope itemprop="blogPosts" itemtype="http://schema.org/BlogPosting" itemtype="http://schema.org/BlogPosting" <?php post_class('border-bottom-hover'); ?> title="<?php printf( esc_html__( 'Blog post: %s', 'llorix-one' ), get_the_title() )?>">
+<article itemscope itemprop="blogPosts" itemtype="http://schema.org/BlogPosting" itemtype="http://schema.org/BlogPosting" <?php post_class('border-bottom-hover'); ?> title="<?php printf( esc_html__( 'Blog post: %s', 'llorix-one-lite' ), get_the_title() )?>">
 	<header class="entry-header">
 
 			<div class="post-img-wrap">
@@ -32,7 +32,7 @@
 					<?php } ?>
 
 				</a>
-				<div class="parallax-one-post-meta" itemprop="datePublished" datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one' ) ); ?>">
+				<div class="parallax-one-post-meta" itemprop="datePublished" datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>">
 					<?php the_time( get_option('date_format') ); ?>
 				</div>
 				<div class="post-date entry-published updated">
@@ -48,10 +48,10 @@
 					</span>
 				</span>
 				<span class="posted-in entry-terms-categories" itemprop="articleSection">
-					<i class="icon-basic-elaboration-folder-check" aria-hidden="true"></i><?php _e('Posted in','llorix-one'); ?> 
+					<i class="icon-basic-elaboration-folder-check" aria-hidden="true"></i><?php _e('Posted in','llorix-one-lite'); ?>
 					<?php
 						/* translators: used between list items, there is a space after the comma */
-						$categories_list = get_the_category_list( esc_html__( ', ', 'llorix-one' ) );
+						$categories_list = get_the_category_list( esc_html__( ', ', 'llorix-one-lite' ) );
 						$pos = strpos($categories_list, ',');
 						if ( $pos ) {
 							echo substr($categories_list, 0, $pos);
@@ -61,7 +61,7 @@
 					?>
 				</span>
 				<a href="<?php comments_link(); ?>" class="post-comments">
-					<i class="icon-comment-alt" aria-hidden="true"></i><?php comments_number( esc_html__('No comments','llorix-one'), esc_html__('One comment','llorix-one'), esc_html__('% comments','llorix-one') ); ?>
+					<i class="icon-comment-alt" aria-hidden="true"></i><?php comments_number( esc_html__('No comments','llorix-one-lite'), esc_html__('One comment','llorix-one-lite'), esc_html__('% comments','llorix-one-lite') ); ?>
 				</a>
 			</div><!-- .entry-meta -->
 
@@ -73,12 +73,12 @@
 	<div itemprop="description" class="entry-content entry-summary">
 		<?php
 			$ismore = @strpos( $post->post_content, '<!--more-->');
-			if($ismore) : the_content( sprintf( esc_html__('Read more %s ...','llorix-one'), '<span class="screen-reader-text">'.esc_html__('about ', 'llorix-one').get_the_title().'</span>' ) );
+			if($ismore) : the_content( sprintf( esc_html__('Read more %s ...','llorix-one-lite'), '<span class="screen-reader-text">'.esc_html__('about ', 'llorix-one-lite').get_the_title().'</span>' ) );
 			else : the_excerpt();
 			endif;
 		
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'llorix-one' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'llorix-one-lite' ),
 				'after'  => '</div>',
 			) );
 		?>

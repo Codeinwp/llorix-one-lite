@@ -3,7 +3,7 @@
  * Changelog
  */
 
-$llorix_one = wp_get_theme( 'llorix-one' );
+$llorix_one = wp_get_theme( 'llorix-one-lite' );
 
 ?>
 <div class="parallax-one-tab-pane" id="changelog">

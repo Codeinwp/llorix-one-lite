@@ -26,9 +26,9 @@ function llorix_one_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on parallax-one, use a find and replace
-	 * to change 'llorix-one' to the name of your theme in all the template files
+	 * to change 'llorix-one-lite' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'llorix-one', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'llorix-one-lite', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,8 +44,8 @@ function llorix_one_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'llorix-one' ),
-		'parallax_footer_menu' => esc_html__('Footer Menu', 'llorix-one'),
+		'primary' => esc_html__( 'Primary Menu', 'llorix-one-lite' ),
+		'parallax_footer_menu' => esc_html__('Footer Menu', 'llorix-one-lite'),
 	) );
 
 	
@@ -135,14 +135,14 @@ function llorix_one_setup() {
         $llorix_one_required_actions = array(
 			array(
 				"id" => 'llorix-one-req-ac-check-front-page',
-                "title" => esc_html__( 'Switch "Front page displays" to "A static page" ' ,'llorix-one' ),
-                "description" => esc_html__( 'In order to have the one page look for your website, please go to Customize -> Static Front Page and switch "Front page displays" to "A static page". Then select the template "Frontpage" for that selected page.','llorix-one' ),
+                "title" => esc_html__( 'Switch "Front page displays" to "A static page" ' ,'llorix-one-lite' ),
+                "description" => esc_html__( 'In order to have the one page look for your website, please go to Customize -> Static Front Page and switch "Front page displays" to "A static page". Then select the template "Frontpage" for that selected page.','llorix-one-lite' ),
                 "check" => llorix_one_is_not_static_page()
 			),
 			array(
                 "id" => 'llorix-one-req-ac-install-intergeo-maps',
-                "title" => esc_html__( 'Install Intergeo Maps - Google Maps Plugin' ,'llorix-one' ),
-                "description" => esc_html__( 'In order to use map section, you need to install Intergeo Maps plugin then use it to create a map and paste the generated shortcode in Customize -> Contact section -> Map shortcode','llorix-one' ),
+                "title" => esc_html__( 'Install Intergeo Maps - Google Maps Plugin' ,'llorix-one-lite' ),
+                "description" => esc_html__( 'In order to use map section, you need to install Intergeo Maps plugin then use it to create a map and paste the generated shortcode in Customize -> Contact section -> Map shortcode','llorix-one-lite' ),
                 "check" => defined('INTERGEO_PLUGIN_NAME'),
                 "plugin_slug" => 'intergeo-maps'
             )
@@ -178,9 +178,9 @@ add_filter( 'image_size_names_choose', 'llorix_one_media_uploader_custom_sizes' 
 
 function llorix_one_media_uploader_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'parallax_one_team' => esc_html__('Llorix One Team Member','llorix-one'),
-		'parallax_one_services' => esc_html__('Llorix One Services','llorix-one'),
-		'parallax_one_customers' => esc_html__('Llorix One Testimonials','llorix-one')
+        'parallax_one_team' => esc_html__('Llorix One Team Member','llorix-one-lite'),
+		'parallax_one_services' => esc_html__('Llorix One Services','llorix-one-lite'),
+		'parallax_one_customers' => esc_html__('Llorix One Testimonials','llorix-one-lite')
     ) );
 }
 
@@ -194,7 +194,7 @@ function llorix_one_widgets_init() {
 	
 	register_sidebar( 
 		array(
-			'name'          => esc_html__( 'Sidebar', 'llorix-one' ),
+			'name'          => esc_html__( 'Sidebar', 'llorix-one-lite' ),
 			'id'            => 'sidebar-1',
 			'description'   => '',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -206,7 +206,7 @@ function llorix_one_widgets_init() {
 	
 	register_sidebars( 4, 
 		array(
-			'name' => esc_html__('Footer area %d','llorix-one'),
+			'name' => esc_html__('Footer area %d','llorix-one-lite'),
 			'id' => 'footer-area',
 			'before_widget'	=> '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
@@ -250,8 +250,8 @@ function llorix_one_scripts() {
 	wp_enqueue_script( 'parallax-one-custom-all', llorix_one_get_file('/js/custom.all.js'), array('jquery'), '2.0.2', true );
 	
 	wp_localize_script( 'parallax-one-custom-all', 'screenReaderText', array(
-		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'llorix-one' ) . '</span>',
-		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'llorix-one' ) . '</span>',
+		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'llorix-one-lite' ) . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'llorix-one-lite' ) . '</span>',
 	) );
 	
 
@@ -298,9 +298,9 @@ function llorix_one_add_id(){
 		/*Services*/
 		$llorix_one_services = get_theme_mod('llorix_one_services_content', json_encode(
 							array(
-									array('choice'=>'parallax_icon','icon_value' => 'icon-basic-webpage-multiple','title' => esc_html__('Lorem Ipsum','llorix-one'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one')),
-									array('choice'=>'parallax_icon','icon_value' => 'icon-ecommerce-graph3','title' => esc_html__('Lorem Ipsum','llorix-one'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one')),
-									array('choice'=>'parallax_icon','icon_value' => 'icon-basic-geolocalize-05','title' => esc_html__('Lorem Ipsum','llorix-one'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one'))
+									array('choice'=>'parallax_icon','icon_value' => 'icon-basic-webpage-multiple','title' => esc_html__('Lorem Ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one-lite')),
+									array('choice'=>'parallax_icon','icon_value' => 'icon-ecommerce-graph3','title' => esc_html__('Lorem Ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one-lite')),
+									array('choice'=>'parallax_icon','icon_value' => 'icon-basic-geolocalize-05','title' => esc_html__('Lorem Ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one-lite'))
 							)
 						));
 		if(!empty($llorix_one_services)){
@@ -319,9 +319,9 @@ function llorix_one_add_id(){
 		/*Team*/
 		$llorix_one_team = get_theme_mod('llorix_one_team_content', json_encode(
 							array(
-									array('image_url' => llorix_one_get_file('/images/team/1.jpg'),'title' => esc_html__('Albert Jacobs','llorix-one'),'subtitle' => esc_html__('Founder & CEO','llorix-one')),
-									array('image_url' => llorix_one_get_file('/images/team/2.jpg'),'title' => esc_html__('Tonya Garcia','llorix-one'),'subtitle' => esc_html__('Account Manager','llorix-one')),
-									array('image_url' => llorix_one_get_file('/images/team/3.jpg'),'title' => esc_html__('Linda Guthrie','llorix-one'),'subtitle' => esc_html__('Business Development','llorix-one'))
+									array('image_url' => llorix_one_get_file('/images/team/1.jpg'),'title' => esc_html__('Albert Jacobs','llorix-one-lite'),'subtitle' => esc_html__('Founder & CEO','llorix-one-lite')),
+									array('image_url' => llorix_one_get_file('/images/team/2.jpg'),'title' => esc_html__('Tonya Garcia','llorix-one-lite'),'subtitle' => esc_html__('Account Manager','llorix-one-lite')),
+									array('image_url' => llorix_one_get_file('/images/team/3.jpg'),'title' => esc_html__('Linda Guthrie','llorix-one-lite'),'subtitle' => esc_html__('Business Development','llorix-one-lite'))
 							)
 						));
 		if(!empty($llorix_one_team)){
@@ -340,9 +340,9 @@ function llorix_one_add_id(){
 		/*Testimonials*/
 		$llorix_one_testimonials = get_theme_mod('llorix_one_testimonials_content', json_encode(
 							array(
-									array('image_url' => llorix_one_get_file('/images/clients/1.jpg'),'title' => esc_html__('Happy Customer','llorix-one'),'subtitle' => esc_html__('Lorem ipsum','llorix-one'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one')),
-									array('image_url' => llorix_one_get_file('/images/clients/2.jpg'),'title' => esc_html__('Happy Customer','llorix-one'),'subtitle' => esc_html__('Lorem ipsum','llorix-one'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one')),
-									array('image_url' => llorix_one_get_file('/images/clients/3.jpg'),'title' => esc_html__('Happy Customer','llorix-one'),'subtitle' => esc_html__('Lorem ipsum','llorix-one'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one'))
+									array('image_url' => llorix_one_get_file('/images/clients/1.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite')),
+									array('image_url' => llorix_one_get_file('/images/clients/2.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite')),
+									array('image_url' => llorix_one_get_file('/images/clients/3.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite'))
 							)
 						));
 		if(!empty($llorix_one_testimonials)){
@@ -498,23 +498,23 @@ function llorix_one_register_required_plugins() {
         'is_automatic' => false,                 
         'message'      => '',     
         'strings'      => array(
-            'page_title'                      => esc_html__( 'Install Required Plugins', 'llorix-one' ),
-            'menu_title'                      => esc_html__( 'Install Plugins', 'llorix-one' ),
-            'installing'                      => esc_html__( 'Installing Plugin: %s', 'llorix-one' ), 
-            'oops'                            => esc_html__( 'Something went wrong with the plugin API.', 'llorix-one' ),
-            'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'llorix-one' ),
-            'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'llorix-one' ),
-            'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'llorix-one' ),
-            'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'llorix-one' ),
-            'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'llorix-one' ),
-            'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'llorix-one' ), 
-            'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'llorix-one' ), 
-            'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'llorix-one' ), 
-            'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'llorix-one' ),
-            'activate_link'                   => _n_noop( 'Begin activating plugin', 'Begin activating plugins', 'llorix-one' ),
-            'return'                          => esc_html__( 'Return to Required Plugins Installer', 'llorix-one' ),
-            'plugin_activated'                => esc_html__( 'Plugin activated successfully.', 'llorix-one' ),
-            'complete'                        => esc_html__( 'All plugins installed and activated successfully. %s', 'llorix-one' ), 
+            'page_title'                      => esc_html__( 'Install Required Plugins', 'llorix-one-lite' ),
+            'menu_title'                      => esc_html__( 'Install Plugins', 'llorix-one-lite' ),
+            'installing'                      => esc_html__( 'Installing Plugin: %s', 'llorix-one-lite' ),
+            'oops'                            => esc_html__( 'Something went wrong with the plugin API.', 'llorix-one-lite' ),
+            'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'llorix-one-lite' ),
+            'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'llorix-one-lite' ),
+            'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'llorix-one-lite' ),
+            'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'llorix-one-lite' ),
+            'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'llorix-one-lite' ),
+            'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'llorix-one-lite' ),
+            'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'llorix-one-lite' ),
+            'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'llorix-one-lite' ),
+            'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'llorix-one-lite' ),
+            'activate_link'                   => _n_noop( 'Begin activating plugin', 'Begin activating plugins', 'llorix-one-lite' ),
+            'return'                          => esc_html__( 'Return to Required Plugins Installer', 'llorix-one-lite' ),
+            'plugin_activated'                => esc_html__( 'Plugin activated successfully.', 'llorix-one-lite' ),
+            'complete'                        => esc_html__( 'All plugins installed and activated successfully. %s', 'llorix-one-lite' ),
             'nag_type'                        => 'updated'
         )
     );
@@ -600,7 +600,7 @@ function llorix_one_comment($comment, $args, $depth) {
 		case 'trackback' :
 		?>
 			<li class="post pingback">
-				<p><?php _e( 'Pingback:', 'llorix-one' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'llorix-one' ), ' ' ); ?></p>
+				<p><?php _e( 'Pingback:', 'llorix-one-lite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'llorix-one-lite' ), ' ' ); ?></p>
 		<?php
 		break;
 
@@ -612,19 +612,19 @@ function llorix_one_comment($comment, $args, $depth) {
 					<footer>
 						<div itemscope itemprop="creator" itemtype="http://schema.org/Person" class="comment-author vcard" >
 							<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
-							<?php printf( __( '<span itemprop="name">%s </span><span class="says">says:</span>', 'llorix-one' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link() ) ); ?>
+							<?php printf( __( '<span itemprop="name">%s </span><span class="says">says:</span>', 'llorix-one-lite' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link() ) ); ?>
 						</div><!-- .comment-author .vcard -->
 						<?php if ( $comment->comment_approved == '0' ) : ?>
-							<em><?php _e( 'Your comment is awaiting moderation.', 'llorix-one' ); ?></em>
+							<em><?php _e( 'Your comment is awaiting moderation.', 'llorix-one-lite' ); ?></em>
 							<br />
 						<?php endif; ?>
 						<div class="comment-metadata">
 							<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>" class="comment-permalink" itemprop="url">
-								<time class="comment-published" datetime="<?php comment_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php comment_time( _x( 'l, F j, Y, g:i a', 'comment time format', 'llorix-one' ) ); ?>" itemprop="commentTime">
-									<?php printf( __( '%1$s at %2$s', 'llorix-one' ), get_comment_date(), get_comment_time() ); ?>
+								<time class="comment-published" datetime="<?php comment_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php comment_time( _x( 'l, F j, Y, g:i a', 'comment time format', 'llorix-one-lite' ) ); ?>" itemprop="commentTime">
+									<?php printf( __( '%1$s at %2$s', 'llorix-one-lite' ), get_comment_date(), get_comment_time() ); ?>
 								</time>
 							</a>
-							<?php edit_comment_link( __( '(Edit)', 'llorix-one' ), ' ' );?>
+							<?php edit_comment_link( __( '(Edit)', 'llorix-one-lite' ), ' ' );?>
 						</div><!-- .comment-meta .commentmetadata -->
 					</footer>
 
@@ -866,6 +866,6 @@ add_action( 'init', 'llorix_one_copy_settings_from_old_versions' );
 
 function new_excerpt_more($more) {
 	global $post;
-	return '<a class="moretag" href="'. get_permalink($post->ID) . '"><span class="screen-reader-text">'.esc_html__('Read more about ', 'llorix-one').get_the_title().'</span>[...]</a>';
+	return '<a class="moretag" href="'. get_permalink($post->ID) . '"><span class="screen-reader-text">'.esc_html__('Read more about ', 'llorix-one-lite').get_the_title().'</span>[...]</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');

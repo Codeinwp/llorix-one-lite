@@ -22,7 +22,7 @@
 
 <?php
 	$llorix_one_blog_header_image = get_theme_mod( 'llorix_one_blog_header_image', llorix_one_get_file('/images/background-images/background-blog.jpg') );
-	$llorix_one_blog_header_title = get_theme_mod( 'llorix_one_blog_header_title', esc_html__('BLOG','llorix-one')  );
+	$llorix_one_blog_header_title = get_theme_mod( 'llorix_one_blog_header_title', esc_html__('BLOG','llorix-one-lite')  );
 	$llorix_one_blog_header_subtitle = get_theme_mod( 'llorix_one_blog_header_subtitle' );
 	
 	if( !empty($llorix_one_blog_header_image) || !empty($llorix_one_blog_header_title) || !empty($llorix_one_blog_header_subtitle) ):

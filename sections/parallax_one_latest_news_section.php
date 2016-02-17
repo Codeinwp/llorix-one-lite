@@ -7,10 +7,10 @@
 	$args = array( 'post_type' => 'post', 'posts_per_page' => $parallax_number_of_posts, 'order' => 'DESC','ignore_sticky_posts' => true );
 	$the_query = new WP_Query( $args );
 	if ( $the_query->have_posts() ) {
-		$llorix_one_latest_news_title = get_theme_mod('llorix_one_latest_news_title',esc_html__('Latest news','llorix-one'));
+		$llorix_one_latest_news_title = get_theme_mod('llorix_one_latest_news_title',esc_html__('Latest news','llorix-one-lite'));
 		if($parallax_number_of_posts > 0) {
 		?>
-			<section class="brief timeline" id="latestnews" role="region" aria-label="<?php esc_html_e('Latest blog posts','llorix-one'); ?>">
+			<section class="brief timeline" id="latestnews" role="region" aria-label="<?php esc_html_e('Latest blog posts','llorix-one-lite'); ?>">
 				<div class="section-overlay-layer">
 					<div class="container">
 						<div class="row">
@@ -26,8 +26,8 @@
 
 							<div class="parallax-slider-whole-wrap">
 								<div class="controls-wrap">
-									<button class="control_next icon icon-arrow-carrot-down"><span class="screen-reader-text"><?php esc_attr_e('Post slider navigation: Down','llorix-one')?></span></button>
-									<button class="control_prev fade-btn icon icon-arrow-carrot-up"><span class="screen-reader-text"><?php esc_attr_e('Post slider navigation: Up','llorix-one')?></span></button>
+									<button class="control_next icon icon-arrow-carrot-down"><span class="screen-reader-text"><?php esc_attr_e('Post slider navigation: Down','llorix-one-lite')?></span></button>
+									<button class="control_prev fade-btn icon icon-arrow-carrot-up"><span class="screen-reader-text"><?php esc_attr_e('Post slider navigation: Up','llorix-one-lite')?></span></button>
 								</div>
 								<!-- TIMLEINE SCROLLER -->
 								<div itemscope itemtype="http://schema.org/Blog" id="llorix_one_slider" class="timeline-section">
@@ -51,8 +51,8 @@
 												}
 										?>
 
-												<div itemscope itemprop="blogPosts" itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" class="timeline-box-wrap" title="<?php printf( esc_html__( 'Latest News: %s', 'llorix-one' ), get_the_title() ) ?>">
-													<div datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one' ) ); ?>" class="entry-published date small-text strong">
+												<div itemscope itemprop="blogPosts" itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" class="timeline-box-wrap" title="<?php printf( esc_html__( 'Latest News: %s', 'llorix-one-lite' ), get_the_title() ) ?>">
+													<div datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>" class="entry-published date small-text strong">
 													<?php echo get_the_date('M, j'); ?>
 													</div>
 													<div itemscope itemprop="image" class="icon-container white-text">
@@ -76,10 +76,10 @@
 															<div class="entry-meta">
 																<span class="entry-date">
 																	<a href="<?php echo esc_url( get_day_link(get_the_date('Y'), get_the_date('m'), get_the_date('d')) ) ?>" rel="bookmark">
-																		<time itemprop="datePublished" datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one' ) ); ?>" class="entry-date entry-published updated"><?php echo get_the_date('F j, Y'); ?></time>
+																		<time itemprop="datePublished" datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>" class="entry-date entry-published updated"><?php echo get_the_date('F j, Y'); ?></time>
 																	</a>
 																</span>
-																<span> <?php esc_html_e('by','llorix-one');?> </span>
+																<span> <?php esc_html_e('by','llorix-one-lite');?> </span>
 																<span itemscope itemprop="author" itemtype="http://schema.org/Person" class="author-link">
 																	<span  itemprop="name" class="entry-author author vcard">
 																		<a itemprop="url" class="url fn n" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )); ?>" rel="author"><?php the_author(); ?> </a>
@@ -89,7 +89,7 @@
 														</header>
 														<div itemprop="description" class="entry-content entry-summary">
 															<?php the_excerpt(); ?>
-															<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more"><?php printf( esc_html__( 'Read more %s', 'llorix-one' ), '<span class="screen-reader-text">  '.get_the_title().'</span>' ); ?></a>
+															<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more"><?php printf( esc_html__( 'Read more %s', 'llorix-one-lite' ), '<span class="screen-reader-text">  '.get_the_title().'</span>' ); ?></a>
 														</div>
 													</div>
 												</div>

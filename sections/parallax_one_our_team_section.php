@@ -3,21 +3,21 @@
 ============================== -->
 <?php
 	global $wp_customize;
-	$llorix_one_our_team_title = get_theme_mod('llorix_one_our_team_title',esc_html__('Our Team','llorix-one'));
-	$llorix_one_our_team_subtitle = get_theme_mod('llorix_one_our_team_subtitle',esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one'));
+	$llorix_one_our_team_title = get_theme_mod('llorix_one_our_team_title',esc_html__('Our Team','llorix-one-lite'));
+	$llorix_one_our_team_subtitle = get_theme_mod('llorix_one_our_team_subtitle',esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one-lite'));
 	$llorix_one_team_content = get_theme_mod('llorix_one_team_content',
 		json_encode(
 			array(
-					array('image_url' => llorix_one_get_file('/images/team/1.jpg'),'title' => esc_html__('Albert Jacobs','llorix-one'),'subtitle' => esc_html__('Founder & CEO','llorix-one')),
-					array('image_url' => llorix_one_get_file('/images/team/2.jpg'),'title' => esc_html__('Tonya Garcia','llorix-one'),'subtitle' => esc_html__('Account Manager','llorix-one')),
-					array('image_url' => llorix_one_get_file('/images/team/3.jpg'),'title' => esc_html__('Linda Guthrie','llorix-one'),'subtitle' => esc_html__('Business Development','llorix-one'))
+					array('image_url' => llorix_one_get_file('/images/team/1.jpg'),'title' => esc_html__('Albert Jacobs','llorix-one-lite'),'subtitle' => esc_html__('Founder & CEO','llorix-one-lite')),
+					array('image_url' => llorix_one_get_file('/images/team/2.jpg'),'title' => esc_html__('Tonya Garcia','llorix-one-lite'),'subtitle' => esc_html__('Account Manager','llorix-one-lite')),
+					array('image_url' => llorix_one_get_file('/images/team/3.jpg'),'title' => esc_html__('Linda Guthrie','llorix-one-lite'),'subtitle' => esc_html__('Business Development','llorix-one-lite'))
 			)
 		)
 	);
 
 	if(!empty($llorix_one_our_team_title) || !empty($llorix_one_our_team_subtitle) || !llorix_one_general_repeater_is_empty($llorix_one_team_content) ){
 ?>
-		<section class="team" id="team" role="region" aria-label="<?php esc_html_e('Team','llorix-one') ?>">
+		<section class="team" id="team" role="region" aria-label="<?php esc_html_e('Team','llorix-one-lite') ?>">
 			<div class="section-overlay-layer">
 				<div class="container">
 
@@ -59,11 +59,11 @@
 														if( !empty($llorix_one_team_member->title) ){
 															echo '<img src="'.esc_url($llorix_one_team_member->image_url).'" alt="'.esc_attr($llorix_one_team_member->title).'">';
 														} else {
-															echo '<img src="'.esc_url($llorix_one_team_member->image_url).'" alt="'.esc_html__('Avatar','llorix-one').'">';
+															echo '<img src="'.esc_url($llorix_one_team_member->image_url).'" alt="'.esc_html__('Avatar','llorix-one-lite').'">';
 														}
 													} else {
 														$default_url = llorix_one_get_file('/images/team/default.png');
-														echo '<img src="'.$default_url.'" alt="'.esc_html__('Avatar','llorix-one').'">';
+														echo '<img src="'.$default_url.'" alt="'.esc_html__('Avatar','llorix-one-lite').'">';
 													}
 												?>
 											</div><!-- .member-pic -->
@@ -112,7 +112,7 @@
 	} else {
 		if( isset( $wp_customize ) ) {
 ?>
-			<section class="team llorix_one_only_customizer" id="team" role="region" aria-label="<?php esc_html_e('Team','llorix-one') ?>">
+			<section class="team llorix_one_only_customizer" id="team" role="region" aria-label="<?php esc_html_e('Team','llorix-one-lite') ?>">
 				<div class="section-overlay-layer">
 					<div class="container">
 						<div class="section-header">

@@ -71,25 +71,25 @@ class Llorix_One_General_Repeater extends WP_Customize_Control {
                         
                 ?>
                         <div class="parallax_one_general_control_repeater_container">
-                            <div class="parallax-customize-control-title"><?php esc_html_e('Llorix One','llorix-one')?></div>
+                            <div class="parallax-customize-control-title"><?php esc_html_e('Llorix One','llorix-one-lite')?></div>
                             <div class="parallax-box-content-hidden">
                                 <?php
                                     if($parallax_image_control == true && $parallax_icon_control == true){ ?>
-                                        <span class="customize-control-title"><?php esc_html_e('Image type','llorix-one');?></span>
+                                        <span class="customize-control-title"><?php esc_html_e('Image type','llorix-one-lite');?></span>
                                         <select class="parallax_one_image_choice">
-                                            <option value="parallax_icon" selected><?php esc_html_e('Icon','llorix-one'); ?></option>
-                                            <option value="parallax_image"><?php esc_html_e('Image','llorix-one'); ?></option>
-                                            <option value="parallax_none"><?php esc_html_e('None','llorix-one'); ?></option>
+                                            <option value="parallax_icon" selected><?php esc_html_e('Icon','llorix-one-lite'); ?></option>
+                                            <option value="parallax_image"><?php esc_html_e('Image','llorix-one-lite'); ?></option>
+                                            <option value="parallax_none"><?php esc_html_e('None','llorix-one-lite'); ?></option>
                                         </select>
 
                                         <p class="parallax_one_image_control" style="display:none">
-                                            <span class="customize-control-title"><?php esc_html_e('Image','llorix-one')?></span>
+                                            <span class="customize-control-title"><?php esc_html_e('Image','llorix-one-lite')?></span>
                                             <input type="text" class="widefat custom_media_url">
-                                            <input type="button" class="button button-primary custom_media_button_parallax_one" value="<?php esc_html_e('Upload Image','llorix-one'); ?>" />
+                                            <input type="button" class="button button-primary custom_media_button_parallax_one" value="<?php esc_html_e('Upload Image','llorix-one-lite'); ?>" />
                                         </p>
 
                                         <div class="parallax_one_general_control_icon">
-                                            <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one');?></span>
+                                            <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one-lite');?></span>
                                             <select class="parallax_one_icon_control">
                                             <?php
                                                 foreach($icons_array as $contact_icon) {
@@ -101,17 +101,17 @@ class Llorix_One_General_Repeater extends WP_Customize_Control {
                                 <?php
                                     } else {
                                         if($parallax_image_control ==true){	?>
-                                            <span class="customize-control-title"><?php esc_html_e('Image','llorix-one')?></span>
+                                            <span class="customize-control-title"><?php esc_html_e('Image','llorix-one-lite')?></span>
                                             <p class="parallax_one_image_control">
                                                 <input type="text" class="widefat custom_media_url">
-                                                <input type="button" class="button button-primary custom_media_button_parallax_one" value="<?php esc_html_e('Upload Image','llorix-one'); ?>" />
+                                                <input type="button" class="button button-primary custom_media_button_parallax_one" value="<?php esc_html_e('Upload Image','llorix-one-lite'); ?>" />
                                             </p>
                                 <?php
                                         }
 
                                        if($parallax_icon_control ==true){
                                 ?>
-                                            <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one')?></span>
+                                            <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one-lite')?></span>
                                             <select name="<?php echo esc_attr($this->id); ?>" class="parallax_one_icon_control">
                                                 <?php
                                                     foreach($icons_array as $contact_icon) {
@@ -124,37 +124,37 @@ class Llorix_One_General_Repeater extends WP_Customize_Control {
                         
                                     if($parallax_title_control==true){
                                 ?>
-                                        <span class="customize-control-title"><?php esc_html_e('Title','llorix-one')?></span>
-                                        <input type="text" class="parallax_one_title_control" placeholder="<?php esc_html_e('Title','llorix-one'); ?>"/>
+                                        <span class="customize-control-title"><?php esc_html_e('Title','llorix-one-lite')?></span>
+                                        <input type="text" class="parallax_one_title_control" placeholder="<?php esc_html_e('Title','llorix-one-lite'); ?>"/>
                                 <?php
                                     }
                         
                                     if($parallax_subtitle_control==true){
                                 ?>
-                                        <span class="customize-control-title"><?php esc_html_e('Subtitle','llorix-one')?></span>
-                                        <input type="text" class="parallax_one_subtitle_control" placeholder="<?php esc_html_e('Subtitle','llorix-one'); ?>"/>
+                                        <span class="customize-control-title"><?php esc_html_e('Subtitle','llorix-one-lite')?></span>
+                                        <input type="text" class="parallax_one_subtitle_control" placeholder="<?php esc_html_e('Subtitle','llorix-one-lite'); ?>"/>
                                 <?php
                                     }
  
 
                                     if($parallax_text_control==true){?>
-                                        <span class="customize-control-title"><?php esc_html_e('Text','llorix-one')?></span>
-                                        <textarea class="parallax_one_text_control" placeholder="<?php esc_html_e('Text','llorix-one'); ?>"></textarea>
+                                        <span class="customize-control-title"><?php esc_html_e('Text','llorix-one-lite')?></span>
+                                        <textarea class="parallax_one_text_control" placeholder="<?php esc_html_e('Text','llorix-one-lite'); ?>"></textarea>
                                 <?php }
 
                                     if($parallax_link_control==true){ ?>
-                                        <span class="customize-control-title"><?php esc_html_e('Link','llorix-one')?></span>
-                                        <input type="text" class="parallax_one_link_control" placeholder="<?php esc_html_e('Link','llorix-one'); ?>"/>
+                                        <span class="customize-control-title"><?php esc_html_e('Link','llorix-one-lite')?></span>
+                                        <input type="text" class="parallax_one_link_control" placeholder="<?php esc_html_e('Link','llorix-one-lite'); ?>"/>
                                 <?php } 
                                     if($parallax_shortcode_control==true){
                                     ?>
-                                        <span class="customize-control-title"><?php esc_html_e('Shortcode','llorix-one')?></span>
-                                        <input type="text" class="parallax_one_shortcode_control" placeholder="<?php esc_html_e('Shortcode','llorix-one'); ?>"/>
+                                        <span class="customize-control-title"><?php esc_html_e('Shortcode','llorix-one-lite')?></span>
+                                        <input type="text" class="parallax_one_shortcode_control" placeholder="<?php esc_html_e('Shortcode','llorix-one-lite'); ?>"/>
                                  <?php   
                                     }
                                 ?>
                                 <input type="hidden" class="parallax_one_box_id">
-                            <button type="button" class="parallax_one_general_control_remove_field button" style="display:none;"><?php esc_html_e('Delete field','llorix-one'); ?></button>
+                            <button type="button" class="parallax_one_general_control_remove_field button" style="display:none;"><?php esc_html_e('Delete field','llorix-one-lite'); ?></button>
                             </div>
                         </div>
                 <?php
@@ -164,25 +164,25 @@ class Llorix_One_General_Repeater extends WP_Customize_Control {
                              
                 ?>
                                 <div class="parallax_one_general_control_repeater_container parallax_one_draggable">
-                                    <div class="parallax-customize-control-title"><?php esc_html_e('Llorix One','llorix-one')?></div>
+                                    <div class="parallax-customize-control-title"><?php esc_html_e('Llorix One','llorix-one-lite')?></div>
                                     <div class="parallax-box-content-hidden">
                                          <?php
                                             if($parallax_image_control == true && $parallax_icon_control == true){ ?>
-                                                <span class="customize-control-title"><?php esc_html_e('Image type','llorix-one');?></span>
+                                                <span class="customize-control-title"><?php esc_html_e('Image type','llorix-one-lite');?></span>
                                                 <select class="parallax_one_image_choice">
-                                                    <option value="parallax_icon" <?php selected($icon->choice,'parallax_icon');?>><?php esc_html_e('Icon','llorix-one');?></option>
-                                                    <option value="parallax_image" <?php selected($icon->choice,'parallax_image');?>><?php esc_html_e('Image','llorix-one');?></option>
-                                                    <option value="parallax_none" <?php selected($icon->choice,'parallax_none');?>><?php esc_html_e('None','llorix-one');?></option>
+                                                    <option value="parallax_icon" <?php selected($icon->choice,'parallax_icon');?>><?php esc_html_e('Icon','llorix-one-lite');?></option>
+                                                    <option value="parallax_image" <?php selected($icon->choice,'parallax_image');?>><?php esc_html_e('Image','llorix-one-lite');?></option>
+                                                    <option value="parallax_none" <?php selected($icon->choice,'parallax_none');?>><?php esc_html_e('None','llorix-one-lite');?></option>
                                                 </select>
 
                                                 <p class="parallax_one_image_control"  <?php if(!empty($icon->choice) && $icon->choice!='parallax_image'){ echo 'style="display:none"';}?>>
-                                                    <span class="customize-control-title"><?php esc_html_e('Image','llorix-one');?></span>
+                                                    <span class="customize-control-title"><?php esc_html_e('Image','llorix-one-lite');?></span>
                                                     <input type="text" class="widefat custom_media_url" value="<?php if(!empty($icon->image_url)) {echo esc_attr($icon->image_url);} ?>">
-                                                    <input type="button" class="button button-primary custom_media_button_parallax_one" value="<?php esc_html_e('Upload Image','llorix-one'); ?>" />
+                                                    <input type="button" class="button button-primary custom_media_button_parallax_one" value="<?php esc_html_e('Upload Image','llorix-one-lite'); ?>" />
                                                 </p>
 
                                                 <div class="parallax_one_general_control_icon" <?php  if(!empty($icon->choice) && $icon->choice!='parallax_icon'){ echo 'style="display:none"';}?>>
-                                                    <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one');?></span>
+                                                    <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one-lite');?></span>
                                                     <select name="<?php echo esc_attr($this->id); ?>" class="parallax_one_icon_control">
                                                         <?php
                                                             foreach($icons_array as $contact_icon) {
@@ -196,15 +196,15 @@ class Llorix_One_General_Repeater extends WP_Customize_Control {
                                             } else {
                                         ?>
                                         <?php	if($parallax_image_control==true){ ?>
-                                                    <span class="customize-control-title"><?php esc_html_e('Image','llorix-one')?></span>
+                                                    <span class="customize-control-title"><?php esc_html_e('Image','llorix-one-lite')?></span>
                                                     <p class="parallax_one_image_control">
                                                         <input type="text" class="widefat custom_media_url" value="<?php if(!empty($icon->image_url)) {echo esc_attr($icon->image_url);} ?>">
-                                                        <input type="button" class="button button-primary custom_media_button_parallax_one" value="<?php esc_html_e('Upload Image','llorix-one'); ?>" />
+                                                        <input type="button" class="button button-primary custom_media_button_parallax_one" value="<?php esc_html_e('Upload Image','llorix-one-lite'); ?>" />
                                                     </p>
                                         <?php	}
 
                                                 if($parallax_icon_control==true){ ?>
-                                                    <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one')?></span>
+                                                    <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one-lite')?></span>
                                                     <select name="<?php echo esc_attr($this->id); ?>" class="parallax_one_icon_control">
                                                         <?php
                                                             foreach($icons_array as $contact_icon) {
@@ -217,33 +217,33 @@ class Llorix_One_General_Repeater extends WP_Customize_Control {
                                             }
                                                 if($parallax_title_control==true){
                                         ?>
-                                                    <span class="customize-control-title"><?php esc_html_e('Title','llorix-one')?></span>
-                                                    <input type="text" value="<?php if(!empty($icon->title)) echo esc_attr($icon->title); ?>" class="parallax_one_title_control" placeholder="<?php esc_html_e('Title','llorix-one'); ?>"/>
+                                                    <span class="customize-control-title"><?php esc_html_e('Title','llorix-one-lite')?></span>
+                                                    <input type="text" value="<?php if(!empty($icon->title)) echo esc_attr($icon->title); ?>" class="parallax_one_title_control" placeholder="<?php esc_html_e('Title','llorix-one-lite'); ?>"/>
                                         <?php
                                                 }
 
                                                 if($parallax_subtitle_control==true){
                                         ?>
-                                                    <span class="customize-control-title"><?php esc_html_e('Subtitle','llorix-one')?></span>
-                                                    <input type="text" value="<?php if(!empty($icon->subtitle)) echo esc_attr($icon->subtitle); ?>" class="parallax_one_subtitle_control" placeholder="<?php esc_html_e('Subtitle','llorix-one'); ?>"/>
+                                                    <span class="customize-control-title"><?php esc_html_e('Subtitle','llorix-one-lite')?></span>
+                                                    <input type="text" value="<?php if(!empty($icon->subtitle)) echo esc_attr($icon->subtitle); ?>" class="parallax_one_subtitle_control" placeholder="<?php esc_html_e('Subtitle','llorix-one-lite'); ?>"/>
                                         <?php
                                                 }
  
                                                 if($parallax_text_control==true){ ?>
-                                                    <span class="customize-control-title"><?php esc_html_e('Text','llorix-one')?></span>
-                                                    <textarea placeholder="<?php esc_html_e('Text','llorix-one'); ?>" class="parallax_one_text_control"><?php if(!empty($icon->text)) {echo esc_attr($icon->text);} ?></textarea>
+                                                    <span class="customize-control-title"><?php esc_html_e('Text','llorix-one-lite')?></span>
+                                                    <textarea placeholder="<?php esc_html_e('Text','llorix-one-lite'); ?>" class="parallax_one_text_control"><?php if(!empty($icon->text)) {echo esc_attr($icon->text);} ?></textarea>
                                         <?php	}
                                                 if($parallax_link_control){ ?>
-                                                    <span class="customize-control-title"><?php esc_html_e('Link','llorix-one')?></span>
-                                                    <input type="text" value="<?php if(!empty($icon->link)) echo esc_url($icon->link); ?>" class="parallax_one_link_control" placeholder="<?php esc_html_e('Link','llorix-one'); ?>"/>
+                                                    <span class="customize-control-title"><?php esc_html_e('Link','llorix-one-lite')?></span>
+                                                    <input type="text" value="<?php if(!empty($icon->link)) echo esc_url($icon->link); ?>" class="parallax_one_link_control" placeholder="<?php esc_html_e('Link','llorix-one-lite'); ?>"/>
                                         <?php	}
                                                 if($parallax_shortcode_control==true){ ?>
-                                        <span class="customize-control-title"><?php esc_html_e('Shortcode','llorix-one')?></span>
-                                        <input type="text" value='<?php if(!empty($icon->shortcode)) echo $icon->shortcode; ?>' class="parallax_one_shortcode_control" placeholder="<?php esc_html_e('Shortcode','llorix-one'); ?>"/>
+                                        <span class="customize-control-title"><?php esc_html_e('Shortcode','llorix-one-lite')?></span>
+                                        <input type="text" value='<?php if(!empty($icon->shortcode)) echo $icon->shortcode; ?>' class="parallax_one_shortcode_control" placeholder="<?php esc_html_e('Shortcode','llorix-one-lite'); ?>"/>
                                   <?php  }
                                         ?>
                                         <input type="hidden" class="parallax_one_box_id" value="<?php if(!empty($icon->id)) echo esc_attr($icon->id); ?>">
-                                    <button type="button" class="parallax_one_general_control_remove_field button" <?php if ($it == 0) echo 'style="display:none;"'; ?>><?php esc_html_e('Delete field','llorix-one'); ?></button>
+                                    <button type="button" class="parallax_one_general_control_remove_field button" <?php if ($it == 0) echo 'style="display:none;"'; ?>><?php esc_html_e('Delete field','llorix-one-lite'); ?></button>
                                     </div>
 
                                 </div>
@@ -255,26 +255,26 @@ class Llorix_One_General_Repeater extends WP_Customize_Control {
                             foreach($json as $icon){
                     ?>
                                 <div class="parallax_one_general_control_repeater_container parallax_one_draggable">
-                                    <div class="parallax-customize-control-title"><?php esc_html_e('Llorix One','llorix-one')?></div>
+                                    <div class="parallax-customize-control-title"><?php esc_html_e('Llorix One','llorix-one-lite')?></div>
                                     <div class="parallax-box-content-hidden">
                                     <?php
                                     if($parallax_image_control == true && $parallax_icon_control == true){ ?>
-                                        <span class="customize-control-title"><?php esc_html_e('Image type','llorix-one');?></span>
+                                        <span class="customize-control-title"><?php esc_html_e('Image type','llorix-one-lite');?></span>
                                         <select class="parallax_one_image_choice">
-                                            <option value="parallax_icon" <?php selected($icon->choice,'parallax_icon');?>><?php esc_html_e('Icon','llorix-one');?></option>
-                                            <option value="parallax_image" <?php selected($icon->choice,'parallax_image');?>><?php esc_html_e('Image','llorix-one');?></option>
-                                            <option value="parallax_none" <?php selected($icon->choice,'parallax_none');?>><?php esc_html_e('None','llorix-one');?></option>
+                                            <option value="parallax_icon" <?php selected($icon->choice,'parallax_icon');?>><?php esc_html_e('Icon','llorix-one-lite');?></option>
+                                            <option value="parallax_image" <?php selected($icon->choice,'parallax_image');?>><?php esc_html_e('Image','llorix-one-lite');?></option>
+                                            <option value="parallax_none" <?php selected($icon->choice,'parallax_none');?>><?php esc_html_e('None','llorix-one-lite');?></option>
                                         </select>
 
 
                                         <p class="parallax_one_image_control" <?php if(!empty($icon->choice) && $icon->choice!='parallax_image'){ echo 'style="display:none"';}?>>
-                                            <span class="customize-control-title"><?php esc_html_e('Image','llorix-one');?></span>
+                                            <span class="customize-control-title"><?php esc_html_e('Image','llorix-one-lite');?></span>
                                             <input type="text" class="widefat custom_media_url" value="<?php if(!empty($icon->image_url)) {echo esc_attr($icon->image_url);} ?>">
-                                            <input type="button" class="button button-primary custom_media_button_parallax_one" value="<?php esc_html_e('Upload Image','llorix-one'); ?>" />
+                                            <input type="button" class="button button-primary custom_media_button_parallax_one" value="<?php esc_html_e('Upload Image','llorix-one-lite'); ?>" />
                                         </p>
 
                                         <div class="parallax_one_general_control_icon" <?php  if(!empty($icon->choice) && $icon->choice!='parallax_icon'){ echo 'style="display:none"';}?>>
-                                            <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one');?></span>
+                                            <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one-lite');?></span>
                                             <select name="<?php echo esc_attr($this->id); ?>" class="parallax_one_icon_control">
                                             <?php
                                                 foreach($icons_array as $contact_icon) {
@@ -289,15 +289,15 @@ class Llorix_One_General_Repeater extends WP_Customize_Control {
                                     ?>
                                         <?php
                                             if($parallax_image_control == true){ ?>
-                                                <span class="customize-control-title"><?php esc_html_e('Image','llorix-one')?></span>
+                                                <span class="customize-control-title"><?php esc_html_e('Image','llorix-one-lite')?></span>
                                                 <p class="parallax_one_image_control">
                                                     <input type="text" class="widefat custom_media_url" value="<?php if(!empty($icon->image_url)) {echo esc_attr($icon->image_url);} ?>">
-                                                    <input type="button" class="button button-primary custom_media_button_parallax_one" value="<?php esc_html_e('Upload Image','llorix-one'); ?>" />
+                                                    <input type="button" class="button button-primary custom_media_button_parallax_one" value="<?php esc_html_e('Upload Image','llorix-one-lite'); ?>" />
                                                 </p>
                                         <?php }
 
                                             if($parallax_icon_control==true){ ?>
-                                                <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one')?></span>
+                                                <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one-lite')?></span>
                                                 <select name="<?php echo esc_attr($this->id); ?>" class="parallax_one_icon_control">
                                                 <?php
                                                     foreach($icons_array as $contact_icon) {
@@ -310,37 +310,37 @@ class Llorix_One_General_Repeater extends WP_Customize_Control {
                                         }
                                         if($parallax_title_control==true){
                                         ?>
-                                            <span class="customize-control-title"><?php esc_html_e('Title','llorix-one')?></span>
-                                            <input type="text" value="<?php if(!empty($icon->title)) echo esc_attr($icon->title); ?>" class="parallax_one_title_control" placeholder="<?php esc_html_e('Title','llorix-one'); ?>"/>
+                                            <span class="customize-control-title"><?php esc_html_e('Title','llorix-one-lite')?></span>
+                                            <input type="text" value="<?php if(!empty($icon->title)) echo esc_attr($icon->title); ?>" class="parallax_one_title_control" placeholder="<?php esc_html_e('Title','llorix-one-lite'); ?>"/>
                                         <?php
                                                 }
 
                                         if($parallax_subtitle_control==true){
                                         ?>
-                                            <span class="customize-control-title"><?php esc_html_e('Subtitle','llorix-one')?></span>
-                                            <input type="text" value="<?php if(!empty($icon->subtitle)) echo esc_attr($icon->subtitle); ?>" class="parallax_one_subtitle_control" placeholder="<?php esc_html_e('Subtitle','llorix-one'); ?>"/>
+                                            <span class="customize-control-title"><?php esc_html_e('Subtitle','llorix-one-lite')?></span>
+                                            <input type="text" value="<?php if(!empty($icon->subtitle)) echo esc_attr($icon->subtitle); ?>" class="parallax_one_subtitle_control" placeholder="<?php esc_html_e('Subtitle','llorix-one-lite'); ?>"/>
                                         <?php
                                         }
                                         if($parallax_text_control==true ){?>
-                                            <span class="customize-control-title"><?php esc_html_e('Text','llorix-one')?></span>
-                                            <textarea class="parallax_one_text_control" placeholder="<?php esc_html_e('Text','llorix-one'); ?>"><?php if(!empty($icon->text)) {echo esc_attr($icon->text);} ?></textarea>
+                                            <span class="customize-control-title"><?php esc_html_e('Text','llorix-one-lite')?></span>
+                                            <textarea class="parallax_one_text_control" placeholder="<?php esc_html_e('Text','llorix-one-lite'); ?>"><?php if(!empty($icon->text)) {echo esc_attr($icon->text);} ?></textarea>
                                         <?php }
 
                                         if($parallax_link_control){ ?>
-                                            <span class="customize-control-title"><?php esc_html_e('Link','llorix-one')?></span>
-                                            <input type="text" value="<?php if(!empty($icon->link)) echo esc_url($icon->link); ?>" class="parallax_one_link_control" placeholder="<?php esc_html_e('Link','llorix-one'); ?>"/>
+                                            <span class="customize-control-title"><?php esc_html_e('Link','llorix-one-lite')?></span>
+                                            <input type="text" value="<?php if(!empty($icon->link)) echo esc_url($icon->link); ?>" class="parallax_one_link_control" placeholder="<?php esc_html_e('Link','llorix-one-lite'); ?>"/>
                                         <?php }
                                         
                                 
                                         if($parallax_shortcode_control==true){ ?>
-                                            <span class="customize-control-title"><?php esc_html_e('Shortcode','llorix-one')?></span>
-                                            <input type="text" value='<?php if(!empty($icon->shortcode)) echo $icon->shortcode; ?>' class="parallax_one_shortcode_control" placeholder="<?php esc_html_e('Shortcode','llorix-one'); ?>"/>
+                                            <span class="customize-control-title"><?php esc_html_e('Shortcode','llorix-one-lite')?></span>
+                                            <input type="text" value='<?php if(!empty($icon->shortcode)) echo $icon->shortcode; ?>' class="parallax_one_shortcode_control" placeholder="<?php esc_html_e('Shortcode','llorix-one-lite'); ?>"/>
                                   <?php  }
                                         ?>
                                         <input type="hidden" class="parallax_one_box_id" value="<?php if(!empty($icon->id)) echo esc_attr($icon->id); ?>">
                                         <button type="button" class="parallax_one_general_control_remove_field button" <?php 
                                             if ($it == 0)
-                                            echo 'style="display:none;"'; ?>><?php esc_html_e('Delete field','llorix-one'); ?></button>
+                                            echo 'style="display:none;"'; ?>><?php esc_html_e('Delete field','llorix-one-lite'); ?></button>
                                     </div>
 
                                 </div>
@@ -362,7 +362,7 @@ class Llorix_One_General_Repeater extends WP_Customize_Control {
 
             <button type="button"   class="button add_field parallax_one_general_control_new_field"    
 
-            ><?php esc_html_e('Add new field','llorix-one'); ?></button>
+            ><?php esc_html_e('Add new field','llorix-one-lite'); ?></button>
 
             <?php
 

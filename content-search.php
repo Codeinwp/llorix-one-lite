@@ -49,13 +49,13 @@
 				
 					<?php
 						/* translators: used between list items, there is a space after the comma */
-						$categories_list = get_the_category_list( esc_html__( ', ', 'llorix-one' ) );
+						$categories_list = get_the_category_list( esc_html__( ', ', 'llorix-one-lite' ) );
                         if(!empty($categories_list)){
                         ?>
                             <span class="posted-in">
                                 <i class="icon-basic-elaboration-folder-check" aria-hidden="true"></i>
                         <?php
-                            esc_html_e('Posted in ','llorix-one');
+                            esc_html_e('Posted in ','llorix-one-lite');
                         
                             $pos = strpos($categories_list, ',');
                             if ( $pos ) {
@@ -68,7 +68,7 @@
 					?>
 				
 				<a href="<?php comments_link(); ?>" class="post-comments">
-					<i class="icon-comment-alt" aria-hidden="true"></i><?php comments_number( esc_html__('No comments','llorix-one'), esc_html__('One comment','llorix-one'), esc_html__('% comments','llorix-one') ); ?>
+					<i class="icon-comment-alt" aria-hidden="true"></i><?php comments_number( esc_html__('No comments','llorix-one-lite'), esc_html__('One comment','llorix-one-lite'), esc_html__('% comments','llorix-one-lite') ); ?>
 				</a>
 			</div><!-- .entry-meta -->
 
@@ -80,12 +80,12 @@
 	<div class="entry-content">
 		<?php
 			$ismore = @strpos( $post->post_content, '<!--more-->');
-			if($ismore) : the_content( sprintf( esc_html__('Read more %s ...','llorix-one'), '<span class="screen-reader-text">'.esc_html__('about ', 'llorix-one').get_the_title().'</span>' ) );
+			if($ismore) : the_content( sprintf( esc_html__('Read more %s ...','llorix-one-lite'), '<span class="screen-reader-text">'.esc_html__('about ', 'llorix-one-lite').get_the_title().'</span>' ) );
 			else : the_excerpt();
 			endif;
 			
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'llorix-one' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'llorix-one-lite' ),
 				'after'  => '</div>',
 			) );
 		?>
