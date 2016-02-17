@@ -19,9 +19,9 @@
 
 	if( !isset( $wp_customize ) ): 
 
-		$llorix_one_disable_preloader = get_theme_mod('llorix_one_disable_preloader');
+		$llorix_one_lite_disable_preloader = get_theme_mod('llorix_one_lite_disable_preloader');
 
-		if( isset($llorix_one_disable_preloader) && ($llorix_one_disable_preloader != 1)):
+		if( isset($llorix_one_lite_disable_preloader) && ($llorix_one_lite_disable_preloader != 1)):
 			 
 			echo '<div class="preloader">';
 				echo '<div class="status">&nbsp;</div>';
@@ -46,15 +46,12 @@
 	$sections_array = apply_filters(
 		"parallax_one_plus_sections_filter",
 		array(
-			'sections/parallax_one_logos_section',
-			'sections/parallax_one_our_services_section',
-			'sections/parallax_one_our_story_section',
-			'sections/parallax_one_our_team_section',
-			'sections/parallax_one_happy_customers_section',
-			'sections/parallax_one_ribbon_section',
-			'sections/parallax_one_latest_news_section',
-			'sections/parallax_one_contact_info_section',
-			'sections/parallax_one_map_section'
+			'sections/llorix_one_lite_logos_section',
+			'sections/llorix_one_lite_our_story_section',
+			'sections/llorix_one_lite_ribbon_section',
+			'sections/llorix_one_lite_latest_news_section',
+			'sections/llorix_one_lite_contact_info_section',
+			'sections/llorix_one_lite_map_section'
 			)
 		);
 

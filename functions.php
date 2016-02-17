@@ -280,71 +280,7 @@ function llorix_one_add_id(){
 			$llorix_one_logos = json_encode($llorix_one_logos_decoded);
 			set_theme_mod( 'llorix_one_logos_content', $llorix_one_logos );
 		}
-		
-		
-		/*Services*/
-		$llorix_one_services = get_theme_mod('llorix_one_services_content', json_encode(
-							array(
-									array('choice'=>'parallax_icon','icon_value' => 'icon-basic-webpage-multiple','title' => esc_html__('Lorem Ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one-lite')),
-									array('choice'=>'parallax_icon','icon_value' => 'icon-ecommerce-graph3','title' => esc_html__('Lorem Ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one-lite')),
-									array('choice'=>'parallax_icon','icon_value' => 'icon-basic-geolocalize-05','title' => esc_html__('Lorem Ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one-lite'))
-							)
-						));
-		if(!empty($llorix_one_services)){
-			
-			$llorix_one_services_decoded = json_decode($llorix_one_services);
-			foreach($llorix_one_services_decoded as &$it){
-				if(!array_key_exists ( "id" , $it ) || !($it->id) ){
-					$it = (object) array_merge( (array)$it, array( 'id' => 'parallax_one_'.uniqid() ) );
-				}
-			}
-			
-			$llorix_one_services = json_encode($llorix_one_services_decoded);
-			set_theme_mod( 'llorix_one_services_content', $llorix_one_services );
-		}
-		
-		/*Team*/
-		$llorix_one_team = get_theme_mod('llorix_one_team_content', json_encode(
-							array(
-									array('image_url' => llorix_one_lite_get_file('/images/team/1.jpg'),'title' => esc_html__('Albert Jacobs','llorix-one-lite'),'subtitle' => esc_html__('Founder & CEO','llorix-one-lite')),
-									array('image_url' => llorix_one_lite_get_file('/images/team/2.jpg'),'title' => esc_html__('Tonya Garcia','llorix-one-lite'),'subtitle' => esc_html__('Account Manager','llorix-one-lite')),
-									array('image_url' => llorix_one_lite_get_file('/images/team/3.jpg'),'title' => esc_html__('Linda Guthrie','llorix-one-lite'),'subtitle' => esc_html__('Business Development','llorix-one-lite'))
-							)
-						));
-		if(!empty($llorix_one_team)){
-			
-			$llorix_one_team_decoded = json_decode($llorix_one_team);
-			foreach($llorix_one_team_decoded as &$it){
-				if(!array_key_exists ( "id" , $it ) || !($it->id) ){
-					$it = (object) array_merge( (array)$it, array( 'id' => 'parallax_one_'.uniqid() ) );
-				}
-			}
-			
-			$llorix_one_team = json_encode($llorix_one_team_decoded);
-			set_theme_mod( 'llorix_one_team_content', $llorix_one_team );
-		}
-		
-		/*Testimonials*/
-		$llorix_one_testimonials = get_theme_mod('llorix_one_testimonials_content', json_encode(
-							array(
-									array('image_url' => llorix_one_lite_get_file('/images/clients/1.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite')),
-									array('image_url' => llorix_one_lite_get_file('/images/clients/2.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite')),
-									array('image_url' => llorix_one_lite_get_file('/images/clients/3.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite'))
-							)
-						));
-		if(!empty($llorix_one_testimonials)){
-			
-			$llorix_one_testimonials_decoded = json_decode($llorix_one_testimonials);
-			foreach($llorix_one_testimonials_decoded as &$it){
-				if(!array_key_exists ( "id" , $it ) || !($it->id) ){
-					$it = (object) array_merge( (array)$it, array( 'id' => 'parallax_one_'.uniqid() ) );
-				}
-			}
-			
-			$llorix_one_testimonials = json_encode($llorix_one_testimonials_decoded);
-			set_theme_mod( 'llorix_one_testimonials_content', $llorix_one_testimonials );
-		}
-		
+
 		/*Contact Info*/
 		$llorix_one_contact_info = get_theme_mod('llorix_one_contact_info_content', json_encode(
 			array( 
@@ -562,20 +498,20 @@ function llorix_one_lite_get_file($file){
  *
  */ 
 
-add_filter( 'woocommerce_output_related_products_args', 'llorix_one_related_products_args' );
+add_filter( 'woocommerce_output_related_products_args', 'llorix_one_lite_related_products_args' );
 
-function llorix_one_related_products_args( $args ) {
+function llorix_one_lite_related_products_args( $args ) {
 	$args['posts_per_page'] = 4;
 	$args['columns'] = 4;
 	return $args;
 }
 
-function llorix_one_responsive_embed($html, $url, $attr, $post_ID) {
+function llorix_one_lite_responsive_embed($html, $url, $attr, $post_ID) {
 	$return = '<div class="parallax-one-video-container">'.$html.'</div>';
 	return $return;
 }
 
-add_filter( 'embed_oembed_html', 'llorix_one_responsive_embed', 10, 4 );
+add_filter( 'embed_oembed_html', 'llorix_one_lite_responsive_embed', 10, 4 );
 
 /* Comments callback function*/
 function llorix_one_lite_comment($comment, $args, $depth) {
@@ -632,95 +568,6 @@ function llorix_one_lite_comment($comment, $args, $depth) {
 /*Polylang repeater translate*/
 
 if(function_exists('icl_unregister_string') && function_exists('icl_register_string')){
-	
-	/*Services*/
-	$llorix_one_services_pl = get_theme_mod('llorix_one_services_content');
-	if(!empty($llorix_one_services_pl)){
-		$llorix_one_services_pl_decoded = json_decode($llorix_one_services_pl);
-		foreach($llorix_one_services_pl_decoded as $llorix_one_service_box){
-			$title = $llorix_one_service_box->title;
-			$text = $llorix_one_service_box->text;
-			$id = $llorix_one_service_box->id;
-			$link = $llorix_one_service_box->link;
-			if(!empty($id)) {
-				if(!empty($title)){
-					icl_unregister_string ('Featured Area' , $id.'_services_title' );
-					icl_register_string( 'Featured Area' , $id.'_services_title' , $title );
-				} else {
-					icl_unregister_string ('Featured Area' , $id.'_services_title' );
-				}
-				if(!empty($text)){
-					icl_unregister_string ('Featured Area' , $id.'_services_text' );
-					icl_register_string( 'Featured Area' , $id.'_services_text' , $text );
-				} else {
-					icl_unregister_string ('Featured Area' , $id.'_services_text' );
-				}
-				if(!empty($link)){
-					icl_unregister_string ('Featured Area' , $id.'_services_link' );
-					icl_register_string( 'Featured Area' , $id.'_services_link' , $link );
-				} else {
-					icl_unregister_string ('Featured Area' , $id.'_services_link' );
-				}
-			}
-		}
-	}
-	
-	/*Team*/
-	$llorix_one_team_pl = get_theme_mod('llorix_one_team_content');
-	if(!empty($llorix_one_team_pl)){
-		$llorix_one_team_pl_decoded = json_decode($llorix_one_team_pl);
-		foreach($llorix_one_team_pl_decoded as $llorix_one_team_box){
-			$title = $llorix_one_team_box->title;
-			$text = $llorix_one_team_box->subtitle;
-			$id = esc_attr($llorix_one_team_box->id);
-			if(!empty($id)) {
-				if(!empty($title)){
-					icl_unregister_string ('Team' , $id.'_team_title' );
-					icl_register_string( 'Team' , $id.'_team_title' , $title );
-				} else {
-					icl_unregister_string ('Team' , $id.'_team_title' );
-				}
-				if(!empty($text)){
-					icl_unregister_string ('Team' , $id.'_team_subtitle' );
-					icl_register_string( 'Team' , $id.'_team_subtitle' , $text );
-				} else {
-					icl_unregister_string ('Team' , $id.'_team_subtitle' );
-				}
-			}
-		}
-	}
-	
-	/*Testimonials*/
-	$llorix_one_testimonials_pl = get_theme_mod('llorix_one_testimonials_content');
-	if(!empty($llorix_one_testimonials_pl)){
-		$llorix_one_testimonials_pl_decoded = json_decode($llorix_one_testimonials_pl);
-		foreach($llorix_one_testimonials_pl_decoded as $llorix_one_testimonials_box){
-			$title = $llorix_one_testimonials_box->title;
-			$subtitle = $llorix_one_testimonials_box->subtitle;
-			$text = $llorix_one_testimonials_box->text;
-			$id = esc_attr($llorix_one_testimonials_box->id);
-			if(!empty($id)) {
-				if(!empty($title)){
-					icl_unregister_string ('Testimonials' , $id.'_testimonials_title' );
-					icl_register_string( 'Testimonials' , $id.'_testimonials_title' , $title );
-				} else {
-					icl_unregister_string ('Testimonials' , $id.'_testimonials_title' );
-				}
-				if(!empty($subtitle)){
-					icl_unregister_string ('Testimonials' , $id.'_testimonials_subtitle' );
-					icl_register_string( 'Testimonials' , $id.'_testimonials_subtitle' , $subtitle );
-				} else {
-					icl_unregister_string ('Testimonials' , $id.'_testimonials_subtitle' );
-				}
-				if(!empty($text)){
-					icl_unregister_string ('Testimonials' , $id.'_testimonials_text' );
-					icl_register_string( 'Testimonials' , $id.'_testimonials_text' , $text );
-				} else {
-					icl_unregister_string ('Testimonials' , $id.'_testimonials_text' );
-				}
-			}
-		}
-	}
 	
 	/*Contact*/
 	$llorix_one_contact_pl = get_theme_mod('llorix_one_contact_info_content');

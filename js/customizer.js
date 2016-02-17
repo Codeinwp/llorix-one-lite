@@ -37,7 +37,7 @@
 	
 		
 	//Very top header Phone
-	wp.customize("llorix_one_very_top_header_phone", function(value) {
+	wp.customize("llorix_one_lite_very_top_header_phone", function(value) {
 		
         value.bind(function( to ) {
 			$( '.very-top-left span' ).html( to );
@@ -210,136 +210,6 @@
 		});
 		
 	});
-
-	/******************************************************
-	*********** OUR SERVICES SECTION **************
-	*******************************************************/
-	
-	
-	//Title
-	wp.customize("llorix_one_our_services_title", function(value) {
-		
-        value.bind(function( to ) {
-			if( to != '' ) {
-				$( '.services' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.services .section-header h2' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$('.services .section-header .colored-line' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.services .section-header h2' ).text( to );
-			}
-			else {
-				$( '.services .section-header h2' ).addClass( 'llorix_one_lite_only_customizer' );
-				$('.services .section-header .colored-line' ).addClass( 'llorix_one_lite_only_customizer' );
-				if($( '.services .section-header .sub-heading' ).hasClass('llorix_one_lite_only_customizer') && isEmpty($('.parallax_one_grid_column_1')) && isEmpty($('.parallax_one_grid_column_2')) && isEmpty($('.parallax_one_grid_column_3')) ){
-					$( '.services' ).addClass( 'llorix_one_lite_only_customizer' );
-				}
-			}
-	    } );
-		
-    });
-	
-	//Subtitle
-	wp.customize("llorix_one_our_services_subtitle", function(value) {
-		
-        value.bind(function( to ) {
-			if( to != '' ) {
-				$( '.services' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.services .section-header .sub-heading' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.services .section-header .sub-heading' ).text( to );
-			} else {
-				$( '.services .section-header .sub-heading' ).addClass( 'llorix_one_lite_only_customizer' );
-				if($( '.services .section-header h2' ).hasClass('llorix_one_lite_only_customizer')  && isEmpty($('.parallax_one_grid_column_1')) && isEmpty($('.parallax_one_grid_column_2')) && isEmpty($('.parallax_one_grid_column_3'))){
-					$( '.services' ).addClass( 'llorix_one_lite_only_customizer' );
-				}
-			}
-		} );
-		
-    });
-
-	
-	/******************************************************
-	*********** OUR TEAM SECTION **************
-	*******************************************************/
-	//Title
-	wp.customize("llorix_one_our_team_title", function(value) {
-		
-        value.bind(function( to ) {
-			
-			if( to != '' ) {
-				$( '.team' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.team .section-header h2' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.team .section-header .colored-line' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.team .section-header h2' ).text( to );
-			} else {
-				$( '.team .section-header h2' ).addClass( 'llorix_one_lite_only_customizer' );
-				$( '.team .section-header .colored-line' ).addClass( 'llorix_one_lite_only_customizer' );
-				if( $( '.team .section-header .sub-heading' ).hasClass( 'llorix_one_lite_only_customizer' ) && isEmpty($('.team .team-member-wrap')) ){
-					$( '.team' ).addClass( 'llorix_one_lite_only_customizer' );
-				}
-			}
-	    } );
-		
-    });
-	
-	//Subtitle
-	wp.customize("llorix_one_our_team_subtitle", function(value) {
-		
-        value.bind(function( to ) {
-			if( to != '' ) {
-				$( '.team' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.team .section-header .sub-heading' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.team .section-header .sub-heading' ).text( to );
-			} else {
-				$( '.team .section-header .sub-heading' ).addClass( 'llorix_one_lite_only_customizer' );
-				if( $( '.team .section-header h2' ).hasClass('llorix_one_lite_only_customizer') && isEmpty($('.team .team-member-wrap')) ){
-					$( '.team' ).addClass( 'llorix_one_lite_only_customizer' );
-				}
-			}
-		} );
-		
-    });
-	
-
-	/******************************************************
-	******** HAPPY CUSTOMERS SECTION ***********
-	*******************************************************/
-	//Title
-	wp.customize("llorix_one_happy_customers_title", function(value) {
-		
-        value.bind(function( to ) {
-			
-			if( to != '' ) {
-				$( '.testimonials' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.testimonials .section-header h2' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.testimonials .section-header .colored-line' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.testimonials .section-header h2' ).text( to );
-			} else {
-				$( '.testimonials .section-header h2' ).addClass( 'llorix_one_lite_only_customizer' );
-				$( '.testimonials .section-header .colored-line' ).addClass( 'llorix_one_lite_only_customizer' );
-				if( $( '.testimonials .section-header .sub-heading').hasClass('llorix_one_lite_only_customizer') && isEmpty($('.testimonials .testimonials-wrap .parallax_one_grid_column_1')) && isEmpty($('.testimonials .testimonials-wrap .parallax_one_grid_column_2')) && isEmpty($('.testimonials .testimonials-wrap .parallax_one_grid_column_3'))){
-					$( '.testimonials' ).addClass( 'llorix_one_lite_only_customizer' );
-				}
-			}
-	    } );
-		
-    });
-	
-	//Subtitle
-	wp.customize("llorix_one_happy_customers_subtitle", function(value) {
-		
-        value.bind(function( to ) {
-			if( to != '' ) {
-				$( '.testimonials' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.testimonials .section-header .sub-heading' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$( '.testimonials .section-header .sub-heading' ).text( to );
-			} else {
-				$( '.testimonials .section-header .sub-heading' ).addClass( 'llorix_one_lite_only_customizer' );
-				if( $( '.testimonials .section-header h2').hasClass('llorix_one_lite_only_customizer') && isEmpty($('.testimonials .testimonials-wrap .parallax_one_grid_column_1')) && isEmpty($('.testimonials .testimonials-wrap .parallax_one_grid_column_2')) && isEmpty($('.testimonials .testimonials-wrap .parallax_one_grid_column_3')) ){
-					$( '.testimonials' ).addClass( 'llorix_one_lite_only_customizer' );
-				}
-			}
-		} );
-		
-    });
 
 	/******************************************************
 	**************** RIBBON SECTION *****************

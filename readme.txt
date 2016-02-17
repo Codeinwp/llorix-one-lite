@@ -1,4 +1,4 @@
-# Llorix One
+# Llorix One Lite
 
 Contributors: codeinwp
 
@@ -8,16 +8,16 @@ Requires at least:	3.3.0
 
 Tested up to:		4.4
 
-Llorix One
+Llorix One Lite
 
 ## Description
 
-Description: Llorix One is a free and beautiful business WordPress theme, with a flat clean design and an elegant parallax effect. It provides a simple and professional look that can be used for any kind of businesses or startups. Llorix One has a blue & orange appearance, with buttons and icons promoting simplicity and elegance at their best. The theme provides a responsive blog section, is ecommerce ready (WooCommerce compatible), WPML and SEO friendly. You can use it for your business / startup, agencies, corporate websites, or portfolios. 
+Description: Llorix One Lite is a free and beautiful business WordPress theme, with a flat clean design and an elegant parallax effect. It provides a simple and professional look that can be used for any kind of businesses or startups. Llorix One has a blue & orange appearance, with buttons and icons promoting simplicity and elegance at their best. The theme provides a responsive blog section, is ecommerce ready (WooCommerce compatible), WPML and SEO friendly. You can use it for your business / startup, agencies, corporate websites, or portfolios.
 
 ## License #
 
-Llorix One WordPress theme, Copyright (C) 2015 ThemeIsle.com
-Llorix One WordPress theme is licensed under the GPL3.
+Llorix One Lite WordPress theme, Copyright (C) 2015 ThemeIsle.com
+Llorix One Lite WordPress theme is licensed under the GPL3.
 
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License.
 The exceptions to this license are as follows:
@@ -46,12 +46,6 @@ The exceptions to this license are as follows:
 			Source: https://download.unsplash.com/31/8jLdwLg6TLKIQfJcZgDb_Freedom_5.jpg
 	* images/background-images/parallax-img/parallax-img1.jpg
 			Source: https://download.unsplash.com/photo-1434626881859-194d67b2b86f
-	* images/team/1.jpg
-			Source: https://download.unsplash.com/reserve/ysPfhVSzSP2m629CW0mw_selfPortrait.jpg
-	* images/team/2.jpg
-			Source: https://download.unsplash.com/photo-1418833893919-fa9c83e8d69e
-	* images/team/3.jpg
-			Source: https://download.unsplash.com/photo-1433170897235-615700336230
 	* images/clients/1.jpg
 			Source: https://download.unsplash.com/photo-1433615988899-12bdf1bd42b6
 	* images/clients/2.jpg
