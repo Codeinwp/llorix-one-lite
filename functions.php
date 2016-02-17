@@ -110,8 +110,8 @@ function llorix_one_lite_setup() {
 	// Latest news Section (homepage)
 	add_image_size( 'llorix-one-lite-post-thumbnail-latest-news', 150, 150, true );
 	
-	if( !get_option( 'parallax_one_migrate_translation' ) ) {
-		add_option( 'parallax_one_migrate_translation', false );
+	if( !get_option( 'llorix_one_lite_migrate_translation' ) ) {
+		add_option( 'llorix_one_lite_migrate_translation', false );
 	}
 	
 	/**
@@ -249,7 +249,7 @@ add_action( 'wp_enqueue_scripts', 'llorix_one_lite_scripts' );
 
 
 function llorix_one_add_id(){
-	$migrate = get_option( 'parallax_one_migrate_translation' );
+	$migrate = get_option( 'llorix_one_lite_migrate_translation' );
 	if( isset($migrate) && $migrate == false ) {
 		
 		/*Logo*/
@@ -259,7 +259,7 @@ function llorix_one_add_id(){
 			$llorix_one_lite_logos_decoded = json_decode($llorix_one_lite_logos);
 			foreach($llorix_one_lite_logos_decoded as &$it){
 				if(!array_key_exists ( "id" , $it ) || !($it->id) ){
-					$it = (object) array_merge( (array)$it, array( 'id' => 'parallax_one_'.uniqid() ) );
+					$it = (object) array_merge( (array)$it, array( 'id' => 'llorix_one_lite_'.uniqid() ) );
 				}
 			}
 			$llorix_one_lite_logos = json_encode($llorix_one_lite_logos_decoded);
@@ -279,7 +279,7 @@ function llorix_one_add_id(){
 			$llorix_one_lite_contact_info_decoded = json_decode($llorix_one_lite_contact_info);
 			foreach($llorix_one_lite_contact_info_decoded as &$it){
 				if(!array_key_exists ( "id" , $it ) || !($it->id) ){
-					$it = (object) array_merge( (array)$it, array( 'id' => 'parallax_one_'.uniqid() ) );
+					$it = (object) array_merge( (array)$it, array( 'id' => 'llorix_one_lite_'.uniqid() ) );
 				}
 			}
 			
@@ -300,7 +300,7 @@ function llorix_one_add_id(){
 			$llorix_one_lite_social_icons_decoded = json_decode($llorix_one_lite_social_icons);
 			foreach($llorix_one_lite_social_icons_decoded as &$it){
 				if(!array_key_exists ( "id" , $it ) || !($it->id) ){
-					$it = (object) array_merge( (array)$it, array( 'id' => 'parallax_one_'.uniqid() ) );
+					$it = (object) array_merge( (array)$it, array( 'id' => 'llorix_one_lite_'.uniqid() ) );
 				}
 			}
 			
@@ -308,7 +308,7 @@ function llorix_one_add_id(){
 			set_theme_mod( 'llorix_one_lite_social_icons', $llorix_one_lite_social_icons );
 		}
 		
-		update_option( 'parallax_one_migrate_translation', true );
+		update_option( 'llorix_one_lite_migrate_translation', true );
 	}
 }
 add_action( 'shutdown', 'llorix_one_add_id' );
@@ -334,7 +334,7 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 function llorix_one_admin_styles() {
-	wp_enqueue_style( 'parallax_admin_stylesheet', llorix_one_lite_get_file('/css/admin-style.css'),'1.0.0' );
+	wp_enqueue_style( 'llorix_one_lite_admin_stylesheet', llorix_one_lite_get_file('/css/admin-style.css'),'1.0.0' );
 }
 add_action( 'admin_enqueue_scripts', 'llorix_one_admin_styles', 10 );
 
@@ -492,7 +492,7 @@ function llorix_one_lite_related_products_args( $args ) {
 }
 
 function llorix_one_lite_responsive_embed($html, $url, $attr, $post_ID) {
-	$return = '<div class="parallax-one-video-container">'.$html.'</div>';
+	$return = '<div class="llorix-one-lite-video-container">'.$html.'</div>';
 	return $return;
 }
 

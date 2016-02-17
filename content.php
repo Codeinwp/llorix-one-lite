@@ -32,7 +32,7 @@
 					<?php } ?>
 
 				</a>
-				<div class="parallax-one-post-meta" itemprop="datePublished" datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>">
+				<div class="llorix-one-lite-post-meta" itemprop="datePublished" datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>">
 					<?php the_time( get_option('date_format') ); ?>
 				</div>
 				<div class="post-date entry-published updated">

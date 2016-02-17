@@ -13,7 +13,7 @@
 			<div class="clearfix"></div>
 		</header><!-- .entry-header -->
 
-		<div class="entry-content content-page parallax_one_contact_form">
+		<div class="entry-content content-page llorix_one_lite_contact_form">
 
 			<?php
 				$llorix_one_lite_contact_form_shortcode = get_theme_mod('llorix_one_lite_contact_form_shortcode');

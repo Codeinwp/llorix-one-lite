@@ -163,10 +163,10 @@ function scrolled() {
         // for all sections check if the cursor is inside a section
         jQuery("section").each( function() {
             var thisID = '#' + jQuery(this).attr('id');           // section id
-            var parallax_one_offset = jQuery(this).offset().top;         // distance between top and our section
+            var llorix_one_lite_offset = jQuery(this).offset().top;         // distance between top and our section
             var thisHeight  = jQuery(this).outerHeight();         // section height
-            var thisBegin   = parallax_one_offset - headerHeight;                      // where the section begins
-            var thisEnd     = parallax_one_offset + thisHeight - headerHeight;         // where the section ends  
+            var thisBegin   = llorix_one_lite_offset - headerHeight;                      // where the section begins
+            var thisEnd     = llorix_one_lite_offset + thisHeight - headerHeight;         // where the section ends
             // if position of the cursor is inside of the this section
             if ( llorix_one_lite_scrollTop >= thisBegin && llorix_one_lite_scrollTop <= thisEnd ) {
                 isInOneSection = 'yes';
@@ -229,14 +229,14 @@ var window_width_old;
 jQuery(document).ready(function(){
     window_width_old = jQuery('.container').width();
     if( window_width_old <= 462 ) {
-        jQuery('.post-type-archive-product .products').parallaxonegridpinterest({columns: 1,selector: '.product', calcMin: false});
-        jQuery('.cart-collaterals .products').parallaxonegridpinterest({columns: 1,selector: '.product', calcMin: false});
+        jQuery('.post-type-archive-product .products').llorix_one_lite_gridpinterest({columns: 1,selector: '.product', calcMin: false});
+        jQuery('.cart-collaterals .products').llorix_one_lite_gridpinterest({columns: 1,selector: '.product', calcMin: false});
     } else if( window_width_old <= 750  ){
-        jQuery('.post-type-archive-product .products').parallaxonegridpinterest({columns: 2,selector: '.product', calcMin: false});
-        jQuery('.cart-collaterals .products').parallaxonegridpinterest({columns: 1,selector: '.product', calcMin: false});
+        jQuery('.post-type-archive-product .products').llorix_one_lite_gridpinterest({columns: 2,selector: '.product', calcMin: false});
+        jQuery('.cart-collaterals .products').llorix_one_lite_gridpinterest({columns: 1,selector: '.product', calcMin: false});
     } else {
-        jQuery('.post-type-archive-product .products').parallaxonegridpinterest({columns: 4,selector: '.product', calcMin: false});
-        jQuery('.cart-collaterals .products').parallaxonegridpinterest({columns: 2,selector: '.product', calcMin: false});
+        jQuery('.post-type-archive-product .products').llorix_one_lite_gridpinterest({columns: 4,selector: '.product', calcMin: false});
+        jQuery('.cart-collaterals .products').llorix_one_lite_gridpinterest({columns: 2,selector: '.product', calcMin: false});
     }
 });
 
@@ -244,14 +244,14 @@ jQuery(window).resize(function() {
     if( window_width_old != jQuery('.container').outerWidth() ){
         window_width_old = jQuery('.container').outerWidth();
         if( window_width_old <= 462 ) {
-            jQuery('.post-type-archive-product .products').parallaxonegridpinterest({columns: 1,selector: '.product', calcMin: false});
-            jQuery('.cart-collaterals .products').parallaxonegridpinterest({columns: 1,selector: '.product', calcMin: false});
+            jQuery('.post-type-archive-product .products').llorix_one_lite_gridpinterest({columns: 1,selector: '.product', calcMin: false});
+            jQuery('.cart-collaterals .products').llorix_one_lite_gridpinterest({columns: 1,selector: '.product', calcMin: false});
         } else if( window_width_old <= 750  ){
-            jQuery('.post-type-archive-product .products').parallaxonegridpinterest({columns: 2,selector: '.product', calcMin: false});
-            jQuery('.cart-collaterals .products').parallaxonegridpinterest({columns: 1,selector: '.product', calcMin: false});
+            jQuery('.post-type-archive-product .products').llorix_one_lite_gridpinterest({columns: 2,selector: '.product', calcMin: false});
+            jQuery('.cart-collaterals .products').llorix_one_lite_gridpinterest({columns: 1,selector: '.product', calcMin: false});
         } else {
-            jQuery('.post-type-archive-product .products').parallaxonegridpinterest({columns: 4,selector: '.product', calcMin: false});
-            jQuery('.cart-collaterals .products').parallaxonegridpinterest({columns: 2,selector: '.product', calcMin: false});
+            jQuery('.post-type-archive-product .products').llorix_one_lite_gridpinterest({columns: 4,selector: '.product', calcMin: false});
+            jQuery('.cart-collaterals .products').llorix_one_lite_gridpinterest({columns: 2,selector: '.product', calcMin: false});
         }
     }
 });
@@ -263,19 +263,19 @@ jQuery(window).resize(function() {
             excludeParentClass:     '',
             calcMin:                true
         };
-    function ParallaxOneGridPinterest(element, options) {
+    function LlorixOneLiteGridPinterest(element, options) {
         this.element    = element;
         this.options    = $.extend({}, defaults, options);
         this.defaults   = defaults;
         this.init();
     }
-    ParallaxOneGridPinterest.prototype.init = function () {
+    LlorixOneLiteGridPinterest.prototype.init = function () {
         var self            = this,
             $container      = $(this.element);
             $select_options = $(this.element).children();
         self.make_magic( $container, $select_options );
     };
-    ParallaxOneGridPinterest.prototype.make_magic = function (container) {
+    LlorixOneLiteGridPinterest.prototype.make_magic = function (container) {
         var self            = this;
             $container      = $(container),
             columns_height  = [],
@@ -344,7 +344,7 @@ jQuery(window).resize(function() {
         $container.remove();
     }
     
-    ParallaxOneGridPinterest.prototype.make_unique = function () {
+    LlorixOneLiteGridPinterest.prototype.make_unique = function () {
         var text = "";
         var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         for( var i=0; i<10; i++ )
@@ -352,7 +352,7 @@ jQuery(window).resize(function() {
         return text;
     }
     
-    ParallaxOneGridPinterest.prototype.allValuesSame = function(arr) {
+    LlorixOneLiteGridPinterest.prototype.allValuesSame = function(arr) {
         for(var i = 1; i < arr.length; i++){
             if(arr[i] !== arr[0])
                 return false;
@@ -360,11 +360,11 @@ jQuery(window).resize(function() {
         return true;
     }
     
-    $.fn.parallaxonegridpinterest = function (options) {
+    $.fn.llorix_one_lite_gridpinterest = function (options) {
         return this.each(function () {
             var value = '';
             if (!$.data(this, value)) {
-                $.data(this, value, new ParallaxOneGridPinterest(this, options) );
+                $.data(this, value, new LlorixOneLiteGridPinterest(this, options) );
             }
         });
     }
@@ -489,7 +489,7 @@ var isMobile = {
 		}
 
 		if ( 'ontouchstart' in window ) {
-			siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.parallax-one', function( e ) {
+			siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.llorix-one-lite', function( e ) {
 				var el = $( this ).parent( 'li' );
 				if ( ! el.hasClass( 'focus' ) ) {
 					e.preventDefault();
@@ -499,7 +499,7 @@ var isMobile = {
 			} );
 		}
 
-		siteNavigation.find( 'a' ).on( 'focus.parallax-one blur.parallax-one', function() {
+		siteNavigation.find( 'a' ).on( 'focus.llorix-one-lite blur.llorix-one-lite', function() {
 			$( this ).parents( '.menu-item' ).toggleClass( 'focus' );
 		} );
 	} )();
@@ -529,7 +529,7 @@ var isMobile = {
 	}
     
     $( document ).ready( function() {
-		$( window ).on( 'load.parallax-one', onResizeARIA )
+		$( window ).on( 'load.llorix-one-lite', onResizeARIA )
 	} );
     
     

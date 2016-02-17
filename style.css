@@ -2300,14 +2300,14 @@ div.wpcf7-mail-sent-ng {
 	width: 100%;
 }
 
-.parallax_one_contact_form input:not([type="submit"]){
+.llorix_one_lite_contact_form input:not([type="submit"]){
 	width: 100%;
 }
-.parallax_one_contact_form input[type="text"],
-.parallax_one_contact_form input[type="email"],
-.parallax_one_contact_form input[type="url"],
-.parallax_one_contact_form input[type="password"],
-.parallax_one_contact_form input[type="search"] {
+.llorix_one_lite_contact_form input[type="text"],
+.llorix_one_lite_contact_form input[type="email"],
+.llorix_one_lite_contact_form input[type="url"],
+.llorix_one_lite_contact_form input[type="password"],
+.llorix_one_lite_contact_form input[type="search"] {
 	padding: 10px;
 }
 
@@ -4394,15 +4394,15 @@ a:hover {
 	border: 1px solid #E7E7E7;
 }
 
-.parallax-one-video-container {
+.llorix-one-lite-video-container {
 	position: relative;
 	padding-bottom: 56.25%;
 	padding-top: 30px; height: 0; overflow: hidden;
 }
  
-.parallax-one-video-container iframe,
-.parallax-one-video-container object,
-.parallax-one-video-container embed {
+.llorix-one-lite-video-container iframe,
+.llorix-one-lite-video-container object,
+.llorix-one-lite-video-container embed {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -4410,7 +4410,7 @@ a:hover {
 	max-height: 100%;
 }
 
-.parallax-one-post-meta{
+.llorix-one-lite-post-meta{
 	visibility: none;
 	position: absolute;
 }

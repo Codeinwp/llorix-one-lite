@@ -94,7 +94,7 @@
 							
 								foreach($llorix_one_lite_social_icons_decoded as $llorix_one_lite_social_icon){
 									
-									echo '<li><a href="'.esc_url($llorix_one_lite_social_icon->link).'"><span class="parallax-one-footer-icons '.esc_attr($llorix_one_lite_social_icon->icon_value).' transparent-text-dark" aria-hidden="true"></span><span class="screen-reader-text">'.esc_attr(explode("-",$llorix_one_lite_social_icon->icon_value)[2]).'</span></a></li>';
+									echo '<li><a href="'.esc_url($llorix_one_lite_social_icon->link).'"><span class="llorix-one-lite-footer-icons '.esc_attr($llorix_one_lite_social_icon->icon_value).' transparent-text-dark" aria-hidden="true"></span><span class="screen-reader-text">'.esc_attr(explode("-",$llorix_one_lite_social_icon->icon_value)[2]).'</span></a></li>';
 
 								}
 						
