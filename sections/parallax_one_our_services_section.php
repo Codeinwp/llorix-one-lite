@@ -27,7 +27,7 @@
 							if( !empty($llorix_one_our_services_title) ){
 								echo '<h2 class="dark-text">'.esc_attr($llorix_one_our_services_title).'</h2><div class="colored-line"></div>';
 							} elseif ( isset( $wp_customize )   ) {
-								echo '<h2 class="dark-text llorix_one_only_customizer"></h2><div class="colored-line llorix_one_only_customizer"></div>';
+								echo '<h2 class="dark-text llorix_one_lite_only_customizer"></h2><div class="colored-line llorix_one_lite_only_customizer"></div>';
 							}
 						?>
 
@@ -35,7 +35,7 @@
 							if( !empty($llorix_one_our_services_subtitle) ){
 								echo '<div class="sub-heading">'.esc_attr($llorix_one_our_services_subtitle).'</div>';
 							} elseif ( isset( $wp_customize )   ) {
-								echo '<div class="sub-heading llorix_one_only_customizer"></div>';
+								echo '<div class="sub-heading llorix_one_lite_only_customizer"></div>';
 							}
 						?>
 					</div>
@@ -145,12 +145,12 @@
 	} else {
 		if( isset( $wp_customize ) ) {
 ?>
-			<section class="services llorix_one_only_customizer" id="services" role="region" aria-label="<?php esc_html_e('Services','llorix-one-lite') ?>">
+			<section class="services llorix_one_lite_only_customizer" id="services" role="region" aria-label="<?php esc_html_e('Services','llorix-one-lite') ?>">
 				<div class="section-overlay-layer">
 					<div class="container">
 						<div class="section-header">
-							<h2 class="dark-text llorix_one_only_customizer"></h2><div class="colored-line llorix_one_only_customizer"></div>
-							<div class="sub-heading llorix_one_only_customizer"></div>
+							<h2 class="dark-text llorix_one_lite_only_customizer"></h2><div class="colored-line llorix_one_lite_only_customizer"></div>
+							<div class="sub-heading llorix_one_lite_only_customizer"></div>
 						</div>
 					</div>
 				</div>

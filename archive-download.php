@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 	get_header(); 
 ?>

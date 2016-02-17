@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 
 	get_header(); 
@@ -16,27 +16,27 @@
 <!-- /END HOME / HEADER  -->
 
 <?php
-	$llorix_one_blog_header_image = get_theme_mod( 'llorix_one_blog_header_image', llorix_one_get_file('/images/background-images/background-blog.jpg') );
-	$llorix_one_blog_header_title = get_theme_mod( 'llorix_one_blog_header_title', esc_html__('BLOG','llorix-one-lite')  );
-	$llorix_one_blog_header_subtitle = get_theme_mod( 'llorix_one_blog_header_subtitle' );
+	$llorix_one_lite_blog_header_image = get_theme_mod( 'llorix_one_lite_blog_header_image', llorix_one_lite_get_file('/images/background-images/background-blog.jpg') );
+	$llorix_one_lite_blog_header_title = get_theme_mod( 'llorix_one_lite_blog_header_title', esc_html__('BLOG','llorix-one-lite')  );
+	$llorix_one_lite_blog_header_subtitle = get_theme_mod( 'llorix_one_lite_blog_header_subtitle' );
 	
-	if( !empty($llorix_one_blog_header_image) || !empty($llorix_one_blog_header_title) || !empty($llorix_one_blog_header_subtitle) ):
+	if( !empty($llorix_one_lite_blog_header_image) || !empty($llorix_one_lite_blog_header_title) || !empty($llorix_one_lite_blog_header_subtitle) ):
 		
-		if( !empty($llorix_one_blog_header_image) ):
-			echo '<div class="archive-top" style="background-image: url('.$llorix_one_blog_header_image.');">';
+		if( !empty($llorix_one_lite_blog_header_image) ):
+			echo '<div class="archive-top" style="background-image: url('.$llorix_one_lite_blog_header_image.');">';
 		else:
 			echo '<div class="archive-top">';
 		endif;
 				echo '<div class="section-overlay-layer">';
 					echo '<div class="container">';
 
-						if( !empty($llorix_one_blog_header_title) ):
-							echo '<p class="archive-top-big-title">'.$llorix_one_blog_header_title.'</p>';
+						if( !empty($llorix_one_lite_blog_header_title) ):
+							echo '<p class="archive-top-big-title">'.$llorix_one_lite_blog_header_title.'</p>';
 							echo '<p class="colored-line"></p>';							
 						endif;
 						
-						if( !empty($llorix_one_blog_header_subtitle) ):
-							echo '<p class="archive-top-text">'.$llorix_one_blog_header_subtitle.'</p>';
+						if( !empty($llorix_one_lite_blog_header_subtitle) ):
+							echo '<p class="archive-top-text">'.$llorix_one_lite_blog_header_subtitle.'</p>';
 						endif;	
 
 					echo '</div>';

@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 
 	get_header(); 

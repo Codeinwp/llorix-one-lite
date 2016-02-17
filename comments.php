@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 
 /*
@@ -47,7 +47,7 @@ if ( post_password_required() ) {
 				wp_list_comments( array(
 					'style'       => 'ol',
 					'short_ping'  => true,
-					'callback'    => 'llorix_one_comment',
+					'callback'    => 'llorix_one_lite_comment',
 					'avatar_size' => 60
 				) );
 			?>

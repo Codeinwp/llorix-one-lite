@@ -3,7 +3,7 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 
 /**

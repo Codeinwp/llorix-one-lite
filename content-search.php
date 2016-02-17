@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 ?>
 
@@ -30,8 +30,8 @@
 						} else {
 					?>
 				 		<picture>
-							<source media="(max-width: 600px)" srcset=" <?php echo llorix_one_get_file('/images/no-thumbnail-mobile.jpg'); ?> ">
-							<img src="<?php echo llorix_one_get_file('/images/no-thumbnail.jpg'); ?>" alt="<?php the_title_attribute(); ?>">
+							<source media="(max-width: 600px)" srcset=" <?php echo llorix_one_lite_get_file('/images/no-thumbnail-mobile.jpg'); ?> ">
+							<img src="<?php echo llorix_one_lite_get_file('/images/no-thumbnail.jpg'); ?>" alt="<?php the_title_attribute(); ?>">
 						</picture>
 					<?php } ?>
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package llorix-one
+ * @package llorix-one-lite
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('contact-page'); ?>>
@@ -16,15 +16,15 @@
 		<div class="entry-content content-page parallax_one_contact_form">
 
 			<?php
-				$llorix_one_contact_form_shortcode = get_theme_mod('llorix_one_contact_form_shortcode');
+				$llorix_one_lite_contact_form_shortcode = get_theme_mod('llorix_one_lite_contact_form_shortcode');
 			?>
 			<div class="col-md-6">
 				<?php the_content(); ?>
 			</div>
 				<?php 
-					if(!empty($llorix_one_contact_form_shortcode)) {
+					if(!empty($llorix_one_lite_contact_form_shortcode)) {
 						echo '<div class="col-md-6">';
-						echo do_shortcode( $llorix_one_contact_form_shortcode);
+						echo do_shortcode( $llorix_one_lite_contact_form_shortcode);
 						echo '</div>';
 					}
 				?>
@@ -39,10 +39,10 @@
 
 	
 		<?php 
-			$llorix_one_contact_map_shortcode = get_theme_mod('llorix_one_contact_map_shortcode');
-			if(!empty($llorix_one_contact_map_shortcode)) {
+			$llorix_one_lite_contact_map_shortcode = get_theme_mod('llorix_one_lite_contact_map_shortcode');
+			if(!empty($llorix_one_lite_contact_map_shortcode)) {
 				echo '<div class="contact-page-map-wrap">';
-				echo do_shortcode( $llorix_one_contact_map_shortcode);
+				echo do_shortcode( $llorix_one_lite_contact_map_shortcode);
 				echo '</div>';
 			}
 		?>

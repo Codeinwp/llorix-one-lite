@@ -1,34 +1,34 @@
 <!-- CONTAINER -->
 <?php
-	$llorix_one_header_logo = get_theme_mod('llorix_one_header_logo', llorix_one_get_file('/images/logo-2.png'));
+	$llorix_one_header_logo = get_theme_mod('llorix_one_header_logo', llorix_one_lite_get_file('/images/logo-2.png'));
 	$llorix_one_header_title = get_theme_mod('llorix_one_header_title',esc_html__('Simple, Reliable and Awesome.','llorix-one-lite'));
 	$llorix_one_header_subtitle = get_theme_mod('llorix_one_header_subtitle','Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
 	$llorix_one_header_button_text = get_theme_mod('llorix_one_header_button_text',esc_html__('GET STARTED','llorix-one-lite'));
 	$llorix_one_header_button_link = get_theme_mod('llorix_one_header_button_link','#');
-	$llorix_one_enable_move = get_theme_mod('llorix_one_enable_move');
-	$llorix_one_first_layer = get_theme_mod('llorix_one_first_layer', llorix_one_get_file('/images/background1.png'));
-	$llorix_one_second_layer = get_theme_mod('llorix_one_second_layer',llorix_one_get_file('/images/background2.png'));
+	$llorix_one_lite_enable_move = get_theme_mod('llorix_one_lite_enable_move');
+	$llorix_one_lite_first_layer = get_theme_mod('llorix_one_lite_first_layer', llorix_one_lite_get_file('/images/background1.png'));
+	$llorix_one_lite_second_layer = get_theme_mod('llorix_one_lite_second_layer',llorix_one_lite_get_file('/images/background2.png'));
 	if(!empty($llorix_one_header_logo) || !empty($llorix_one_header_title) || !empty($llorix_one_header_subtitle) || !empty($llorix_one_header_button_text)){
 ?>
 
 <?php
-	if( !empty($llorix_one_enable_move) && $llorix_one_enable_move ) {
+	if( !empty($llorix_one_lite_enable_move) && $llorix_one_lite_enable_move ) {
 		
 		echo '<ul id="parallax_move">';
 
 
-			if ( empty($llorix_one_first_layer) && empty($llorix_one_second_layer) ) {
+			if ( empty($llorix_one_lite_first_layer) && empty($llorix_one_lite_second_layer) ) {
 
 				$llorix_one_header_image2 = get_header_image();
 				echo '<li class="layer layer1" data-depth="0.10" style="background-image: url('.$llorix_one_header_image2.');"></li>';
 
 			} else {
 
-				if( !empty($llorix_one_first_layer) )  {
-					echo '<li class="layer layer1" data-depth="0.10" style="background-image: url('.$llorix_one_first_layer.');"></li>';
+				if( !empty($llorix_one_lite_first_layer) )  {
+					echo '<li class="layer layer1" data-depth="0.10" style="background-image: url('.$llorix_one_lite_first_layer.');"></li>';
 				}
-				if( !empty($llorix_one_second_layer) ) {
-					echo '<li class="layer layer2" data-depth="0.20" style="background-image: url('.$llorix_one_second_layer.');"></li>';
+				if( !empty($llorix_one_lite_second_layer) ) {
+					echo '<li class="layer layer2" data-depth="0.20" style="background-image: url('.$llorix_one_lite_second_layer.');"></li>';
 				}
 
 			}
@@ -64,7 +64,7 @@
 								if( !empty($llorix_one_header_title) ){
 									echo '<h1 id="intro_section_text_1" class="intro white-text">'.esc_attr($llorix_one_header_title).'</h1>';
 								} elseif ( isset( $wp_customize )   ) {
-									echo '<h1 id="intro_section_text_1" class="intro white-text llorix_one_only_customizer"></h1>';
+									echo '<h1 id="intro_section_text_1" class="intro white-text llorix_one_lite_only_customizer"></h1>';
 								}
 							?>
 
@@ -73,7 +73,7 @@
 								if( !empty($llorix_one_header_subtitle) ){
 									echo '<h5 id="intro_section_text_2" class="white-text">'.esc_attr($llorix_one_header_subtitle).'</h5>';
 								} elseif ( isset( $wp_customize )   ) {
-									echo '<h5 id="intro_section_text_2" class="white-text llorix_one_only_customizer"></h5>';
+									echo '<h5 id="intro_section_text_2" class="white-text llorix_one_lite_only_customizer"></h5>';
 								}
 							?>
 
@@ -90,7 +90,7 @@
 										}
 									}
 								} elseif ( isset( $wp_customize )   ) {
-									echo '<div id="intro_section_text_3" class="button"><div id="inpage_scroll_btn"><a href="" class="btn btn-primary standard-button inpage-scroll llorix_one_only_customizer"></a></div></div>';
+									echo '<div id="intro_section_text_3" class="button"><div id="inpage_scroll_btn"><a href="" class="btn btn-primary standard-button inpage-scroll llorix_one_lite_only_customizer"></a></div></div>';
 								}
 							?>
 							<!-- /END BUTTON -->

@@ -17,9 +17,9 @@
 			<key name="llorix_one_button_text" />
 			<key name="llorix_one_button_link" />
 			<key name="llorix_one_latest_news_title" />
-			<key name="llorix_one_contact_form_shortcode" />
-			<key name="llorix_one_contact_map_shortcode" />
-			<key name="llorix_one_copyright" />
+			<key name="llorix_one_lite_contact_form_shortcode" />
+			<key name="llorix_one_lite_contact_map_shortcode" />
+			<key name="llorix_one_lite_copyright" />
 		</key>
 	</admin-texts>
 </wpml-config>

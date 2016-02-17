@@ -22,17 +22,17 @@ function media_upload(button_class) {
 							display_field.val(attachment.sizes.thumbnail.url);
                             display_field.trigger('change');
 							break;
-						case 'parallax_one_team':
+						case 'llorix_one_lite_team':
 							console.log(attachment.sizes);
-							display_field.val(attachment.sizes.parallax_one_team.url);
+							display_field.val(attachment.sizes.llorix_one_lite_team.url);
                             display_field.trigger('change');
 							break
-						case 'parallax_one_services':
-							display_field.val(attachment.sizes.parallax_one_services.url);
+						case 'llorix_one_lite_services':
+							display_field.val(attachment.sizes.llorix_one_lite_services.url);
                             display_field.trigger('change');
 							break
-						case 'parallax_one_customers':
-							display_field.val(attachment.sizes.parallax_one_customers.url);
+						case 'llorix_one_lite_customers':
+							display_field.val(attachment.sizes.llorix_one_lite_customers.url);
                             display_field.trigger('change');
 							break;
 						default:
@@ -266,25 +266,25 @@ var entityMap = {
 
 jQuery(document).ready(function(){
   
-	var sh = jQuery('#customize-control-llorix_one_enable_move').find('input:checkbox');
+	var sh = jQuery('#customize-control-llorix_one_lite_enable_move').find('input:checkbox');
 	if(!sh.is(':checked')){
-		jQuery('#customize-control-llorix_one_first_layer').hide();
-		jQuery('#customize-control-llorix_one_second_layer').hide();
+		jQuery('#customize-control-llorix_one_lite_first_layer').hide();
+		jQuery('#customize-control-llorix_one_lite_second_layer').hide();
 		jQuery('#customize-control-header_image').show();
 	} else {
-		jQuery('#customize-control-llorix_one_first_layer').show();
-		jQuery('#customize-control-llorix_one_second_layer').show();
+		jQuery('#customize-control-llorix_one_lite_first_layer').show();
+		jQuery('#customize-control-llorix_one_lite_second_layer').show();
 		jQuery('#customize-control-header_image').hide();
 	}
 	
 	sh.on('change',function(){
 		if(jQuery(this).is(':checked')){
-			jQuery('#customize-control-llorix_one_first_layer').fadeIn();
-			jQuery('#customize-control-llorix_one_second_layer').fadeIn();
+			jQuery('#customize-control-llorix_one_lite_first_layer').fadeIn();
+			jQuery('#customize-control-llorix_one_lite_second_layer').fadeIn();
 			jQuery('#customize-control-header_image').fadeOut();
 		} else {
-			jQuery('#customize-control-llorix_one_first_layer').fadeOut();
-			jQuery('#customize-control-llorix_one_second_layer').fadeOut();
+			jQuery('#customize-control-llorix_one_lite_first_layer').fadeOut();
+			jQuery('#customize-control-llorix_one_lite_second_layer').fadeOut();
 			jQuery('#customize-control-header_image').fadeIn();
 		} 
 	});

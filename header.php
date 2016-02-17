@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
@@ -82,13 +82,13 @@
 				        		echo '<span>' . esc_attr($llorix_one_very_top_header_phone) . '</span>';
 				        		echo '</div>';
 							} elseif ( isset( $wp_customize )   ) {
-								echo '<div class="very-top-left llorix_one_only_customizer">' . esc_html_e('Call us:', 'llorix-one-lite') . '<span></span></div>';
+								echo '<div class="very-top-left llorix_one_lite_only_customizer">' . esc_html_e('Call us:', 'llorix-one-lite') . '<span></span></div>';
 							}
 						?>
 		        		<div class="very-top-right">
 							<?php 
 								/* SOCIAL ICONS */
-								$llorix_one_social_icons = get_theme_mod('llorix_one_very_top_social_icons',json_encode(
+								$llorix_one_lite_social_icons = get_theme_mod('llorix_one_very_top_social_icons',json_encode(
 																array(
 																	array('icon_value' =>'icon-social-facebook' , 'link' => '#'),
 																	array('icon_value' =>'icon-social-twitter' , 'link' => '#'),
@@ -96,12 +96,12 @@
 																	)
 																));
 								
-								if( !empty( $llorix_one_social_icons ) ){
-									$llorix_one_social_icons_decoded = json_decode($llorix_one_social_icons);
+								if( !empty( $llorix_one_lite_social_icons ) ){
+									$llorix_one_lite_social_icons_decoded = json_decode($llorix_one_lite_social_icons);
 
-									if( !empty($llorix_one_social_icons_decoded) ){
+									if( !empty($llorix_one_lite_social_icons_decoded) ){
 										echo '<ul class="social-icons">';
-											foreach($llorix_one_social_icons_decoded as $llorix_one_social_icon){
+											foreach($llorix_one_lite_social_icons_decoded as $llorix_one_social_icon){
 
 												echo '<li><a href="'.esc_url($llorix_one_social_icon->link).'"><span class="'.esc_attr($llorix_one_social_icon->icon_value).' transparent-text-dark" aria-hidden="true"></span><span class="screen-reader-text">'.esc_attr(explode("-",$llorix_one_social_icon->icon_value)[2]).'</span></a></li>';
 											}
@@ -141,7 +141,7 @@
 
 								echo '</a>';
 
-								echo '<div class="header-logo-wrap text-header llorix_one_only_customizer">';
+								echo '<div class="header-logo-wrap text-header llorix_one_lite_only_customizer">';
 
 									echo '<h1 itemprop="headline" id="site-title" class="site-title"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'name' ).'</a></h1>';
 								
@@ -153,7 +153,7 @@
 							
 								if( isset( $wp_customize ) ):
 								
-									echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand llorix_one_only_customizer" title="'.get_bloginfo('title').'">';
+									echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand llorix_one_lite_only_customizer" title="'.get_bloginfo('title').'">';
 
 										echo '<img src="" alt="'.get_bloginfo('title').'">';
 
@@ -185,7 +185,7 @@
 										'theme_location'    => 'primary',
 										'menu_class'        => 'primary-menu small-text',
 										'depth'           	=> 4,
-										'fallback_cb'       => 'llorix_one_wp_page_menu'
+										'fallback_cb'       => 'llorix_one_lite_wp_page_menu'
 										 ) 
 								);
 							?>

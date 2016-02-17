@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 
 if ( ! function_exists( 'llorix_one_posts_navigation' ) ) :
@@ -69,11 +69,11 @@ function llorix_one_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'llorix_one_entry_footer' ) ) :
+if ( ! function_exists( 'llorix_one_lite_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function llorix_one_entry_footer() {
+function llorix_one_lite_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package llorix-one
+ * @package llorix-one-lite
  */
 ?>
 
@@ -32,6 +32,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php llorix_one_entry_footer(); ?>
+		<?php llorix_one_lite_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

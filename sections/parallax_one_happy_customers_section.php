@@ -8,9 +8,9 @@
 	$llorix_one_testimonials_content = get_theme_mod('llorix_one_testimonials_content',
 		json_encode(
 			array(
-					array('image_url' => llorix_one_get_file('/images/clients/1.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite')),
-					array('image_url' => llorix_one_get_file('/images/clients/2.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite')),
-					array('image_url' => llorix_one_get_file('/images/clients/3.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite'))
+					array('image_url' => llorix_one_lite_get_file('/images/clients/1.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite')),
+					array('image_url' => llorix_one_lite_get_file('/images/clients/2.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite')),
+					array('image_url' => llorix_one_lite_get_file('/images/clients/3.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite'))
 			)
 		)
 	);
@@ -30,13 +30,13 @@
 							if( !empty($llorix_one_happy_customers_title) ){
 								echo '<h2 class="dark-text">'.esc_attr($llorix_one_happy_customers_title).'</h2><div class="colored-line"></div>';
 							} elseif ( isset( $wp_customize )   ) {
-								echo '<h2 class="dark-text llorix_one_only_customizer"></h2><div class="colored-line llorix_one_only_customizer"></div>';
+								echo '<h2 class="dark-text llorix_one_lite_only_customizer"></h2><div class="colored-line llorix_one_lite_only_customizer"></div>';
 							}
 
 							if( !empty($llorix_one_happy_customers_subtitle) ){
 								echo '<div class="sub-heading">'.esc_attr($llorix_one_happy_customers_subtitle).'</div>';
 							} elseif ( isset( $wp_customize )   ) {
-								echo '<div class="sub-heading llorix_one_only_customizer"></div>';
+								echo '<div class="sub-heading llorix_one_lite_only_customizer"></div>';
 							}
 						?>
 					</div>
@@ -64,7 +64,7 @@
 														echo '<img src="'.esc_url($llorix_one_testimonial->image_url).'" alt="'.esc_html('Avatar','llorix-one-lite').'">';
 													}
 												} else {
-													$default_image = llorix_one_get_file('/images/clients/client-no-image.jpg');
+													$default_image = llorix_one_lite_get_file('/images/clients/client-no-image.jpg');
 													echo '<img src="'.esc_url($default_image).'" alt="'.esc_html('Avatar','llorix-one-lite').'">';
 												}	
 											?>
@@ -136,12 +136,12 @@
 	} else {
 		if( isset( $wp_customize ) ) {
 ?>
-			<section class="testimonials llorix_one_only_customizer" id="customers" role="region" aria-label="<?php esc_html_e('Testimonials','llorix-one-lite') ?>">
+			<section class="testimonials llorix_one_lite_only_customizer" id="customers" role="region" aria-label="<?php esc_html_e('Testimonials','llorix-one-lite') ?>">
 				<div class="section-overlay-layer">
 					<div class="container">
 						<div class="section-header">
-							<h2 class="dark-text llorix_one_only_customizer"></h2><div class="colored-line llorix_one_only_customizer"></div>
-							<div class="sub-heading llorix_one_only_customizer"></div>
+							<h2 class="dark-text llorix_one_lite_only_customizer"></h2><div class="colored-line llorix_one_lite_only_customizer"></div>
+							<div class="sub-heading llorix_one_lite_only_customizer"></div>
 						</div>				
 					</div>
 				</div>

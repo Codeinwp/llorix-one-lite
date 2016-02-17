@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 
 	get_header(); 

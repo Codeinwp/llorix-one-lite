@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

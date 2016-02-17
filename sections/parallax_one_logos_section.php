@@ -5,11 +5,11 @@
 	$llorix_one_logos = get_theme_mod('llorix_one_logos_content',
 		json_encode(
 			array( 
-				array("image_url" => llorix_one_get_file('/images/companies/1.png') ,"link" => "#" ),
-				array("image_url" => llorix_one_get_file('/images/companies/2.png') ,"link" => "#" ),
-				array("image_url" => llorix_one_get_file('/images/companies/3.png') ,"link" => "#" ),
-				array("image_url" => llorix_one_get_file('/images/companies/4.png') ,"link" => "#" ),
-				array("image_url" => llorix_one_get_file('/images/companies/5.png') ,"link" => "#" )
+				array("image_url" => llorix_one_lite_get_file('/images/companies/1.png') ,"link" => "#" ),
+				array("image_url" => llorix_one_lite_get_file('/images/companies/2.png') ,"link" => "#" ),
+				array("image_url" => llorix_one_lite_get_file('/images/companies/3.png') ,"link" => "#" ),
+				array("image_url" => llorix_one_lite_get_file('/images/companies/4.png') ,"link" => "#" ),
+				array("image_url" => llorix_one_lite_get_file('/images/companies/5.png') ,"link" => "#" )
 			)
 		)
 	);

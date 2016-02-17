@@ -2,7 +2,7 @@
 /**
  * Template name: Frontpage
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 
 

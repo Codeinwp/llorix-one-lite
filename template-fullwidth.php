@@ -2,7 +2,7 @@
 /**
  * Template name: Full Width
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 
 	get_header(); 

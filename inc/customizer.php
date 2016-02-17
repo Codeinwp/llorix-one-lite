@@ -2,7 +2,7 @@
 /**
  * llorix-one Theme Customizer
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 
 /**
@@ -36,7 +36,7 @@ function llorix_one_customize_register( $wp_customize ) {
 		'title' => esc_html__( 'Appearance', 'llorix-one-lite' )
 	) );
 	
-	$wp_customize->add_setting( 'llorix_one_text_color', array(
+	$wp_customize->add_setting( 'llorix_one_lite_text_color', array(
 		'default' => '#313131',
 		'sanitize_callback' => 'llorix_one_sanitize_text'
 	));
@@ -44,7 +44,7 @@ function llorix_one_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'llorix_one_text_color',
+			'llorix_one_lite_text_color',
 			array(
 				'label'      => esc_html__( 'Text color', 'llorix-one-lite' ),
 				'section'    => 'colors',
@@ -54,7 +54,7 @@ function llorix_one_customize_register( $wp_customize ) {
 	);
 	
 	
-	$wp_customize->add_setting( 'llorix_one_title_color', array(
+	$wp_customize->add_setting( 'llorix_one_lite_title_color', array(
 		'default' => '#454545',
 		'sanitize_callback' => 'llorix_one_sanitize_text'
 	));
@@ -62,7 +62,7 @@ function llorix_one_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'llorix_one_title_color',
+			'llorix_one_lite_title_color',
 			array(
 				'label'      => esc_html__( 'Title color', 'llorix-one-lite' ),
 				'section'    => 'colors',
@@ -126,7 +126,7 @@ function llorix_one_customize_register( $wp_customize ) {
 	
 	/* Header Logo	*/
 	$wp_customize->add_setting( 'llorix_one_header_logo', array(
-		'default' => llorix_one_get_file('/images/logo-2.png'),
+		'default' => llorix_one_lite_get_file('/images/logo-2.png'),
 		'sanitize_callback' => 'esc_url',
 		'transport' => 'postMessage'
 	));
@@ -206,11 +206,11 @@ function llorix_one_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'llorix_one_sanitize_repeater',
 		'default' => json_encode(
 				array( 
-					array("image_url" => llorix_one_get_file('/images/companies/1.png') ,"link" => "#" ),
-					array("image_url" => llorix_one_get_file('/images/companies/2.png') ,"link" => "#" ),
-					array("image_url" => llorix_one_get_file('/images/companies/3.png') ,"link" => "#" ),
-					array("image_url" => llorix_one_get_file('/images/companies/4.png') ,"link" => "#" ),
-					array("image_url" => llorix_one_get_file('/images/companies/5.png') ,"link" => "#" )
+					array("image_url" => llorix_one_lite_get_file('/images/companies/1.png') ,"link" => "#" ),
+					array("image_url" => llorix_one_lite_get_file('/images/companies/2.png') ,"link" => "#" ),
+					array("image_url" => llorix_one_lite_get_file('/images/companies/3.png') ,"link" => "#" ),
+					array("image_url" => llorix_one_lite_get_file('/images/companies/4.png') ,"link" => "#" ),
+					array("image_url" => llorix_one_lite_get_file('/images/companies/5.png') ,"link" => "#" )
 				)
 		)
 
@@ -230,10 +230,10 @@ function llorix_one_customize_register( $wp_customize ) {
 	$wp_customize->get_section('header_image')->title = esc_html__( 'Background', 'llorix-one-lite' );
 	
 	/* Enable parallax effect*/
-	$wp_customize->add_setting( 'llorix_one_enable_move', array(
+	$wp_customize->add_setting( 'llorix_one_lite_enable_move', array(
 		'sanitize_callback' => 'llorix_one_sanitize_text',
 	));
-	$wp_customize->add_control( 'llorix_one_enable_move', array(
+	$wp_customize->add_control( 'llorix_one_lite_enable_move', array(
 		'type' => 'checkbox',
 		'label' => esc_html__('Parallax effect','llorix-one-lite'),
 		'description' => esc_html__('If this box is checked, the parallax effect is enabled.','llorix-one-lite'),
@@ -242,24 +242,24 @@ function llorix_one_customize_register( $wp_customize ) {
 	));
 	
 	/* Layer one */
-	$wp_customize->add_setting( 'llorix_one_first_layer', array(
-		'default' => llorix_one_get_file('/images/background1.png'),
+	$wp_customize->add_setting( 'llorix_one_lite_first_layer', array(
+		'default' => llorix_one_lite_get_file('/images/background1.png'),
 		'sanitize_callback' => 'esc_url',
 	));
 	
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'llorix_one_first_layer', array(
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'llorix_one_lite_first_layer', array(
 		'label'    => esc_html__( 'First layer', 'llorix-one-lite' ),
 		'section'  => 'header_image',
 		'priority'    => 4,
 	)));
 	
 	/* Layer two */
-	$wp_customize->add_setting( 'llorix_one_second_layer', array(
-		'default' => llorix_one_get_file('/images/background2.png'),
+	$wp_customize->add_setting( 'llorix_one_lite_second_layer', array(
+		'default' => llorix_one_lite_get_file('/images/background2.png'),
 		'sanitize_callback' => 'esc_url',
 	));
 	
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'llorix_one_second_layer', array(
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'llorix_one_lite_second_layer', array(
 		'label'    => esc_html__( 'Second layer', 'llorix-one-lite' ),
 		'section'  => 'header_image',
 		'priority'    => 5,
@@ -317,36 +317,36 @@ function llorix_one_customize_register( $wp_customize ) {
 	));
 	
 	/* Blog Header title */
-	$wp_customize->add_setting( 'llorix_one_blog_header_title', array(
+	$wp_customize->add_setting( 'llorix_one_lite_blog_header_title', array(
 		'default' 			=> esc_html__('BLOG','llorix-one-lite'),
 		'sanitize_callback' => 'llorix_one_sanitize_text',
 		'transport' 		=> 'postMessage'
 	));
-	$wp_customize->add_control( 'llorix_one_blog_header_title', array(
+	$wp_customize->add_control( 'llorix_one_lite_blog_header_title', array(
 		'label'    			=> esc_html__( 'Title', 'llorix-one-lite' ),
 		'section'  			=> 'llorix_one_blog_header_section',
 		'priority'    		=> 1
 	));
 	
 	/* Blog Header subtitle */
-	$wp_customize->add_setting( 'llorix_one_blog_header_subtitle', array(
+	$wp_customize->add_setting( 'llorix_one_lite_blog_header_subtitle', array(
 		'sanitize_callback' => 'llorix_one_sanitize_text',
 		'transport' 		=> 'postMessage'
 	));
-	$wp_customize->add_control( 'llorix_one_blog_header_subtitle', array(
+	$wp_customize->add_control( 'llorix_one_lite_blog_header_subtitle', array(
 		'label'    			=> esc_html__( 'Subtitle', 'llorix-one-lite' ),
 		'section'  			=> 'llorix_one_blog_header_section',
 		'priority'    		=> 2
 	));
 	
 	/* Blog Header image	*/
-	$wp_customize->add_setting( 'llorix_one_blog_header_image', array(
-		'default' => llorix_one_get_file('/images/background-images/background-blog.jpg'),
+	$wp_customize->add_setting( 'llorix_one_lite_blog_header_image', array(
+		'default' => llorix_one_lite_get_file('/images/background-images/background-blog.jpg'),
 		'sanitize_callback' => 'esc_url',
 		'transport' => 'postMessage'
 	));
 	
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'llorix_one_blog_header_image', array(
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'llorix_one_lite_blog_header_image', array(
 	      	'label'    => esc_html__( 'Image', 'llorix-one-lite' ),
 	      	'section'  => 'llorix_one_blog_header_section',
 			'priority'    => 3,
@@ -455,7 +455,7 @@ function llorix_one_customize_register( $wp_customize ) {
 	
 	/* About Image	*/
 	$wp_customize->add_setting( 'llorix_one_our_story_image', array(
-		'default' => llorix_one_get_file('/images/about-us.png'),
+		'default' => llorix_one_lite_get_file('/images/about-us.png'),
 		'sanitize_callback' => 'esc_url',
 		'transport' => 'postMessage'
 	));
@@ -508,9 +508,9 @@ function llorix_one_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'llorix_one_sanitize_repeater',
 		'default' => json_encode(
 							array(
-									array('image_url' => llorix_one_get_file('/images/team/1.jpg'),'title' => esc_html__('Albert Jacobs','llorix-one-lite'),'subtitle' => esc_html__('Founder & CEO','llorix-one-lite')),
-									array('image_url' => llorix_one_get_file('/images/team/2.jpg'),'title' => esc_html__('Tonya Garcia','llorix-one-lite'),'subtitle' => esc_html__('Account Manager','llorix-one-lite')),
-									array('image_url' => llorix_one_get_file('/images/team/3.jpg'),'title' => esc_html__('Linda Guthrie','llorix-one-lite'),'subtitle' => esc_html__('Business Development','llorix-one-lite'))
+									array('image_url' => llorix_one_lite_get_file('/images/team/1.jpg'),'title' => esc_html__('Albert Jacobs','llorix-one-lite'),'subtitle' => esc_html__('Founder & CEO','llorix-one-lite')),
+									array('image_url' => llorix_one_lite_get_file('/images/team/2.jpg'),'title' => esc_html__('Tonya Garcia','llorix-one-lite'),'subtitle' => esc_html__('Account Manager','llorix-one-lite')),
+									array('image_url' => llorix_one_lite_get_file('/images/team/3.jpg'),'title' => esc_html__('Linda Guthrie','llorix-one-lite'),'subtitle' => esc_html__('Business Development','llorix-one-lite'))
 							)
 						)
 	));
@@ -526,7 +526,7 @@ function llorix_one_customize_register( $wp_customize ) {
 	
 	/* Team Background	*/
 	$wp_customize->add_setting( 'llorix_one_team_background', array(
-		'default' 				=> llorix_one_get_file('/images/background-images/parallax-img/team-img.jpg'),
+		'default' 				=> llorix_one_lite_get_file('/images/background-images/parallax-img/team-img.jpg'),
 		'sanitize_callback'		=> 'esc_url',
 		'transport' 			=> 'postMessage'
 	));
@@ -580,9 +580,9 @@ function llorix_one_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'llorix_one_sanitize_repeater',
 		'default' => json_encode(
 							array(
-									array('image_url' => llorix_one_get_file('/images/clients/1.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite')),
-									array('image_url' => llorix_one_get_file('/images/clients/2.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite')),
-									array('image_url' => llorix_one_get_file('/images/clients/3.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite'))
+									array('image_url' => llorix_one_lite_get_file('/images/clients/1.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite')),
+									array('image_url' => llorix_one_lite_get_file('/images/clients/2.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite')),
+									array('image_url' => llorix_one_lite_get_file('/images/clients/3.jpg'),'title' => esc_html__('Happy Customer','llorix-one-lite'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-lite'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-lite'))
 							)
 						)
 	));
@@ -612,7 +612,7 @@ function llorix_one_customize_register( $wp_customize ) {
 
 	/* Ribbon Background	*/
 	$wp_customize->add_setting( 'llorix_one_ribbon_background', array(
-		'default' => llorix_one_get_file('/images/background-images/parallax-img/parallax-img1.jpg'),
+		'default' => llorix_one_lite_get_file('/images/background-images/parallax-img/parallax-img1.jpg'),
 		'sanitize_callback' => 'esc_url',
 		'transport' => 'postMessage'
 	));
@@ -742,11 +742,11 @@ function llorix_one_customize_register( $wp_customize ) {
 	));
 
 	/* Contact Form  */
-	$wp_customize->add_setting( 'llorix_one_contact_form_shortcode', array(
+	$wp_customize->add_setting( 'llorix_one_lite_contact_form_shortcode', array(
 		'default' => '',
 		'sanitize_callback' => 'llorix_one_sanitize_text'
 	));
-	$wp_customize->add_control( 'llorix_one_contact_form_shortcode', array(
+	$wp_customize->add_control( 'llorix_one_lite_contact_form_shortcode', array(
 		'label'    => esc_html__( 'Contact form shortcode', 'llorix-one-lite' ),
 		'description' => __('Create a form, copy the shortcode generated and paste it here. We recommend <a href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> but you can use any plugin you like.','llorix-one-lite'),
 		'section'  => 'llorix_one_contact_page',
@@ -755,11 +755,11 @@ function llorix_one_customize_register( $wp_customize ) {
 	));
 	
 	/* Map ShortCode  */
-	$wp_customize->add_setting( 'llorix_one_contact_map_shortcode', array(
+	$wp_customize->add_setting( 'llorix_one_lite_contact_map_shortcode', array(
 		'default' => '',
 		'sanitize_callback' => 'llorix_one_sanitize_text'
 	));
-	$wp_customize->add_control( 'llorix_one_contact_map_shortcode', array(
+	$wp_customize->add_control( 'llorix_one_lite_contact_map_shortcode', array(
 		'label'    => esc_html__( 'Map shortcode', 'llorix-one-lite' ),
 		'description' => __('To use this section please install <a href="https://wordpress.org/plugins/intergeo-maps/">Intergeo Maps</a> plugin then use it to create a map and paste here the shortcode generated','llorix-one-lite'),
 		'section'  => 'llorix_one_contact_page',
@@ -778,18 +778,18 @@ function llorix_one_customize_register( $wp_customize ) {
 	));	
 	
 	/* Footer Menu */
-	$nav_menu_locations_footer = $wp_customize->get_control('nav_menu_locations[parallax_footer_menu]');
+	$nav_menu_locations_footer = $wp_customize->get_control('nav_menu_locations[llorix_one_lite_footer_menu]');
 	if(!empty($nav_menu_locations_footer)){
 		$nav_menu_locations_footer->section = 'llorix_one_footer_section';
 		$nav_menu_locations_footer->priority = 1;
 	}
 	/* Copyright */
-	$wp_customize->add_setting( 'llorix_one_copyright', array(
+	$wp_customize->add_setting( 'llorix_one_lite_copyright', array(
 		'default' => 'Themeisle',
 		'sanitize_callback' => 'llorix_one_sanitize_text',
 		'transport' => 'postMessage'
 	));
-	$wp_customize->add_control( 'llorix_one_copyright', array(
+	$wp_customize->add_control( 'llorix_one_lite_copyright', array(
 		'label'    => esc_html__( 'Copyright', 'llorix-one-lite' ),
 		'section'  => 'llorix_one_footer_section',
 		'priority'    => 2
@@ -799,7 +799,7 @@ function llorix_one_customize_register( $wp_customize ) {
 	/* Socials icons */
 	
 	
-	$wp_customize->add_setting( 'llorix_one_social_icons', array(
+	$wp_customize->add_setting( 'llorix_one_lite_social_icons', array(
 		'sanitize_callback' => 'llorix_one_sanitize_repeater',
 		'default' => json_encode(
 			array(
@@ -810,7 +810,7 @@ function llorix_one_customize_register( $wp_customize ) {
 		)
 
 	));
-	$wp_customize->add_control( new Llorix_One_General_Repeater( $wp_customize, 'llorix_one_social_icons', array(
+	$wp_customize->add_control( new Llorix_One_General_Repeater( $wp_customize, 'llorix_one_lite_social_icons', array(
 		'label'   => esc_html__('Add new social icon','llorix-one-lite'),
 		'section' => 'llorix_one_footer_section',
 		'priority' => 3,
@@ -919,7 +919,7 @@ add_action( 'customize_register', 'llorix_one_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function llorix_one_customize_preview_js() {
-	wp_enqueue_script( 'llorix_one_customizer', llorix_one_get_file('/js/customizer.js'), array( 'customize-preview' ), '1.0.2', true );
+	wp_enqueue_script( 'llorix_one_customizer', llorix_one_lite_get_file('/js/customizer.js'), array( 'customize-preview' ), '1.0.2', true );
 }
 add_action( 'customize_preview_init', 'llorix_one_customize_preview_js', 10);
 
@@ -1004,7 +1004,7 @@ function llorix_one_sanitize_html( $input){
 
 
 function llorix_one_customizer_script() {
-	wp_enqueue_script( 'llorix_one_customizer_script', llorix_one_get_file('/js/parallax_one_customizer.js'), array("jquery","jquery-ui-draggable"),'1.0.0', true  );
+	wp_enqueue_script( 'llorix_one_customizer_script', llorix_one_lite_get_file('/js/parallax_one_customizer.js'), array("jquery","jquery-ui-draggable"),'1.0.0', true  );
 	
 	wp_localize_script( 'llorix_one_customizer_script', 'llorixOneCustomizerObject', array(
 	

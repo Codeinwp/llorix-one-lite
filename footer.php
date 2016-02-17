@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package llorix-one
+ * @package llorix-one-lite
  */
 ?>
 
@@ -60,12 +60,12 @@
 					global $wp_customize;
 				
 					/* COPYRIGHT */
-					$llorix_one_copyright = get_theme_mod('llorix_one_copyright','Themeisle');
+					$llorix_one_lite_copyright = get_theme_mod('llorix_one_lite_copyright','Themeisle');
 					
-					if( !empty($llorix_one_copyright) ){
-						echo '<span class="parallax_one_copyright_content">'.esc_attr($llorix_one_copyright).'</span>';
+					if( !empty($llorix_one_lite_copyright) ){
+						echo '<span class="llorix_one_lite_copyright_content">'.esc_attr($llorix_one_lite_copyright).'</span>';
 					} elseif ( isset( $wp_customize )   ) {
-						echo '<span class="parallax_one_copyright_content llorix_one_only_customizer"></span>';
+						echo '<span class="llorix_one_lite_copyright_content llorix_one_lite_only_customizer"></span>';
 					}
 				
 					/* OPTIONAL FOOTER LINKS */
@@ -74,7 +74,7 @@
 						echo '<h1 class="screen-reader-text">'.esc_html__( 'Secondary Menu', 'llorix-one-lite' ).'</h1>';
 						wp_nav_menu( 
 							array( 
-								'theme_location'    => 'parallax_footer_menu',
+								'theme_location'    => 'llorix_one_lite_footer_menu',
 								'container'         => false,
 								'menu_class'        => 'footer-links small-text',
 								'depth' 			=> 1,
@@ -82,19 +82,19 @@
 					echo '</div>';
 					/* SOCIAL ICONS */
 				
-					$llorix_one_social_icons = get_theme_mod('llorix_one_social_icons',json_encode(array(array('icon_value' =>'icon-social-facebook' , 'link' => '#'),array('icon_value' =>'icon-social-twitter' , 'link' => '#'),array('icon_value' =>'icon-social-googleplus' , 'link' => '#'))));
+					$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_social_icons',json_encode(array(array('icon_value' =>'icon-social-facebook' , 'link' => '#'),array('icon_value' =>'icon-social-twitter' , 'link' => '#'),array('icon_value' =>'icon-social-googleplus' , 'link' => '#'))));
 
-					if( !empty( $llorix_one_social_icons ) ){
+					if( !empty( $llorix_one_lite_social_icons ) ){
 						
-						$llorix_one_social_icons_decoded = json_decode($llorix_one_social_icons);
+						$llorix_one_lite_social_icons_decoded = json_decode($llorix_one_lite_social_icons);
 						
-						if( !empty($llorix_one_social_icons_decoded) ){
+						if( !empty($llorix_one_lite_social_icons_decoded) ){
 						
 							echo '<ul class="social-icons">';
 							
-								foreach($llorix_one_social_icons_decoded as $llorix_one_social_icon){
+								foreach($llorix_one_lite_social_icons_decoded as $llorix_one_lite_social_icon){
 									
-									echo '<li><a href="'.esc_url($llorix_one_social_icon->link).'"><span class="parallax-one-footer-icons '.esc_attr($llorix_one_social_icon->icon_value).' transparent-text-dark" aria-hidden="true"></span><span class="screen-reader-text">'.esc_attr(explode("-",$llorix_one_social_icon->icon_value)[2]).'</span></a></li>';
+									echo '<li><a href="'.esc_url($llorix_one_lite_social_icon->link).'"><span class="parallax-one-footer-icons '.esc_attr($llorix_one_lite_social_icon->icon_value).' transparent-text-dark" aria-hidden="true"></span><span class="screen-reader-text">'.esc_attr(explode("-",$llorix_one_lite_social_icon->icon_value)[2]).'</span></a></li>';
 
 								}
 						
@@ -107,7 +107,7 @@
 	        </div><!-- .footer-bottom-wrap -->
 
 	        <div class="powered-by">
-	            <a class="" href="http://themeisle.com/themes/llorix-one/" rel="nofollow">Llorix One </a> <?php esc_html_e('powered by','llorix-one-lite'); ?> <a class="" href="http://wordpress.org/" rel="nofollow"><?php esc_html_e('WordPress','llorix-one-lite'); ?></a>
+	            <a class="" href="http://themeisle.com/themes/llorix-one/" rel="nofollow">Llorix One Lite </a> <?php esc_html_e('powered by','llorix-one-lite'); ?> <a class="" href="http://wordpress.org/" rel="nofollow"><?php esc_html_e('WordPress','llorix-one-lite'); ?></a>
 	        </div>
 
 	    </div><!-- container -->

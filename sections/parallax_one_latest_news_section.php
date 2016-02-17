@@ -20,7 +20,7 @@
 								if(!empty($llorix_one_latest_news_title)){
 									echo '<div class="col-md-12 timeline-text text-left"><h2 class="text-left dark-text">'.esc_attr($llorix_one_latest_news_title).'</h2><div class="colored-line-left"></div></div>';
 								} elseif ( isset( $wp_customize )   ) {
-									echo '<div class="col-md-12 timeline-text text-left llorix_one_only_customizer"><h2 class="text-left dark-text "></h2><div class="colored-line-left "></div></div>';
+									echo '<div class="col-md-12 timeline-text text-left llorix_one_lite_only_customizer"><h2 class="text-left dark-text "></h2><div class="colored-line-left "></div></div>';
 								}
 							?>
 
@@ -60,9 +60,9 @@
 															<?php 
 
 																if ( has_post_thumbnail() ) :
-																	the_post_thumbnail('parallax-one-post-thumbnail-latest-news');
+																	the_post_thumbnail('llorix-one-lite-post-thumbnail-latest-news');
 																else: ?>
-																	<img src="<?php echo llorix_one_get_file('/images/no-thumbnail-latest-news.jpg'); ?>" width="150" height="150" alt="<?php the_title(); ?>">
+																	<img src="<?php echo llorix_one_lite_get_file('/images/no-thumbnail-latest-news.jpg'); ?>" width="150" height="150" alt="<?php the_title(); ?>">
 															<?php 
 																endif; 
 															?>
