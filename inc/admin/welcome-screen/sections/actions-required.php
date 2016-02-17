@@ -4,29 +4,29 @@
  */
 ?>
 
-<div id="actions_required" class="parallax-one-tab-pane">
+<div id="actions_required" class="llorix-one-lite-tab-pane">
 
-    <h1><?php esc_html_e( 'Keep up with Llorix One\'s latest news' ,'llorix-one-lite' ); ?></h1>
+    <h1><?php esc_html_e( 'Keep up with Llorix One Lite\'s latest news' ,'llorix-one-lite' ); ?></h1>
 
     <!-- NEWS -->
     <hr />
 	
 	<?php
-	global $llorix_one_required_actions;
+	global $llorix_one_lite_required_actions;
 	
-	if( !empty($llorix_one_required_actions) ):
+	if( !empty($llorix_one_lite_required_actions) ):
 	
-		/* $llorix_one_required_actions is an array of true/false for each required action that was dismissed */
+		/* $llorix_one_lite_required_actions is an array of true/false for each required action that was dismissed */
 		
-		$llorix_one_show_required_actions = get_option("llorix_one_show_required_actions");
+		$llorix_one_lite_show_required_actions = get_option("llorix_one_lite_show_required_actions");
 		
-		foreach( $llorix_one_required_actions as $llorix_one_required_action_key => $llorix_one_required_action_value ):
+		foreach( $llorix_one_lite_required_actions as $llorix_one_required_action_key => $llorix_one_required_action_value ):
 		
-			if(@$llorix_one_show_required_actions[$llorix_one_required_action_value['id']] === false) continue;
+			if(@$llorix_one_lite_show_required_actions[$llorix_one_required_action_value['id']] === false) continue;
 			if(@$llorix_one_required_action_value['check']) continue;
 			?>
-			<div class="parallax-one-action-required-box">
-				<span class="dashicons dashicons-no-alt parallax-one-dismiss-required-action" id="<?php echo $llorix_one_required_action_value['id']; ?>"></span>
+			<div class="llorix-one-lite-action-required-box">
+				<span class="dashicons dashicons-no-alt llorix-one-lite-dismiss-required-action" id="<?php echo $llorix_one_required_action_value['id']; ?>"></span>
 				<h4><?php echo $llorix_one_required_action_key + 1; ?>. <?php if( !empty($llorix_one_required_action_value['title']) ): echo $llorix_one_required_action_value['title']; endif; ?></h4>
 				<p><?php if( !empty($llorix_one_required_action_value['description']) ): echo $llorix_one_required_action_value['description']; endif; ?></p>
 				<?php
@@ -42,14 +42,14 @@
 	endif;
 	$nr_actions_required = 0;
 	/* get number of required actions */
-	if( get_option('llorix_one_show_required_actions') ):
-		$llorix_one_show_required_actions = get_option('llorix_one_show_required_actions');
+	if( get_option('llorix_one_lite_show_required_actions') ):
+		$llorix_one_lite_show_required_actions = get_option('llorix_one_lite_show_required_actions');
 	else:
-		$llorix_one_show_required_actions = array();
+		$llorix_one_lite_show_required_actions = array();
 	endif;
-	if( !empty($llorix_one_required_actions) ):
-		foreach( $llorix_one_required_actions as $llorix_one_required_action_value ):
-			if(( !isset( $llorix_one_required_action_value['check'] ) || ( isset( $llorix_one_required_action_value['check'] ) && ( $llorix_one_required_action_value['check'] == false ) ) ) && ((isset($llorix_one_show_required_actions[$llorix_one_required_action_value['id']]) && ($llorix_one_show_required_actions[$llorix_one_required_action_value['id']] == true)) || !isset($llorix_one_show_required_actions[$llorix_one_required_action_value['id']]) )) :
+	if( !empty($llorix_one_lite_required_actions) ):
+		foreach( $llorix_one_lite_required_actions as $llorix_one_required_action_value ):
+			if(( !isset( $llorix_one_required_action_value['check'] ) || ( isset( $llorix_one_required_action_value['check'] ) && ( $llorix_one_required_action_value['check'] == false ) ) ) && ((isset($llorix_one_lite_show_required_actions[$llorix_one_required_action_value['id']]) && ($llorix_one_lite_show_required_actions[$llorix_one_required_action_value['id']] == true)) || !isset($llorix_one_lite_show_required_actions[$llorix_one_required_action_value['id']]) )) :
 				$nr_actions_required++;
 			endif;
 		endforeach;

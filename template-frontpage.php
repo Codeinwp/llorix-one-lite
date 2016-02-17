@@ -31,7 +31,7 @@
 
 	endif; 
 
-	llorix_one_get_template_part( apply_filters("parallax_one_plus_header_layout","/sections/parallax_one_header_section"));
+	llorix_one_lite_get_template_part( apply_filters("llorix_one_lite_header_layout","/sections/llorix_one_lite_header_section"));
 
 ?>
 	</div>
@@ -44,7 +44,7 @@
 <?php
 
 	$sections_array = apply_filters(
-		"parallax_one_plus_sections_filter",
+		"llorix_one_lite_sections_filter",
 		array(
 			'sections/llorix_one_lite_logos_section',
 			'sections/llorix_one_lite_our_story_section',
@@ -57,7 +57,7 @@
 
 	if(!empty($sections_array)){
 		foreach($sections_array as $section){
-			llorix_one_get_template_part($section);
+			llorix_one_lite_get_template_part($section);
 		}
 	}
 ?>

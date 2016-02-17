@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
 
     /* Number of required actions */
     if ((typeof llorix_one_aboutpage !== 'undefined') && (typeof llorix_one_nr_actions_required !== 'undefined') && (llorix_one_nr_actions_required != '0')) {
-        jQuery('#accordion-section-themes .accordion-section-title').append('<a href="' + llorix_one_aboutpage + '"><span class="parallax-one-actions-count">' + llorix_one_nr_actions_required + '</span></a>');
+        jQuery('#accordion-section-themes .accordion-section-title').append('<a href="' + llorix_one_aboutpage + '"><span class="llorix-one-lite-actions-count">' + llorix_one_nr_actions_required + '</span></a>');
     }
 
     /* Upsell in Customizer (Link to Welcome page) */

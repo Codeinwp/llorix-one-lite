@@ -119,45 +119,19 @@ jQuery(window).resize(function() {
     }
 });
 
-var home_window_width_old;
-jQuery(document).ready(function(){
-    home_window_width_old = jQuery('.container').width();
-    if( home_window_width_old < 750  ){
-        jQuery('#our_services_wrap').parallaxonegridpinterest({columns: 1,selector: '.service-box'});
-        jQuery('#happy_customers_wrap').parallaxonegridpinterest({columns: 1,selector: '.testimonials-box'});
-    } else {
-        jQuery('#our_services_wrap').parallaxonegridpinterest({columns: 3,selector: '.service-box'});
-        jQuery('#happy_customers_wrap').parallaxonegridpinterest({columns: 3,selector: '.testimonials-box'});
-    } 
-});
-
-jQuery(window).resize(function() {
-    if( home_window_width_old != jQuery('.container').outerWidth() ){
-        home_window_width_old = jQuery('.container').outerWidth();
-        if( home_window_width_old < 750  ){
-            jQuery('#our_services_wrap').parallaxonegridpinterest({columns: 1,selector: '.service-box'});
-            jQuery('#happy_customers_wrap').parallaxonegridpinterest({columns: 1,selector: '.testimonials-box'});
-        } else {
-            jQuery('#our_services_wrap').parallaxonegridpinterest({columns: 3,selector: '.service-box'});
-            jQuery('#happy_customers_wrap').parallaxonegridpinterest({columns: 3,selector: '.testimonials-box'});
-        } 
-    }
-});
-
-
 /*=============================
 ========= MAP OVERLAY =========
 ===============================*/
 jQuery(document).ready(function(){
     jQuery('html').click(function(event) {
-        jQuery('.parallax_one_map_overlay').show();
+        jQuery('.llorix_one_lite_map_overlay').show();
     });
     
     jQuery('#container-fluid').click(function(event){
         event.stopPropagation();
     });
     
-    jQuery('.parallax_one_map_overlay').on('click',function(event){
+    jQuery('.llorix_one_lite_map_overlay').on('click',function(event){
         jQuery(this).hide();
     })
 });
@@ -170,8 +144,8 @@ jQuery(document).ready(function() {
 
 jQuery(document).ready(function(){
     if(jQuery('.overlay-layer-nav').hasClass('sticky-navigation-open')){
-        $parallax_one_header_height = jQuery('.navbar').height();
-        $parallax_one_header_height+=84;
-        jQuery('.header .overlay-layer').css('padding-top',$parallax_one_header_height);
+        $llorix_one_lite_header_height = jQuery('.navbar').height();
+        $llorix_one_lite_header_height+=84;
+        jQuery('.header .overlay-layer').css('padding-top',$llorix_one_lite_header_height);
     }
 });

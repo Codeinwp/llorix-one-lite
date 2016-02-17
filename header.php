@@ -129,15 +129,15 @@
 						
 						<?php
 							
-							$parallax_one = get_theme_mod( 'llorix_one_logo' );
+							$llorix_one_lite_logo = get_theme_mod( 'llorix_one_lite_logo' );
 
 							
 							
-							if(!empty($parallax_one)):
+							if(!empty($llorix_one_lite_logo)):
 
 								echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand" title="'.get_bloginfo('title').'">';
 
-									echo '<img src="'.esc_url($parallax_one).'" alt="'.get_bloginfo('title').'">';
+									echo '<img src="'.esc_url($llorix_one_lite_logo).'" alt="'.get_bloginfo('title').'">';
 
 								echo '</a>';
 

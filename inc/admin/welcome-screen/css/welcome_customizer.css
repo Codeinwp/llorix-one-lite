@@ -1,4 +1,4 @@
-.parallax-one-actions-count {
+.llorix-one-lite-actions-count {
     padding: 0 6px;
     display: inline-block;
     background-color: #d54e21;
@@ -11,13 +11,4 @@
     -webkit-border-radius: 10px;
     border-radius: 10px;
     z-index: 26;
-}
-.parallax-one-upgrade-to-pro-button {
-	padding: 3px 6px !important;
-	line-height: 1.5 !important;
-	font-size: 9px !important;
-	color: #ffffff !important;
-	background-color: #EA6F60;
-	letter-spacing: 1px;
-	text-transform: uppercase;
 }

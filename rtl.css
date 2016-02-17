@@ -130,11 +130,6 @@ label{
 .client-logos li{
     margin:25px 25px 25px 25px;
 }
-.single-service{
-    padding:40px 35px 40px 35px;
-    border-right:1px solid #eaeaea;
-    border-left:1px solid #eaeaea;
-}
 .woocommerce ul.products li .galcolumn{
     margin-left:0!important;
 }
@@ -257,7 +252,7 @@ li.galcolumn{
 .timeline-box-wrap .info .entry-meta{ 
     float:right;
 }
-.parallax-slider-whole-wrap{
+.llorix-one-lite-slider-whole-wrap{
     float:right;
 }
 #llorix_one_slider{
@@ -287,27 +282,6 @@ a.control_prev span{
     margin-left:1em;
     float:right;
 }
-.team-member .social-icons li{
-    padding-right:5px;
-    padding-left:5px;
-}
-.member-details{
-    right:0;
-    left:auto;
-}
-.team-member-wrap .team-member-box{
-    margin-left:-4px;
-}
-.testimonials-wrap .testimonials-box{
-    padding-right:15px;
-    padding-left:15px;
-}
-.testimonials-box .feedback{
-    padding:40px 0 40px 0;
-    margin:40px 0 30px 0;
-    border-right:1px solid #eaeaea;
-    border-left:1px solid #eaeaea;
-}
 .modal-content{
     padding:10px 30px 30px 30px;
 }
@@ -317,7 +291,7 @@ a.control_prev span{
 #cd-google-map address{
     right:0;
 }
-.parallax_one_map_overlay{
+.llorix_one_lite_map_overlay{
     right:0;
 }
 .page-template-template-contact-php #primary{
@@ -775,42 +749,6 @@ footer.footer ul{
 .widget .post-date{
     padding-right:10px;
 }
-.parallax_one_grid_col_1,
-.parallax_one_grid_col_2,
-.parallax_one_grid_col_3,
-.parallax_one_grid_col_4 {
-    float: right;
-}
-.parallax_one_grid_first {
-    margin-right: 0;
-}
-.parallax_one_grid_last {
-    margin-left: 0;
-}
-.parallax_one_grid_col_1.parallax_one_grid_first {
-    margin-left: 0;
-}
-.parallax_one_grid_col_2.parallax_one_grid_first {
-    margin-left: 1.75%;
-}
-.parallax_one_grid_col_3.parallax_one_grid_first {
-    margin-left: 1.25%;
-}
-.parallax_one_grid_col_4.parallax_one_grid_first {
-    margin-left: 1.25%;
-}
-.parallax_one_grid_col_1.parallax_one_grid_last {
-    margin-right: 0;
-}
-.parallax_one_grid_col_2.parallax_one_grid_last {
-    margin-right: 1.75%;
-}
-.parallax_one_grid_col_3.parallax_one_grid_last {
-    margin-right: 1.25%;
-}
-.parallax_one_grid_col_4.parallax_one_grid_last {
-    margin-right: 1.25%;
-}
 
 @media (max-width:1200px) {
     .woocommerce ul.products li.product a.added_to_cart{
@@ -874,9 +812,6 @@ footer.footer ul{
     }
     .menu-align-center .navbar-header > a{
         float:right;
-    }
-    .single-service{
-        margin:20px 0 20px 0;
     }
     .pricing-table{padding-right:30px;
         padding-left:30px;

@@ -66,7 +66,7 @@
 	******** HEADER SECTION ****************
 	****************************************/
 	//Logo
-	wp.customize("llorix_one_logo", function(value) {
+	wp.customize("llorix_one_lite_logo", function(value) {
         value.bind(function( to ) {
 			if( to != '' ) {
 				$( '.navbar-brand' ).removeClass( 'llorix_one_lite_only_customizer' );
@@ -84,68 +84,68 @@
 
 
 	//Show Header Logo
-	wp.customize('llorix_one_header_logo', function( value ){
+	wp.customize('llorix_one_lite_header_logo', function( value ){
 		value.bind(function( to ) {
 			if( to != '' ) {
-				$('#parallax_header .only-logo').removeClass( 'llorix_one_lite_only_customizer' );
+				$('#llorix_one_lite_header .only-logo').removeClass( 'llorix_one_lite_only_customizer' );
 			} else {
-				$('#parallax_header .only-logo').addClass( 'llorix_one_lite_only_customizer' );
+				$('#llorix_one_lite_header .only-logo').addClass( 'llorix_one_lite_only_customizer' );
 			}
-			$( '#parallax_header .only-logo img' ).attr('src', to);
+			$( '#llorix_one_lite_header .only-logo img' ).attr('src', to);
 		});
 		
 	});
 	
 	//Title
-	wp.customize("llorix_one_header_title", function(value) {
+	wp.customize("llorix_one_lite_header_title", function(value) {
 		
         value.bind(function( to ) {
 			if( to != '' ) {
-				$( '#parallax_header .intro-section h1' ).removeClass( 'llorix_one_lite_only_customizer' );
+				$( '#llorix_one_lite_header .intro-section h1' ).removeClass( 'llorix_one_lite_only_customizer' );
 			}
 			else {
-				$( '#parallax_header .intro-section h1' ).addClass( 'llorix_one_lite_only_customizer' );
+				$( '#llorix_one_lite_header .intro-section h1' ).addClass( 'llorix_one_lite_only_customizer' );
 			}
-			$( '#parallax_header .intro-section h1' ).text( to );
+			$( '#llorix_one_lite_header .intro-section h1' ).text( to );
 	    } );
 		
     });
 	
 	//Subtitle
-	wp.customize("llorix_one_header_subtitle", function(value) {
+	wp.customize("llorix_one_lite_header_subtitle", function(value) {
 		
         value.bind(function( to ) {
 			if( to != '' ) {
-				$( '#parallax_header .intro-section h5' ).removeClass( 'llorix_one_lite_only_customizer' );
+				$( '#llorix_one_lite_header .intro-section h5' ).removeClass( 'llorix_one_lite_only_customizer' );
 			} else {
-				$( '#parallax_header .intro-section h5' ).addClass( 'llorix_one_lite_only_customizer' );
+				$( '#llorix_one_lite_header .intro-section h5' ).addClass( 'llorix_one_lite_only_customizer' );
 			}
-			$( '#parallax_header .intro-section h5' ).text( to );
+			$( '#llorix_one_lite_header .intro-section h5' ).text( to );
 		} );
 		
     });
 	
 	//Button text
-	wp.customize("llorix_one_header_button_text", function(value) {
+	wp.customize("llorix_one_lite_header_button_text", function(value) {
 		
         value.bind(function( to ) {
 
 			if( to != '' ) {
-				$( '#parallax_header .button a' ).removeClass( 'llorix_one_lite_only_customizer' );
+				$( '#llorix_one_lite_header .button a' ).removeClass( 'llorix_one_lite_only_customizer' );
 			} else {
-				$( '#parallax_header .button a' ).addClass( 'llorix_one_lite_only_customizer' );
+				$( '#llorix_one_lite_header .button a' ).addClass( 'llorix_one_lite_only_customizer' );
 			}
-			$( '#parallax_header .button a' ).text( to );
+			$( '#llorix_one_lite_header .button a' ).text( to );
 		} );
 		
     });
 
 
 	//Button link
-	wp.customize("llorix_one_header_button_link", function(value) {
+	wp.customize("llorix_one_lite_header_button_link", function(value) {
 		
         value.bind(function( to ) {
-			$( '#parallax_header .button a' ).attr( 'href', to );
+			$( '#llorix_one_lite_header .button a' ).attr( 'href', to );
 		} );
 		
     });	
@@ -155,7 +155,7 @@
 	************* OUR STORY SECTION ****************
 	*******************************************************/
 	//Title
-	wp.customize("llorix_one_our_story_title", function(value) {
+	wp.customize("llorix_one_lite_our_story_title", function(value) {
 		
         value.bind(function( to ) {
 			
@@ -176,7 +176,7 @@
 		
     });
 	
-	wp.customize("llorix_one_our_story_text",function(value) {
+	wp.customize("llorix_one_lite_our_story_text",function(value) {
 		
 		value.bind(function( to ) {
 			if( to != '' ) {
@@ -194,7 +194,7 @@
 		
 	});
 	
-	wp.customize("llorix_one_our_story_image",function(value) {
+	wp.customize("llorix_one_lite_our_story_image",function(value) {
 		
 		value.bind(function( to ) {
 			if( to != '' ) {
@@ -215,7 +215,7 @@
 	**************** RIBBON SECTION *****************
 	*******************************************************/
 	
-	wp.customize( 'llorix_one_ribbon_background', function( value ) {
+	wp.customize( 'llorix_one_lite_ribbon_background', function( value ) {
 		value.bind( function( to ) {
 			
 			if ( '' != to ) {
@@ -230,7 +230,7 @@
 	
 	
 	//Title
-	wp.customize("llorix_one_ribbon_title", function(value) {
+	wp.customize("llorix_one_lite_ribbon_title", function(value) {
 		
         value.bind(function( to ) {
 
@@ -250,7 +250,7 @@
 	
 	
 	//Button text
-	wp.customize("llorix_one_button_text", function(value) {
+	wp.customize("llorix_one_lite_button_text", function(value) {
 		
         value.bind(function( to ) {
 
@@ -270,7 +270,7 @@
 
 
 	//Button link
-	wp.customize("llorix_one_button_link", function(value) {
+	wp.customize("llorix_one_lite_button_link", function(value) {
 		
         value.bind(function( to ) {
 			$( '#ribbon button' ).attr( 'onclick', to );
@@ -284,7 +284,7 @@
 	*******************************************************/
 	
 	//Title
-	wp.customize("llorix_one_latest_news_title", function(value) {
+	wp.customize("llorix_one_lite_latest_news_title", function(value) {
 		
         value.bind(function( to ) {
 

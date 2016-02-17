@@ -3,12 +3,12 @@
 ============================== -->
 <?php
 
-	$parallax_number_of_posts = get_option('posts_per_page');
-	$args = array( 'post_type' => 'post', 'posts_per_page' => $parallax_number_of_posts, 'order' => 'DESC','ignore_sticky_posts' => true );
+	$llorix_one_lite_number_of_posts = get_option('posts_per_page');
+	$args = array( 'post_type' => 'post', 'posts_per_page' => $llorix_one_lite_number_of_posts, 'order' => 'DESC','ignore_sticky_posts' => true );
 	$the_query = new WP_Query( $args );
 	if ( $the_query->have_posts() ) {
-		$llorix_one_latest_news_title = get_theme_mod('llorix_one_latest_news_title',esc_html__('Latest news','llorix-one-lite'));
-		if($parallax_number_of_posts > 0) {
+		$llorix_one_lite_latest_news_title = get_theme_mod('llorix_one_lite_latest_news_title',esc_html__('Latest news','llorix-one-lite'));
+		if($llorix_one_lite_number_of_posts > 0) {
 		?>
 			<section class="brief timeline" id="latestnews" role="region" aria-label="<?php esc_html_e('Latest blog posts','llorix-one-lite'); ?>">
 				<div class="section-overlay-layer">
@@ -17,14 +17,14 @@
 
 							<!-- TIMELINE HEADING / TEXT  -->
 							<?php
-								if(!empty($llorix_one_latest_news_title)){
-									echo '<div class="col-md-12 timeline-text text-left"><h2 class="text-left dark-text">'.esc_attr($llorix_one_latest_news_title).'</h2><div class="colored-line-left"></div></div>';
+								if(!empty($llorix_one_lite_latest_news_title)){
+									echo '<div class="col-md-12 timeline-text text-left"><h2 class="text-left dark-text">'.esc_attr($llorix_one_lite_latest_news_title).'</h2><div class="colored-line-left"></div></div>';
 								} elseif ( isset( $wp_customize )   ) {
 									echo '<div class="col-md-12 timeline-text text-left llorix_one_lite_only_customizer"><h2 class="text-left dark-text "></h2><div class="colored-line-left "></div></div>';
 								}
 							?>
 
-							<div class="parallax-slider-whole-wrap">
+							<div class="llorix-one-lite-slider-whole-wrap">
 								<div class="controls-wrap">
 									<button class="control_next icon icon-arrow-carrot-down"><span class="screen-reader-text"><?php esc_attr_e('Post slider navigation: Down','llorix-one-lite')?></span></button>
 									<button class="control_prev fade-btn icon icon-arrow-carrot-up"><span class="screen-reader-text"><?php esc_attr_e('Post slider navigation: Up','llorix-one-lite')?></span></button>
@@ -108,7 +108,7 @@
 										?>
 									</ul>
 								</div>
-							</div><!-- .parallax-slider-whole-wrap -->
+							</div><!-- .llorix-one-lite-slider-whole-wrap -->
 						</div>
 					</div>
 				</div>

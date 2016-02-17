@@ -6,20 +6,20 @@
 $customizer_url = admin_url() . 'customize.php' ;
 ?>
 
-<div id="getting_started" class="parallax-one-tab-pane active">
+<div id="getting_started" class="llorix-one-lite-tab-pane active">
 
-	<div class="prallax-one-tab-pane-center">
+	<div class="llorix-one-lite-tab-pane-center">
 
-		<h1 class="llorix-one-welcome-title"><?php _e('Welcome to Llorix One!','llorix-one-lite'); ?> <?php if( !empty($llorix_one['Version']) ): ?> <sup id="parallax-one-theme-version"><?php echo esc_attr( $llorix_one['Version'] ); ?> </sup><?php endif; ?></h1>
+		<h1 class="llorix-one-welcome-title"><?php _e('Welcome to Llorix One Lite!','llorix-one-lite'); ?> <?php if( !empty($llorix_one['Version']) ): ?> <sup id="llorix-one-lite-theme-version"><?php echo esc_attr( $llorix_one['Version'] ); ?> </sup><?php endif; ?></h1>
 
 		<p><?php esc_html_e( 'Our most elegant and professional one-page theme, which turns your scrolling into a smooth and pleasant experience.','llorix-one-lite'); ?></p>
-		<p><?php esc_html_e( 'We want to make sure you have the best experience using Llorix One and that is why we gathered here all the necessary informations for you. We hope you will enjoy using Llorix One, as much as we enjoy creating great products.', 'llorix-one-lite' ); ?>
+		<p><?php esc_html_e( 'We want to make sure you have the best experience using Llorix One Lite and that is why we gathered here all the necessary informations for you. We hope you will enjoy using Llorix One Lite, as much as we enjoy creating great products.', 'llorix-one-lite' ); ?>
 
 	</div>
 
 	<hr />
 
-	<div class="prallax-one-tab-pane-center">
+	<div class="llorix-one-lite-tab-pane-center">
 
 		<h1><?php esc_html_e( 'Getting started', 'llorix-one-lite' ); ?></h1>
 
@@ -31,13 +31,13 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 	<hr />
 
-	<div class="prallax-one-tab-pane-center">
+	<div class="llorix-one-lite-tab-pane-center">
 
 		<h1><?php esc_html_e( 'FAQ', 'llorix-one-lite' ); ?></h1>
 
 	</div>
 
-	<div class="prallax-one-tab-pane-half prallax-one-tab-pane-first-half">
+	<div class="llorix-one-lite-tab-pane-half llorix-one-lite-tab-pane-first-half">
 
 		<h4><?php esc_html_e( 'Create a child theme', 'llorix-one-lite' ); ?></h4>
 		<p><?php esc_html_e( 'If you want to make changes to the theme\'s files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below.', 'llorix-one-lite' ); ?></p>
@@ -57,7 +57,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 	</div>
 
-	<div class="prallax-one-tab-pane-half">
+	<div class="llorix-one-lite-tab-pane-half">
 
 		<h4><?php esc_html_e( 'Speed up your site', 'llorix-one-lite' ); ?></h4>
 		<p><?php esc_html_e( 'If you find yourself in the situation where everything on your site is running very slow, you might consider having a look at the below documentation where you will find the most common issues causing this and possible solutions for each of the issues.', 'llorix-one-lite' ); ?></p>
@@ -77,11 +77,11 @@ $customizer_url = admin_url() . 'customize.php' ;
 		
 	</div>
 
-	<div class="parallax-one-clear"></div>
+	<div class="llorix-one-lite-clear"></div>
 
 	<hr />
 
-	<div class="prallax-one-tab-pane-center">
+	<div class="llorix-one-lite-tab-pane-center">
 
 		<h1><?php esc_html_e( 'View full documentation', 'llorix-one-lite' ); ?></h1>
 		<p><?php esc_html_e( 'Need more details? Please check our full documentation for detailed information on how to use Llorix One.', 'llorix-one-lite' ); ?></p>
@@ -91,11 +91,11 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 	<hr />
 
-	<div class="prallax-one-tab-pane-center">
+	<div class="llorix-one-lite-tab-pane-center">
 		<h1><?php esc_html_e( 'Recommended plugins', 'llorix-one-lite' ); ?></h1>
 	</div>
 
-	<div class="prallax-one-tab-pane-half prallax-one-tab-pane-first-half">
+	<div class="llorix-one-lite-tab-pane-half llorix-one-lite-tab-pane-first-half">
 
 		<!-- WP Product Review -->
 		<h4><?php esc_html_e( 'Intergeo Maps - Google Maps Plugin', 'llorix-one-lite' ); ?></h4>
@@ -103,7 +103,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 		<?php if ( is_plugin_active( 'intergeo-maps/index.php' ) ) { ?>
 
-				<p><span class="parallax-one-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
+				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
 
 			<?php
 		}
@@ -123,7 +123,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 		<?php if ( is_plugin_active( 'pirate-forms/pirate-forms.php' ) ) { ?>
 
-				<p><span class="parallax-one-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
+				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
 
 			<?php
 		}
@@ -140,7 +140,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 
 	
-	<div class="prallax-one-tab-pane-half">
+	<div class="llorix-one-lite-tab-pane-half">
 
 		<!-- ShortPixel Image Optimizer -->
 		<h4><?php esc_html_e( 'ShortPixel Image Optimizer', 'llorix-one-lite' ); ?></h4>
@@ -148,7 +148,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 		<?php if ( is_plugin_active( 'shortpixel-image-optimiser/wp-shortpixel.php' ) ) { ?>
 
-				<p><span class="parallax-one-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
+				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
 
 			<?php
 		}
@@ -162,6 +162,6 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 	</div>
 
-	<div class="parallax-one-clear"></div>
+	<div class="llorix-one-lite-clear"></div>
 
 </div>
