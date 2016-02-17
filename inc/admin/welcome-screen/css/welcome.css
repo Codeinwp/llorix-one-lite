@@ -1,0 +1,125 @@
+.llorix-one-lite-nav-tabs {
+    margin-bottom: 0;
+}
+.llorix-one-lite-nav-tabs:after {
+    clear: both;
+    display: table;
+    content: " ";
+}
+.llorix-one-lite-nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    display: block;
+}
+.llorix-one-lite-nav-tabs > li > a {
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    display: block;
+    padding: 10px 15px;
+	text-decoration: none;
+}
+.llorix-one-lite-nav-tabs > li.active > a, .llorix-one-lite-nav-tabs > li.active > a:focus, .llorix-one-lite-nav-tabs > li.active > a:hover {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.llorix-one-lite-nav-tabs > li.llorix-one-lite-w-red-tab > a {
+    color: red;
+    font-weight: bold;
+}
+.llorix-one-lite-tab-content {
+	background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    width: 960px;
+    float: left;
+}
+.llorix-one-lite-tab-content > .tab-pane {
+    display: none;
+}
+.llorix-one-lite-tab-content > .active {
+    display: block;
+}
+
+.llorix-one-lite-tab-pane {
+	padding: 30px;
+}
+.llorix-one-lite-tab-pane {
+    display: none;
+}
+.llorix-one-lite-tab-pane.active {
+    display: block;
+}
+
+#llorix-one-lite-theme-version {
+    font-size: 50%;
+    padding: 10px;
+    background: #ccc;
+}
+#llorix-one-lite-w-screenshot {
+    border: 1px solid #ccc;
+    margin-top: 30px;
+}
+.llorix-one-lite-w-activated {
+    cursor:not-allowed !important;
+}
+.llorix-one-lite-tab-pane-half {
+    width: 45%;
+    float:left;
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+    margin-top: 15px;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+.llorix-one-lite-tab-content img {
+    max-width: 100%;
+}
+.llorix-one-lite-tab-pane-first-half {
+    border-left: none;
+}
+.llorix-one-lite-tab-pane-center {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.llorix-one-welcome-title {
+    font-size: 32px;
+}
+.llorix-one-lite-clear {
+    clear: both;
+}
+
+.llorix-one-lite-actions-count {
+    padding: 0 6px;
+    display: inline-block;
+    background-color: #d54e21;
+    color: #fff;
+    font-size: 9px;
+    line-height: 17px;
+    font-weight: 600;
+    margin: 1px 0 0 2px;
+    vertical-align: top;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    z-index: 26;
+}
+.llorix-one-lite-action-required-box {
+    position: relative;
+}
+.llorix-one-lite-dismiss-required-action {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    background-color: #D24A4A;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+}
+.llorix-one-lite-dismiss-required-action:hover {
+    background-color: #CC8C8C;
+}
