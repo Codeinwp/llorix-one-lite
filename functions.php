@@ -333,10 +333,15 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-function llorix_one_admin_styles() {
+function llorix_one_lite_admin_styles($hook) {
+
+	if ( 'themes.php' != $hook ) {
+		return;
+	}
+
 	wp_enqueue_style( 'llorix_one_lite_admin_stylesheet', llorix_one_lite_get_file('/css/admin-style.css'),'1.0.0' );
 }
-add_action( 'admin_enqueue_scripts', 'llorix_one_admin_styles', 10 );
+add_action( 'admin_enqueue_scripts', 'llorix_one_lite_admin_styles', 10 );
 
 // Adding IE-only scripts to header.
 function llorix_one_lite_ie () {
