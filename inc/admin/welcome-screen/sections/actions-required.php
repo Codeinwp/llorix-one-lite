@@ -6,7 +6,7 @@
 
 <div id="actions_required" class="llorix-one-lite-tab-pane">
 
-    <h1><?php esc_html_e( 'Keep up with Llorix One Lite\'s latest news' ,'llorix-one-lite' ); ?></h1>
+    <h1><?php esc_html_e( 'Keep up with Llorix One Lite\'s required actions' ,'llorix-one-lite' ); ?></h1>
 
     <!-- NEWS -->
     <hr />

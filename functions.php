@@ -248,7 +248,7 @@ function llorix_one_lite_scripts() {
 add_action( 'wp_enqueue_scripts', 'llorix_one_lite_scripts' );
 
 
-function llorix_one_add_id(){
+function llorix_one_lite_add_id(){
 	$migrate = get_option( 'llorix_one_lite_migrate_translation' );
 	if( isset($migrate) && $migrate == false ) {
 		
@@ -311,7 +311,7 @@ function llorix_one_add_id(){
 		update_option( 'llorix_one_lite_migrate_translation', true );
 	}
 }
-add_action( 'shutdown', 'llorix_one_add_id' );
+add_action( 'shutdown', 'llorix_one_lite_add_id' );
 
 /**
  * Custom template tags for this theme.
