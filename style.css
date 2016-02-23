@@ -1498,6 +1498,47 @@ header .navbar-brand {
 	display: none !important;
 }
 
+.llorix_one_lite_grid_col_4 > div,
+.llorix_one_lite_grid_col_3 > div,
+.llorix_one_lite_grid_col_2 > div,
+.llorix_one_lite_grid_col_1 > div {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.llorix_one_lite_grid_col_4 {
+	float: left;
+	width: 23%;
+	margin: 0 1.25% 0 1.25%;
+}
+
+.llorix_one_lite_grid_col_3 {
+    float: left;
+    width: 31.5%;
+    margin: 0 1.25% 0 1.25%;
+	min-height: 1px;
+}
+
+.llorix_one_lite_grid_col_2 {
+	float: left;
+	width: 48%;
+	margin: 0 1.75% 0 1.75%;
+}
+
+.llorix_one_lite_grid_col_1 {
+	float: left;
+	width: 100%;
+}
+
+.llorix_one_lite_grid_first {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.llorix_one_lite_grid_last {
+	margin-right: 0;
+	padding-right: 0;
+}
 
 /*---------------------------------------
    3.4 SECTION: APP BRIEF    
