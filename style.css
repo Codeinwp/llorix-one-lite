@@ -4,7 +4,7 @@ Theme URI: http://themeisle.com/themes/llorix-one/
 Author: ThemeIsle
 Author URI: http://themeisle.com/
 Description: Llorix One Lite is a free and beautiful business WordPress theme, with a flat clean design and an elegant parallax effect. It provides a simple and professional look that can be used for any kind of businesses or startups. Llorix One Lite has a blue & orange appearance, with buttons and icons promoting simplicity and elegance at their best. The theme provides a responsive blog section, is ecommerce ready (WooCommerce compatible), WPML and SEO friendly. You can use it for your business / startup, agencies, corporate websites, or portfolios.
-Version: 0.1
+Version: 0.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: llorix-one-lite
@@ -1498,6 +1498,47 @@ header .navbar-brand {
 	display: none !important;
 }
 
+.llorix_one_lite_grid_col_4 > div,
+.llorix_one_lite_grid_col_3 > div,
+.llorix_one_lite_grid_col_2 > div,
+.llorix_one_lite_grid_col_1 > div {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.llorix_one_lite_grid_col_4 {
+	float: left;
+	width: 23%;
+	margin: 0 1.25% 0 1.25%;
+}
+
+.llorix_one_lite_grid_col_3 {
+    float: left;
+    width: 31.5%;
+    margin: 0 1.25% 0 1.25%;
+	min-height: 1px;
+}
+
+.llorix_one_lite_grid_col_2 {
+	float: left;
+	width: 48%;
+	margin: 0 1.75% 0 1.75%;
+}
+
+.llorix_one_lite_grid_col_1 {
+	float: left;
+	width: 100%;
+}
+
+.llorix_one_lite_grid_first {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.llorix_one_lite_grid_last {
+	margin-right: 0;
+	padding-right: 0;
+}
 
 /*---------------------------------------
    3.4 SECTION: APP BRIEF    
@@ -5121,6 +5162,10 @@ h2.screen-reader-text {
     background-size: cover;
     background-position: top center;
     z-index: -1;
+}
+
+.llorix-one-lite-top-margin-5px {
+	margin-top: 5px !important;
 }
 
 /* --------------------------------------
