@@ -18,7 +18,7 @@
 			</header><!-- .entry-header -->
 	<?php } ?>
 
-	<div class="entry-content content-page" itemprop="text">
+	<div class="entry-content content-page <?php if( empty( $page_title ) ){ echo 'llorix-one-lite-top-margin-5px'; } ?>" itemprop="text">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

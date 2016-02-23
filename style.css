@@ -5164,6 +5164,10 @@ h2.screen-reader-text {
     z-index: -1;
 }
 
+.llorix-one-lite-top-margin-5px {
+	margin-top: 5px !important;
+}
+
 /* --------------------------------------
 =========================================
    6. RESPONSIVE CSS FIXES
