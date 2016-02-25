@@ -1,1 +1,0 @@
-# llorix-one-lite
