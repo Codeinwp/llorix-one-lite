@@ -123,3 +123,26 @@
 .llorix-one-lite-dismiss-required-action:hover {
     background-color: #CC8C8C;
 }
+
+/*Breakpoints*/
+
+@media (max-width: 1200px) {
+  .llorix-one-lite-tab-content {
+    width: 98%;
+  }
+  .llorix-one-lite-tab-pane-half {
+    width: 43%;
+  }
+}
+@media (max-width: 782px) {
+
+  .llorix-one-lite-tab-pane-half {
+    width: auto;
+    float: none;
+    border-left: none;
+  }
+
+  .llorix-one-welcome-title, .llorix-one-lite-tab-content h1 {
+    line-height: 30px;
+  }
+}
