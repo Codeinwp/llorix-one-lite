@@ -634,7 +634,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'llorix_one_lite_general_section' , array(
 		'title'       => esc_html__( 'Advanced options', 'llorix-one-lite' ),
       	'priority'    => 85,
-      	'description' => esc_html__('Paralax One theme general options','llorix-one-lite'),
+      	'description' => esc_html__('Llorix One Lite theme general options','llorix-one-lite'),
 	));
 	
 	$blogname = $wp_customize->get_control('blogname');
