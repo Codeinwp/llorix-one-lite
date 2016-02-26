@@ -213,6 +213,8 @@ function llorix_one_lite_scripts() {
 	
 	wp_enqueue_style( 'llorix-one-lite-font', '//fonts.googleapis.com/css?family=Cabin:400,600|Open+Sans:400,300,600');
 
+	wp_enqueue_style( 'llorix-one-lite-fontawesome', get_stylesheet_directory_uri().'/css/font-awesome.min.css',array(), '4.4.0');
+
 	wp_enqueue_style( 'llorix-one-lite-bootstrap-style', llorix_one_lite_get_file( '/css/bootstrap.min.css'),array(), '3.3.1');
 
 	wp_enqueue_style( 'llorix-one-lite-style', get_stylesheet_uri(), array('llorix-one-lite-bootstrap-style'),'1.0.0');
@@ -246,72 +248,6 @@ function llorix_one_lite_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'llorix_one_lite_scripts' );
-
-
-function llorix_one_lite_add_id(){
-	$migrate = get_option( 'llorix_one_lite_migrate_translation' );
-	if( isset($migrate) && $migrate == false ) {
-		
-		/*Logo*/
-		$llorix_one_lite_logos = get_theme_mod('llorix_one_lite_logos_content', json_encode(array( array("image_url" => llorix_one_lite_get_file('/images/companies/1.png') ,"link" => "#" ),array("image_url" => llorix_one_lite_get_file('/images/companies/2.png') ,"link" => "#" ),array("image_url" => llorix_one_lite_get_file('/images/companies/3.png') ,"link" => "#" ),array("image_url" => llorix_one_lite_get_file('/images/companies/4.png') ,"link" => "#" ),array("image_url" => llorix_one_lite_get_file('/images/companies/5.png') ,"link" => "#" ) )));
-		if(!empty($llorix_one_lite_logos)){
-			
-			$llorix_one_lite_logos_decoded = json_decode($llorix_one_lite_logos);
-			foreach($llorix_one_lite_logos_decoded as &$it){
-				if(!array_key_exists ( "id" , $it ) || !($it->id) ){
-					$it = (object) array_merge( (array)$it, array( 'id' => 'llorix_one_lite_'.uniqid() ) );
-				}
-			}
-			$llorix_one_lite_logos = json_encode($llorix_one_lite_logos_decoded);
-			set_theme_mod( 'llorix_one_lite_logos_content', $llorix_one_lite_logos );
-		}
-
-		/*Contact Info*/
-		$llorix_one_lite_contact_info = get_theme_mod('llorix_one_lite_contact_info_content', json_encode(
-			array( 
-					array("icon_value" => "icon-basic-mail" ,"text" => "contact@site.com", "link" => "#" ), 
-					array("icon_value" => "icon-basic-geolocalize-01" ,"text" => "Company address", "link" => "#" ), 
-					array("icon_value" => "icon-basic-tablet" ,"text" => "0 332 548 954", "link" => "#" ) 
-			)
-		));
-		if(!empty($llorix_one_lite_contact_info)){
-			
-			$llorix_one_lite_contact_info_decoded = json_decode($llorix_one_lite_contact_info);
-			foreach($llorix_one_lite_contact_info_decoded as &$it){
-				if(!array_key_exists ( "id" , $it ) || !($it->id) ){
-					$it = (object) array_merge( (array)$it, array( 'id' => 'llorix_one_lite_'.uniqid() ) );
-				}
-			}
-			
-			$llorix_one_lite_contact_info = json_encode($llorix_one_lite_contact_info_decoded);
-			set_theme_mod( 'llorix_one_lite_contact_info_content', $llorix_one_lite_contact_info );
-		}
-		
-		/*Social Icons*/
-		$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_social_icons', json_encode(
-			array(
-				array('icon_value' =>'icon-social-facebook' , 'link' => '#'),
-				array('icon_value' =>'icon-social-twitter' , 'link' => '#'),
-				array('icon_value' =>'icon-social-googleplus' , 'link' => '#')
-			)
-		));
-		if(!empty($llorix_one_lite_social_icons)){
-			
-			$llorix_one_lite_social_icons_decoded = json_decode($llorix_one_lite_social_icons);
-			foreach($llorix_one_lite_social_icons_decoded as &$it){
-				if(!array_key_exists ( "id" , $it ) || !($it->id) ){
-					$it = (object) array_merge( (array)$it, array( 'id' => 'llorix_one_lite_'.uniqid() ) );
-				}
-			}
-			
-			$llorix_one_lite_social_icons = json_encode($llorix_one_lite_social_icons_decoded);
-			set_theme_mod( 'llorix_one_lite_social_icons', $llorix_one_lite_social_icons );
-		}
-		
-		update_option( 'llorix_one_lite_migrate_translation', true );
-	}
-}
-add_action( 'shutdown', 'llorix_one_lite_add_id' );
 
 /**
  * Custom template tags for this theme.
@@ -560,13 +496,107 @@ if(function_exists('icl_unregister_string') && function_exists('icl_register_str
 		$llorix_one_contact_pl_decoded = json_decode($llorix_one_contact_pl);
 		foreach($llorix_one_contact_pl_decoded as $llorix_one_contact_box){
 			$text = $llorix_one_contact_box->text;
-			$id = esc_attr($llorix_one_contact_box->id);
+			$link = $llorix_one_contact_box->link;
+			$icon = $llorix_one_contact_box->icon_value;
+			$id = $llorix_one_contact_box->id;
 			if(!empty($id)) {
 				if(!empty($text)){
 					icl_unregister_string ('Contact' , $id.'_contact' );
 					icl_register_string( 'Contact' , $id.'_contact' , $text );
 				} else {
 					icl_unregister_string ('Contact' , $id.'_contact' );
+				}
+
+				if(!empty($link)){
+					icl_unregister_string ('Contact link' , $id.'_contact_link' );
+					icl_register_string( 'Contact link' , $id.'_contact_link' , $link );
+				} else {
+					icl_unregister_string ('Contact link' , $id.'_contact_link' );
+				}
+
+				if(!empty($icon)){
+					icl_unregister_string ('Contact icon' , $id.'_contact_icon' );
+					icl_register_string( 'Contact icon' , $id.'_contact_icon' , $icon );
+				} else {
+					icl_unregister_string ('Contact icon' , $id.'_contact_icon' );
+				}
+			}
+		}
+	}
+
+	/*Logo*/
+	$llorix_one_lite_logos_pl = get_theme_mod('llorix_one_lite_logos_content');
+	if(!empty($llorix_one_lite_logos_pl)){
+		$llorix_one_lite_logos_pl_decoded = json_decode($llorix_one_lite_logos_pl);
+		foreach($llorix_one_lite_logos_pl_decoded as $llorix_one_logo_box){
+			$image = $llorix_one_logo_box->image_url;
+			$link = $llorix_one_logo_box->link;
+			$id = $llorix_one_logo_box->id;
+			if(!empty($id)) {
+				if(!empty($image)){
+					icl_unregister_string ('Logo image' , $id.'_logo_image' );
+					icl_register_string( 'Logo image' , $id.'_logo_image' , $image );
+				} else {
+					icl_unregister_string ('Logo image' , $id.'_logo_image' );
+				}
+
+				if(!empty($link)){
+					icl_unregister_string ('Logo link' , $id.'_logo_link' );
+					icl_register_string( 'Logo link' , $id.'_logo_link' , $link );
+				} else {
+					icl_unregister_string ('Logo link' , $id.'_logo_link' );
+				}
+			}
+		}
+	}
+
+	/*Header*/
+	$llorix_one_lite_social_icons_pl = get_theme_mod('llorix_one_lite_very_top_social_icons');
+	if(!empty($llorix_one_lite_social_icons_pl)){
+		$llorix_one_lite_social_icons_pl_decoded = json_decode($llorix_one_lite_social_icons_pl);
+		foreach($llorix_one_lite_social_icons_pl_decoded as $llorix_one_header_social_box){
+			$icon = $llorix_one_header_social_box->icon_value;
+			$link = $llorix_one_header_social_box->link;
+			$id = $llorix_one_header_social_box->id;
+			if(!empty($id)) {
+				if(!empty($icon)){
+					icl_unregister_string ('Header Social Icon' , $id.'_header_social_icon' );
+					icl_register_string( 'Header Social Icon' , $id.'_header_social_icon' , $icon );
+				} else {
+					icl_unregister_string ('Header Social Icon' , $id.'_header_social_icon' );
+				}
+
+				if(!empty($link)){
+					icl_unregister_string ('Header Social Link' , $id.'_header_social_link' );
+					icl_register_string( 'Header Social Link' , $id.'_header_social_link' , $link );
+				} else {
+					icl_unregister_string ('Header Social Link' , $id.'_header_social_link' );
+				}
+			}
+		}
+	}
+
+	/*Footer*/
+	$llorix_one_lite_social_icons_pl = get_theme_mod('llorix_one_lite_social_icons');
+	if(!empty($llorix_one_lite_social_icons_pl)){
+		$llorix_one_lite_social_icons_pl_decoded = json_decode($llorix_one_lite_social_icons_pl);
+		foreach($llorix_one_lite_social_icons_pl_decoded as $llorix_one_header_social_box){
+			$icon = $llorix_one_header_social_box->icon_value;
+			$link = $llorix_one_header_social_box->link;
+			$id = $llorix_one_header_social_box->id;
+			if(!empty($id)) {
+				if(!empty($icon)){
+					icl_unregister_string ('Footer Social Icon' , $id.'_footer_social_icon' );
+					icl_register_string( 'Footer Social Icon' , $id.'_footer_social_icon' , $icon );
+				} else {
+					icl_unregister_string ('Footer Social Icon' , $id.'_footer_social_icon' );
+				}
+
+				if(!empty($link)){
+					icl_unregister_string ('Footer Social Link' , $id.'_footer_social_link' );
+					icl_register_string( 'Footer Social Link' , $id.'_footer_social_link' , $link );
+				} else {
+					icl_unregister_string ('Footer Social Link' , $id.'_footer_social_link' );
 				}
 			}
 		}
