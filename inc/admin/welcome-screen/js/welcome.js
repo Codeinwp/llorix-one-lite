@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-	
+
 	/* If there are required actions, add an icon with the number of required actions in the About L One page -> Actions required tab */
     var llorix_one_nr_actions_required = llorixOneLiteWelcomeScreenObject.nr_actions_required;
 
@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
     jQuery(".llorix-one-lite-dismiss-required-action").click(function(){
 
         var id= jQuery(this).attr('id');
-        
+
         jQuery.ajax({
             type       : "GET",
             data       : { action: 'llorix_one_lite_dismiss_required_action',dismiss_id : id },
@@ -40,7 +40,7 @@ jQuery(document).ready(function() {
             }
         });
     });
-	
+
 	/* Tabs in welcome page */
 	function llorix_one_lite_welcome_page_tabs(event) {
 		jQuery(event).parent().addClass("active");
@@ -49,16 +49,21 @@ jQuery(document).ready(function() {
         jQuery(".llorix-one-lite-tab-pane").not(tab).css("display", "none");
         jQuery(tab).fadeIn();
 	}
-	
+
 	var llorix_one_lite_actions_anchor = location.hash;
-	
+
 	if( (typeof llorix_one_lite_actions_anchor !== 'undefined') && (llorix_one_lite_actions_anchor != '') ) {
 		llorix_one_lite_welcome_page_tabs('a[href="'+ llorix_one_lite_actions_anchor +'"]');
 	}
-	
+
     jQuery(".llorix-one-lite-nav-tabs a").click(function(event) {
         event.preventDefault();
 		llorix_one_lite_welcome_page_tabs(this);
     });
-	
+
+ /* Tab Content height matches admin menu height for scrolling purpouses */
+		$tab = jQuery('.llorix-one-lite-tab-content > div');
+		$admin_menu_height = jQuery('#adminmenu').height();
+		$newheight = $admin_menu_height - 180;
+		$tab.css('min-height',$newheight);
 });
