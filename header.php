@@ -102,10 +102,15 @@
 									if( !empty($llorix_one_lite_social_icons_decoded) ){
 										echo '<ul class="social-icons">';
 											foreach($llorix_one_lite_social_icons_decoded as $llorix_one_social_icon){
-												if(function_exists('icl_t')){
-													echo '<li><a href="'.icl_t('Header Social Link',$llorix_one_social_icon->id.'_header_social_link',esc_url($llorix_one_social_icon->link)).'"><i class="fa '.icl_t('Header Social Icon',$llorix_one_social_icon->id.'_header_social_icon',esc_attr($llorix_one_social_icon->icon_value)).' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">'.esc_attr(explode("-",$llorix_one_social_icon->icon_value)[2]).'</span></a></li>';
-												} else {
-													echo '<li><a href="'.esc_url($llorix_one_social_icon->link).'"><i class="fa '.esc_attr($llorix_one_social_icon->icon_value).' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">'.esc_attr(explode("-",$llorix_one_social_icon->icon_value)[2]).'</span></a></li>';
+												if( !empty($llorix_one_social_icon->icon_value) ) {
+													explode("-",$llorix_one_social_icon->icon_value);
+													if( !empty($llorix_one_social_icon->icon_value[2]) ) {
+														if(function_exists('icl_t')){
+															echo '<li><a href="'.icl_t('Header Social Link',$llorix_one_social_icon->id.'_header_social_link',esc_url($llorix_one_social_icon->link)).'"><i class="fa '.icl_t('Header Social Icon',$llorix_one_social_icon->id.'_header_social_icon',esc_attr($llorix_one_social_icon->icon_value)).' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">'.esc_attr($llorix_one_social_icon->icon_value[2]).'</span></a></li>';
+														} else {
+															echo '<li><a href="'.esc_url($llorix_one_social_icon->link).'"><i class="fa '.esc_attr($llorix_one_social_icon->icon_value).' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">'.esc_attr($llorix_one_social_icon->icon_value[2]).'</span></a></li>';
+														}
+													}	
 												}
 											}
 										echo '</ul>';

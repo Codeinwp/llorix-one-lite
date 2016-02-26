@@ -100,11 +100,16 @@
 							echo '<ul class="social-icons">';
 							
 								foreach($llorix_one_lite_social_icons_decoded as $llorix_one_lite_social_icon){
-									if(function_exists('icl_t')){
-										echo '<li><a href="'.icl_t('Footer Social Link',$llorix_one_lite_social_icon->id.'_footer_social_link',esc_url($llorix_one_lite_social_icon->link)).'"><i class="fa llorix-one-lite-footer-icons '.icl_t('Footer Social Icon',$llorix_one_lite_social_icon->id.'_footer_social_icon',esc_attr($llorix_one_lite_social_icon->icon_value)).' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">'.esc_attr(explode("-",$llorix_one_lite_social_icon->icon_value)[2]).'</span></a></li>';
-									} else {
-										echo '<li><a href="'.esc_url($llorix_one_lite_social_icon->link).'"><i class="fa llorix-one-lite-footer-icons '.esc_attr($llorix_one_lite_social_icon->icon_value).' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">'.esc_attr(explode("-",$llorix_one_lite_social_icon->icon_value)[2]).'</span></a></li>';
-									}
+									if( !empty($llorix_one_lite_social_icon->icon_value) ) {
+										explode("-",$llorix_one_lite_social_icon->icon_value);
+										if( !empty($llorix_one_lite_social_icon->icon_value[2]) ) {
+											if(function_exists('icl_t')){
+												echo '<li><a href="'.icl_t('Footer Social Link',$llorix_one_lite_social_icon->id.'_footer_social_link',esc_url($llorix_one_lite_social_icon->link)).'"><i class="fa llorix-one-lite-footer-icons '.icl_t('Footer Social Icon',$llorix_one_lite_social_icon->id.'_footer_social_icon',esc_attr($llorix_one_lite_social_icon->icon_value)).' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">'.esc_attr($llorix_one_lite_social_icon->icon_value[2]).'</span></a></li>';
+											} else {
+												echo '<li><a href="'.esc_url($llorix_one_lite_social_icon->link).'"><i class="fa llorix-one-lite-footer-icons '.esc_attr($llorix_one_lite_social_icon->icon_value).' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">'.esc_attr($llorix_one_lite_social_icon->icon_value[2]).'</span></a></li>';
+											}
+										}	
+									}	
 
 								}
 						
