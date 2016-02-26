@@ -6,7 +6,7 @@
 
 <div id="actions_required" class="llorix-one-lite-tab-pane">
 
-    <h1><?php esc_html_e( 'Keep up with Llorix One Lite\'s required actions' ,'llorix-one-lite' ); ?></h1>
+    <h1><?php esc_html_e( 'Keep up with Llorix One Lite\'s recommended actions' ,'llorix-one-lite' ); ?></h1>
 
     <!-- NEWS -->
     <hr />
@@ -55,7 +55,7 @@
 		endforeach;
 	endif;
 	if( $nr_actions_required == 0 ):
-		echo '<p>'.__( 'Hooray! There are no required actions for you right now.','llorix-one-lite' ).'</p>';
+		echo '<p>'.__( 'Hooray! There are no recommended actions for you right now.','llorix-one-lite' ).'</p>';
 	endif;
 	?>
 

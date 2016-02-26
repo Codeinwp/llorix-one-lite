@@ -114,7 +114,6 @@ class Llorix_One_Lite_Welcome {
 			'nr_actions_required' => $nr_actions_required,
 			'aboutpage' => esc_url( admin_url( 'themes.php?page=llorix-one-lite-welcome#actions_required' ) ),
 			'customizerpage' => esc_url( admin_url( 'customize.php#actions_required' ) ),
-			'themeinfo' => __('View Theme Info','llorix-one-lite'),
 		) );
 	}
 	
@@ -161,7 +160,7 @@ class Llorix_One_Lite_Welcome {
 
 		<ul class="llorix-one-lite-nav-tabs" role="tablist">
 			<li role="presentation" class="active"><a href="#getting_started" aria-controls="getting_started" role="tab" data-toggle="tab"><?php esc_html_e( 'Getting started','llorix-one-lite'); ?></a></li>
-			<li role="presentation" class="llorix-one-lite-w-red-tab"><a href="#actions_required" aria-controls="actions_required" role="tab" data-toggle="tab"><?php esc_html_e( 'Actions required','llorix-one-lite'); ?></a></li>
+			<li role="presentation" class="llorix-one-lite-w-red-tab"><a href="#actions_required" aria-controls="actions_required" role="tab" data-toggle="tab"><?php esc_html_e( 'Actions recommended','llorix-one-lite'); ?></a></li>
 			<li role="presentation"><a href="#github" aria-controls="github" role="tab" data-toggle="tab"><?php esc_html_e( 'Contribute','llorix-one-lite'); ?></a></li>
 			<li role="presentation"><a href="#changelog" aria-controls="changelog" role="tab" data-toggle="tab"><?php esc_html_e( 'Change log','llorix-one-lite'); ?></a></li>
 		</ul>

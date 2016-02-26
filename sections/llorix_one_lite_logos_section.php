@@ -5,11 +5,11 @@
 	$llorix_one_lite_logos = get_theme_mod('llorix_one_lite_logos_content',
 		json_encode(
 			array( 
-				array("image_url" => llorix_one_lite_get_file('/images/companies/1.png') ,"link" => "#" ),
-				array("image_url" => llorix_one_lite_get_file('/images/companies/2.png') ,"link" => "#" ),
-				array("image_url" => llorix_one_lite_get_file('/images/companies/3.png') ,"link" => "#" ),
-				array("image_url" => llorix_one_lite_get_file('/images/companies/4.png') ,"link" => "#" ),
-				array("image_url" => llorix_one_lite_get_file('/images/companies/5.png') ,"link" => "#" )
+				array("image_url" => llorix_one_lite_get_file('/images/companies/1.png') ,"link" => "#",'id' => 'llorix_one_lite_56d069bb8cb71' ),
+				array("image_url" => llorix_one_lite_get_file('/images/companies/2.png') ,"link" => "#",'id' => 'llorix_one_lite_56d069bc8cb72' ),
+				array("image_url" => llorix_one_lite_get_file('/images/companies/3.png') ,"link" => "#",'id' => 'llorix_one_lite_56d069bd8cb73' ),
+				array("image_url" => llorix_one_lite_get_file('/images/companies/4.png') ,"link" => "#",'id' => 'llorix_one_lite_56d06d128cb74' ),
+				array("image_url" => llorix_one_lite_get_file('/images/companies/5.png') ,"link" => "#",'id' => 'llorix_one_lite_56d06d3d8cb75' )
 			)
 		)
 	);
@@ -22,11 +22,21 @@
 			
 					echo '<li>';
 					if(!empty($llorix_one_lite_logo->link)){
-						echo '<a href="'.$llorix_one_lite_logo->link.'" title="">';
-							echo '<img src="'.$llorix_one_lite_logo->image_url.'" alt="'. esc_html__('Logo','llorix-one-lite') .'">';
-						echo '</a>';
+						if(function_exists('icl_t')){
+							echo '<a href="'.icl_t('Logo link',$llorix_one_lite_logo->id.'_logo_link',esc_url($llorix_one_lite_logo->link)).'" title="">';
+								echo '<img src="'.icl_t('Logo image',$llorix_one_lite_logo->id.'_logo_image',esc_url($llorix_one_lite_logo->image_url)).'" alt="'. esc_html__('Logo','llorix-one-lite') .'">';
+							echo '</a>';
+						} else {
+							echo '<a href="'.$llorix_one_lite_logo->link.'" title="">';
+								echo '<img src="'.$llorix_one_lite_logo->image_url.'" alt="'. esc_html__('Logo','llorix-one-lite') .'">';
+							echo '</a>';
+						}
 					} else {
-						echo '<img src="'.esc_url($llorix_one_lite_logo->image_url).'" alt="'.esc_html__('Logo','llorix-one-lite').'">';
+						if(function_exists('icl_t')){
+							echo '<img src="'.icl_t('Logo image',$llorix_one_lite_logo->id.'_logo_image',esc_url($llorix_one_lite_logo->image_url)).'" alt="'. esc_html__('Logo','llorix-one-lite') .'">';
+						} else {
+							echo '<img src="'.esc_url($llorix_one_lite_logo->image_url).'" alt="'.esc_html__('Logo','llorix-one-lite').'">';
+						}
 					}
 					echo '</li>';
 
