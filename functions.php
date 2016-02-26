@@ -551,13 +551,13 @@ if(function_exists('icl_unregister_string') && function_exists('icl_register_str
 	}
 
 	/*Header*/
-	$llorix_one_lite_social_icons_pl = get_theme_mod('llorix_one_lite_very_top_social_icons');
-	if(!empty($llorix_one_lite_social_icons_pl)){
-		$llorix_one_lite_social_icons_pl_decoded = json_decode($llorix_one_lite_social_icons_pl);
-		foreach($llorix_one_lite_social_icons_pl_decoded as $llorix_one_header_social_box){
-			$icon = $llorix_one_header_social_box->icon_value;
-			$link = $llorix_one_header_social_box->link;
-			$id = $llorix_one_header_social_box->id;
+	$llorix_one_lite_very_top_social_icons_pl = get_theme_mod('llorix_one_lite_very_top_social_icons');
+	if(!empty($llorix_one_lite_very_top_social_icons_pl)){
+		$llorix_one_lite_very_top_social_icons_pl_decoded = json_decode($llorix_one_lite_very_top_social_icons_pl);
+		foreach($llorix_one_lite_very_top_social_icons_pl_decoded as $llorix_one_lite_very_top_social_box){
+			$icon = $llorix_one_lite_very_top_social_box->icon_value;
+			$link = $llorix_one_lite_very_top_social_box->link;
+			$id = $llorix_one_lite_very_top_social_box->id;
 			if(!empty($id)) {
 				if(!empty($icon)){
 					icl_unregister_string ('Header Social Icon' , $id.'_header_social_icon' );
