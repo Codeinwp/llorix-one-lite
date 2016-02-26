@@ -569,7 +569,7 @@ if(function_exists('icl_unregister_string') && function_exists('icl_register_str
 			if(!empty($id)) {
 				if(!empty($text)){
 					icl_unregister_string ('Contact' , $id.'_contact' );
-					icl_register_string( 'Contact' , $id.'_contact' , $title );
+					icl_register_string( 'Contact' , $id.'_contact' , $text );
 				} else {
 					icl_unregister_string ('Contact' , $id.'_contact' );
 				}
