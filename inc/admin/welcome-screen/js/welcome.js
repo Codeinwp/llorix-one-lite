@@ -64,6 +64,9 @@ jQuery(document).ready(function() {
  /* Tab Content height matches admin menu height for scrolling purpouses */
 		$tab = jQuery('.llorix-one-lite-tab-content > div');
 		$admin_menu_height = jQuery('#adminmenu').height();
+    if( (typeof $tab !== 'undefined') && (typeof $admin_menu_height !== 'undefined') )
+  {
 		$newheight = $admin_menu_height - 180;
 		$tab.css('min-height',$newheight);
+  }
 });
