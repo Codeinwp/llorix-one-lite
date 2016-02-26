@@ -1002,7 +1002,7 @@ header .navbar-brand {
     display: inline-block;
 }
 
-.very-top-header .social-icons span:before {
+.very-top-header .social-icons i:before {
 	line-height: 20px;
 	font-size: 12px;
 	text-align: center;
@@ -1014,7 +1014,7 @@ header .navbar-brand {
 	background: #f16c20;
 }
 
-.very-top-header .social-icons span:hover:before {
+.very-top-header .social-icons i:hover:before {
 	color: #FFF;
 }
 
@@ -1722,7 +1722,7 @@ header .navbar-brand {
 	float: left;
 }
 
-.feature .icon-container span {
+.feature .icon-container i {
 	font-size: 30px;
 }
 
@@ -4008,7 +4008,7 @@ footer.footer .social-icons li a {
 	padding: 0 5px;
 }
 
-footer.footer .social-icons span:before {
+footer.footer .social-icons i:before {
     line-height: 30px;
     font-size: 12px;
     color: #FFFFFF;
@@ -4019,7 +4019,7 @@ footer.footer .social-icons span:before {
     display: inline-block;
 }
 
-footer.footer .social-icons span:hover:before {
+footer.footer .social-icons i:hover:before {
 	background: #f16c20;
 }
 
@@ -5786,7 +5786,7 @@ h2.screen-reader-text {
 		margin-bottom: 20px;
 	}
 
-	.single-stats .icon-container span {
+	.single-stats .icon-container i {
 		font-size: 50px;
 	}
 

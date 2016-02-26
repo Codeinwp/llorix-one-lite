@@ -49,9 +49,9 @@
 												echo '<div class="col-sm-4 contact-link-box  col-xs-12">';
 												if(!empty($llorix_one_contact_item->icon_value)){
 													if(function_exists('icl_t')){
-														echo '<div class="icon-container"><i class=fa "'.icl_t('Contact icon',$llorix_one_contact_item->id.'_contact_icon',esc_attr($llorix_one_contact_item->icon_value)).' colored-text"></span></div>';
+														echo '<div class="icon-container"><i class=fa "'.icl_t('Contact icon',$llorix_one_contact_item->id.'_contact_icon',esc_attr($llorix_one_contact_item->icon_value)).' colored-text"></i></div>';
 													} else {
-														echo '<div class="icon-container"><i class=fa "'.esc_attr($llorix_one_contact_item->icon_value).' colored-text"></span></div>';
+														echo '<div class="icon-container"><i class=fa "'.esc_attr($llorix_one_contact_item->icon_value).' colored-text"></i></div>';
 													}
 												}
 												if(!empty($llorix_one_contact_item->text)){
