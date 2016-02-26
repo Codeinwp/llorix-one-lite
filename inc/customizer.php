@@ -293,7 +293,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 			array(
 				array('icon_value' =>'icon-social-facebook' , 'link' => '#', 'id' => 'llorix_one_lite_56d069ad8cb6b'),
 				array('icon_value' =>'icon-social-twitter' , 'link' => '#', 'id' => 'llorix_one_lite_56d069b48cb6c'),
-				array('icon_value' =>'icon-social-googleplus' , 'link' => '#', 'id' => 'llorix_one_lite_56d069b58cb6d')
+				array('icon_value' =>'icon-social-googleplus' , 'link' => '#', 'id' => 'llorix_one_lite_56d07bca8cb76')
 			)
 		)
 
@@ -506,8 +506,8 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'llorix_one_lite_sanitize_repeater',
 		'default' => json_encode(
 			array( 
-					array("icon_value" => "icon-basic-mail" ,"text" => "contact@site.com", "link" => "#",'id' => 'llorix_one_lite_56d069b78cb6e' ), 
-					array("icon_value" => "icon-basic-geolocalize-01" ,"text" => "Company address", "link" => "#",'id' => 'llorix_one_lite_56d069b88cb6f' ), 
+					array("icon_value" => "icon-basic-mail" ,"text" => "contact@site.com", "link" => "#",'id' => 'llorix_one_lite_56d07aea1f305' ), 
+					array("icon_value" => "icon-basic-geolocalize-01" ,"text" => "Company address", "link" => "#",'id' => 'llorix_one_lite_56d07b261f306' ), 
 					array("icon_value" => "icon-basic-tablet" ,"text" => "0 332 548 954", "link" => "#",'id' => 'llorix_one_lite_56d069b98cb70' ) 
 				)
 		)

@@ -5,9 +5,9 @@
 	$llorix_one_lite_contact_info_item = get_theme_mod('llorix_one_lite_contact_info_content',
 		json_encode(
 			array( 
-					array("icon_value" => "icon-basic-mail" ,"text" => "contact@site.com", "link" => "#",'id' => 'llorix_one_lite_56d069b78cb6e' ), 
-					array("icon_value" => "icon-basic-geolocalize-01" ,"text" => "Company address", "link" => "#",'id' => 'llorix_one_lite_56d069b88cb6f' ), 
-					array("icon_value" => "icon-basic-tablet" ,"text" => "0 332 548 954", "link" => "#",'id' => 'llorix_one_lite_56d069b98cb70' ) 
+					array("icon_value" => "fa-envelope" ,"text" => "contact@site.com", "link" => "#",'id' => 'llorix_one_lite_56d069b78cb6e' ), 
+					array("icon_value" => "fa-map-marker" ,"text" => "Company address", "link" => "#",'id' => 'llorix_one_lite_56d069b88cb6f' ), 
+					array("icon_value" => "fa-tablet" ,"text" => "0 332 548 954", "link" => "#",'id' => 'llorix_one_lite_56d069b98cb70' ) 
 				)
 		)
 	);
@@ -31,9 +31,9 @@
 												echo '<div class="col-sm-4 contact-link-box col-xs-12">';
 												if(!empty($llorix_one_contact_item->icon_value)){
 													if(function_exists('icl_t')){
-														echo '<div class="icon-container"><span class="'.icl_t('Contact icon',$llorix_one_contact_item->id.'_contact_icon',esc_attr($llorix_one_contact_item->icon_value)) .' colored-text"></span></div>';
+														echo '<div class="icon-container"><i class="fa '.icl_t('Contact icon',$llorix_one_contact_item->id.'_contact_icon',esc_attr($llorix_one_contact_item->icon_value)) .' colored-text"></i></div>';
 													} else {
-														echo '<div class="icon-container"><span class="'.esc_attr($llorix_one_contact_item->icon_value).' colored-text"></span></div>';
+														echo '<div class="icon-container"><i class="fa '.esc_attr($llorix_one_contact_item->icon_value).' colored-text"></i></div>';
 													}
 												}
 												if(!empty($llorix_one_contact_item->text)){
@@ -49,9 +49,9 @@
 												echo '<div class="col-sm-4 contact-link-box  col-xs-12">';
 												if(!empty($llorix_one_contact_item->icon_value)){
 													if(function_exists('icl_t')){
-														echo '<div class="icon-container"><span class="'.icl_t('Contact icon',$llorix_one_contact_item->id.'_contact_icon',esc_attr($llorix_one_contact_item->icon_value)).' colored-text"></span></div>';
+														echo '<div class="icon-container"><i class=fa "'.icl_t('Contact icon',$llorix_one_contact_item->id.'_contact_icon',esc_attr($llorix_one_contact_item->icon_value)).' colored-text"></span></div>';
 													} else {
-														echo '<div class="icon-container"><span class="'.esc_attr($llorix_one_contact_item->icon_value).' colored-text"></span></div>';
+														echo '<div class="icon-container"><i class=fa "'.esc_attr($llorix_one_contact_item->icon_value).' colored-text"></span></div>';
 													}
 												}
 												if(!empty($llorix_one_contact_item->text)){

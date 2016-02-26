@@ -213,6 +213,8 @@ function llorix_one_lite_scripts() {
 	
 	wp_enqueue_style( 'llorix-one-lite-font', '//fonts.googleapis.com/css?family=Cabin:400,600|Open+Sans:400,300,600');
 
+	wp_enqueue_style( 'llorix-one-lite-fontawesome', get_stylesheet_directory_uri().'/css/font-awesome.min.css',array(), '4.4.0');
+
 	wp_enqueue_style( 'llorix-one-lite-bootstrap-style', llorix_one_lite_get_file( '/css/bootstrap.min.css'),array(), '3.3.1');
 
 	wp_enqueue_style( 'llorix-one-lite-style', get_stylesheet_uri(), array('llorix-one-lite-bootstrap-style'),'1.0.0');
