@@ -114,7 +114,6 @@ class Llorix_One_Lite_Welcome {
 			'nr_actions_required' => $nr_actions_required,
 			'aboutpage' => esc_url( admin_url( 'themes.php?page=llorix-one-lite-welcome#actions_required' ) ),
 			'customizerpage' => esc_url( admin_url( 'customize.php#actions_required' ) ),
-			'themeinfo' => __('View Theme Info','llorix-one-lite'),
 		) );
 	}
 	
