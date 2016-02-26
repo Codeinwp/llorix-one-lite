@@ -110,10 +110,6 @@ function llorix_one_lite_setup() {
 	// Latest news Section (homepage)
 	add_image_size( 'llorix-one-lite-post-thumbnail-latest-news', 150, 150, true );
 	
-	if( !get_option( 'llorix_one_lite_migrate_translation' ) ) {
-		add_option( 'llorix_one_lite_migrate_translation', false );
-	}
-	
 	/**
 	* Welcome screen
 	*/
