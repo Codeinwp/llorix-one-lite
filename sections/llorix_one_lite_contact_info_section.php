@@ -38,7 +38,7 @@
 												}
 												if(!empty($llorix_one_contact_item->text)){
 													if(function_exists('icl_t')){
-														echo '<a href="'.icl_t('Contact link',$llorix_one_contact_item->id.'_contact_link',esc_url($llorix_one_contact_item->link)).'" class="strong">'.icl_t('Contact',$llorix_one_contact_item->id.'_contact',html_entity_decode($llorix_one_contact_item->text)).'</a>';
+														echo '<a href="'.esc_url( icl_t('Contact link',$llorix_one_contact_item->id.'_contact_link', $llorix_one_contact_item->link)).'" class="strong">'.icl_t('Contact',$llorix_one_contact_item->id.'_contact',html_entity_decode($llorix_one_contact_item->text)).'</a>';
 													} else {
 														echo '<a href="'.$llorix_one_contact_item->link.'" class="strong">'.html_entity_decode($llorix_one_contact_item->text).'</a>';
 													}

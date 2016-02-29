@@ -26,9 +26,10 @@ The exceptions to this license are as follows:
     Copyright 2011-2014 Twitter, Inc.
     Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
-* Fontastic
-    Copyright (c) 2014 WEBALYS (http://www.webalys.com)
-    Licensed under the MIT license.
+
+* Font Awesome
+	License: SIL OFL 1.1
+	URL: http://scripts.sil.org/OFL
 
 * Html5shiv
 	HTML5 Shiv 3.7.2
