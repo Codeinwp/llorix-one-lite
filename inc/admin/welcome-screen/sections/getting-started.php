@@ -115,9 +115,14 @@ $customizer_url = admin_url() . 'customize.php' ;
 		}
 
 		?>
-		
-		<hr/>
-		<!-- WP Product Review -->
+
+	</div>
+
+
+	
+	<div class="llorix-one-lite-tab-pane-half">
+
+		<!-- Pirate Forms -->
 		<h4><?php esc_html_e( 'Pirate Forms', 'llorix-one-lite' ); ?></h4>
 		<p><?php esc_html_e( 'Makes your contact page more engaging by creating a good-looking contact form on your website. The interaction with your visitors was never easier.', 'llorix-one-lite' ); ?></p>
 
@@ -134,30 +139,6 @@ $customizer_url = admin_url() . 'customize.php' ;
 			<?php
 		}
 
-		?>
-
-	</div>
-
-
-	
-	<div class="llorix-one-lite-tab-pane-half">
-
-		<!-- ShortPixel Image Optimizer -->
-		<h4><?php esc_html_e( 'ShortPixel Image Optimizer', 'llorix-one-lite' ); ?></h4>
-		<p><?php esc_html_e( 'Fast, easy-to-use and lightweight plugin that optimizes images & PDFs. Preserve a high visual quality of images and make your website load faster!', 'llorix-one-lite' ); ?></p>
-
-		<?php if ( is_plugin_active( 'shortpixel-image-optimiser/wp-shortpixel.php' ) ) { ?>
-
-				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
-
-			<?php
-		}
-		else { ?>
-
-			<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'themes.php?page=tgmpa-install-plugins&plugin=shortpixel-image-optimiser' ), 'install-plugin_shortpixel-image-optimiser' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install ShortPixel Image Optimizer', 'llorix-one-lite' ); ?></a></p>
-
-			<?php
-		}
 		?>
 
 	</div>
