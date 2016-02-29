@@ -4146,24 +4146,6 @@ footer.footer #wp-calendar td {
 	background: none;
 }
 
-.widget_search .search-form:before {
-	content: "\e0a6";
-	font-family: "stamp-icons" !important;
-	font-style: normal !important;
-	font-weight: normal !important;
-	font-variant: normal !important;
-	text-transform: none !important;
-	speak: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 25px;
-	position: absolute;
-	right: 11px;
-	top: 10px;
-	color: #949495;
-}
-
 .widget_search .search-form:hover:before {
 	color: #f16c20;
 }
@@ -5103,21 +5085,21 @@ h2.screen-reader-text {
 }
 
 .widget_search .search-form:before {
-	content: "\e0a6";
-	font-family: "stamp-icons" !important;
-	font-style: normal !important;
-	font-weight: normal !important;
-	font-variant: normal !important;
-	text-transform: none !important;
+	content: "\f002";
+	font-family:FontAwesome;
+	position: absolute;
+	right: 11px;
+	top: 10px;
 	speak: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 25px;
-	position: absolute;
-	right: 11px;
-	top: 10px;
 	color: #949495;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
 }
 
 .widget_search .search-form:hover:before {
@@ -5606,8 +5588,8 @@ h2.screen-reader-text {
 	}
 
 	.main-navigation .menu-item-has-children > a:after{
-		content: "\e0d4";
-		font-family: stamp-icons!important;
+		content: "\f0d7";
+		font-family:FontAwesome;
 		position: absolute;
 		top: 23px;
 		right: 0;
