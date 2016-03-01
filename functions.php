@@ -300,11 +300,8 @@ function llorix_one_lite_wrapper_end() {
 // add this code directly, no action needed
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
-
 /* tgm-plugin-activation */
 require_once get_template_directory() . '/class-tgm-plugin-activation.php';
-
-
 add_action( 'tgmpa_register', 'llorix_one_lite_register_required_plugins' );
 function llorix_one_lite_register_required_plugins() {
 	
@@ -324,7 +321,6 @@ function llorix_one_lite_register_required_plugins() {
 				'name'     => 'Pirate Forms',
 			
 				'slug' 	   => 'pirate-forms',
-
 				'required' => false
 			
 			)

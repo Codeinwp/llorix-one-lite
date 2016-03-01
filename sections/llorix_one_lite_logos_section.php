@@ -23,8 +23,8 @@
 					echo '<li>';
 					if(!empty($llorix_one_lite_logo->link)){
 						if(function_exists('icl_t')){
-							echo '<a href="'.icl_t('Logo link',$llorix_one_lite_logo->id.'_logo_link',esc_url($llorix_one_lite_logo->link)).'" title="">';
-								echo '<img src="'.icl_t('Logo image',$llorix_one_lite_logo->id.'_logo_image',esc_url($llorix_one_lite_logo->image_url)).'" alt="'. esc_html__('Logo','llorix-one-lite') .'">';
+							echo '<a href="'.esc_url( icl_t('Logo link',$llorix_one_lite_logo->id.'_logo_link', $llorix_one_lite_logo->link) ).'" title="">';
+								echo '<img src="'.esc_url( icl_t('Logo image',$llorix_one_lite_logo->id.'_logo_image', $llorix_one_lite_logo->image_url) ).'" alt="'. esc_html__('Logo','llorix-one-lite') .'">';
 							echo '</a>';
 						} else {
 							echo '<a href="'.$llorix_one_lite_logo->link.'" title="">';
@@ -33,7 +33,7 @@
 						}
 					} else {
 						if(function_exists('icl_t')){
-							echo '<img src="'.icl_t('Logo image',$llorix_one_lite_logo->id.'_logo_image',esc_url($llorix_one_lite_logo->image_url)).'" alt="'. esc_html__('Logo','llorix-one-lite') .'">';
+							echo '<img src="'.esc_url( icl_t('Logo image',$llorix_one_lite_logo->id.'_logo_image', $llorix_one_lite_logo->image_url)).'" alt="'. esc_html__('Logo','llorix-one-lite') .'">';
 						} else {
 							echo '<img src="'.esc_url($llorix_one_lite_logo->image_url).'" alt="'.esc_html__('Logo','llorix-one-lite').'">';
 						}
