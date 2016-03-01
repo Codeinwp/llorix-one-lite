@@ -1,5 +1,15 @@
 
 
+### 0.1.3 - 01/03/2016
+
+ Changes: 
+
+
+ * Merge pull request #8 from cristian-ungureanu/development
+
+!!! fix translation for links, added font awesome in readme
+
+
 ### 0.1.2 - 26/02/2016
 
  Changes: 
