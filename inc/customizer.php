@@ -37,7 +37,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
         'priority' => 25
     ) );
 	
-	$wp_customize->add_setting( 'llorix_one_lite_front_page_instructions' );
+	$wp_customize->add_setting( 'llorix_one_lite_front_page_instructions', array( 'sanitize_callback' => 'llorix_one_lite_sanitize_text' ) );
 	
 	$wp_customize->add_control( new LlorixOneLite_Front_Page_Instructions( $wp_customize, 'llorix_one_lite_front_page_instructions', array(
 	    'section' => 'llorix_one_lite_front_page_instructions',
@@ -610,7 +610,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
         'priority' => 75
     ) );
 	
-	$wp_customize->add_setting( 'llorix_one_lite_contact_page_instructions' );
+	$wp_customize->add_setting( 'llorix_one_lite_contact_page_instructions', array( 'sanitize_callback' => 'llorix_one_lite_sanitize_text' ) );
 	
 	$wp_customize->add_control( new LlorixOneLite_Contact_Page_Instructions( $wp_customize, 'llorix_one_lite_contact_page_instructions', array(
 	    'section' => 'llorix_one_lite_contact_page_instructions',
