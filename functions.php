@@ -329,7 +329,7 @@ function llorix_one_lite_register_required_plugins() {
 	$config = array(
         'default_path' => '',                      
         'menu'         => 'tgmpa-install-plugins', 
-        'has_notices'  => true,                   
+        'has_notices'  => false,                   
         'dismissable'  => true,                  
         'dismiss_msg'  => '',                   
         'is_automatic' => false,                 
