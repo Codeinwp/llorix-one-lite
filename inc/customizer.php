@@ -723,44 +723,6 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	/*********************************/
 	require_once ( 'class/llorix-one-lite-text-control.php');
 	
-	
-	/*****************************************************************/
-    /**********	Control for choosing a template for the frontpage ****/
-	/*****************************************************************/
-	
-	$wp_customize->remove_control('page_on_front');
-	
-	$wp_customize->add_control(new Llorix_One_Frontpage_Templates($wp_customize, 'page_on_front',array(
-			'label'    => __( 'Front page', 'llorix-one-lite' ),
-			'section' => 'static_front_page',
-			'priority' => 10
-	)));
-	
-	$llorix_one_lite_page_for_posts = $wp_customize->get_control('page_for_posts');
-	if(!empty($llorix_one_lite_page_for_posts)):
-		$llorix_one_lite_page_for_posts->priority = 11;
-	endif;
-	
-	$llorix_one_lite_templates = get_page_templates();
-	
-	if( !empty($llorix_one_lite_templates) ):
-
-		$llorix_one_lite_templates_reversed = array_flip($llorix_one_lite_templates);
-		$llorix_one_lite_templates_reversed['default'] = 'Default';
-	
-		$wp_customize->add_setting( 'llorix_one_lite_frontpage_template_static', array(
-			'default' => esc_html__('Frontpage template','llorix-one-lite'),
-			'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-		));
-		$wp_customize->add_control( 'llorix_one_lite_frontpage_template_static', array(
-			'type' => 'select',
-			'label'    => esc_html__( 'Frontpage template', 'llorix-one-lite' ),
-			'section'  => 'static_front_page',
-			'choices' => $llorix_one_lite_templates_reversed,
-			'priority'    => 12
-		));
-	endif;	
-	
 }
 add_action( 'customize_register', 'llorix_one_lite_customize_register' );
 
