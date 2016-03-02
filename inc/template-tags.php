@@ -79,13 +79,13 @@ function llorix_one_lite_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'llorix-one-lite' ) );
 		if ( $categories_list && llorix_one_lite_categorized_blog() ) {
-			printf( '<span class="cat-links"><i class="icon-basic-elaboration-folder-check" aria-hidden="true"></i>' . esc_html__( 'Posted in %1$s', 'llorix-one-lite' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links"><i class="fa fa-folder-open" aria-hidden="true"></i>' . esc_html__( 'Posted in %1$s', 'llorix-one-lite' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'llorix-one-lite' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links"><i class="icon-basic-elaboration-folder-check" aria-hidden="true"></i>' . esc_html__( 'Tagged %1$s', 'llorix-one-lite' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links"><i class="fa fa-tags" aria-hidden="true"></i>' . esc_html__( 'Tagged %1$s', 'llorix-one-lite' ) . '</span>', $tags_list );
 		}
 	}
 

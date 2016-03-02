@@ -26,8 +26,8 @@
 
 							<div class="llorix-one-lite-slider-whole-wrap">
 								<div class="controls-wrap">
-									<button class="control_next icon icon-arrow-carrot-down"><span class="screen-reader-text"><?php esc_attr_e('Post slider navigation: Down','llorix-one-lite')?></span></button>
-									<button class="control_prev fade-btn icon icon-arrow-carrot-up"><span class="screen-reader-text"><?php esc_attr_e('Post slider navigation: Up','llorix-one-lite')?></span></button>
+									<button class="control_next fa fa-angle-up"><span class="screen-reader-text"><?php esc_attr_e('Post slider navigation: Down','llorix-one-lite')?></span></button>
+									<button class="control_prev fade-btn fa fa-angle-down"><span class="screen-reader-text"><?php esc_attr_e('Post slider navigation: Up','llorix-one-lite')?></span></button>
 								</div>
 								<!-- TIMLEINE SCROLLER -->
 								<div itemscope itemtype="http://schema.org/Blog" id="llorix_one_slider" class="timeline-section">

@@ -44,7 +44,8 @@
 
 			<div class="entry-meta list-post-entry-meta">
 				<span class="post-author">
-					<i class="icon-man-people-streamline-user" aria-hidden="true"></i><?php the_author_posts_link(); ?>
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<?php the_author_posts_link(); ?>
 				</span>
 				
 					<?php
@@ -53,7 +54,7 @@
                         if(!empty($categories_list)){
                         ?>
                             <span class="posted-in">
-                                <i class="icon-basic-elaboration-folder-check" aria-hidden="true"></i>
+                                <i class="fa fa-folder-open-o" aria-hidden="true"></i>
                         <?php
                             esc_html_e('Posted in ','llorix-one-lite');
                         
@@ -68,7 +69,8 @@
 					?>
 				
 				<a href="<?php comments_link(); ?>" class="post-comments">
-					<i class="icon-comment-alt" aria-hidden="true"></i><?php comments_number( esc_html__('No comments','llorix-one-lite'), esc_html__('One comment','llorix-one-lite'), esc_html__('% comments','llorix-one-lite') ); ?>
+					<i class="fa fa-comment" aria-hidden="true"></i>
+					<?php comments_number( esc_html__('No comments','llorix-one-lite'), esc_html__('One comment','llorix-one-lite'), esc_html__('% comments','llorix-one-lite') ); ?>
 				</a>
 			</div><!-- .entry-meta -->
 
