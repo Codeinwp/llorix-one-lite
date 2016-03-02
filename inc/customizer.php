@@ -582,7 +582,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	));
 	$wp_customize->add_control( 'llorix_one_lite_contact_form_shortcode', array(
 		'label'    => esc_html__( 'Contact form shortcode', 'llorix-one-lite' ),
-		'description' => __('Create a form, copy the shortcode generated and paste it here. We recommend <a href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> but you can use any plugin you like.','llorix-one-lite'),
+		'description' => __('Create a form, copy the shortcode generated and paste it here. We recommend <a href="'.admin_url( 'plugin-install.php?tab=plugin-information&plugin=pirate-forms').'">Pirate Forms</a> but you can use any plugin you like.','llorix-one-lite'),
 		'section'  => 'llorix_one_lite_contact_page',
 		'active_callback' => 'llorix_one_lite_is_contact_page',
 		'priority'    => 1
@@ -595,7 +595,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	));
 	$wp_customize->add_control( 'llorix_one_lite_contact_map_shortcode', array(
 		'label'    => esc_html__( 'Map shortcode', 'llorix-one-lite' ),
-		'description' => __('To use this section please install <a href="https://wordpress.org/plugins/intergeo-maps/">Intergeo Maps</a> plugin then use it to create a map and paste here the shortcode generated','llorix-one-lite'),
+		'description' => __('To use this section please install <a href="'.admin_url( 'plugin-install.php?tab=plugin-information&plugin=intergeo-maps').'">Intergeo Maps</a> plugin then use it to create a map and paste here the shortcode generated','llorix-one-lite'),
 		'section'  => 'llorix_one_lite_contact_page',
 		'active_callback' => 'llorix_one_lite_is_contact_page',
 		'priority'    => 2
