@@ -1,5 +1,14 @@
 
 
+### 0.1.4 - 02/03/2016
+
+ Changes: 
+
+
+ * Removed notices
+ * Fixed #15 Icons do not seem to work on blog
+
+
 ### 0.1.3 - 01/03/2016
 
  Changes: 
