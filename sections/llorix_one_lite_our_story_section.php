@@ -1,5 +1,5 @@
 <!-- =========================
- SECTION: ABOUT SECTION
+ SECTION: ABOUT
 ============================== -->
 <?php
 	global $wp_customize;
@@ -9,7 +9,9 @@
 	
 	$llorix_one_lite_our_story_show = get_theme_mod('llorix_one_lite_our_story_show');
 	
+	/* If section is not disabled */
 	if( isset($llorix_one_lite_our_story_show) && $llorix_one_lite_our_story_show != 1 ) {
+		
 		if( !empty($llorix_one_lite_our_story_image) || !empty($llorix_one_lite_our_story_title) || !empty($llorix_one_lite_our_story_text) ) {
 	?>
 			<section class="brief text-left brief-design-one brief-left" id="story" role="region" aria-label="<?php esc_html_e('About','llorix-one-lite') ?>">
@@ -24,7 +26,7 @@
 									} else {
 										echo '<div class="col-md-6 brief-content-two"><div class="brief-image-right"><img src="'.esc_url($llorix_one_lite_our_story_image).'" alt="'.esc_html__('About','llorix-one-lite').'"></div></div>';
 									}
-								} elseif ( isset( $wp_customize )   ) {
+								} elseif ( isset( $wp_customize ) ) {
 									echo '<div class="col-md-6 brief-content-two llorix_one_lite_only_customizer"><img src="" alt=""><div class="brief-image-right"></div></div>';
 								}
 							?>
@@ -37,9 +39,6 @@
 									} elseif ( isset( $wp_customize )   ) {
 										echo '<h2 class="text-left dark-text llorix_one_lite_only_customizer"></h2><div class="colored-line-left llorix_one_lite_only_customizer"></div>';
 									}
-								?>
-
-								<?php
 
 									if( !empty($llorix_one_lite_our_story_text) ){
 										echo '<div class="brief-content-text">'.$llorix_one_lite_our_story_text.'</div>';
@@ -54,6 +53,7 @@
 			</section><!-- .brief-design-one -->
 	<?php
 		}
+	/* If section is disabled, but we are in Customize, display section with class llorix_one_lite_only_customizer */	
 	} elseif( isset( $wp_customize ) ) {
 	?>
 			<section class="brief text-left brief-design-one brief-left llorix_one_lite_only_customizer" id="story" role="region" aria-label="<?php esc_html_e('About','llorix-one-lite') ?>">
@@ -68,7 +68,7 @@
 									} else {
 										echo '<div class="col-md-6 brief-content-two"><div class="brief-image-right"><img src="'.esc_url($llorix_one_lite_our_story_image).'" alt="'.esc_html__('About','llorix-one-lite').'"></div></div>';
 									}
-								} elseif ( isset( $wp_customize )   ) {
+								} elseif ( isset( $wp_customize ) ) {
 									echo '<div class="col-md-6 brief-content-two llorix_one_lite_only_customizer"><img src="" alt=""><div class="brief-image-right"></div></div>';
 								}
 							?>
@@ -78,16 +78,13 @@
 								<?php
 									if( !empty($llorix_one_lite_our_story_title) ){
 										echo '<h2 class="text-left dark-text">'.esc_attr($llorix_one_lite_our_story_title).'</h2><div class="colored-line-left"></div>';
-									} elseif ( isset( $wp_customize )   ) {
+									} elseif ( isset( $wp_customize ) ) {
 										echo '<h2 class="text-left dark-text llorix_one_lite_only_customizer"></h2><div class="colored-line-left llorix_one_lite_only_customizer"></div>';
 									}
-								?>
-
-								<?php
 
 									if( !empty($llorix_one_lite_our_story_text) ){
 										echo '<div class="brief-content-text">'.$llorix_one_lite_our_story_text.'</div>';
-									} elseif ( isset( $wp_customize )   ) {
+									} elseif( isset( $wp_customize ) ) {
 										echo '<div class="brief-content-text llorix_one_lite_only_customizer"></div>';
 									}
 								?>

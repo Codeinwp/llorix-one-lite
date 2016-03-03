@@ -302,6 +302,19 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'panel' 	=> 'panel_1'
 	));
 	
+	/* Very top header show/hide */
+	$wp_customize->add_setting( 'llorix_one_lite_very_top_header_show', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+		'transport' => 'postMessage'
+	));
+	
+	$wp_customize->add_control( 'llorix_one_lite_very_top_header_show', array(
+		'type' => 'checkbox',
+		'label' => __('Disable the Very top header?','llorix-one-lite'),
+		'section' => 'llorix_one_lite_very_top_header_content',
+		'priority'    => 1,
+	));
+	
 	/* Header title */
 	$wp_customize->add_setting( 'llorix_one_lite_very_top_header_phone', array(
 		'default' 			=> esc_html__('(+9) 0999.500.400','llorix-one-lite'),
@@ -311,7 +324,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'llorix_one_lite_very_top_header_phone', array(
 		'label'    			=> esc_html__( 'Phone number', 'llorix-one-lite' ),
 		'section'  			=> 'llorix_one_lite_very_top_header_content',
-		'priority'    		=> 1
+		'priority'    		=> 2
 	));
 
 	/* social icons header */
@@ -329,7 +342,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new Llorix_One_Lite_General_Repeater( $wp_customize, 'llorix_one_lite_very_top_social_icons', array(
 		'label'   					=> esc_html__('Add new social icon','llorix-one-lite'),
 		'section' 					=> 'llorix_one_lite_very_top_header_content',
-		'priority' 					=> 2,
+		'priority' 					=> 3,
         'llorix_one_lite_image_control' 	=> false,
         'llorix_one_lite_icon_control' 	=> true,
         'llorix_one_lite_text_control' 	=> false,
@@ -555,15 +568,26 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	/********************************************************/
 	/****************** CONTACT OPTIONS  ********************/
 	/********************************************************/
-	
-	
-	/* CONTACT SETTINGS */
+
 	$wp_customize->add_section( 'llorix_one_lite_contact_section' , array(
-		'title'       => esc_html__( 'Contact section', 'llorix-one-lite' ),
+		'title'       => esc_html__( 'Contact info section', 'llorix-one-lite' ),
 		'priority'    => 70,
 	));
-
-
+	
+	/* Contact info show/hide */
+	$wp_customize->add_setting( 'llorix_one_lite_contact_info_show', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+		'transport' => 'postMessage'
+	));
+	
+	$wp_customize->add_control( 'llorix_one_lite_contact_info_show', array(
+		'type' => 'checkbox',
+		'label' => __('Disable the Contact info section?','llorix-one-lite'),
+		'section' => 'llorix_one_lite_contact_section',
+		'priority'    => 1,
+	));
+	
+	/* Contact info content */
 	$wp_customize->add_setting( 'llorix_one_lite_contact_info_content', array(
 		'sanitize_callback' => 'llorix_one_lite_sanitize_repeater',
 		'default' => json_encode(
@@ -585,10 +609,8 @@ function llorix_one_lite_customize_register( $wp_customize ) {
         'llorix_one_lite_link_control' => true
 	) ) );
 	
-    
-	/* Map ShortCode  */
+	/* Contact info Map ShortCode */
 	$wp_customize->add_setting( 'llorix_one_lite_frontpage_map_shortcode', array(
-		'default' => '',
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text'
 	));
 	$wp_customize->add_control( 'llorix_one_lite_frontpage_map_shortcode', array(
@@ -598,7 +620,6 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'active_callback' => 'llorix_one_lite_show_on_front',
 		'priority'    => 20
 	));
-	
     
 	/********************************************************/
 	/*************** CONTACT PAGE OPTIONS  ******************/

@@ -6,7 +6,7 @@
 
 ( function( $ ) {
 	
-	// Site title and description.
+	/* Site title and description. */
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-title a' ).text( to );
@@ -17,7 +17,8 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
-	// Header text color.
+	
+	/* Header text color. */
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to ) {
@@ -35,17 +36,32 @@
 		} );
 	} );
 	
+	/*************************************
+    *********	Very top header ***********
+	**************************************/
 		
-	//Very top header Phone
+	/* llorix_one_lite_very_top_header_phone */
 	wp.customize("llorix_one_lite_very_top_header_phone", function(value) {
-		
         value.bind(function( to ) {
 			$( '.very-top-left span' ).html( to );
 		} );
-		
-    });	
+    });
 	
-	/* Blog header */
+	/* llorix_one_lite_very_top_header_show */
+	wp.customize( 'llorix_one_lite_very_top_header_show', function( value ) {
+		value.bind( function( to ) {
+			if ( '1' != to ) {
+				$( 'div#very-top-header' ).removeClass('llorix_one_lite_only_customizer');
+			} else {
+				$( 'div#very-top-header' ).addClass('llorix_one_lite_only_customizer');
+			}
+		} );
+	} );
+	
+	/*************************************
+    *********	Blog header **************
+	**************************************/
+	
 	wp.customize("llorix_one_lite_blog_header_title", function(value) {
         value.bind(function( to ) {
 			$( '.archive-top-big-title' ).html( to );
@@ -65,7 +81,8 @@
 	/***************************************
 	******** HEADER SECTION ****************
 	****************************************/
-	//Logo
+	
+	/* llorix_one_lite_logo */
 	wp.customize("llorix_one_lite_logo", function(value) {
         value.bind(function( to ) {
 			if( to != '' ) {
@@ -76,14 +93,11 @@
 				$( '.navbar-brand' ).addClass( 'llorix_one_lite_only_customizer' );
 				$( '.header-logo-wrap' ).removeClass( 'llorix_one_lite_only_customizer' );
 			}
-				
             $(".navbar-brand img").attr( "src", to );
-			
         } );
     });
 
-
-	//Show Header Logo
+	/* llorix_one_lite_header_logo */
 	wp.customize('llorix_one_lite_header_logo', function( value ){
 		value.bind(function( to ) {
 			if( to != '' ) {
@@ -96,9 +110,8 @@
 		
 	});
 	
-	//Title
+	/* llorix_one_lite_header_title */
 	wp.customize("llorix_one_lite_header_title", function(value) {
-		
         value.bind(function( to ) {
 			if( to != '' ) {
 				$( '#llorix_one_lite_header .intro-section h1' ).removeClass( 'llorix_one_lite_only_customizer' );
@@ -111,9 +124,8 @@
 		
     });
 	
-	//Subtitle
+	/* llorix_one_lite_header_subtitle */
 	wp.customize("llorix_one_lite_header_subtitle", function(value) {
-		
         value.bind(function( to ) {
 			if( to != '' ) {
 				$( '#llorix_one_lite_header .intro-section h5' ).removeClass( 'llorix_one_lite_only_customizer' );
@@ -125,11 +137,9 @@
 		
     });
 	
-	//Button text
+	/* llorix_one_lite_header_button_text */
 	wp.customize("llorix_one_lite_header_button_text", function(value) {
-		
         value.bind(function( to ) {
-
 			if( to != '' ) {
 				$( '#llorix_one_lite_header .button a' ).removeClass( 'llorix_one_lite_only_customizer' );
 			} else {
@@ -139,20 +149,17 @@
 		} );
 		
     });
-
-
-	//Button link
+	
+	/* llorix_one_lite_header_button_link */
 	wp.customize("llorix_one_lite_header_button_link", function(value) {
-		
         value.bind(function( to ) {
 			$( '#llorix_one_lite_header .button a' ).attr( 'href', to );
 		} );
 		
-    });	
-	
+    });
 
 	/******************************************************
-	************* OUR STORY SECTION ***********************
+	************* ABOUT SECTION ***************************
 	*******************************************************/
 	
 	/* llorix_one_lite_our_story_show */
@@ -160,10 +167,8 @@
 		value.bind( function( to ) {
 			if ( '1' != to ) {
 				$( 'section#story' ).removeClass('llorix_one_lite_only_customizer');
-				//$( 'section#story' ).css( { 'display': 'block' } );
 			} else {
 				$( 'section#story' ).addClass('llorix_one_lite_only_customizer');
-				//$( 'section#story' ).css( { 'display': 'none' } );
 			}
 		} );
 	} );
@@ -185,7 +190,6 @@
 				}
 			}
 	    } );
-		
     });
 	
 	/* llorix_one_lite_our_story_text */
@@ -218,7 +222,6 @@
 				}
 			}
 		});
-		
 	});
 
 	/******************************************************
@@ -229,9 +232,9 @@
 	wp.customize( 'llorix_one_lite_ribbon_show', function( value ) {
 		value.bind( function( to ) {
 			if ( '1' != to ) {
-				$( 'section#ribbon' ).css( { 'display': 'block' } );
+				$( 'section#ribbon' ).removeClass('llorix_one_lite_only_customizer');
 			} else {
-				$( 'section#ribbon' ).css( { 'display': 'none' } );
+				$( 'section#ribbon' ).addClass('llorix_one_lite_only_customizer');
 			}
 		} );
 	} );
@@ -277,7 +280,6 @@
 				}
 			}
 		} );
-		
     });
 	
 	/* llorix_one_lite_button_link */
@@ -291,13 +293,13 @@
 	************ LATEST NEWS SECTION **********************
 	*******************************************************/
 	
-	/* llorix_one_lite_ribbon_show */
+	/* llorix_one_lite_latest_news_show */
 	wp.customize( 'llorix_one_lite_latest_news_show', function( value ) {
 		value.bind( function( to ) {
 			if ( '1' != to ) {
-				$( 'section#latestnews' ).css( { 'display': 'block' } );
+				$( 'section#latestnews' ).removeClass('llorix_one_lite_only_customizer');
 			} else {
-				$( 'section#latestnews' ).css( { 'display': 'none' } );
+				$( 'section#latestnews' ).addClass('llorix_one_lite_only_customizer');
 			}
 		} );
 	} );
@@ -313,12 +315,30 @@
 			$( '#latestnews .timeline-text h2' ).text( to );
 		} );
     });
+	
+	/**************************************
+	********* CONTACT INFO SECTION ********
+	***************************************/
+	
+	/* llorix_one_lite_contact_info_show */
+	wp.customize( 'llorix_one_lite_contact_info_show', function( value ) {
+		value.bind( function( to ) {
+			if ( '1' != to ) {
+				$( 'div#contactinfo' ).removeClass('llorix_one_lite_only_customizer');
+				$( 'div.contactinfo-map' ).removeClass('llorix_one_lite_only_customizer');
+			} else {
+				$( 'div#contactinfo' ).addClass('llorix_one_lite_only_customizer');
+				$( 'div.contactinfo-map' ).addClass('llorix_one_lite_only_customizer');
+			}
+		} );
+	} );
     
 	
 	/***************************************
 	******** FOOTER SECTION ****************
 	****************************************/
-	//Copyright
+	
+	/* llorix_one_lite_copyright */
 	wp.customize("llorix_one_lite_copyright", function(value) {
         value.bind(function( to ) {
 			if( to != '' ) {
@@ -326,13 +346,8 @@
 			} else {
 				$( '.llorix_one_lite_copyright_content' ).addClass( 'llorix_one_lite_only_customizer' );
 			}
-			
 			$( '.llorix_one_lite_copyright_content' ).text( to );
 	    } );
     });
-	
-	function isEmpty( el ){
-		return ($.trim(el.html()) === '' ? true : false);
-	}
 	
 } )( jQuery );
