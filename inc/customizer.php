@@ -384,10 +384,22 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	/******************** ABOUT OPTIONS  ********************/
 	/********************************************************/
 
-	
 	$wp_customize->add_section( 'llorix_one_lite_about_section' , array(
-			'title'       => esc_html__( 'About section', 'llorix-one-lite' ),
-			'priority'    => 45,
+		'title'       => esc_html__( 'About section', 'llorix-one-lite' ),
+		'priority'    => 45,
+	));
+	
+	/* About show/hide */
+	$wp_customize->add_setting( 'llorix_one_lite_our_story_show', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+		'transport' => 'postMessage'
+	));
+	
+	$wp_customize->add_control( 'llorix_one_lite_our_story_show', array(
+		'type' => 'checkbox',
+		'label' => __('Disable the About section?','llorix-one-lite'),
+		'section' => 'llorix_one_lite_about_section',
+		'priority'    => 1,
 	));
 	
 	/* About title */
@@ -404,12 +416,10 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	));
 
 	/* About Content */
-	
 	$wp_customize->add_setting( 'llorix_one_lite_our_story_text', array(
 		'default' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.','llorix-one-lite'),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_html',
 		'transport' => 'postMessage'
-		
 	));
 	
 	$wp_customize->add_control( 'llorix_one_lite_our_story_text', array(
@@ -427,37 +437,48 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'transport' => 'postMessage'
 	));
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'llorix_one_lite_our_story_image', array(
-	      	'label'    => esc_html__( 'Image', 'llorix-one-lite' ),
-	      	'section'  => 'llorix_one_lite_about_section',
-			'active_callback' => 'llorix_one_lite_show_on_front',
-			'priority'    => 30,
+		'label'    => esc_html__( 'Image', 'llorix-one-lite' ),
+		'section'  => 'llorix_one_lite_about_section',
+		'active_callback' => 'llorix_one_lite_show_on_front',
+		'priority'    => 30,
 	)));
 
 	/********************************************************/
-	/***************** RIBBON OPTIONS  *****************/
+	/***************** RIBBON OPTIONS  **********************/
 	/********************************************************/
 	
-    
-	/* RIBBON SETTINGS */
 	$wp_customize->add_section( 'llorix_one_lite_ribbon_section' , array(
 		'title'       => esc_html__( 'Ribbon section', 'llorix-one-lite' ),
 		'priority'    => 60,
 	));
 	
-
-	/* Ribbon Background	*/
+	/* Ribbon show/hide */
+	$wp_customize->add_setting( 'llorix_one_lite_ribbon_show', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+		'transport' => 'postMessage'
+	));
+	
+	$wp_customize->add_control( 'llorix_one_lite_ribbon_show', array(
+		'type' => 'checkbox',
+		'label' => __('Disable the Ribbon section?','llorix-one-lite'),
+		'section' => 'llorix_one_lite_ribbon_section',
+		'priority'    => 1,
+	));
+	
+	/* Ribbon Background */
 	$wp_customize->add_setting( 'llorix_one_lite_ribbon_background', array(
 		'default' => llorix_one_lite_get_file('/images/background-images/parallax-img/parallax-img1.jpg'),
 		'sanitize_callback' => 'esc_url',
 		'transport' => 'postMessage'
 	));
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'llorix_one_lite_ribbon_background', array(
-	      	'label'    => esc_html__( 'Ribbon Background', 'llorix-one-lite' ),
-	      	'section'  => 'llorix_one_lite_ribbon_section',
-			'active_callback' => 'llorix_one_lite_show_on_front',
-			'priority'    => 10
+		'label'    => esc_html__( 'Ribbon Background', 'llorix-one-lite' ),
+		'section'  => 'llorix_one_lite_ribbon_section',
+		'active_callback' => 'llorix_one_lite_show_on_front',
+		'priority'    => 10
 	)));
 	
+	/* Ribbon Title */
 	$wp_customize->add_setting( 'llorix_one_lite_ribbon_title', array(
 		'default' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one-lite'),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
@@ -470,7 +491,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'priority'    => 20
 	));
 	
-
+	/* Ribbon button label */
 	$wp_customize->add_setting( 'llorix_one_lite_button_text', array(
 		'default' => esc_html__('GET STARTED','llorix-one-lite'),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
@@ -483,7 +504,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'priority'    => 30
 	));
 	
-	
+	/* Ribbon button link */
 	$wp_customize->add_setting( 'llorix_one_lite_button_link', array(
 		'default' => esc_html__('#','llorix-one-lite'),
 		'sanitize_callback' => 'esc_url',
@@ -497,15 +518,28 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	));
 
 	/********************************************************/
-	/************ LATEST NEWS OPTIONS  **************/
+	/************ LATEST NEWS OPTIONS  **********************/
 	/********************************************************/
 	
-    
 	$wp_customize->add_section( 'llorix_one_lite_latest_news_section' , array(
 			'title'       => esc_html__( 'Latest news section', 'llorix-one-lite' ),
 			'priority'    => 65
 	));
 	
+	/* Latest news show/hide */
+	$wp_customize->add_setting( 'llorix_one_lite_latest_news_show', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+		'transport' => 'postMessage'
+	));
+	
+	$wp_customize->add_control( 'llorix_one_lite_latest_news_show', array(
+		'type' => 'checkbox',
+		'label' => __('Disable the Latest news section?','llorix-one-lite'),
+		'section' => 'llorix_one_lite_latest_news_section',
+		'priority'    => 1,
+	));
+	
+	/* Latest news title */
 	$wp_customize->add_setting( 'llorix_one_lite_latest_news_title', array(
 		'default' => esc_html__('Latest news','llorix-one-lite'),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
