@@ -96,8 +96,27 @@ $customizer_url = admin_url() . 'customize.php' ;
 	</div>
 
 	<div class="llorix-one-lite-tab-pane-half llorix-one-lite-tab-pane-first-half">
+	
+		<!-- Llorix One -->
+		<h4><?php esc_html_e( 'Llorix One Companion', 'llorix-one-lite' ); ?></h4>
+		<p><?php esc_html_e( 'The Llorix One Companion plugin is a simple, easy and in the same time quite powerful plugins that adds options for Our Services, Our Team and Testimonials sections on frontpage.', 'llorix-one-lite' ); ?></p>
 
-		<!-- WP Product Review -->
+		<?php if ( is_plugin_active( 'llorix-one-companion/llorix-one-companion.php' ) ) { ?>
+
+				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
+
+			<?php
+		}
+		else { ?>
+
+				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=llorix-one-companion' ), 'install-plugin_llorix-one-companion' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Llorix One Companion', 'llorix-one-lite' ); ?></a></p>
+
+			<?php
+		}
+
+		?>
+
+		<!-- Intergeo Maps -->
 		<h4><?php esc_html_e( 'Intergeo Maps - Google Maps Plugin', 'llorix-one-lite' ); ?></h4>
 		<p><?php esc_html_e( 'The Intergeo Google Maps plugin is a simple, easy and in the same time quite powerful tool for handling Google Maps in your website. The plugin allows users to create new maps by using powerful UI builder.', 'llorix-one-lite' ); ?></p>
 
