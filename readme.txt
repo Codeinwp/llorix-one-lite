@@ -57,3 +57,9 @@ The exceptions to this license are as follows:
 			Source: https://download.unsplash.com/reserve/ysPfhVSzSP2m629CW0mw_selfPortrait.jpg
 			Source: https://download.unsplash.com/photo-1435536949628-9954f4e829cd
 			Source: https://download.unsplash.com/photo-1432921481493-3d589756af70
+	* images/team/1.jpg
+			Source: https://download.unsplash.com/reserve/ysPfhVSzSP2m629CW0mw_selfPortrait.jpg
+	* images/team/2.jpg
+			Source: https://download.unsplash.com/photo-1418833893919-fa9c83e8d69e
+	* images/team/3.jpg
+			Source: https://download.unsplash.com/photo-1433170897235-615700336230

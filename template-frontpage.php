@@ -44,7 +44,7 @@
 <?php
 
 	$sections_array = apply_filters(
-		"llorix_one_lite_sections_filter",
+		"llorix_one_companion_sections_filter",
 		array(
 			'sections/llorix_one_lite_logos_section',
 			'sections/llorix_one_lite_our_story_section',
