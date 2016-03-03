@@ -12,12 +12,6 @@
  */
 function llorix_one_lite_customize_register( $wp_customize ) {
 	
-	class LlorixOneLite_Contact_Page_Instructions extends WP_Customize_Control {
-		public function render_content() {
-			echo __( 'To customize the Contact Page you need to first select the template "Contact page" for the page you want to use for this purpose. Then open that page in the browser and press "Customize" in the top bar.','llorix-one-lite' );
-		}
-	}
-	
 	class LlorixOneLite_Front_Page_Instructions extends WP_Customize_Control {
 		public function render_content() {
 			echo __( 'To customize the Front Page you need to first select the template "Frontpage" for the page you want to use for this purpose. Then open that page in the browser and press "Customize" in the top bar.','llorix-one-lite' );
@@ -640,18 +634,17 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'llorix_one_lite_contact_page' , array(
 		'title'       => esc_html__( 'Contact page', 'llorix-one-lite' ),
       	'priority'    => 75,
+		'description' =>  __( 'To customize the Contact Page you need to first select the template "Contact page" for the page you want to use for this purpose. Then open that page in the browser and press "Customize" in the top bar.','llorix-one-lite' )
 	));
 
 	/* Contact Form  */
 	$wp_customize->add_setting( 'llorix_one_lite_contact_form_shortcode', array(
-		'default' => '',
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text'
 	));
 	$wp_customize->add_control( 'llorix_one_lite_contact_form_shortcode', array(
 		'label'    => esc_html__( 'Contact form shortcode', 'llorix-one-lite' ),
 		'description' => __('Create a form, copy the shortcode generated and paste it here. We recommend <a href="'.admin_url( 'plugin-install.php?tab=plugin-information&plugin=pirate-forms').'">Pirate Forms</a> but you can use any plugin you like.','llorix-one-lite'),
 		'section'  => 'llorix_one_lite_contact_page',
-		'active_callback' => 'llorix_one_lite_is_contact_page',
 		'priority'    => 1
 	));
 	
@@ -664,25 +657,8 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'label'    => esc_html__( 'Map shortcode', 'llorix-one-lite' ),
 		'description' => __('To use this section please install <a href="'.admin_url( 'plugin-install.php?tab=plugin-information&plugin=intergeo-maps').'">Intergeo Maps</a> plugin then use it to create a map and paste here the shortcode generated','llorix-one-lite'),
 		'section'  => 'llorix_one_lite_contact_page',
-		'active_callback' => 'llorix_one_lite_is_contact_page',
 		'priority'    => 2
 	));
-	
-	/***********************************************************************************/
-	/******  Contact page - instructions for users when not on Contact page  ***********/
-	/***********************************************************************************/
-	
-	$wp_customize->add_section( 'llorix_one_lite_contact_page_instructions', array(
-        'title'    => __( 'Contact page', 'llorix-one-lite' ),
-        'priority' => 75
-    ) );
-	
-	$wp_customize->add_setting( 'llorix_one_lite_contact_page_instructions', array( 'sanitize_callback' => 'llorix_one_lite_sanitize_text' ) );
-	
-	$wp_customize->add_control( new LlorixOneLite_Contact_Page_Instructions( $wp_customize, 'llorix_one_lite_contact_page_instructions', array(
-	    'section' => 'llorix_one_lite_contact_page_instructions',
-		'active_callback' => 'llorix_one_lite_is_not_contact_page',
-	)));
 	
 	/********************************************************/
 	/****************** FOOTER OPTIONS  *********************/
@@ -885,14 +861,6 @@ function llorix_one_lite_customizer_script() {
 	wp_enqueue_script( 'llorix_one_lite_customizer_script', llorix_one_lite_get_file('/js/llorix_one_lite_customizer.js'), array("jquery","jquery-ui-draggable"),'1.0.0', true  );
 }
 add_action( 'customize_controls_enqueue_scripts', 'llorix_one_lite_customizer_script' );
-
-function llorix_one_lite_is_contact_page() {
-		return is_page_template('template-contact.php');
-};
-
-function llorix_one_lite_is_not_contact_page() {
-		return !is_page_template('template-contact.php');
-};
 
 function llorix_one_lite_show_on_front(){
 	return is_page_template('template-frontpage.php');
