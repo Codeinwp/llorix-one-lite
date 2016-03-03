@@ -219,15 +219,27 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	));
 	
 	
-	/* LOGOS SETTINGS */
+	/* LOGOS BAR */
 	
 	$wp_customize->add_section( 'llorix_one_lite_logos_settings_section' , array(
-			'title'       => esc_html__( 'Logos Bar', 'llorix-one-lite' ),
-			'priority'    => 2,
-			'panel' => 'panel_1'
+		'title'       => esc_html__( 'Logos Bar', 'llorix-one-lite' ),
+		'priority'    => 2,
+		'panel' => 'panel_1'
 	));
 	
-    
+	/* Logos bar show/hide */
+	$wp_customize->add_setting( 'llorix_one_lite_logos_show', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+		'transport' => 'postMessage'
+	));
+	
+	$wp_customize->add_control( 'llorix_one_lite_logos_show', array(
+		'type' => 'checkbox',
+		'label' => __('Disable the Logos bar sections?','llorix-one-lite'),
+		'section' => 'llorix_one_lite_logos_settings_section',
+		'priority'    => 1,
+	));
+	
     require_once ( 'class/llorix-one-lite-general-control.php');
 	
 	$wp_customize->add_setting( 'llorix_one_lite_logos_content', array(

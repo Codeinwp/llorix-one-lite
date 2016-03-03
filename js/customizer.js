@@ -58,6 +58,21 @@
 		} );
 	} );
 	
+	/************************************
+	************* Logos bar *************
+	*************************************/
+	
+	/* llorix_one_lite_logos_show */
+	wp.customize( 'llorix_one_lite_logos_show', function( value ) {
+		value.bind( function( to ) {
+			if ( '1' != to ) {
+				$( 'div#clients' ).removeClass('llorix_one_lite_only_customizer');
+			} else {
+				$( 'div#clients' ).addClass('llorix_one_lite_only_customizer');
+			}
+		} );
+	} );
+	
 	/*************************************
     *********	Blog header **************
 	**************************************/
