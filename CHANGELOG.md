@@ -1,5 +1,14 @@
 
 
+### 0.1.5 - 03/03/2016
+
+ Changes: 
+
+
+ * #18 Options to hide frontpage sections
+ * Recommend Llorix One Companion plugin
+
+
 ### 0.1.4 - 02/03/2016
 
  Changes: 
