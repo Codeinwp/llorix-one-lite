@@ -51,9 +51,9 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 		<hr />
 
-		<h4><?php esc_html_e( 'Change customizer in a child theme', 'llorix-one-lite' ); ?></h4>
-		<p><?php esc_html_e( 'If you want to add or remove customizer controls, check out our documentation to find out how.', 'llorix-one-lite' ); ?></p>
-		<p><a href="http://docs.themeisle.com/article/74-how-to-override-controls" class="button"><?php esc_html_e( 'View how to do this', 'llorix-one-lite' ); ?></a></p>
+		<h4><?php esc_html_e( 'Build a landing page with a drag-and-drop content builder', 'llorix-one-lite' ); ?></h4>
+		<p><?php esc_html_e( 'In the below documentation you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin.', 'llorix-one-lite' ); ?></p>
+		<p><a href="http://docs.themeisle.com/article/219-how-to-build-a-landing-page-with-a-drag-and-drop-content-builder" class="button"><?php esc_html_e( 'View how to do this', 'llorix-one-lite' ); ?></a></p>
 
 	</div>
 
@@ -97,7 +97,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 	<div class="llorix-one-lite-tab-pane-half llorix-one-lite-tab-pane-first-half">
 	
-		<!-- Llorix One -->
+		<!-- Llorix One Companion -->
 		<h4><?php esc_html_e( 'Llorix One Companion', 'llorix-one-lite' ); ?></h4>
 		<p><?php esc_html_e( 'The Llorix One Companion plugin is a simple, easy and in the same time quite powerful plugins that adds options for Our Services, Our Team and Testimonials sections on frontpage.', 'llorix-one-lite' ); ?></p>
 
@@ -115,7 +115,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 		}
 
 		?>
-
+		<hr />
 		<!-- Intergeo Maps -->
 		<h4><?php esc_html_e( 'Intergeo Maps - Google Maps Plugin', 'llorix-one-lite' ); ?></h4>
 		<p><?php esc_html_e( 'The Intergeo Google Maps plugin is a simple, easy and in the same time quite powerful tool for handling Google Maps in your website. The plugin allows users to create new maps by using powerful UI builder.', 'llorix-one-lite' ); ?></p>
@@ -159,6 +159,25 @@ $customizer_url = admin_url() . 'customize.php' ;
 		}
 
 		?>
+		<hr />
+		<!-- Page Builder by SiteOrigin -->
+		<h4><?php esc_html_e( 'Page Builder by SiteOrigin', 'llorix-one-lite' ); ?></h4>
+		<p><?php esc_html_e( 'Build responsive page layouts using the widgets you know and love using this simple drag and drop page builder.', 'llorix-one-lite' ); ?></p>
+ 
+ 		<?php if ( is_plugin_active( 'siteorigin-panels/siteorigin-panels.php' ) ) { ?>
+ 
+ 				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
+ 
+ 			<?php
+ 		}
+ 		else { ?>
+ 
+ 				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=siteorigin-panels' ), 'install-plugin_siteorigin-panels' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Page Builder by SiteOrigin', 'llorix-one-lite' ); ?></a></p>
+ 
+ 			<?php
+ 		}
+ 
+ 		?>
 
 	</div>
 
