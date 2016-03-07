@@ -14,4 +14,10 @@
 		<a href="http://docs.themeisle.com/article/186-llorix-one-documentation" class="button button-primary"><?php esc_html_e( 'Llorix One Lite documentation', 'llorix-one-lite' ); ?></a>
 	</p>
 	
+	<p><?php esc_html_e( 'Or would you like to contact us? Write on our support forum.','llorix-one-lite'); ?></p>
+
+	<p>
+		<a href="https://wordpress.org/support/theme/llorix-one-lite" class="button button-primary"><?php esc_html_e( 'Support forum', 'llorix-one-lite' ); ?></a>
+	</p>
+	
 </div>
