@@ -129,7 +129,7 @@ function llorix_one_lite_setup() {
 				"id" => 'llorix-one-lite-req-ac-check-front-page',
                 "title" => esc_html__( 'Switch "Front page displays" to "A static page" ' ,'llorix-one-lite' ),
                 "description" => esc_html__( 'In order to have the one page look for your website, please go to Customize -> Static Front Page and switch "Front page displays" to "A static page". Then select the template "Frontpage" for that selected page.','llorix-one-lite' ),
-                "check" => !llorix_one_lite_is_static_front_page()
+                "check" => llorix_one_lite_is_not_static_front_page()
 			),
 			array(
                 "id" => 'llorix-one-lite-req-ac-install-intergeo-maps',
@@ -148,9 +148,11 @@ function llorix_one_lite_setup() {
 endif; // llorix_one_lite_setup
 add_action( 'after_setup_theme', 'llorix_one_lite_setup' );
 
-function llorix_one_lite_is_static_front_page() {
-
-	return is_front_page() && is_page_template( 'template-frontpage.php' );
+function llorix_one_lite_is_not_static_front_page() {
+	
+	$frontpage_id = get_option('page_on_front');
+	
+	return ( ( get_option( 'show_on_front' ) == 'page' ) && !empty($frontpage_id) && (get_page_template_slug( $frontpage_id ) == 'template-frontpage.php' ) ) ? true : false;
 }
 
 /**
