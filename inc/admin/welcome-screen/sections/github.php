@@ -16,6 +16,14 @@
 		<a href="https://github.com/Codeinwp/llorix-one-lite/" class="button button-primary"><?php esc_html_e( 'Llorix One Lite on GitHub', 'llorix-one-lite' ); ?></a>
 	</p>
 	
-	<hr/>
+	<p><?php esc_html_e( 'Or would you like to translate Llorix One Lite to your language? Get involved at wordpress.org.', 'llorix-one-lite' ); ?></p>
+	
+	<p>
+		<a href="<?php echo esc_url( 'https://translate.wordpress.org/projects/wp-themes/llorix-one-lite/' ); ?>" class="button button-primary"><?php _e( 'Translate Llorix One Lite', 'llorix-one-lite' ); ?></a>
+	</p>
+
+	<h4><?php esc_html_e( 'Are you enjoying Llorix One Lite?', 'llorix-one-lite' ); ?></h4>
+		
+	<p><?php echo sprintf( esc_html__( 'Leave us a review on %sWordPress.org%s. We\'d really appreciate it!', 'llorix-one-lite' ), '<a href="https://wordpress.org/support/theme/llorix-one-lite/">', '</a>' ); ?></p>
 	
 </div>
