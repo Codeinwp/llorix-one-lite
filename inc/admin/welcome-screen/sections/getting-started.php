@@ -116,31 +116,6 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 		?>
 		<hr />
-		<!-- Intergeo Maps -->
-		<h4><?php esc_html_e( 'Intergeo Maps - Google Maps Plugin', 'llorix-one-lite' ); ?></h4>
-		<p><?php esc_html_e( 'The Intergeo Google Maps plugin is a simple, easy and in the same time quite powerful tool for handling Google Maps in your website. The plugin allows users to create new maps by using powerful UI builder.', 'llorix-one-lite' ); ?></p>
-
-		<?php if ( is_plugin_active( 'intergeo-maps/index.php' ) ) { ?>
-
-				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
-
-			<?php
-		}
-		else { ?>
-
-				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=intergeo-maps' ), 'install-plugin_intergeo-maps' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Intergeo Maps', 'llorix-one-lite' ); ?></a></p>
-
-			<?php
-		}
-
-		?>
-
-	</div>
-
-
-	
-	<div class="llorix-one-lite-tab-pane-half">
-
 		<!-- Pirate Forms -->
 		<h4><?php esc_html_e( 'Pirate Forms', 'llorix-one-lite' ); ?></h4>
 		<p><?php esc_html_e( 'Makes your contact page more engaging by creating a good-looking contact form on your website. The interaction with your visitors was never easier.', 'llorix-one-lite' ); ?></p>
@@ -160,6 +135,31 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 		?>
 		<hr />
+		<!-- ECPT -->
+		<h4><?php esc_html_e( 'Easy Content Types', 'llorix-one-lite' ); ?></h4>
+		<p><?php esc_html_e( 'Custom Post Types, Taxonomies and Metaboxes in Minutes', 'llorix-one-lite' ); ?></p>
+
+		<?php if ( is_plugin_active( 'easy-content-types/easy-content-types.php' ) ) { ?>
+
+				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
+
+			<?php
+		}
+		else { ?>
+
+				<p><a href="<?php echo esc_url( 'http://themeisle.com/plugins/easy-content-types/' ); ?>" class="button button-primary"><?php esc_html_e( 'Download Easy Content Types', 'llorix-one-lite' ); ?></a></p>
+
+			<?php
+		}
+
+		?>
+
+	</div>
+
+
+	
+	<div class="llorix-one-lite-tab-pane-half">
+	
 		<!-- Page Builder by SiteOrigin -->
 		<h4><?php esc_html_e( 'Page Builder by SiteOrigin', 'llorix-one-lite' ); ?></h4>
 		<p><?php esc_html_e( 'Build responsive page layouts using the widgets you know and love using this simple drag and drop page builder.', 'llorix-one-lite' ); ?></p>
@@ -178,6 +178,26 @@ $customizer_url = admin_url() . 'customize.php' ;
  		}
  
  		?>
+		<hr />
+		<!-- Intergeo Maps -->
+		<h4><?php esc_html_e( 'Intergeo Maps - Google Maps Plugin', 'llorix-one-lite' ); ?></h4>
+		<p><?php esc_html_e( 'The Intergeo Google Maps plugin is a simple, easy and in the same time quite powerful tool for handling Google Maps in your website. The plugin allows users to create new maps by using powerful UI builder.', 'llorix-one-lite' ); ?></p>
+
+		<?php if ( is_plugin_active( 'intergeo-maps/index.php' ) ) { ?>
+
+				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
+
+			<?php
+		}
+		else { ?>
+
+				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=intergeo-maps' ), 'install-plugin_intergeo-maps' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Intergeo Maps', 'llorix-one-lite' ); ?></a></p>
+
+			<?php
+		}
+
+		?>
+		
 
 	</div>
 
