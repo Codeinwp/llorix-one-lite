@@ -1,5 +1,16 @@
 
 
+### 0.1.7 - 10/03/2016
+
+ Changes: 
+
+
+ * Merge pull request #28 from abaicus/development
+
+!!!Restyled Contribute section.
+ * Fixed socials icons cant be removed completely  #31
+
+
 ### 0.1.5 - 03/03/2016
 
  Changes: 
