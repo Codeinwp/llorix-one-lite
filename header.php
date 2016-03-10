@@ -111,7 +111,7 @@
 										if( !empty($llorix_one_lite_social_icons_decoded) ){
 											echo '<ul class="social-icons">';
 												foreach($llorix_one_lite_social_icons_decoded as $llorix_one_social_icon){
-													if( !empty($llorix_one_social_icon->icon_value) ) {
+													if( !empty($llorix_one_social_icon->icon_value) && ($llorix_one_social_icon->icon_value != 'No Icon') ) {
 														explode("-",$llorix_one_social_icon->icon_value);
 														if( !empty($llorix_one_social_icon->icon_value[2]) ) {
 															if(function_exists('icl_t')){
