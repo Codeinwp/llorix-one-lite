@@ -72,6 +72,17 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'priority'    => 7,
 	));
 	
+	/* Change the template to full width for page.php */
+	$wp_customize->add_setting( 'llorix_one_lite_change_to_full_width', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text'
+	));
+	$wp_customize->add_control( 'llorix_one_lite_change_to_full_width', array(
+		'type' 		=> 'checkbox',
+		'label' 	=> __( 'Change the template to Full width for all the pages?','llorix-one-lite' ),
+		'section' 	=> 'llorix_one_lite_general_section',
+		'priority'	=> 8
+	) );
+	
 	/********************************************************/
 	/********************* APPEARANCE  **********************/
 	/********************************************************/
