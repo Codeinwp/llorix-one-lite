@@ -4205,9 +4205,6 @@ footer.footer #wp-calendar td {
 }
 
 /* THE OVERLAY COLORS WHICH WILL SHOW IN FRONT OF BACKGROUND IMAGES*/
-.overlay-layer-wrap {
-	background: rgba(13, 60, 85, 0.5);
-}
 
 .overlay-layer-2 {
 	background: rgba(0, 5, 8, 0.90);
@@ -4488,7 +4485,6 @@ a:hover {
 .archive-top .section-overlay-layer {
     padding-top: 100px;
     padding-bottom: 100px;
-    background: rgba(13, 60, 85, 0.6);
 }
 
 .archive-top {

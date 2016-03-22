@@ -373,6 +373,16 @@ function llorix_one_lite_php_style() {
 			echo '.header{ background-image: url('.$llorix_one_header_image.');}';
 		}
 	}
+	
+	$llorix_one_lite_frontpage_opacity = get_theme_mod('llorix_one_lite_frontpage_opacity','rgba(13, 60, 85, 0.5)');
+	if(!empty($llorix_one_lite_frontpage_opacity)){
+		echo '.overlay-layer-wrap{ background:'.$llorix_one_lite_frontpage_opacity.';}';
+	}
+	
+	$llorix_one_lite_blog_opacity = get_theme_mod('llorix_one_lite_blog_opacity','rgba(13, 60, 85, 0.6)');
+	if(!empty($llorix_one_lite_blog_opacity)){
+		echo '.archive-top .section-overlay-layer{ background:'.$llorix_one_lite_blog_opacity.';}';
+	}
 
 	echo '</style>';
 }

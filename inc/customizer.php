@@ -14,6 +14,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	
 	require_once ( 'class/llorix-one-lite-general-control.php');
 	require_once ( 'class/llorix-one-lite-text-control.php');
+	require_once ( 'class/llorix-one-lite-alpha-control.php');
 	
 	class LlorixOneLite_Front_Page_Instructions extends WP_Customize_Control {
 		public function render_content() {
@@ -273,6 +274,16 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'priority'    => 3,
 	)));
 	
+	$wp_customize->add_setting( 'llorix_one_lite_blog_opacity', array(
+		'default' => 'rgba(13, 60, 85, 0.6)'
+	));
+	
+	$wp_customize->add_control( new Llorix_One_Lite_Customize_Alpha_Color_Control( $wp_customize, 'llorix_one_lite_blog_opacity', array(
+		'label'    => __( 'Overlay color and transparency', 'llorix-one-lite' ),
+		'palette' => true,
+		'section'  => 'llorix_one_lite_blog_header_section',
+		'priority'   => 4
+	)));
 	
 	/***********************************************************************************/
 	/******  Frontpage - instructions for users when not on Frontpage template *********/
@@ -405,6 +416,17 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'label'    => esc_html__( 'Second layer', 'llorix-one-lite' ),
 		'section'  => 'header_image',
 		'priority'    => 5,
+	)));
+	
+	$wp_customize->add_setting( 'llorix_one_lite_frontpage_opacity', array(
+		'default' => 'rgba(13, 60, 85, 0.5)'
+	));
+	
+	$wp_customize->add_control( new Llorix_One_Lite_Customize_Alpha_Color_Control( $wp_customize, 'llorix_one_lite_frontpage_opacity', array(
+		'label'    => __( 'Overlay color and transparency', 'llorix-one-lite' ),
+		'palette' => true,
+		'section'  => 'header_image',
+		'priority'   => 20
 	)));
 	
 	/* LOGOS BAR SECTION */
