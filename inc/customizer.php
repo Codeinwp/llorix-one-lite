@@ -184,7 +184,18 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'priority'    => 1,
 	));
 	
-	/* Header title */
+	/* Phone number - text */
+	$wp_customize->add_setting( 'llorix_one_lite_very_top_header_phone_text', array(
+		'default' 			=> esc_html__('Call us: ','llorix-one-lite'),
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+	));
+	$wp_customize->add_control( 'llorix_one_lite_very_top_header_phone_text', array(
+		'label'    			=> esc_html__( 'Text before the phone number', 'llorix-one-lite' ),
+		'section'  			=> 'llorix_one_lite_very_top_header_content',
+		'priority'    		=> 2
+	));
+	
+	/* Phone number */
 	$wp_customize->add_setting( 'llorix_one_lite_very_top_header_phone', array(
 		'default' 			=> esc_html__('(+9) 0999.500.400','llorix-one-lite'),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
@@ -193,7 +204,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'llorix_one_lite_very_top_header_phone', array(
 		'label'    			=> esc_html__( 'Phone number', 'llorix-one-lite' ),
 		'section'  			=> 'llorix_one_lite_very_top_header_content',
-		'priority'    		=> 2
+		'priority'    		=> 3
 	));
 
 	/* social icons header */
@@ -211,7 +222,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new Llorix_One_Lite_General_Repeater( $wp_customize, 'llorix_one_lite_very_top_social_icons', array(
 		'label'   					=> esc_html__('Add new social icon','llorix-one-lite'),
 		'section' 					=> 'llorix_one_lite_very_top_header_content',
-		'priority' 					=> 3,
+		'priority' 					=> 4,
         'llorix_one_lite_image_control' 	=> false,
         'llorix_one_lite_icon_control' 	=> true,
         'llorix_one_lite_text_control' 	=> false,
