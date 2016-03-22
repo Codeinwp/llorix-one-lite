@@ -124,33 +124,33 @@
     background-color: #CC8C8C;
 }
 
-#github {
+#github.llorix-one-lite-tab-pane {
   text-align: center;
 }
 
-#github .llorix-one-lite-tab-pane-half {
+#github.llorix-one-lite-tab-pane .llorix-one-lite-tab-pane-half {
   min-height: 160px;
 }
 
-#github .translate-button, #github .github-button {
+#github.llorix-one-lite-tab-pane .translate-button, #github .github-button {
   margin-top: 20px;
 }
 
-#github .dashicons {
+#github.llorix-one-lite-tab-pane .dashicons {
   color: #0073aa;
   font-size: 12px;
   width: auto;
 }
 
-#github h4 {
+#github.llorix-one-lite-tab-pane h4 {
   margin:10px;;
 }
 
-#github p.review-link {
+#github.llorix-one-lite-tab-pane p.review-link {
   margin:0;
 }
 
-#github .llorix-one-lite-tab-pane-half hr {
+#github.llorix-one-lite-tab-pane .llorix-one-lite-tab-pane-half hr {
   display: none;
 }
 
@@ -165,7 +165,7 @@
   }
 }
 @media (max-width: 782px) {
-  #github .llorix-one-lite-tab-pane-half hr {
+  #github.llorix-one-lite-tab-pane .llorix-one-lite-tab-pane-half hr {
     display:block;
   }
 
