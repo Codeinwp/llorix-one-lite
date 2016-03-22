@@ -1,5 +1,15 @@
 
 
+### 0.1.8 - 22/03/2016
+
+ Changes: 
+
+
+ * Merge pull request #33 from abaicus/development
+
+Changed widget title style and CSS selectors for the github tab in the about screen on dashboard.
+
+
 ### 0.1.7 - 10/03/2016
 
  Changes: 
