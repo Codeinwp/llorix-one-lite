@@ -181,7 +181,7 @@ function llorix_one_lite_widgets_init() {
 			'before_widget'	=> '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'	=> '<h3 class="widget-title">',
-			'after_title'	=> '</h3><div class="colored-line-left"></div><div class="clearfix widget-title-margin"></div>'
+			'after_title'	=> '</h3>'
 		)
 	);
 
@@ -372,6 +372,16 @@ function llorix_one_lite_php_style() {
 		if(!empty($llorix_one_header_image)){
 			echo '.header{ background-image: url('.$llorix_one_header_image.');}';
 		}
+	}
+	
+	$llorix_one_lite_frontpage_opacity = get_theme_mod('llorix_one_lite_frontpage_opacity','rgba(13, 60, 85, 0.5)');
+	if(!empty($llorix_one_lite_frontpage_opacity)){
+		echo '.overlay-layer-wrap{ background:'.$llorix_one_lite_frontpage_opacity.';}';
+	}
+	
+	$llorix_one_lite_blog_opacity = get_theme_mod('llorix_one_lite_blog_opacity','rgba(13, 60, 85, 0.6)');
+	if(!empty($llorix_one_lite_blog_opacity)){
+		echo '.archive-top .section-overlay-layer{ background:'.$llorix_one_lite_blog_opacity.';}';
 	}
 
 	echo '</style>';

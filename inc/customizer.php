@@ -14,6 +14,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	
 	require_once ( 'class/llorix-one-lite-general-control.php');
 	require_once ( 'class/llorix-one-lite-text-control.php');
+	require_once ( 'class/llorix-one-lite-alpha-control.php');
 	
 	class LlorixOneLite_Front_Page_Instructions extends WP_Customize_Control {
 		public function render_content() {
@@ -70,6 +71,17 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'section' => 'llorix_one_lite_general_section',
 		'priority'    => 7,
 	));
+	
+	/* Change the template to full width for page.php */
+	$wp_customize->add_setting( 'llorix_one_lite_change_to_full_width', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text'
+	));
+	$wp_customize->add_control( 'llorix_one_lite_change_to_full_width', array(
+		'type' 		=> 'checkbox',
+		'label' 	=> __( 'Change the template to Full width for all the pages?','llorix-one-lite' ),
+		'section' 	=> 'llorix_one_lite_general_section',
+		'priority'	=> 8
+	) );
 	
 	/********************************************************/
 	/********************* APPEARANCE  **********************/
@@ -184,7 +196,18 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'priority'    => 1,
 	));
 	
-	/* Header title */
+	/* Phone number - text */
+	$wp_customize->add_setting( 'llorix_one_lite_very_top_header_phone_text', array(
+		'default' 			=> esc_html__('Call us: ','llorix-one-lite'),
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+	));
+	$wp_customize->add_control( 'llorix_one_lite_very_top_header_phone_text', array(
+		'label'    			=> esc_html__( 'Text before the phone number', 'llorix-one-lite' ),
+		'section'  			=> 'llorix_one_lite_very_top_header_content',
+		'priority'    		=> 2
+	));
+	
+	/* Phone number */
 	$wp_customize->add_setting( 'llorix_one_lite_very_top_header_phone', array(
 		'default' 			=> esc_html__('(+9) 0999.500.400','llorix-one-lite'),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
@@ -193,7 +216,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'llorix_one_lite_very_top_header_phone', array(
 		'label'    			=> esc_html__( 'Phone number', 'llorix-one-lite' ),
 		'section'  			=> 'llorix_one_lite_very_top_header_content',
-		'priority'    		=> 2
+		'priority'    		=> 3
 	));
 
 	/* social icons header */
@@ -211,7 +234,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new Llorix_One_Lite_General_Repeater( $wp_customize, 'llorix_one_lite_very_top_social_icons', array(
 		'label'   					=> esc_html__('Add new social icon','llorix-one-lite'),
 		'section' 					=> 'llorix_one_lite_very_top_header_content',
-		'priority' 					=> 3,
+		'priority' 					=> 4,
         'llorix_one_lite_image_control' 	=> false,
         'llorix_one_lite_icon_control' 	=> true,
         'llorix_one_lite_text_control' 	=> false,
@@ -262,6 +285,16 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'priority'    => 3,
 	)));
 	
+	$wp_customize->add_setting( 'llorix_one_lite_blog_opacity', array(
+		'default' => 'rgba(13, 60, 85, 0.6)'
+	));
+	
+	$wp_customize->add_control( new Llorix_One_Lite_Customize_Alpha_Color_Control( $wp_customize, 'llorix_one_lite_blog_opacity', array(
+		'label'    => __( 'Overlay color and transparency', 'llorix-one-lite' ),
+		'palette' => true,
+		'section'  => 'llorix_one_lite_blog_header_section',
+		'priority'   => 4
+	)));
 	
 	/***********************************************************************************/
 	/******  Frontpage - instructions for users when not on Frontpage template *********/
@@ -394,6 +427,17 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'label'    => esc_html__( 'Second layer', 'llorix-one-lite' ),
 		'section'  => 'header_image',
 		'priority'    => 5,
+	)));
+	
+	$wp_customize->add_setting( 'llorix_one_lite_frontpage_opacity', array(
+		'default' => 'rgba(13, 60, 85, 0.5)'
+	));
+	
+	$wp_customize->add_control( new Llorix_One_Lite_Customize_Alpha_Color_Control( $wp_customize, 'llorix_one_lite_frontpage_opacity', array(
+		'label'    => __( 'Overlay color and transparency', 'llorix-one-lite' ),
+		'palette' => true,
+		'section'  => 'header_image',
+		'priority'   => 20
 	)));
 	
 	/* LOGOS BAR SECTION */

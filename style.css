@@ -4,7 +4,7 @@ Theme URI: http://themeisle.com/themes/llorix-one/
 Author: ThemeIsle
 Author URI: http://themeisle.com/
 Description: Llorix One Lite is a free and beautiful one page business WordPress theme, with a flat and clean bootstrap based design and an elegant parallax effect. It provides a simple,minimal and modern look that can be used for any kind of personal businesses or startup mobile app. The landing page has a fullscreen hero image and blue & orange appearance with buttons and icons promoting simplicity and elegance at their best. The theme provides a responsive blog section, is eCommerce ready (WooCommerce store compatible), WPML, bbPress, Photo Gallery Grid,Contact Form 7,Meta Slider,SiteOrigin Page Builder, JetPack compatible  and SEO friendly. You can use it for your business / startup shop, agency, corporate website, or photography portfolio.
-Version: 0.1.8
+Version: 0.1.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: llorix-one-lite
@@ -4038,10 +4038,16 @@ footer.footer .widget-title {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	text-transform: uppercase;
+	font-weight: normal;
 }
 
-footer.footer .colored-line-left {
-	background: rgba(255, 255, 255, 0.5);
+footer.footer .widget-title:after {
+    content: "";
+    height: 2px;
+    width: 80px;
+    display: block;
+    background: #ECECEC;
+    margin-top: 5px;
 }
 
 footer.footer .social-icons li a {
@@ -4205,9 +4211,6 @@ footer.footer #wp-calendar td {
 }
 
 /* THE OVERLAY COLORS WHICH WILL SHOW IN FRONT OF BACKGROUND IMAGES*/
-.overlay-layer-wrap {
-	background: rgba(13, 60, 85, 0.5);
-}
 
 .overlay-layer-2 {
 	background: rgba(0, 5, 8, 0.90);
@@ -4488,7 +4491,6 @@ a:hover {
 .archive-top .section-overlay-layer {
     padding-top: 100px;
     padding-bottom: 100px;
-    background: rgba(13, 60, 85, 0.6);
 }
 
 .archive-top {

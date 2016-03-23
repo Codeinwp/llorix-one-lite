@@ -83,15 +83,16 @@
 					<div class="very-top-header" id="very-top-header">
 						<div class="container">
 							<?php
-								$llorix_one_lite_very_top_header_phone = get_theme_mod('llorix_one_lite_very_top_header_phone','(+9) 0999.500.400');
+								$llorix_one_lite_very_top_header_phone = get_theme_mod( 'llorix_one_lite_very_top_header_phone',esc_html__('(+9) 0999.500.400','llorix-one-lite') );
+								$llorix_one_lite_very_top_header_phone_text = get_theme_mod( 'llorix_one_lite_very_top_header_phone_text',esc_html__('Call us: ','llorix-one-lite') );
 
-								if( !empty($llorix_one_lite_very_top_header_phone) ){
+								if( !empty($llorix_one_lite_very_top_header_phone) || !empty($llorix_one_lite_very_top_header_phone_text) ){
 									echo '<div class="very-top-left">';
-										echo esc_html_e('Call us:', 'llorix-one-lite') . ' ';
+										echo $llorix_one_lite_very_top_header_phone_text;
 										echo '<span>' . esc_attr($llorix_one_lite_very_top_header_phone) . '</span>';
 									echo '</div>';
 								} elseif ( isset( $wp_customize ) ) {
-									echo '<div class="very-top-left llorix_one_lite_only_customizer">' . esc_html_e('Call us:', 'llorix-one-lite') . '<span></span></div>';
+									echo '<div class="very-top-left llorix_one_lite_only_customizer"><span></span></div>';
 								}
 							?>
 							<div class="very-top-right">

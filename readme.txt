@@ -63,3 +63,5 @@ The exceptions to this license are as follows:
 			Source: https://download.unsplash.com/photo-1418833893919-fa9c83e8d69e
 	* images/team/3.jpg
 			Source: https://download.unsplash.com/photo-1433170897235-615700336230
+	Screenshot image:
+			Source: https://pixabay.com/en/woman-blonde-model-female-918614/
