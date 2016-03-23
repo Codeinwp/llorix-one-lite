@@ -1,5 +1,16 @@
 
 
+### 0.1.9 - 23/03/2016
+
+ Changes: 
+
+
+ * Option to change the Call us text in the very top header #36
+ * Added an option to change the overlay color and transparency of the header image #37
+ * Option to change the page template to full width site-wide #27
+ * Footer widgets underline issue #41
+
+
 ### 0.1.8 - 22/03/2016
 
  Changes: 
