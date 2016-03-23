@@ -4038,10 +4038,16 @@ footer.footer .widget-title {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	text-transform: uppercase;
+	font-weight: normal;
 }
 
-footer.footer .colored-line-left {
-	background: rgba(255, 255, 255, 0.5);
+footer.footer .widget-title:after {
+    content: "";
+    height: 2px;
+    width: 80px;
+    display: block;
+    background: #ECECEC;
+    margin-top: 5px;
 }
 
 footer.footer .social-icons li a {

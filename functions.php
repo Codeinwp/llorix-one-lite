@@ -181,7 +181,7 @@ function llorix_one_lite_widgets_init() {
 			'before_widget'	=> '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'	=> '<h3 class="widget-title">',
-			'after_title'	=> '</h3><div class="colored-line-left"></div><div class="clearfix widget-title-margin"></div>'
+			'after_title'	=> '</h3>'
 		)
 	);
 
