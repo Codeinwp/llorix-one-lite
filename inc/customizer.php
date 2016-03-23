@@ -286,7 +286,8 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	)));
 	
 	$wp_customize->add_setting( 'llorix_one_lite_blog_opacity', array(
-		'default' => 'rgba(13, 60, 85, 0.6)'
+		'default' => 'rgba(13, 60, 85, 0.6)',
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text'
 	));
 	
 	$wp_customize->add_control( new Llorix_One_Lite_Customize_Alpha_Color_Control( $wp_customize, 'llorix_one_lite_blog_opacity', array(
@@ -305,7 +306,9 @@ function llorix_one_lite_customize_register( $wp_customize ) {
         'priority' => 70
     ) );
 	
-	$wp_customize->add_setting( 'llorix_one_lite_front_page_instructions', array( 'sanitize_callback' => 'llorix_one_lite_sanitize_text' ) );
+	$wp_customize->add_setting( 'llorix_one_lite_front_page_instructions', array( 
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text' 
+	) );
 	
 	$wp_customize->add_control( new LlorixOneLite_Front_Page_Instructions( $wp_customize, 'llorix_one_lite_front_page_instructions', array(
 	    'section' => 'llorix_one_lite_front_page_instructions'
@@ -430,7 +433,8 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	)));
 	
 	$wp_customize->add_setting( 'llorix_one_lite_frontpage_opacity', array(
-		'default' => 'rgba(13, 60, 85, 0.5)'
+		'default' => 'rgba(13, 60, 85, 0.5)',
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text'
 	));
 	
 	$wp_customize->add_control( new Llorix_One_Lite_Customize_Alpha_Color_Control( $wp_customize, 'llorix_one_lite_frontpage_opacity', array(
