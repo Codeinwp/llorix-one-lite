@@ -90,13 +90,15 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 
                                         <div class="llorix_one_lite_general_control_icon">
                                             <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one-lite');?></span>
+                                            <div class="llorix-one-lite-dd">
                                             <select class="llorix_one_lite_icon_control">
                                             <?php
                                                 foreach($icons_array as $contact_icon) {
-                                                    echo '<option value="'.esc_attr($contact_icon).'">'.esc_attr($contact_icon).'</option>';
+                                                    echo '<option value="'.esc_attr($contact_icon).'" data-iconclass="'.$contact_icon.'">'.esc_attr($contact_icon).'</option>';
                                                 }
                                             ?>
                                             </select>
+                                            </div>
                                         </div>
                                 <?php
                                     } else {
@@ -112,13 +114,15 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
                                        if($llorix_one_lite_icon_control ==true){
                                 ?>
                                             <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one-lite')?></span>
+                                            <div class="llorix-one-lite-dd">
                                             <select name="<?php echo esc_attr($this->id); ?>" class="llorix_one_lite_icon_control">
                                                 <?php
                                                     foreach($icons_array as $contact_icon) {
-                                                        echo '<option value="'.esc_attr($contact_icon).'">'.esc_attr($contact_icon).'</option>';
+                                                        echo '<option value="'.esc_attr($contact_icon).'" data-iconclass="'.$contact_icon.'">'.esc_attr($contact_icon).'</option>';
                                                     }
                                                 ?>
                                             </select>
+                                            </div>
                                 <?php   }
                                     }
                         
@@ -183,13 +187,15 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 
                                                 <div class="llorix_one_lite_general_control_icon" <?php  if(!empty($icon->choice) && $icon->choice!='llorix_one_lite_icon'){ echo 'style="display:none"';}?>>
                                                     <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one-lite');?></span>
+                                                    <div class="llorix-one-lite-dd">
                                                     <select name="<?php echo esc_attr($this->id); ?>" class="llorix_one_lite_icon_control">
                                                         <?php
                                                             foreach($icons_array as $contact_icon) {
-                                                                echo '<option value="'.esc_attr($contact_icon).'" '.selected($icon->icon_value,$contact_icon).'">'.esc_attr($contact_icon).'</option>';
+                                                                echo '<option value="'.esc_attr($contact_icon).'" '.selected($icon->icon_value,$contact_icon).'" data-iconclass="'.$contact_icon.'">'.esc_attr($contact_icon).'</option>';
                                                             }
                                                         ?>
                                                     </select>
+                                                    </div>
                                                 </div>
 
                                         <?php
@@ -205,13 +211,15 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 
                                                 if($llorix_one_lite_icon_control==true){ ?>
                                                     <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one-lite')?></span>
-                                                    <select name="<?php echo esc_attr($this->id); ?>" class="llorix_one_lite_icon_control">
-                                                        <?php
-                                                            foreach($icons_array as $contact_icon) {
-                                                                echo '<option value="'.esc_attr($contact_icon).'" '.selected($icon->icon_value,$contact_icon).'">'.esc_attr($contact_icon).'</option>';
-                                                            }
-                                                        ?>
-                                                    </select>
+                                                    <div class="llorix-one-lite-dd">
+                                                        <select name="<?php echo esc_attr($this->id); ?>" class="llorix_one_lite_icon_control">
+                                                            <?php
+                                                                foreach($icons_array as $contact_icon) {
+                                                                    echo '<option value="'.esc_attr($contact_icon).'" '.selected($icon->icon_value,$contact_icon).'" data-iconclass="'.$contact_icon.'">'.esc_attr($contact_icon).'</option>';
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                    </div>
                                         <?php
                                                 }
                                             }
@@ -275,13 +283,15 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 
                                         <div class="llorix_one_lite_general_control_icon" <?php  if(!empty($icon->choice) && $icon->choice!='llorix_one_lite_icon'){ echo 'style="display:none"';}?>>
                                             <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one-lite');?></span>
-                                            <select name="<?php echo esc_attr($this->id); ?>" class="llorix_one_lite_icon_control">
-                                            <?php
-                                                foreach($icons_array as $contact_icon) {
-                                                    echo '<option value="'.esc_attr($contact_icon).'" '.selected($icon->icon_value,$contact_icon).'">'.esc_attr($contact_icon).'</option>';
-                                                }
-                                            ?>
-                                            </select>
+                                            <div class="llorix-one-lite-dd">
+                                                <select name="<?php echo esc_attr($this->id); ?>" class="llorix_one_lite_icon_control">
+                                                <?php
+                                                    foreach($icons_array as $contact_icon) {
+                                                        echo '<option value="'.esc_attr($contact_icon).'" '.selected($icon->icon_value,$contact_icon).'" data-iconclass="'.$contact_icon.'">'.esc_attr($contact_icon).'</option>';
+                                                    }
+                                                ?>
+                                                </select>
+                                            </div>
                                         </div>
                                     <?php
 
@@ -298,13 +308,15 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 
                                             if($llorix_one_lite_icon_control==true){ ?>
                                                 <span class="customize-control-title"><?php esc_html_e('Icon','llorix-one-lite')?></span>
+                                                <div class="llorix-one-lite-dd">
                                                 <select name="<?php echo esc_attr($this->id); ?>" class="llorix_one_lite_icon_control">
                                                 <?php
                                                     foreach($icons_array as $contact_icon) {
-                                                        echo '<option value="'.esc_attr($contact_icon).'" '.selected($icon->icon_value,$contact_icon).'">'.esc_attr($contact_icon).'</option>';
+                                                        echo '<option value="'.esc_attr($contact_icon).'" '.selected($icon->icon_value,$contact_icon).'" data-iconclass="'.$contact_icon.'">'.esc_attr($contact_icon).'</option>';
                                                     }
                                                 ?>
                                                 </select>
+                                                </div>
                                         <?php
                                             }
                                         }

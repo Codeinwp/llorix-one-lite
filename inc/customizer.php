@@ -886,12 +886,6 @@ function llorix_one_lite_sanitize_html( $input){
 	return wp_kses($string, $allowed_html);
 }
 
-
-function llorix_one_lite_customizer_script() {
-	wp_enqueue_script( 'llorix_one_lite_customizer_script', llorix_one_lite_get_file('/js/llorix_one_lite_customizer.js'), array("jquery","jquery-ui-draggable"),'1.0.0', true  );
-}
-add_action( 'customize_controls_enqueue_scripts', 'llorix_one_lite_customizer_script' );
-
 function llorix_one_lite_show_on_front(){
 	return is_page_template('template-frontpage.php');
 }
