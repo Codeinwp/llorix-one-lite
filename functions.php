@@ -616,9 +616,15 @@ function llorix_one_lite_get_template_part($template){
     if(locate_template($template.'.php')) {
 		get_template_part($template);
     } else {
-		if(defined('LLORIX_ONE_COMPANION_PATH')){
-			if(file_exists ( LLORIX_ONE_COMPANION_PATH.'sections/'.$template.'.php' )){
-				require_once ( LLORIX_ONE_COMPANION_PATH.'sections/'.$template.'.php' );
+    	if(defined('LLORIX_ONE_PLUS_PATH')){
+			if(file_exists ( LLORIX_ONE_PLUS_PATH.'public/templates/'.$template.'.php' )){
+				require_once ( LLORIX_ONE_PLUS_PATH.'public/templates/'.$template.'.php' );
+			}
+		} else {
+			if(defined('LLORIX_ONE_COMPANION_PATH')){
+				if(file_exists ( LLORIX_ONE_COMPANION_PATH.'sections/'.$template.'.php' )){
+					require_once ( LLORIX_ONE_COMPANION_PATH.'sections/'.$template.'.php' );
+				}
 			}
 		}
 	}
