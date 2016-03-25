@@ -1,5 +1,13 @@
 
 
+### 0.1.11 - 25/03/2016
+
+ Changes: 
+
+
+ * Added Eventbrite API plugin compatibility #44
+
+
 ### 0.1.9 - 23/03/2016
 
  Changes: 
