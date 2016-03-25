@@ -41,7 +41,6 @@ function llorix_one_lite_setup() {
 	 */
 	add_theme_support( 'title-tag' );
 
-
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'llorix-one-lite' ),
@@ -142,6 +141,12 @@ function llorix_one_lite_setup() {
 
 		require get_template_directory() . '/inc/admin/welcome-screen/welcome-screen.php';
 	}
+	
+	/**
+     * Add theme support for the Eventbrite API plugin.
+     * See: https://wordpress.org/plugins/eventbrite-api/
+     */
+    add_theme_support( 'eventbrite' );
 
 
 }
