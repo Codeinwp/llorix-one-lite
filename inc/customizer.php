@@ -16,6 +16,21 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	require_once ( 'class/llorix-one-lite-text-control.php');
 	require_once ( 'class/llorix-one-lite-alpha-control.php');
 	
+	class Llorix_One_Lite_Message extends WP_Customize_Control{
+		private $message = '';
+		public function __construct( $manager, $id, $args = array() ) {
+			parent::__construct( $manager, $id, $args );
+			if(!empty($args['llorix_one_lite_message'])){
+				$this->message = $args['llorix_one_lite_message'];
+			}
+		}
+		
+		public function render_content(){
+			echo '<span class="customize-control-title">'.$this->label.'</span>';
+			echo $this->message;
+		}
+	} 
+	
 	class LlorixOneLite_Front_Page_Instructions extends WP_Customize_Control {
 		public function render_content() {
 			echo __( 'To customize the Frontpage sections please create a page and select the template "Frontpage" for that page. After that, go to Appearance -> Customize -> Static Front Page and under "Static Front Page" select "A static page". Finally, for "Front page" choose the page you previously created.','llorix-one-lite' ).'<br><br>'.__( 'Need further informations? Check this','llorix-one-lite' ).' <a href="http://docs.themeisle.com/article/236-how-to-set-up-the-home-page-for-llorix-one">'.__( 'doc','llorix-one-lite').'</a>';
@@ -795,6 +810,91 @@ function llorix_one_lite_customize_register( $wp_customize ) {
         'llorix_one_lite_text_control' => false,
         'llorix_one_lite_link_control' => true
 	) ) );
+	
+	/*********************************/
+	/******* PLUS SECTIONS ***********/
+	/*********************************/
+	
+	$wp_customize->add_section( 'llorix_one_lite_sections_order' , array(
+		'title'       => __( 'Sections management', 'llorix-one-lite' ),
+		'priority' => 20
+	));
+	$wp_customize->add_setting( 'llorix_one_lite_sections_management', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+	) );
+	
+	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_sections_management',
+		array(
+			'label'    => __( 'Sections management', 'llorix-one-lite' ),
+			'section' => 'llorix_one_lite_sections_order',
+			'priority' => 1,
+			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the frontpage SECTIONS ORDER!', 'llorix-one-lite' )
+	   )
+	));
+	
+	$wp_customize->add_section( 'llorix_one_lite_portfolio_section' , array(
+		'title'       => esc_html__( 'Portfolio section', 'llorix-one-lite' ),
+		'priority'    => 48,
+	));
+	$wp_customize->add_setting( 'llorix_one_lite_portfolio_text', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+	) );
+	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_portfolio_text',
+		array(
+			'label'    => __( 'Portfolio', 'llorix-one-lite' ),
+			'section' => 'llorix_one_lite_portfolio_section',
+			'priority' => 1,
+			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the NEW PORTFOLIO SECTION!', 'llorix-one-lite' )
+	   )
+	));
+	$wp_customize->add_section( 'llorix_one_lite_new_features' , array(
+		'title'       => esc_html__( 'New Features', 'llorix-one-lite' ),
+		'priority'    => 76,
+	));
+	$wp_customize->add_setting( 'llorix_one_lite_new_layout', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+	) );
+	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_new_layout',
+		array(
+			'label'    => __( 'Header Layout', 'llorix-one-lite' ),
+			'section' => 'llorix_one_lite_new_features',
+			'priority' => 1,
+			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the HEADER\'S LAYOUT SECTION!', 'llorix-one-lite' )
+	   )
+	));
+	$wp_customize->add_setting( 'llorix_one_lite_new_color', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+	) );
+	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_new_color',
+		array(
+			'label'    => __( 'Color scheme', 'llorix-one-lite' ),
+			'section' => 'llorix_one_lite_new_features',
+			'priority' => 2,
+			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the COLOR SCHEME!', 'llorix-one-lite' )
+	   )
+	));
+	$wp_customize->add_setting( 'llorix_one_lite_new_preloader', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+	) );
+	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_new_preloader',
+		array(
+			'label'    => __( 'Preloader', 'llorix-one-lite' ),
+			'section' => 'llorix_one_lite_new_features',
+			'priority' => 3,
+			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the PRELOADER IMAGE!', 'llorix-one-lite' )
+	   )
+	));
+	$wp_customize->add_setting( 'llorix_one_lite_new_opacity', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+	) );
+	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_new_opacity',
+		array(
+			'label'    => __( 'Opacity', 'llorix-one-lite' ),
+			'section' => 'llorix_one_lite_new_features',
+			'priority' => 4,
+			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the background opacity and color of each section!', 'llorix-one-lite' )
+	   )
+	));
 	
 }
 add_action( 'customize_register', 'llorix_one_lite_customize_register' );
