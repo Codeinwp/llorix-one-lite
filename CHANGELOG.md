@@ -1,5 +1,17 @@
 
 
+### 0.1.12 - 01/04/2016
+
+ Changes: 
+
+
+ * Update pot file
+ * Big title section background issue
+ * Merge pull request #47 from cristian-ungureanu/development
+
+Development
+
+
 ### 0.1.11 - 25/03/2016
 
  Changes: 
