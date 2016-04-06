@@ -1,5 +1,16 @@
 
 
+### 0.1.13 - 06/04/2016
+
+ Changes: 
+
+
+ * fixed icons in customizer
+ * Merge pull request #54 from cristian-ungureanu/development
+
+fixed icons in customizer
+
+
 ### 0.1.12 - 01/04/2016
 
  Changes: 
