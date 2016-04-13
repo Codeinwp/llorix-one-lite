@@ -1,5 +1,18 @@
 
 
+### 0.1.14 - 13/04/2016
+
+ Changes: 
+
+
+ * Fixed WP 4.5 menu issue
+
+Fixed jQuery issue which was caused with WP 4.5
+ * Merge pull request #58 from HardeepAsrani/development
+
+Fixed WP 4.5 menu issue
+
+
 ### 0.1.13 - 06/04/2016
 
  Changes: 
