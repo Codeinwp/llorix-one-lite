@@ -33,8 +33,8 @@
 
 				</a>
 				<div class="post-date entry-published updated">
-					<span class="post-date-day"><?php the_time('d'); ?></span>
-					<span class="post-date-month"><?php the_time('M'); ?></span>
+					<span class="post-date-day"><?php the_time(_x('d', 'front page/archives post date format', 'llorix-one-lite')); ?></span>
+					<span class="post-date-month"><?php the_time(_x('M', 'front page/archives post month format', 'llorix-one-lite')); ?></span>
 				</div>
 			</div>
 			
