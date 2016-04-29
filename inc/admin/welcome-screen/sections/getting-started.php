@@ -153,6 +153,8 @@ $customizer_url = admin_url() . 'customize.php' ;
 		}
 
 		?>
+		<hr />
+
 
 	</div>
 
@@ -198,6 +200,25 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 		?>
 		
+		<hr />
+		<!-- FEEDZY RSS Feeds -->
+		<h4><?php esc_html_e( 'FEEDZY RSS Feeds', 'llorix-one-lite' ); ?></h4>
+
+		<?php if ( is_plugin_active( 'feedzy-rss-feeds/feedzy-rss-feed.php' ) ) { ?>
+
+				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
+
+			<?php
+		}
+		else { ?>
+
+				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=feedzy-rss-feeds' ), 'install-plugin_feedzy-rss-feeds' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install FEEDZY RSS Feeds', 'llorix-one-lite' ); ?></a></p>
+
+			<?php
+		}
+		?>
+
+		<hr />
 
 	</div>
 
