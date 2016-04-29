@@ -156,6 +156,8 @@ $customizer_url = admin_url() . 'customize.php' ;
 		<hr />
 
 
+
+
 	</div>
 
 
@@ -217,6 +219,26 @@ $customizer_url = admin_url() . 'customize.php' ;
 			<?php
 		}
 		?>
+
+		<hr />
+
+		<!-- Adblock Notify -->
+		<h4><?php esc_html_e( 'Adblock Notify by b*web', 'llorix-one-lite' ); ?></h4>
+
+		<?php if ( is_plugin_active( 'adblock-notify-by-bweb/adblock-notify.php' ) ) { ?>
+
+				<p><span class="parallax-one-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
+
+			<?php
+		}
+		else { ?>
+
+				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=adblock-notify-by-bweb' ), 'install-plugin_adblock-notify-by-bweb' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Adblock Notify', 'llorix-one-lite' ); ?></a></p>
+
+			<?php
+		}
+		?>
+
 
 		<hr />
 
