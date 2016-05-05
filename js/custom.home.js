@@ -25,19 +25,19 @@ jQuery(window).resize(function() {
     sliderUlHeight = 0;
     marginTop = 0;
 
-    jQuery('#llorix_one_slider li').css('height','auto').each(function(){
+    jQuery('#llorix_one_slider > ul > li').css('height','auto').each(function(){
         if ( slideHeight < jQuery(this).height() ){
             slideHeight = jQuery(this).height();
         }
     });
 
-    slideCount = jQuery('#llorix_one_slider ul li').length;
+    slideCount = jQuery('#llorix_one_slider > ul > li').length;
     sliderUlHeight = slideCount * slideHeight;
     
     /* set height */
     jQuery('#llorix_one_slider').css({ width: slideWidth, height: slideHeight });
-    jQuery('#llorix_one_slider ul li ').css({ height: slideHeight}); 
-    jQuery('#llorix_one_slider ul').css({ height: sliderUlHeight, top: marginTop });
+    jQuery('#llorix_one_slider > ul > li ').css({ height: slideHeight}); 
+    jQuery('#llorix_one_slider > ul').css({ height: sliderUlHeight, top: marginTop });
 
     if( jQuery('.control_next').hasClass('fade-btn') ){
         jQuery('.control_next').removeClass('fade-btn');
@@ -54,26 +54,26 @@ function llorix_one_latest_news() {
      /* maximum height for slides */
     slideHeight = 0;
 
-    jQuery('#llorix_one_slider li').css('height','auto').each(function(){
+    jQuery('#llorix_one_slider > ul > li').css('height','auto').each(function(){
         if ( slideHeight < jQuery(this).height() ){
             slideHeight = jQuery(this).height();
         }
     });
 
-    slideCount = jQuery('#llorix_one_slider ul li').length;
+    slideCount = jQuery('#llorix_one_slider > ul > li').length;
     sliderUlHeight = slideCount * slideHeight;
     
     /* set height */
     jQuery('#llorix_one_slider').css({ width: slideWidth, height: slideHeight });
-    jQuery('#llorix_one_slider ul li ').css({ height: slideHeight}); 
-    jQuery('#llorix_one_slider ul').css({ height: sliderUlHeight});
+    jQuery('#llorix_one_slider > ul > li ').css({ height: slideHeight}); 
+    jQuery('#llorix_one_slider > ul').css({ height: sliderUlHeight});
 
 }
 
 function llorix_one_moveTop() {
     if ( marginTop - slideHeight >= - sliderUlHeight + slideHeight ){
         marginTop = marginTop - slideHeight;
-        jQuery('#llorix_one_slider ul').animate({
+        jQuery('#llorix_one_slider > ul').animate({
             top: marginTop
         }, 400 );
         if( marginTop == - slideHeight * (slideCount-1) ) {
@@ -88,7 +88,7 @@ function llorix_one_moveTop() {
 function llorix_one_moveBottom() {
     if ( marginTop + slideHeight <= 0 ){
         marginTop = marginTop + slideHeight;
-        jQuery('#llorix_one_slider ul').animate({
+        jQuery('#llorix_one_slider > ul').animate({
             top: marginTop
         }, 400 );
         if( marginTop == 0 ) {

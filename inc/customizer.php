@@ -266,7 +266,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	
 	/* Blog Header title */
 	$wp_customize->add_setting( 'llorix_one_lite_blog_header_title', array(
-		'default' 			=> esc_html__('BLOG','llorix-one-lite'),
+		'default' 			=> 'This Theme Supports a Custom FrontPage',
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
 		'transport' 		=> 'postMessage'
 	));
