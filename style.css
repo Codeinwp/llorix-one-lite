@@ -2051,7 +2051,7 @@ header .navbar-brand {
 	border-radius: 4px;
 }
 
-#llorix_one_slider ul {
+#llorix_one_slider > ul {
 	position: relative;
 	margin: 0;
 	padding: 0;
@@ -2059,7 +2059,7 @@ header .navbar-brand {
 	list-style: none;
 }
 
-#llorix_one_slider ul li {
+#llorix_one_slider > ul > li {
 	position: relative;
 	display: block;
 	float: left;
