@@ -23,7 +23,7 @@ $llorix_one_lite = wp_get_theme( 'llorix-one-lite' );
 		if(substr( $llorix_one_lite_changelog_line, 0, 3 ) === "###"){
 			echo '<hr /><h1>'.substr($llorix_one_lite_changelog_line,3).'</h1>';
 		} else {
-			echo $llorix_one_lite_changelog_line,'<br/>';
+			echo $llorix_one_lite_changelog_line.'<br/>';
 		}
 	}
 
