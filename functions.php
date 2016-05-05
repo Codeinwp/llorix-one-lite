@@ -208,41 +208,13 @@ function llorix_one_lite_wp_page_menu()
     echo '</ul>';
 }
 
-/*Enqueue Google fonts*/
-function llorix_one_lite_fonts_url() {
-	$fonts_url = '';
-	
-	$cabin = _x( 'on', 'Cabin font: on or off', 'llorix-one-lite' );
-	$open_sans = _x( 'on', 'Open Sans font: on or off', 'llorix-one-lite' );
-
-	if ( 'off' !== $cabin || 'off' !== $open_sans ) {
-		$font_families = array();
-		 
-		if ( 'off' !== $cabin ) {
-		$font_families[] = 'Cabin:400,600';
-		}
-		 
-		if ( 'off' !== $open_sans ) {
-		$font_families[] = 'Open Sans:400,300,600';
-		}
-
-		$query_args = array(
-		'family' => urlencode( implode( '|', $font_families ) ),
-		'subset' => urlencode( 'latin,latin-ext' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-	return $fonts_url;
-}
-
 
 /**
  * Enqueue scripts and styles.
  */
 function llorix_one_lite_scripts() {
 
-	wp_enqueue_style( 'llorix-one-lite-fonts', llorix_one_lite_fonts_url(), array(), null );
+	wp_enqueue_style( 'llorix-one-lite-font', '//fonts.googleapis.com/css?family=Cabin:400,600|Open+Sans:400,300,600');
 
 	wp_enqueue_style( 'llorix-one-lite-fontawesome', llorix_one_lite_get_file( '/css/font-awesome.min.css' ),array(), '4.4.0');
 
