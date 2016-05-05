@@ -1,5 +1,17 @@
 
 
+### 0.1.15 - 05/05/2016
+
+ Changes: 
+
+
+ * #7 - make only one request for google fonts
+ * Merge pull request #67 from cristian-ungureanu/development
+
+Development
+ *  Fixed issue with Jetpack sharing on latest news section #68
+
+
 ### 0.1.14 - 13/04/2016
 
  Changes: 
