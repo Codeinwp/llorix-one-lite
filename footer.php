@@ -122,7 +122,7 @@
 	        </div><!-- .footer-bottom-wrap -->
 
 	        <div class="powered-by">
-	            <a class="" href="http://themeisle.com/themes/llorix-one/" rel="nofollow">Llorix One Lite </a> <?php esc_html_e('powered by','llorix-one-lite'); ?> <a class="" href="http://wordpress.org/" rel="nofollow"><?php esc_html_e('WordPress','llorix-one-lite'); ?></a>
+	            <?php echo apply_filters( 'llorix_one_lite_powered_by',"<a class='' href='http://themeisle.com/themes/llorix-one/' rel='nofollow'>Llorix One Lite </a>".esc_html__('powered by','llorix-one-lite')."<a class='' href='http://wordpress.org/' rel='nofollow'>".esc_html__('WordPress','llorix-one-lite')."</a>"); ?>
 	        </div>
 
 	    </div><!-- container -->
