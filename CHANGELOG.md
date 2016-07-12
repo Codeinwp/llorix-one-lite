@@ -1,4 +1,9 @@
 
+### 0.1.17 - 12/07/2016
+**Changes:** 
+- Fixed responsive issue with menu
+- Added filter for footer copyright
+
 
 ### 0.1.15 - 05/05/2016
 
