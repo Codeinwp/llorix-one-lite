@@ -39,7 +39,7 @@
 </header>
 <!-- /END HOME / HEADER  -->
 
-<div itemprop id="content" class="content-warp" role="main">
+<div itemprop id="content" class="content-wrap" role="main">
 
 <?php
 
