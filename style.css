@@ -1971,6 +1971,13 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 
 .timeline-box-wrap .icon-container img {
 	float: left;
+	border: 0;
+	vertical-align: middle;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	min-width: 100%;
+	max-width: 500%;
 }
 
 .timeline-box-wrap .info {
