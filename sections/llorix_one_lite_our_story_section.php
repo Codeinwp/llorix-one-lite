@@ -27,12 +27,16 @@
 										echo '<div class="col-md-6 brief-content-two"><div class="brief-image-right"><img src="'.esc_url($llorix_one_lite_our_story_image).'" alt="'.esc_html__('About','llorix-one-lite').'"></div></div>';
 									}
 								} elseif ( isset( $wp_customize ) ) {
-									echo '<div class="col-md-6 brief-content-two llorix_one_lite_only_customizer"><img src="" alt=""><div class="brief-image-right"></div></div>';
+									echo '<div class="col-md-6 brief-content-two llorix_one_lite_only_customizer"><div class="brief-image-right"><img src="" ></div></div>';
 								}
 							?>
 
 							<!-- BRIEF HEADING -->
-							<div class="col-md-6 content-section brief-content-one">
+							<?php if( !empty($llorix_one_lite_our_story_image) ){
+								echo '<div class="col-md-6 content-section brief-content-one">';
+							} else {
+								echo '<div class="col-md-12 content-section brief-content-one">';
+							} ?>
 								<?php
 									if( !empty($llorix_one_lite_our_story_title) ){
 										echo '<h2 class="text-left dark-text">'.esc_attr($llorix_one_lite_our_story_title).'</h2><div class="colored-line-left"></div>';
@@ -69,12 +73,16 @@
 										echo '<div class="col-md-6 brief-content-two"><div class="brief-image-right"><img src="'.esc_url($llorix_one_lite_our_story_image).'" alt="'.esc_html__('About','llorix-one-lite').'"></div></div>';
 									}
 								} elseif ( isset( $wp_customize ) ) {
-									echo '<div class="col-md-6 brief-content-two llorix_one_lite_only_customizer"><img src="" alt=""><div class="brief-image-right"></div></div>';
+									echo '<div class="col-md-6 brief-content-two llorix_one_lite_only_customizer"><div class="brief-image-right"><img src="" ></div></div>';
 								}
 							?>
 
 							<!-- BRIEF HEADING -->
-							<div class="col-md-6 content-section brief-content-one">
+							<?php if( !empty($llorix_one_lite_our_story_image) ){
+								echo '<div class="col-md-6 content-section brief-content-one">';
+							} else {
+								echo '<div class="col-md-12 content-section brief-content-one">';
+							} ?>
 								<?php
 									if( !empty($llorix_one_lite_our_story_title) ){
 										echo '<h2 class="text-left dark-text">'.esc_attr($llorix_one_lite_our_story_title).'</h2><div class="colored-line-left"></div>';
