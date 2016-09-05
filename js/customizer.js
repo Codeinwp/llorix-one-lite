@@ -235,10 +235,14 @@
 		value.bind(function( to ) {
 			if( to != '' ) {
 				$( '.brief' ).removeClass( 'llorix_one_lite_only_customizer' );
-				$('.brief .brief-content-two').removeClass( 'llorix_one_lite_only_customizer' );
+				$( '.brief .brief-content-two' ).removeClass( 'llorix_one_lite_only_customizer' );
 				$( '.brief .brief-content-two .brief-image-right img' ).attr('src', to);
+				$( '.brief .brief-content-one').removeClass( 'col-md-12');
+				$( '.brief .brief-content-one').addClass( 'col-md-6 ');
 			} else {
-				$('.brief .brief-content-two').addClass( 'llorix_one_lite_only_customizer' );
+				$( '.brief .brief-content-two').addClass( 'llorix_one_lite_only_customizer' );
+				$( '.brief .brief-content-one').addClass( 'col-md-12');
+				$( '.brief .brief-content-one').removeClass( 'col-md-6 ');
 				if( $( '.brief .content-section h2' ).hasClass('llorix_one_lite_only_customizer') && $('.brief .content-section .brief-content-text').hasClass('llorix_one_lite_only_customizer') ){
 					$( '.brief' ).addClass( 'llorix_one_lite_only_customizer' );
 				}
