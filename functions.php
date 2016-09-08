@@ -316,7 +316,9 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
 /* tgm-plugin-activation */
 require_once get_template_directory() . '/class-tgm-plugin-activation.php';
-add_action( 'tgmpa_register', 'llorix_one_lite_register_required_plugins' );
+if ( current_user_can( 'install_plugins' ) ) {
+	add_action( 'tgmpa_register', 'llorix_one_lite_register_required_plugins' );
+}
 function llorix_one_lite_register_required_plugins() {
 
 		$plugins = array(

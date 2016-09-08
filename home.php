@@ -53,7 +53,7 @@
 ?>
 
 
-<div role="main" id="content" class="content-warp">
+<div role="main" id="content" class="content-wrap">
 	<div class="container">
 		<div id="primary" class="content-area col-md-8 post-list">
 			<main <?php if(have_posts()) echo 'itemscope itemtype="http://schema.org/Blog"'; ?> id="main" class="site-main" role="main">
