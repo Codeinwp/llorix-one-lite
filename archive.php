@@ -48,7 +48,7 @@
 ?>
 
 
-<div role="main" id="content" class="content-warp">
+<div role="main" id="content" class="content-wrap">
 	<div class="container">
 
 		<div id="primary" class="content-area col-md-8 post-list">
