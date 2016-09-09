@@ -1,4 +1,12 @@
 
+### 0.1.18 - 09/09/2016
+**Changes:** 
+- Update Fontawesome to 4.6.3
+- Fixed issue with Latest news images
+- Increased the About us section, when no image is provided
+- Update tags
+- Made notice of Llorix Companion plugin visible just to admins
+
 ### 0.1.17 - 12/07/2016
 **Changes:** 
 - Fixed responsive issue with menu
