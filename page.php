@@ -18,7 +18,7 @@
 </header>
 <!-- /END HOME / HEADER  -->
 
-<div id="content" class="content-warp">
+<div id="content" class="content-wrap">
 	<div class="container">
 	
 		<?php

@@ -41,7 +41,7 @@ get_header(); ?>
 						</div><!-- .entry-content -->
 
 						<footer class="entry-footer">
-							<?php eventbrite_edit_post_link( __( 'Edit', 'eventbrite_api' ), '<span class="edit-link">', '</span>' ); ?>
+							<?php eventbrite_edit_post_link( __( 'Edit', 'llorix-one-lite' ), '<span class="edit-link">', '</span>' ); ?>
 						</footer><!-- .entry-footer -->
 					</article><!-- #post-## -->
 
