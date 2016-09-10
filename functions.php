@@ -273,14 +273,12 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 function llorix_one_lite_admin_styles() {
-	wp_enqueue_style( 'llorix_one_lite_admin_fontawesome', llorix_one_lite_get_file( '/css/font-awesome.min.css' ),array(), '4.5.0');
 	wp_enqueue_style( 'llorix_one_lite_admin_stylesheet', llorix_one_lite_get_file('/css/admin-style.css'),'1.0.0' );
 }
 add_action( 'customize_controls_enqueue_scripts', 'llorix_one_lite_admin_styles', 10 );
 
 function llorix_one_lite_admin_scripts(){
-	wp_register_script( 'llorix_one_lite_ddslick', get_template_directory_uri() .'/js/jquery.ddslick.js', array("jquery"), '1.0.1');
-	wp_enqueue_script( 'llorix_one_lite_customizer_script', llorix_one_lite_get_file('/js/llorix_one_lite_customizer.js'), array("jquery","jquery-ui-draggable","llorix_one_lite_ddslick"),'1.0.0', true  );
+	wp_enqueue_script( 'llorix_one_lite_customizer_script', llorix_one_lite_get_file('/js/llorix_one_lite_customizer.js'), array("jquery","jquery-ui-draggable"),'1.0.0', true  );
 }
 add_action( 'customize_controls_enqueue_scripts', 'llorix_one_lite_admin_scripts' );
 
