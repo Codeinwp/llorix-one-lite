@@ -903,7 +903,7 @@ add_action( 'customize_register', 'llorix_one_lite_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function llorix_one_lite_customize_preview_js() {
-	wp_enqueue_script( 'llorix_one_lite_customizer', llorix_one_lite_get_file('/js/customizer.js'), array( 'customize-preview' ), '1.0.2', true );
+	wp_enqueue_script( 'llorix_one_lite_customizer', llorix_one_lite_get_file('/js/customizer.js'), array( 'customize-preview' ), '1.0.3', true );
 }
 add_action( 'customize_preview_init', 'llorix_one_lite_customize_preview_js', 10);
 

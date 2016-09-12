@@ -129,12 +129,12 @@
 	wp.customize("llorix_one_lite_header_title", function(value) {
         value.bind(function( to ) {
 			if( to != '' ) {
-				$( '#llorix_one_lite_header .intro-section h1' ).removeClass( 'llorix_one_lite_only_customizer' );
+				$( '#llorix_one_lite_header .intro-section .intro' ).removeClass( 'llorix_one_lite_only_customizer' );
 			}
 			else {
-				$( '#llorix_one_lite_header .intro-section h1' ).addClass( 'llorix_one_lite_only_customizer' );
+				$( '#llorix_one_lite_header .intro-section .intro' ).addClass( 'llorix_one_lite_only_customizer' );
 			}
-			$( '#llorix_one_lite_header .intro-section h1' ).text( to );
+			$( '#llorix_one_lite_header .intro-section .intro' ).text( to );
 	    } );
 		
     });
