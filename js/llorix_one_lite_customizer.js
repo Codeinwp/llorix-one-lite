@@ -172,28 +172,32 @@ jQuery(document).ready(function(){
       
       var field = th.find(".llorix_one_lite_general_control_repeater_container:first").clone();
       
-      if(typeof field != 'undefined'){
+    if(typeof field != 'undefined'){
         field.find(".llorix_one_lite_image_choice").val('llorix_one_lite_icon');
         field.find('.llorix_one_lite_general_control_icon').show();
-        
+
         if(field.find('.llorix_one_lite_general_control_icon').length > 0){
-          field.find('.llorix_one_lite_image_control').hide();
+        field.find('.llorix_one_lite_image_control').hide();
         }
-        
+
         field.find(".llorix_one_lite_general_control_remove_field").show();
 
+        field.find( '.icp' ).iconpicker().on( 'iconpickerUpdated', function() {
+        jQuery( this ).trigger( 'change' );
+        } );
 
-                field.find(".icp").val('');
-                field.find(".llorix_one_lite_text_control").val('');
-                field.find(".llorix_one_lite_link_control").val('');
-                field.find(".llorix_one_lite_box_id").val(id);
-                field.find(".custom_media_url").val('');
-                field.find(".llorix_one_lite_title_control").val('');
-                field.find(".llorix_one_lite_subtitle_control").val('');
-                field.find(".llorix_one_lite_shortcode_control").val('');
-                th.find(".llorix_one_lite_general_control_repeater_container:first").parent().append(field);
-                llorix_one_refresh_general_control_values();
-            }
+        field.find( '.iconpicker-component' ).html('');
+        field.find(".icp").val('');
+        field.find(".llorix_one_lite_text_control").val('');
+        field.find(".llorix_one_lite_link_control").val('');
+        field.find(".llorix_one_lite_box_id").val(id);
+        field.find(".custom_media_url").val('');
+        field.find(".llorix_one_lite_title_control").val('');
+        field.find(".llorix_one_lite_subtitle_control").val('');
+        field.find(".llorix_one_lite_shortcode_control").val('');
+        th.find(".llorix_one_lite_general_control_repeater_container:first").parent().append(field);
+        llorix_one_refresh_general_control_values();
+    }
       
     }
     return false;
