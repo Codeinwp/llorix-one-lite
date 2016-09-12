@@ -160,11 +160,11 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
                         }
 
                         if($this->llorix_one_lite_image_control==true){
-                            $this->image_control($icon->image_url);
+                            $this->image_control($icon->image_url, $icon->choice);
                         }
 
                         if($this->llorix_one_lite_icon_control==true){
-                            $this->icon_picker_control($icon->icon_value);
+                            $this->icon_picker_control($icon->icon_value, $icon->choice);
                         }
 
                         if($this->llorix_one_lite_title_control==true){
