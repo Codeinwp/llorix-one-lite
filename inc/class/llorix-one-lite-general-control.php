@@ -155,30 +155,60 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
                     </div>
                     <div class="llorix-one-lite-box-content-hidden">
                         <?php
+                        $choice = 'llorix_one_lite_icon';
+                        $image_url = $icon_value = $title = $subtitle = $text = $link = $shortcode = '';
+
+                        if(!empty($icon->choice)){
+                            $choice = $icon->choice;
+                        }
+                        if(!empty($icon->image_url)){
+                            $image_url = $icon->image_url;
+                        }
+                        if(!empty($icon->icon_value)){
+                            $icon_value = $icon->icon_value;
+                        }
+                        if(!empty($icon->title)){
+                            $title = $icon->title;
+                        }
+                        if(!empty($icon->subtitle)){
+                            $subtitle =  $icon->subtitle;
+                        }
+                        if(!empty($icon->text)){
+                            $text = $icon->text;
+                        }
+                        if(!empty($icon->link)){
+                            $link = $icon->link;
+                        }
+                        if(!empty($icon->shortcode)){
+                            $shortcode = $icon->shortcode;
+                        }
+
+
                         if($this->llorix_one_lite_image_control == true && $this->llorix_one_lite_icon_control == true) {
-                            $this->icon_type_choice( $icon->choice );
+
+                            $this->icon_type_choice( $choice );
                         }
 
-                        if($this->llorix_one_lite_image_control==true){
-                            $this->image_control($icon->image_url, $icon->choice);
+                        if($this->llorix_one_lite_image_control == true){
+                            $this->image_control($image_url, $choice);
                         }
 
-                        if($this->llorix_one_lite_icon_control==true){
-                            $this->icon_picker_control($icon->icon_value, $icon->choice);
+                        if($this->llorix_one_lite_icon_control == true){
+                            $this->icon_picker_control($icon_value, $choice);
                         }
 
                         if($this->llorix_one_lite_title_control==true){
                             $this->input_control(array(
                                 'label' => __('Title','llorix-one-lite'),
                                 'class' => 'llorix_one_lite_title_control',
-                            ), $icon->title);
+                            ), $title);
                         }
 
                         if($this->llorix_one_lite_subtitle_control==true){
                             $this->input_control(array(
                                 'label' => __('Subtitle','llorix-one-lite'),
                                 'class' => 'llorix_one_lite_subtitle_control',
-                            ), $icon->subtitle);
+                            ), $subtitle);
                         }
 
                         if($this->llorix_one_lite_text_control==true){
@@ -186,7 +216,7 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
                                 'label' => __('Text','llorix-one-lite'),
                                 'class' => 'llorix_one_lite_text_control',
                                 'type'  => 'textarea'
-                            ), $icon->text);
+                            ), $text);
                         }
 
                         if($this->llorix_one_lite_link_control){
@@ -194,14 +224,14 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
                                 'label' => __('Link','llorix-one-lite'),
                                 'class' => 'llorix_one_lite_link_control',
                                 'sanitize_callback' => 'esc_url'
-                            ), $icon->link);
+                            ), $link);
                         }
 
                         if($this->llorix_one_lite_shortcode_control==true){
                             $this->input_control(array(
                                 'label' => __('Shortcode','llorix-one-lite'),
                                 'class' => 'llorix_one_lite_shortcode_control',
-                            ), $icon->shortcode);
+                            ), $shortcode);
                         } ?>
                         <input type="hidden" class="llorix_one_lite_box_id" value="<?php if(!empty($icon->id)) echo esc_attr($icon->id); ?>">
                         <button type="button" class="llorix_one_lite_general_control_remove_field button" <?php if ($it == 0) echo 'style="display:none;"'; ?>><?php esc_html_e('Delete field','llorix-one-lite'); ?></button>
