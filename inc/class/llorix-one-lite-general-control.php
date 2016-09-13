@@ -56,7 +56,8 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
         <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
         <div class="llorix_one_lite_general_control_repeater llorix_one_lite_general_control_droppable">
             <?php
-            if(empty($json)) {
+
+            if( (count($json) == 1 && '' === $json[0] ) || empty($json) ) {
                 if(!empty($this_default)){
                     $this->iterate_array($this_default); ?>
                     <input type="hidden" id="llorix_one_lite_<?php echo $this->id; ?>_repeater_colector" <?php $this->link(); ?> class="llorix_one_lite_repeater_colector" value="<?php  echo esc_textarea( json_encode($this_default )); ?>" />
@@ -251,7 +252,7 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
                     }
 
                     if ( $this->llorix_one_lite_image_control == true ) {
-                        $this->image_control();
+                        $this->image_control('','llorix_one_lite_icon');
                     }
 
                     if ( $this->llorix_one_lite_icon_control == true ) {
