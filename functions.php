@@ -235,7 +235,7 @@ function llorix_one_lite_scripts() {
 
 	wp_enqueue_style( 'llorix-one-lite-style', get_stylesheet_uri(), array( 'llorix-one-lite-bootstrap-style' ),'1.0.0' );
 
-	wp_enqueue_script( 'llorix-one-lite-bootstrap', llorix_one_lite_get_file( '/js/bootstrap.min.js' ), array(), '3.3.5', true );
+	wp_enqueue_script( 'llorix-one-lite-bootstrap', llorix_one_lite_get_file( '/js/vendor/bootstrap.min.js' ), array(), '3.3.7', true );
 
 	wp_enqueue_script( 'llorix-one-lite-custom-all', llorix_one_lite_get_file( '/js/custom.all.js' ), array( 'jquery' ), '2.0.2', true );
 
