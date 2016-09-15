@@ -1,10 +1,11 @@
-<?php 
-/*
-Template Name: Contact
-*/
+<?php
+/**
+ * Template Name: Contact
+ *
+ * @package llorix-one-lite
+ */
 
-	get_header(); 
-?>
+get_header(); ?>
 
 	</div>
 	<!-- /END COLOR OVER IMAGE -->

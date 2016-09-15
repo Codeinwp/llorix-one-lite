@@ -38,7 +38,8 @@ module.exports = function (grunt) {
             php: [
                 '**/*.php',
                 '!node_modules/**/*.php',
-                '!inc/admin/**/*.php'
+                '!inc/admin/**/*.php',
+                '!class-tgm-plugin-activation.php'
             ],
             get config() {
                 return project.paths.config + '*.js';
