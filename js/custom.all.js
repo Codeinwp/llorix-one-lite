@@ -1,4 +1,5 @@
-jQuery(window).load(function(){ 
+/* global screenReaderText */
+jQuery(window).load(function(){
     fixFooterBottom();
     callback_menu_align();
 });
@@ -472,10 +473,10 @@ var isMobile = {
     
     initMainNavigation( $( '.main-navigation' ) );
     
-    masthead = $( '#masthead' );
-	menuToggle       = masthead.find( '#menu-toggle' );
-	siteHeaderMenu   = masthead.find( '#site-header-menu' );
-	siteNavigation   = masthead.find( '#site-navigation' ); 
+    var masthead = $( '#masthead' );
+	var menuToggle       = masthead.find( '#menu-toggle' );
+	var siteHeaderMenu   = masthead.find( '#site-header-menu' );
+	var siteNavigation   = masthead.find( '#site-navigation' );
     
     // Enable menuToggle.
 	( function() {

@@ -186,7 +186,7 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 				<?php
 				echo sprintf(
 					__( 'Note: Some icons may not be displayed here. You can see the full list of icons at %1$s', 'llorix-one-lite' ),
-					sprintf( '<a href="http://fontawesome.io/icons/" rel="nofollow">%s</a>', esc_html__( 'http://fontawesome.io/icons/', 'themotion' ) )
+					sprintf( '<a href="http://fontawesome.io/icons/" rel="nofollow">%s</a>', esc_html__( 'http://fontawesome.io/icons/', 'llorix-one-lite' ) )
 				); ?>
 			</span>
 			<div class="input-group icp-container">
