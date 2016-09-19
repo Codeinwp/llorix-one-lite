@@ -473,10 +473,10 @@ add_filter( 'woocommerce_output_related_products_args', 'llorix_one_lite_related
 /**
  * Wrap videos in a class.
  *
- * @param    mixed $cache The cached HTML result, stored in post meta.
+ * @param    mixed  $cache The cached HTML result, stored in post meta.
  * @param    string $url The attempted embed URL.
- * @param    array $attr An array of shortcode attributes.
- * @param    int $post_id Post ID.
+ * @param    array  $attr An array of shortcode attributes.
+ * @param    int    $post_id Post ID.
  *
  * @return string
  */
@@ -491,7 +491,7 @@ add_filter( 'embed_oembed_html', 'llorix_one_lite_responsive_embed', 10, 4 );
  *
  * @param     mixed $comment Author’s User ID, an E-mail Address (a string) or the comment object from the comment loop.
  * @param     array $args Arguments for wp_list_comments.
- * @param     int $depth How deep (in comment replies) should the comments be fetched.
+ * @param     int   $depth How deep (in comment replies) should the comments be fetched.
  */
 function llorix_one_lite_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
