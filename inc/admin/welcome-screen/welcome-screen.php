@@ -19,9 +19,10 @@ class Llorix_One_Lite_Welcome {
 		/* load welcome screen */
 		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_getting_started' ), 	    10 );
 		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_actions_required' ),      20 );
-		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_github' ), 		        30 );
-		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_support' ), 			    40 );
-		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_changelog' ), 			50 );
+		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_child_themes' ), 		    30 );
+		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_github' ), 		        40 );
+		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_support' ), 			    50 );
+		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_changelog' ), 			60 );
 		
 		/* ajax callback for dismissable required actions */
 		add_action( 'wp_ajax_llorix_one_lite_dismiss_required_action', array( $this, 'llorix_one_lite_dismiss_required_action_callback') );
@@ -162,6 +163,7 @@ class Llorix_One_Lite_Welcome {
 		<ul class="llorix-one-lite-nav-tabs" role="tablist">
 			<li role="presentation" class="active"><a href="#getting_started" aria-controls="getting_started" role="tab" data-toggle="tab"><?php esc_html_e( 'Getting started','llorix-one-lite'); ?></a></li>
 			<li role="presentation" class="llorix-one-lite-w-red-tab"><a href="#actions_required" aria-controls="actions_required" role="tab" data-toggle="tab"><?php esc_html_e( 'Actions recommended','llorix-one-lite'); ?></a></li>
+			<li role="presentation"><a href="#child_themes" aria-controls="child_themes" role="tab" data-toggle="tab"><?php echo 'Child themes'; ?></a></li>
 			<li role="presentation"><a href="#github" aria-controls="github" role="tab" data-toggle="tab"><?php esc_html_e( 'Contribute','llorix-one-lite'); ?></a></li>
 			<li role="presentation"><a href="#support" aria-controls="support" role="tab" data-toggle="tab"><?php esc_html_e( 'Support','llorix-one-lite'); ?></a></li>
 			<li role="presentation"><a href="#changelog" aria-controls="changelog" role="tab" data-toggle="tab"><?php esc_html_e( 'Change log','llorix-one-lite'); ?></a></li>
@@ -173,9 +175,10 @@ class Llorix_One_Lite_Welcome {
 			/**
 			 * @hooked llorix_one_lite_welcome_getting_started - 10
 			 * @hooked llorix_one_lite_welcome_actions_required - 20
-			 * @hooked llorix_one_lite_welcome_github - 30
-			 * @hooked llorix_one_lite_welcome_support - 40
-			 * @hooked llorix_one_lite_welcome_changelog - 50
+			 * @hooked llorix_one_lite_welcome_child_themes - 30
+			 * @hooked llorix_one_lite_welcome_github - 40
+			 * @hooked llorix_one_lite_welcome_support - 50
+			 * @hooked llorix_one_lite_welcome_changelog - 60
 			 */
 			do_action( 'llorix_one_lite_welcome' ); ?>
 
@@ -199,6 +202,13 @@ class Llorix_One_Lite_Welcome {
 	 */
 	public function llorix_one_lite_welcome_github() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/github.php' );
+	}
+	/**
+	 * Child themes
+	 * @since 1.8.2.4
+	 */
+	public function llorix_one_lite_welcome_child_themes() {
+		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/child-themes.php' );
 	}
 	/**
 	 * Support
