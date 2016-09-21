@@ -1,6 +1,8 @@
 <?php
 /**
  * The Template for displaying all single Eventbrite events.
+ *
+ * @package llorix-one-lite
  */
 
 get_header(); ?>
@@ -13,7 +15,7 @@ get_header(); ?>
 <div class="content-wrap">
 	<div class="container">
 
-		<div id="primary" class="content-area <?php if ( is_active_sidebar( 'sidebar-1' ) ) { echo 'col-md-8';} else {echo 'col-md-12';}  ?>">
+		<div id="primary" class="content-area <?php if ( is_active_sidebar( 'sidebar-1' ) ) { echo 'col-md-8';} else { echo 'col-md-12';}  ?>">
 			<main itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage" id="main" class="site-main" role="main">
 
 			<?php
@@ -21,7 +23,7 @@ get_header(); ?>
 				$event = new Eventbrite_Query( array( 'p' => get_query_var( 'eventbrite_id' ) ) );
 
 				if ( $event->have_posts() ) :
-					while ( $event->have_posts() ) : $event->the_post(); ?>
+				while ( $event->have_posts() ) : $event->the_post(); ?>
 
 					<article id="event-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<header class="entry-header">

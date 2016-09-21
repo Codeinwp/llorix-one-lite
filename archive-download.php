@@ -6,9 +6,8 @@
  *
  * @package llorix-one-lite
  */
-	get_header(); 
-?>
 
+get_header(); ?>
 	</div>
 	<!-- /END COLOR OVER IMAGE -->
 </header>
@@ -18,7 +17,7 @@
 	<div class="container">
 
 		<div id="primary" class="content-area col-md-12">
-			<main <?php if(have_posts()) echo 'itemscope itemtype="http://schema.org/Blog"'; ?> id="main" class="site-main" role="main">
+			<main <?php if ( have_posts() ) { echo 'itemscope itemtype="http://schema.org/Blog"';} ?> id="main" class="site-main" role="main">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -33,12 +32,13 @@
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php
-							/* Include the Post-Format-specific template for the content.
-							 * If you want to override this in a child theme, then include a file
-							 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-							 */
-							get_template_part( 'content', 'archive-download' );
-						?>
+
+						/**
+						 * Include the Post-Format-specific template for the content.
+						 * If you want to override this in a child theme, then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						get_template_part( 'content', 'archive-download' ); ?>
 
 					<?php endwhile; ?>
 					

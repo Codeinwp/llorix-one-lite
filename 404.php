@@ -1,12 +1,12 @@
 <?php
 /**
- * 
+ *
  * The template for displaying 404 pages (not found).
  *
  * @package llorix-one-lite
  */
 
-	get_header(); 
+	get_header();
 ?>
 
 	</div>
