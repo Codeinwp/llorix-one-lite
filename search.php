@@ -5,7 +5,7 @@
  * @package llorix-one-lite
  */
 
-	get_header(); 
+	get_header();
 ?>
 
 	</div>

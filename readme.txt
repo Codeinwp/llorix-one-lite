@@ -38,6 +38,10 @@ The exceptions to this license are as follows:
 * Parallax.js
  	Copyright (C) 2014 Matthew Wagerfield - @wagerfield
     Licensed under the MIT license.
+
+* Font Awesome Iconpocker from repeater
+    Copyright (c) 2014 Javier Aguilar @mjolnic
+    Licensed under the MIT license.
 	
 * Images	 
 	 

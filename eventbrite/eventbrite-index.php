@@ -1,6 +1,8 @@
 <?php
 /**
  * Template Name: Eventbrite Events
+ *
+ * @package llorix-one-lite
  */
 
 get_header(); ?>
@@ -63,7 +65,7 @@ get_header(); ?>
 
 					<?php get_template_part( 'content', 'none' ); ?>
 
-				<?php endif; 
+				<?php endif;
 				// Return $post to its rightful owner.
 				wp_reset_postdata();
 				?>

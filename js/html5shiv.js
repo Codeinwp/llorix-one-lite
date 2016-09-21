@@ -2,6 +2,8 @@
 * @preserve HTML5 Shiv 3.7.2 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 */
 ;(function(window, document) {
+  'use strict';
+
 /*jshint evil:true */
   /** version */
   var version = '3.7.2';
@@ -37,14 +39,14 @@
         //if the hidden property is implemented we can assume, that the browser supports basic HTML5 Styles
         supportsHtml5Styles = ('hidden' in a);
 
-        supportsUnknownElements = a.childNodes.length == 1 || (function() {
+        supportsUnknownElements = a.childNodes.length === 1 || (function() {
           // assign a false positive if unable to shiv
           (document.createElement)('a');
           var frag = document.createDocumentFragment();
           return (
-            typeof frag.cloneNode == 'undefined' ||
-            typeof frag.createDocumentFragment == 'undefined' ||
-            typeof frag.createElement == 'undefined'
+            typeof frag.cloneNode === 'undefined' ||
+            typeof frag.createDocumentFragment === 'undefined' ||
+            typeof frag.createElement === 'undefined'
           );
         }());
     } catch(e) {
@@ -79,7 +81,7 @@
    */
   function getElements() {
     var elements = html5.elements;
-    return typeof elements == 'string' ? elements.split(' ') : elements;
+    return typeof elements === 'string' ? elements.split(' ') : elements;
   }
 
   /**
@@ -90,10 +92,10 @@
    */
   function addElements(newElements, ownerDocument) {
     var elements = html5.elements;
-    if(typeof elements != 'string'){
+    if(typeof elements !== 'string'){
       elements = elements.join(' ');
     }
-    if(typeof newElements != 'string'){
+    if(typeof newElements !== 'string'){
       newElements = newElements.join(' ');
     }
     html5.elements = elements +' '+ newElements;

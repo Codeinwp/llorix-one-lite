@@ -43,7 +43,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 
 		// Add the blog description for the home/front page.
 		$site_description = get_bloginfo( 'description', 'display' );
-		if ( $site_description && ( is_home() || (is_front_page() || is_page_template('template-frontpage.php')) ) ) {
+		if ( $site_description && ( is_home() || (is_front_page() || is_page_template( 'template-frontpage.php' )) ) ) {
 			$title .= " $sep $site_description";
 		}
 

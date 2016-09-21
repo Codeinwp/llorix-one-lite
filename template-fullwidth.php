@@ -5,7 +5,7 @@
  * @package llorix-one-lite
  */
 
-	get_header(); 
+	get_header();
 ?>
 
 	</div>
@@ -16,7 +16,7 @@
 <div class="content-wrap">
 	<div class="container">
 		<?php $page_title = get_the_title(); ?>
-		<div id="primary" class="content-area col-md-12 <?php if( empty( $page_title ) ){ echo 'llorix-one-lite-top-margin-5px'; } ?>">
+		<div id="primary" class="content-area col-md-12 <?php if ( empty( $page_title ) ) {  echo 'llorix-one-lite-top-margin-5px'; } ?>">
 			<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -26,7 +26,7 @@
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
 					if ( comments_open() || get_comments_number() ) :
-						comments_template();
+					comments_template();
 					endif;
 				?>
 
