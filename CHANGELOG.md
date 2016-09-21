@@ -1,4 +1,8 @@
 
+### 0.1.20 - 21/09/2016
+**Changes:** 
+- Add recommandated child theme
+
 ### 0.1.19 - 21/09/2016
 **Changes:** 
 - Redo the layout of the icon picker
