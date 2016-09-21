@@ -1,4 +1,9 @@
 
+### 0.1.19 - 21/09/2016
+**Changes:** 
+- Redo the layout of the icon picker
+- Allow HTML tags in the About us section
+
 ### 0.1.18 - 09/09/2016
 **Changes:** 
 - Update Fontawesome to 4.6.3
