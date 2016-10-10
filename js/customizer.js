@@ -136,7 +136,7 @@
 			} else {
 				llorix_one_lite_header.find( '.intro-section .intro' ).addClass( 'llorix_one_lite_only_customizer' );
 			}
-			llorix_one_lite_header.find( '.intro-section .intro' ).text( to );
+			llorix_one_lite_header.find( '.intro-section .intro' ).html( to );
 	    } );
 		
     });

@@ -72,7 +72,7 @@ if ( ! empty( $llorix_one_lite_header_logo ) || ! empty( $llorix_one_lite_header
 							<!-- WELCOM MESSAGE -->
 							<?php
 							if ( ! empty( $llorix_one_lite_header_title ) ) {
-								echo '<h1 id="intro_section_text_1" class="intro white-text">' . esc_attr( $llorix_one_lite_header_title ) . '</h1>';
+								echo '<h1 id="intro_section_text_1" class="intro white-text">' . wp_kses_post( $llorix_one_lite_header_title ) . '</h1>';
 								} elseif ( isset( $wp_customize )   ) {
 								echo '<h1 id="intro_section_text_1" class="intro white-text llorix_one_lite_only_customizer"></h1>';
 								}
