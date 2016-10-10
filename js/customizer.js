@@ -304,7 +304,7 @@
 			if( to !== '' ) {
 				ribbon_wrap.removeClass( 'llorix_one_lite_only_customizer' );
 				ribbon_wrap_header.removeClass( 'llorix_one_lite_only_customizer' );
-				ribbon_wrap_header.text( to );
+				ribbon_wrap_header.html( to );
 			} else {
 				ribbon_wrap_header.addClass( 'llorix_one_lite_only_customizer' );
 				if( ribbon_wrap_button.hasClass( 'llorix_one_lite_only_customizer' ) ){
