@@ -335,7 +335,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 	/* Header title */
 	$wp_customize->add_setting( 'llorix_one_lite_header_title', array(
-		'default' => esc_html__( 'Simple, Reliable and Awesome.','llorix-one-lite' ),
+		'default' => apply_filters('llorix_one_lite_header_title_filter',esc_html__( 'Simple, Reliable and Awesome.','llorix-one-lite' )),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
 		'transport' => 'postMessage',
 	));
