@@ -323,7 +323,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 	/* Header Logo	*/
 	$wp_customize->add_setting( 'llorix_one_lite_header_logo', array(
-		'default' => llorix_one_lite_get_file( '/images/logo-2.png' ),
+		'default' => apply_filters('llorix_one_lite_header_logo_filter',llorix_one_lite_get_file( '/images/logo-2.png' )),
 		'sanitize_callback' => 'esc_url',
 		'transport' => 'postMessage',
 	));

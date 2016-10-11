@@ -11,7 +11,7 @@
  * @link        http://themeisle.com
  */
 
-	$llorix_one_lite_header_logo = get_theme_mod( 'llorix_one_lite_header_logo', llorix_one_lite_get_file( '/images/logo-2.png' ) );
+	$llorix_one_lite_header_logo = get_theme_mod( 'llorix_one_lite_header_logo', apply_filters('llorix_one_lite_header_logo_filter',llorix_one_lite_get_file( '/images/logo-2.png' )) );
 	$llorix_one_lite_header_title = get_theme_mod( 'llorix_one_lite_header_title', apply_filters('llorix_one_lite_header_title_filter',esc_html__( 'Simple, Reliable and Awesome.','llorix-one-lite' )) );
 	$llorix_one_lite_header_subtitle = apply_filters('llorix_one_lite_header_subtitle_filter',esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one-lite' ));
 	$llorix_one_lite_header_button_text = get_theme_mod( 'llorix_one_lite_header_button_text',esc_html__( 'GET STARTED','llorix-one-lite' ) );
