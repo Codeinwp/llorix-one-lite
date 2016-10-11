@@ -12,7 +12,7 @@
  */
 
 	global $wp_customize;
-	$ribbon_background = get_theme_mod( 'llorix_one_lite_ribbon_background', llorix_one_lite_get_file( '/images/background-images/parallax-img/parallax-img1.jpg' ) );
+	$ribbon_background = get_theme_mod( 'llorix_one_lite_ribbon_background', apply_filter('llorix_one_lite_ribbon_background_filter',llorix_one_lite_get_file( '/images/background-images/parallax-img/parallax-img1.jpg' )) );
 	$llorix_one_lite_ribbon_title = get_theme_mod( 'llorix_one_lite_ribbon_title',esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one-lite' ) );
 	$llorix_one_lite_button_text = get_theme_mod( 'llorix_one_lite_button_text',esc_html__( 'GET STARTED','llorix-one-lite' ) );
 	$llorix_one_lite_button_link = get_theme_mod( 'llorix_one_lite_button_link','#' );

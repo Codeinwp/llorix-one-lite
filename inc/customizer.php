@@ -175,6 +175,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 	/* Very top header show/hide */
 	$wp_customize->add_setting( 'llorix_one_lite_very_top_header_show', array(
+		'default' => apply_filters('llorix_one_lite_very_top_header_show_filter',0),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
 		'transport' => 'postMessage',
 	));
@@ -264,7 +265,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 	/* Blog Header image	*/
 	$wp_customize->add_setting( 'llorix_one_lite_blog_header_image', array(
-		'default' => llorix_one_lite_get_file( '/images/background-images/background-blog.jpg' ),
+		'default' => apply_filters('llorix_one_lite_blog_header_image_filter',llorix_one_lite_get_file( '/images/background-images/background-blog.jpg' )),
 		'sanitize_callback' => 'esc_url',
 		'transport' => 'postMessage',
 	));
@@ -276,7 +277,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	)));
 
 	$wp_customize->add_setting( 'llorix_one_lite_blog_opacity', array(
-		'default' => 'rgba(13, 60, 85, 0.6)',
+		'default' => apply_filter('llorix_one_lite_blog_opacity_filter','rgba(13, 60, 85, 0.6)'),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
 	));
 
@@ -423,7 +424,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	)));
 
 	$wp_customize->add_setting( 'llorix_one_lite_frontpage_opacity', array(
-		'default' => 'rgba(13, 60, 85, 0.5)',
+		'default' => apply_filter('llorix_one_lite_frontpage_opacity_filter','rgba(13, 60, 85, 0.5)'),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
 	));
 
@@ -528,7 +529,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 	/* About Image	*/
 	$wp_customize->add_setting( 'llorix_one_lite_our_story_image', array(
-		'default' => llorix_one_lite_get_file( '/images/about-us.png' ),
+		'default' => apply_filters('llorix_one_lite_our_story_image_filter',llorix_one_lite_get_file( '/images/about-us.png' )),
 		'sanitize_callback' => 'esc_url',
 		'transport' => 'postMessage',
 	));
@@ -561,7 +562,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 	/* Ribbon Background */
 	$wp_customize->add_setting( 'llorix_one_lite_ribbon_background', array(
-		'default' => llorix_one_lite_get_file( '/images/background-images/parallax-img/parallax-img1.jpg' ),
+		'default' => apply_filter('llorix_one_lite_ribbon_background_filter',llorix_one_lite_get_file( '/images/background-images/parallax-img/parallax-img1.jpg' )),
 		'sanitize_callback' => 'esc_url',
 		'transport' => 'postMessage',
 	));

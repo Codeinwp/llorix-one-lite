@@ -73,7 +73,7 @@
 				<?php
 
 				/* VERY TOP HEADER */
-				$llorix_one_lite_very_top_header_show = get_theme_mod( 'llorix_one_lite_very_top_header_show' );
+				$llorix_one_lite_very_top_header_show = get_theme_mod( 'llorix_one_lite_very_top_header_show', apply_filters('llorix_one_lite_very_top_header_show_filter',0) );
 
 				/* If section is not disabled */
 				if ( isset( $llorix_one_lite_very_top_header_show ) && $llorix_one_lite_very_top_header_show != 1 ) {

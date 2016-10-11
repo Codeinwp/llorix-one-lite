@@ -399,8 +399,8 @@ function llorix_one_lite_php_style() {
 	$llorix_one_lite_title_color       = get_theme_mod( 'llorix_one_lite_title_color' );
 	$llorix_one_lite_text_color        = get_theme_mod( 'llorix_one_lite_text_color' );
 	$llorix_one_lite_enable_move       = get_theme_mod( 'llorix_one_lite_enable_move' );
-	$llorix_one_lite_frontpage_opacity = get_theme_mod( 'llorix_one_lite_frontpage_opacity', 'rgba(13, 60, 85, 0.5)' );
-	$llorix_one_lite_blog_opacity      = get_theme_mod( 'llorix_one_lite_blog_opacity', 'rgba(13, 60, 85, 0.6)' );
+	$llorix_one_lite_frontpage_opacity = get_theme_mod( 'llorix_one_lite_frontpage_opacity', apply_filter('llorix_one_lite_frontpage_opacity_filter','rgba(13, 60, 85, 0.5)') );
+	$llorix_one_lite_blog_opacity      = get_theme_mod( 'llorix_one_lite_blog_opacity', apply_filter('llorix_one_lite_blog_opacity_filter','rgba(13, 60, 85, 0.6)') );
 	$llorix_one_header_image           = get_header_image();
 
 	if ( ! empty( $llorix_one_lite_title_color ) ) {
