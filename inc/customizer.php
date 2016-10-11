@@ -347,7 +347,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 	/* Header subtitle */
 	$wp_customize->add_setting( 'llorix_one_lite_header_subtitle', array(
-		'default' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one-lite' ),
+		'default' => apply_filters('llorix_one_lite_header_subtitle_filter',esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one-lite' )),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
 		'transport' => 'postMessage',
 	));
