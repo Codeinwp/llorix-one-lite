@@ -69,3 +69,220 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	}
 	add_action( 'wp_head', 'llorix_one_lite_render_title' );
 endif;
+
+
+if(!function_exists('llorix_one_lite_pll')){
+	/**
+	 * Filter to apply translations if polylang plugin is installed.
+	 * @param string $input Input to translate.
+	 *
+	 * @return string
+	 */
+	function llorix_one_lite_pll($input){
+		if(function_exists('pll__')){
+			return pll__($input);
+		}
+		return $input;
+	}
+	add_filter('llorix_one_lite_language_filter','llorix_one_lite_pll');
+}
+
+
+if(!function_exists('llorix_one_companion_register_string')){
+	/**
+	 * Function to register repeater content in polylang.
+	 *
+	 * @param string $input String to register.
+	 * @param string $context Field name.
+	 */
+	function llorix_one_companion_register_string($input,$context){
+		$json_decoded = json_decode($input,true);
+		foreach($json_decoded as $index => $value){
+			foreach ($value as $key => $string){
+				if($key !== 'id' && $string !== 'undefined'){
+					$text = false;
+					if($key === 'text'){
+						$text = true;
+					}
+					pll_register_string('llorix one '.$context, $string, $text);
+				}
+			}
+		}
+	}
+}
+
+
+/**
+ * Register content of sections in polylang.
+ */
+function llorix_one_lite_translations(){
+	$llorix_one_lite_logos = get_theme_mod('llorix_one_lite_logos_content', json_encode( array(
+			array(
+				'image_url' => llorix_one_lite_get_file( '/images/companies/1.png' ) ,
+				'link' => '#',
+				'id' => 'llorix_one_lite_56d069bb8cb71'
+			),
+			array(
+				'image_url' => llorix_one_lite_get_file( '/images/companies/2.png' ) ,
+				'link' => '#',
+				'id' => 'llorix_one_lite_56d069bc8cb72'
+			),
+			array(
+				'image_url' => llorix_one_lite_get_file( '/images/companies/3.png' ) ,
+				'link' => '#',
+				'id' => 'llorix_one_lite_56d069bd8cb73'
+			),
+			array(
+				'image_url' => llorix_one_lite_get_file( '/images/companies/4.png' ) ,
+				'link' => '#',
+				'id' => 'llorix_one_lite_56d06d128cb74'
+			),
+			array(
+				'image_url' => llorix_one_lite_get_file( '/images/companies/5.png' ) ,
+				'link' => '#',
+				'id' => 'llorix_one_lite_56d06d3d8cb75'
+			) ) )
+	);
+	llorix_one_companion_register_string($llorix_one_lite_logos,'logos');
+
+	$llorix_one_lite_contact_info_item = get_theme_mod('llorix_one_lite_contact_info_content', json_encode( array(
+			array(
+				'icon_value' => 'fa-envelope' ,
+				'text' => 'contact@site.com',
+				'link' => '#',
+				'id' => 'llorix_one_lite_56d450a72cb3a'
+			),
+			array(
+				'icon_value' => 'fa-map-marker' ,
+				'text' => 'Company address',
+				'link' => '#',
+				'id' => 'llorix_one_lite_56d069b88cb6f'
+			),
+			array(
+				'icon_value' => 'fa-tablet' ,
+				'text' => '0 332 548 954',
+				'link' => '#',
+				'id' => 'llorix_one_lite_56d069b98cb70'
+			) ) )
+	);
+	llorix_one_companion_register_string($llorix_one_lite_contact_info_item,'contact');
+
+	$llorix_one_lite_footer_social_icons = get_theme_mod('llorix_one_lite_social_icons', json_encode( array(
+		array(
+			'icon_value' => 'fa-facebook' ,
+			'link' => '#',
+			'id' => 'llorix_one_lite_56d069b78cb6e'
+		),
+		array(
+			'icon_value' => 'fa-twitter' ,
+			'link' => '#',
+			'id' => 'llorix_one_lite_56d450842cb39'
+		),
+		array(
+			'icon_value' => 'fa-google-plus-square' ,
+			'link' => '#', 'id' => 'llorix_one_lite_56d450512cb38'
+		) ) )
+	);
+	llorix_one_companion_register_string($llorix_one_lite_footer_social_icons,'footer social icons');
+
+	$llorix_one_lite_header_social_icons = get_theme_mod('llorix_one_lite_very_top_social_icons',json_encode( array(
+			array(
+				'icon_value' => 'fa-facebook' ,
+				'link' => '#',
+				'id' => 'llorix_one_lite_56d069ad8cb6b'
+			),
+			array(
+				'icon_value' => 'fa-twitter' ,
+				'link' => '#',
+				'id' => 'llorix_one_lite_56d069b48cb6c'
+			),
+			array(
+				'icon_value' => 'fa-google-plus-square' ,
+				'link' => '#',
+				'id' => 'llorix_one_lite_56d069b58cb6d'
+			) ) )
+	);
+	llorix_one_companion_register_string($llorix_one_lite_header_social_icons,'header social icons');
+}
+
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+if(is_plugin_active('polylang/polylang.php')){
+	add_action( 'after_setup_theme', 'llorix_one_lite_translations' );
+}
+
+
+/**
+ * Logos section display content.
+ *
+ * @param array $llorix_one_lite_logos_decoded Section content.
+ */
+function llorix_one_lite_logos_content( $llorix_one_lite_logos_decoded ){?>
+	<div class="container">
+		<ul class="client-logos">
+			<?php
+			foreach ( $llorix_one_lite_logos_decoded as $llorix_one_lite_logo ) {
+				$image = ( !empty($llorix_one_lite_logo->image_url) ? apply_filters( 'llorix_one_lite_language_filter', $llorix_one_lite_logo->image_url) : '' );
+				$link = ( !empty($llorix_one_lite_logo->link) ? apply_filters('llorix_one_lite_language_filter', $llorix_one_lite_logo->link) : '' );
+				if ( ! empty( $image ) ) { ?>
+					<li>
+						<?php
+						if ( !empty( $link ) ) { ?>
+							<a href="<?php echo esc_url($link); ?>" title="">
+								<img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_html__( 'Logo','llorix-one-lite' ); ?>">
+							</a>
+							<?php
+						} else { ?>
+							<img src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_html__( 'Logo','llorix-one-lite' ); ?>">
+							<?php
+						} ?>
+					</li>
+					<?php
+				}
+			} ?>
+		</ul>
+	</div>
+<?php
+}
+
+
+/**
+ * Contact section display content.
+ *
+ * @param  array$llorix_one_lite_contact_info_item_decoded Section content.
+ */
+function llorix_one_lite_contact_content($llorix_one_lite_contact_info_item_decoded){ ?>
+	<div class="section-overlay-layer">
+		<div class="container">
+			<!-- CONTACT INFO -->
+			<div class="row contact-links">
+				<?php
+				if ( ! empty( $llorix_one_lite_contact_info_item_decoded ) ) {
+					foreach ( $llorix_one_lite_contact_info_item_decoded as $llorix_one_contact_item ) {
+						$link = (!empty($llorix_one_contact_item->link) ? apply_filters('llorix_one_lite_language_filter',$llorix_one_contact_item->link) : '' );
+						$icon = (!empty($llorix_one_contact_item->icon_value) ? apply_filters('llorix_one_lite_language_filter',$llorix_one_contact_item->icon_value) : '');
+						$text = (!empty($llorix_one_contact_item->text) ? apply_filters('llorix_one_lite_language_filter',$llorix_one_contact_item->text) : '' );
+						if ( !empty( $icon ) || !empty($text) ) { ?>
+							<div class="col-sm-4 contact-link-box col-xs-12">
+								<?php
+								if ( !empty( $icon ) ) { ?>
+									<div class="icon-container">
+										<i class="fa <?php echo esc_attr( $icon ); ?> colored-text"></i>
+									</div>
+									<?php
+								}
+								if ( !empty( $text ) ) { ?>
+									<a <?php echo (!empty($link) ? 'href="'.esc_url($link).'"' : '') ?> class="strong">
+										<?php echo html_entity_decode( $llorix_one_contact_item->text ); ?>
+									</a>
+									<?php
+								} ?>
+							</div>
+							<?php
+						}
+					}
+				} ?>
+			</div><!-- .contact-links -->
+		</div><!-- .container -->
+	</div>
+	<?php
+}

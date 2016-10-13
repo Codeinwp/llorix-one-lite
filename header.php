@@ -95,36 +95,25 @@
 							?>
 							<div class="very-top-right">
 								<?php
-									/* SOCIAL ICONS */
-									$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_very_top_social_icons',json_encode(
-																	array(
-																		array( 'icon_value' => 'fa-facebook' , 'link' => '#', 'id' => 'llorix_one_lite_56d069ad8cb6b' ),
-																		array( 'icon_value' => 'fa-twitter' , 'link' => '#', 'id' => 'llorix_one_lite_56d069b48cb6c' ),
-																		array( 'icon_value' => 'fa-google-plus-square' , 'link' => '#', 'id' => 'llorix_one_lite_56d069b58cb6d' ),
-																	)
-																	));
-
-									if ( ! empty( $llorix_one_lite_social_icons ) ) {
-										$llorix_one_lite_social_icons_decoded = json_decode( $llorix_one_lite_social_icons );
-
-										if ( ! empty( $llorix_one_lite_social_icons_decoded ) ) {
-											echo '<ul class="social-icons">';
-												foreach ( $llorix_one_lite_social_icons_decoded as $llorix_one_social_icon ) {
-												if ( ! empty( $llorix_one_social_icon->icon_value ) && ($llorix_one_social_icon->icon_value != 'No Icon') ) {
-													explode( '-',$llorix_one_social_icon->icon_value );
-													if ( ! empty( $llorix_one_social_icon->icon_value[2] ) ) {
-														if ( function_exists( 'icl_t' ) ) {
-															echo '<li><a href="' . esc_url( icl_t( 'Header Social Link',$llorix_one_social_icon->id . '_header_social_link',$llorix_one_social_icon->link ) ) . '"><i class="fa ' . icl_t( 'Header Social Icon',$llorix_one_social_icon->id . '_header_social_icon',esc_attr( $llorix_one_social_icon->icon_value ) ) . ' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">' . esc_attr( $llorix_one_social_icon->icon_value[2] ) . '</span></a></li>';
-															} else {
-															echo '<li><a href="' . esc_url( $llorix_one_social_icon->link ) . '"><i class="fa ' . esc_attr( $llorix_one_social_icon->icon_value ) . ' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">' . esc_attr( $llorix_one_social_icon->icon_value[2] ) . '</span></a></li>';
-															}
-														}
-													}
-												}
-											echo '</ul>';
-										}
-									}
-								?>            
+								/* SOCIAL ICONS */
+								$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_very_top_social_icons',json_encode( array(
+									array(
+										'icon_value' => 'fa-facebook' ,
+										'link' => '#',
+										'id' => 'llorix_one_lite_56d069ad8cb6b'
+									),
+									array(
+										'icon_value' => 'fa-twitter' ,
+										'link' => '#',
+										'id' => 'llorix_one_lite_56d069b48cb6c'
+									),
+									array(
+										'icon_value' => 'fa-google-plus-square' ,
+										'link' => '#',
+										'id' => 'llorix_one_lite_56d069b58cb6d'
+									) )	)
+								);
+								llorix_one_lite_social_icons($llorix_one_lite_social_icons, false); ?>
 							</div>
 						</div>
 					</div>
@@ -166,11 +155,9 @@
 												if ( ! empty( $llorix_one_social_icon->icon_value ) ) {
 													explode( '-',$llorix_one_social_icon->icon_value );
 													if ( ! empty( $llorix_one_social_icon->icon_value[2] ) ) {
-														if ( function_exists( 'icl_t' ) ) {
-															echo '<li><a href="' . esc_url( icl_t( 'Header Social Link',$llorix_one_social_icon->id . '_header_social_link',$llorix_one_social_icon->link ) ) . '"><i class="fa ' . icl_t( 'Header Social Icon',$llorix_one_social_icon->id . '_header_social_icon',esc_attr( $llorix_one_social_icon->icon_value ) ) . ' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">' . esc_attr( $llorix_one_social_icon->icon_value[2] ) . '</span></a></li>';
-															} else {
+
 															echo '<li><a href="' . esc_url( $llorix_one_social_icon->link ) . '"><i class="fa ' . esc_attr( $llorix_one_social_icon->icon_value ) . ' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">' . esc_attr( $llorix_one_social_icon->icon_value[2] ) . '</span></a></li>';
-															}
+
 														}
 													}
 												}
