@@ -192,3 +192,7 @@ button.llorix_one_lite_general_control_remove_field:hover {
 	content:"\f540";
 	font: 400 20px/1 dashicons;
 }
+
+.frontpage-sections-upsell {
+	padding: 10px 10px 11px 14px;
+}
