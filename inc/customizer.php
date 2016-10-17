@@ -796,69 +796,6 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'llorix_one_lite_link_control' => true,
 	) ) );
 
-	/* PLUS SECTIONS */
-
-	$wp_customize->add_section( 'llorix_one_lite_sections_order' , array(
-		'title'       => __( 'Sections management', 'llorix-one-lite' ),
-		'priority' => 20,
-	));
-	$wp_customize->add_setting( 'llorix_one_lite_sections_management', array(
-		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-	) );
-
-	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_sections_management',
-		array(
-			'label'    => __( 'Sections management', 'llorix-one-lite' ),
-			'section' => 'llorix_one_lite_sections_order',
-			'priority' => 1,
-			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the frontpage SECTIONS ORDER!', 'llorix-one-lite' ),
-	   )
-	));
-
-	$wp_customize->add_section( 'llorix_one_lite_portfolio_section' , array(
-		'title'       => esc_html__( 'Portfolio section', 'llorix-one-lite' ),
-		'priority'    => 48,
-	));
-
-	$wp_customize->add_section( 'llorix_one_lite_new_features' , array(
-		'title'       => esc_html__( 'New Features', 'llorix-one-lite' ),
-		'priority'    => 76,
-	));
-	$wp_customize->add_setting( 'llorix_one_lite_new_layout', array(
-		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-	) );
-	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_new_layout',
-		array(
-			'label'    => __( 'Header Layout', 'llorix-one-lite' ),
-			'section' => 'llorix_one_lite_new_features',
-			'priority' => 1,
-			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the HEADER\'S LAYOUT SECTION!', 'llorix-one-lite' ),
-	   )
-	));
-
-	$wp_customize->add_setting( 'llorix_one_lite_new_preloader', array(
-		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-	) );
-	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_new_preloader',
-		array(
-			'label'    => __( 'Preloader', 'llorix-one-lite' ),
-			'section' => 'llorix_one_lite_new_features',
-			'priority' => 3,
-			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the PRELOADER IMAGE!', 'llorix-one-lite' ),
-	   )
-	));
-	$wp_customize->add_setting( 'llorix_one_lite_new_opacity', array(
-		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-	) );
-	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_new_opacity',
-		array(
-			'label'    => __( 'Opacity', 'llorix-one-lite' ),
-			'section' => 'llorix_one_lite_new_features',
-			'priority' => 4,
-			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the background opacity and color of each section!', 'llorix-one-lite' ),
-	   )
-	));
-
 }
 add_action( 'customize_register', 'llorix_one_lite_customize_register' );
 
