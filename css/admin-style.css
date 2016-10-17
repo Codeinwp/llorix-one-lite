@@ -184,7 +184,8 @@ button.llorix_one_lite_general_control_remove_field:hover {
 	content: "\f160";
 }
 
-#customize-control-llorix_one_lite_new_color{
+#customize-control-llorix_one_lite_new_color,
+#customize-control-llorix_one_lite_portfolio_text{
 	text-align: center;
 }
 #customize-control-llorix_one_lite_new_color:after {
