@@ -400,8 +400,8 @@ function llorix_one_lite_php_style() {
 	$llorix_one_lite_title_color       = get_theme_mod( 'llorix_one_lite_title_color' );
 	$llorix_one_lite_text_color        = get_theme_mod( 'llorix_one_lite_text_color' );
 	$llorix_one_lite_enable_move       = get_theme_mod( 'llorix_one_lite_enable_move' );
-	$llorix_one_lite_frontpage_opacity = get_theme_mod( 'llorix_one_lite_frontpage_opacity', apply_filters('llorix_one_lite_frontpage_opacity_filter','rgba(13, 60, 85, 0.5)') );
-	$llorix_one_lite_blog_opacity      = get_theme_mod( 'llorix_one_lite_blog_opacity', apply_filters('llorix_one_lite_blog_opacity_filter','rgba(13, 60, 85, 0.6)') );
+	$llorix_one_lite_frontpage_opacity = get_theme_mod( 'llorix_one_lite_frontpage_opacity', apply_filters( 'llorix_one_lite_frontpage_opacity_filter','rgba(13, 60, 85, 0.5)' ) );
+	$llorix_one_lite_blog_opacity      = get_theme_mod( 'llorix_one_lite_blog_opacity', apply_filters( 'llorix_one_lite_blog_opacity_filter','rgba(13, 60, 85, 0.6)' ) );
 	$llorix_one_header_image           = get_header_image();
 
 	if ( ! empty( $llorix_one_lite_title_color ) ) {
@@ -609,7 +609,7 @@ add_filter( 'excerpt_more', 'llorix_one_lite_excerpt_more' );
  *
  * @param string $social_icons Social icons input.
  */
-function llorix_one_lite_social_icons($social_icons, $is_footer){
+function llorix_one_lite_social_icons( $social_icons, $is_footer ) {
 	if ( ! empty( $social_icons ) ) {
 		$llorix_one_lite_social_icons_decoded = json_decode( $social_icons );
 		if ( ! empty( $llorix_one_lite_social_icons_decoded ) ) { ?>
@@ -619,11 +619,11 @@ function llorix_one_lite_social_icons($social_icons, $is_footer){
 				foreach ( $llorix_one_lite_social_icons_decoded as $llorix_one_lite_social_icon ) {
 					$icon = ( ! empty( $llorix_one_lite_social_icon->icon_value ) ? apply_filters( 'llorix_one_lite_language_filter', $llorix_one_lite_social_icon->icon_value ) : '' );
 					$link = ( ! empty( $llorix_one_lite_social_icon->link ) ? apply_filters( 'llorix_one_lite_language_filter', $llorix_one_lite_social_icon->link ) : '' );
-					if ( !empty( $icon ) && $icon !== 'No Icon' && !empty($link) ) { ?>
+					if ( ! empty( $icon ) && $icon !== 'No Icon' && ! empty( $link ) ) { ?>
 						<li>
 							<a href="<?php esc_url( $link ); ?>">
 								<span class="screen-reader-text"><?php echo esc_attr( $icon ) ?></span>
-								<i class="fa <?php if($is_footer === true) { echo 'llorix-one-lite-footer-icons '; } echo esc_attr( $icon ); ?> transparent-text-dark" aria-hidden="true"></i>
+								<i class="fa <?php if ( $is_footer === true ) { echo 'llorix-one-lite-footer-icons '; } echo esc_attr( $icon ); ?> transparent-text-dark" aria-hidden="true"></i>
 							</a>
 						</li>
 						<?php

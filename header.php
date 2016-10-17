@@ -73,7 +73,7 @@
 				<?php
 
 				/* VERY TOP HEADER */
-				$llorix_one_lite_very_top_header_show = get_theme_mod( 'llorix_one_lite_very_top_header_show', apply_filters('llorix_one_lite_very_top_header_show_filter',0) );
+				$llorix_one_lite_very_top_header_show = get_theme_mod( 'llorix_one_lite_very_top_header_show', apply_filters( 'llorix_one_lite_very_top_header_show_filter',0 ) );
 
 				/* If section is not disabled */
 				if ( isset( $llorix_one_lite_very_top_header_show ) && $llorix_one_lite_very_top_header_show != 1 ) {
@@ -98,22 +98,23 @@
 								/* SOCIAL ICONS */
 								$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_very_top_social_icons',json_encode( array(
 									array(
-										'icon_value' => 'fa-facebook' ,
+										'icon_value' => 'fa-facebook',
 										'link' => '#',
-										'id' => 'llorix_one_lite_56d069ad8cb6b'
+										'id' => 'llorix_one_lite_56d069ad8cb6b',
 									),
 									array(
-										'icon_value' => 'fa-twitter' ,
+										'icon_value' => 'fa-twitter',
 										'link' => '#',
-										'id' => 'llorix_one_lite_56d069b48cb6c'
+										'id' => 'llorix_one_lite_56d069b48cb6c',
 									),
 									array(
-										'icon_value' => 'fa-google-plus-square' ,
+										'icon_value' => 'fa-google-plus-square',
 										'link' => '#',
-										'id' => 'llorix_one_lite_56d069b58cb6d'
-									) )	)
+										'id' => 'llorix_one_lite_56d069b58cb6d',
+									),
+)	)
 								);
-								llorix_one_lite_social_icons($llorix_one_lite_social_icons, false); ?>
+								llorix_one_lite_social_icons( $llorix_one_lite_social_icons, false ); ?>
 							</div>
 						</div>
 					</div>

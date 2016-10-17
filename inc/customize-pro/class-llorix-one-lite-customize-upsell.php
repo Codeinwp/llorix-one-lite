@@ -1,4 +1,9 @@
 <?php
+/**
+ * Singleton class file.
+ *
+ * @package llorix-one-lite
+ */
 
 /**
  * Singleton class for handling the theme's customizer integration.
@@ -57,7 +62,7 @@ final class Llorix_One_Lite_Customizer_Upsell {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @param  object  $manager
+	 * @param  object $manager Customizer manager.
 	 * @return void
 	 */
 	public function sections( $manager ) {
@@ -67,7 +72,6 @@ final class Llorix_One_Lite_Customizer_Upsell {
 
 		// Register custom section types.
 		$manager->register_section_type( 'Llorix_One_Lite_Customizer_Upsell_Frontpage_Sections' );
-
 
 		// Register sections.
 		$manager->add_section( new Llorix_One_Lite_Customizer_Upsell_Frontpage_Sections( $manager, 'llorix-one-lite-upsell-frontpage-sections',
