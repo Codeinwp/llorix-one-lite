@@ -84,6 +84,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title' => esc_html__( 'Appearance', 'llorix-one-lite' ),
 	) );
 
+
 	/* Colors */
 	$wp_customize->add_setting( 'llorix_one_lite_text_color', array(
 		'default' => '#313131',
@@ -118,6 +119,17 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 			)
 		)
 	);
+
+	$wp_customize->add_setting( 'llorix_one_lite_new_color', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+	) );
+	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_new_color',
+		array(
+			'section' => 'colors',
+			'priority' => 100,
+			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the COLOR SCHEME!', 'llorix-one-lite' ),
+		)
+	));
 
 	/* General options */
 	$wp_customize->add_section( 'llorix_one_lite_appearance_general' , array(
@@ -822,17 +834,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the HEADER\'S LAYOUT SECTION!', 'llorix-one-lite' ),
 	   )
 	));
-	$wp_customize->add_setting( 'llorix_one_lite_new_color', array(
-		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-	) );
-	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_new_color',
-		array(
-			'label'    => __( 'Color scheme', 'llorix-one-lite' ),
-			'section' => 'llorix_one_lite_new_features',
-			'priority' => 2,
-			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the COLOR SCHEME!', 'llorix-one-lite' ),
-	   )
-	));
+
 	$wp_customize->add_setting( 'llorix_one_lite_new_preloader', array(
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
 	) );

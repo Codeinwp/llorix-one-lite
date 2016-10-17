@@ -183,3 +183,11 @@ button.llorix_one_lite_general_control_remove_field:hover {
 #accordion-section-llorix_one_lite_new_features .accordion-section-title:after {
 	content: "\f160";
 }
+
+#customize-control-llorix_one_lite_new_color{
+	text-align: center;
+}
+#customize-control-llorix_one_lite_new_color:after {
+	content:"\f540";
+	font: 400 20px/1 dashicons;
+}
