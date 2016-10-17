@@ -84,9 +84,12 @@ if(!function_exists('llorix_one_lite_pll')){
 		}
 		return $input;
 	}
-	add_filter('llorix_one_lite_language_filter','llorix_one_lite_pll');
+
 }
 
+if(function_exists('llorix_one_lite_pll')){
+	add_filter('llorix_one_lite_language_filter','llorix_one_lite_pll');
+}
 
 if(!function_exists('llorix_one_companion_register_string')){
 	/**
@@ -205,8 +208,7 @@ function llorix_one_lite_translations(){
 	llorix_one_companion_register_string($llorix_one_lite_header_social_icons,'header social icons');
 }
 
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-if(is_plugin_active('polylang/polylang.php')){
+if(class_exists('Polylang')){
 	add_action( 'after_setup_theme', 'llorix_one_lite_translations' );
 }
 
