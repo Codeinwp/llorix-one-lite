@@ -99,15 +99,17 @@ if(!function_exists('llorix_one_companion_register_string')){
 	 * @param string $context Field name.
 	 */
 	function llorix_one_companion_register_string($input,$context){
-		$json_decoded = json_decode($input,true);
-		foreach($json_decoded as $index => $value){
-			foreach ($value as $key => $string){
-				if($key !== 'id' && $string !== 'undefined'){
-					$text = false;
-					if($key === 'text'){
-						$text = true;
+		if(function_exists('pll_register_string')){
+			$json_decoded = json_decode($input,true);
+			foreach($json_decoded as $index => $value){
+				foreach ($value as $key => $string){
+					if($key !== 'id' && $string !== 'undefined'){
+						$text = false;
+						if($key === 'text'){
+							$text = true;
+						}
+						pll_register_string('llorix one '.$context, $string, $text);
 					}
-					pll_register_string('llorix one '.$context, $string, $text);
 				}
 			}
 		}
