@@ -95,6 +95,7 @@
 							?>
 							<div class="very-top-right">
 								<?php
+									llorix_one_lite_header_top_right_open_trigger();
 									/* SOCIAL ICONS */
 									$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_very_top_social_icons',json_encode(
 																	array(
@@ -124,6 +125,7 @@
 											echo '</ul>';
 										}
 									}
+									llorix_one_lite_header_top_right_close_trigger();
 								?>            
 							</div>
 						</div>
@@ -148,6 +150,7 @@
 							?>
 							<div class="very-top-right">
 								<?php
+									llorix_one_lite_header_top_right_open_trigger();
 									/* SOCIAL ICONS */
 									$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_very_top_social_icons',json_encode(
 																	array(
@@ -177,6 +180,7 @@
 											echo '</ul>';
 										}
 									}
+									llorix_one_lite_header_top_right_close_trigger();
 								?>            
 							</div>
 						</div>

@@ -34,6 +34,7 @@
 			if ( ! empty( $llorix_one_lite_logos_decoded ) ) {
 				echo '<div class="clients white-bg" id="clients" role="region" aria-label="' . __( 'Affiliates Logos','llorix-one-lite' ) . '">';
 					echo '<div class="container">';
+						llorix_one_lite_home_logos_section_open_trigger();
 						echo '<ul class="client-logos">';
 
 						foreach ( $llorix_one_lite_logos_decoded as $llorix_one_lite_logo ) {
@@ -62,6 +63,7 @@
 					}
 						}
 						echo '</ul>';
+						llorix_one_lite_home_logos_section_close_trigger();
 					echo '</div>';
 				echo '</div>';
 			}
@@ -73,6 +75,7 @@
 			if ( ! empty( $llorix_one_lite_logos_decoded ) ) {
 				echo '<div class="clients white-bg llorix_one_lite_only_customizer" id="clients" role="region" aria-label="' . __( 'Affiliates Logos','llorix-one-lite' ) . '">';
 					echo '<div class="container">';
+						llorix_one_lite_home_logos_section_open_trigger();
 						echo '<ul class="client-logos">';
 
 						foreach ( $llorix_one_lite_logos_decoded as $llorix_one_lite_logo ) {
@@ -101,6 +104,7 @@
 					}
 						}
 						echo '</ul>';
+						llorix_one_lite_home_logos_section_close_trigger();
 					echo '</div>';
 				echo '</div>';
 			}
