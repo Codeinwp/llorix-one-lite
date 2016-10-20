@@ -157,6 +157,7 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		 */
 		add_theme_support( 'eventbrite' );
 
+		require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-llorix-one-lite-customize-upsell.php' );
 	}
 endif; // llorix_one_lite_setup
 add_action( 'after_setup_theme', 'llorix_one_lite_setup' );
@@ -399,8 +400,8 @@ function llorix_one_lite_php_style() {
 	$llorix_one_lite_title_color       = get_theme_mod( 'llorix_one_lite_title_color' );
 	$llorix_one_lite_text_color        = get_theme_mod( 'llorix_one_lite_text_color' );
 	$llorix_one_lite_enable_move       = get_theme_mod( 'llorix_one_lite_enable_move' );
-	$llorix_one_lite_frontpage_opacity = get_theme_mod( 'llorix_one_lite_frontpage_opacity', 'rgba(13, 60, 85, 0.5)' );
-	$llorix_one_lite_blog_opacity      = get_theme_mod( 'llorix_one_lite_blog_opacity', 'rgba(13, 60, 85, 0.6)' );
+	$llorix_one_lite_frontpage_opacity = get_theme_mod( 'llorix_one_lite_frontpage_opacity', apply_filters( 'llorix_one_lite_frontpage_opacity_filter','rgba(13, 60, 85, 0.5)' ) );
+	$llorix_one_lite_blog_opacity      = get_theme_mod( 'llorix_one_lite_blog_opacity', apply_filters( 'llorix_one_lite_blog_opacity_filter','rgba(13, 60, 85, 0.6)' ) );
 	$llorix_one_header_image           = get_header_image();
 
 	if ( ! empty( $llorix_one_lite_title_color ) ) {
@@ -538,123 +539,6 @@ function llorix_one_lite_comment( $comment, $args, $depth ) {
 	endswitch;
 }
 
-/**
- * Polylang repeater translate
- */
-if ( function_exists( 'icl_unregister_string' ) && function_exists( 'icl_register_string' ) ) {
-
-	/*Contact*/
-	$llorix_one_contact_pl = get_theme_mod( 'llorix_one_lite_contact_info_content' );
-	if ( ! empty( $llorix_one_contact_pl ) ) {
-		$llorix_one_contact_pl_decoded = json_decode( $llorix_one_contact_pl );
-		foreach ( $llorix_one_contact_pl_decoded as $llorix_one_contact_box ) {
-			$text = $llorix_one_contact_box->text;
-			$link = $llorix_one_contact_box->link;
-			$icon = $llorix_one_contact_box->icon_value;
-			$id   = $llorix_one_contact_box->id;
-			if ( ! empty( $id ) ) {
-				if ( ! empty( $text ) ) {
-					icl_unregister_string( 'Contact', $id . '_contact' );
-					icl_register_string( 'Contact', $id . '_contact', $text );
-				} else {
-					icl_unregister_string( 'Contact', $id . '_contact' );
-				}
-
-				if ( ! empty( $link ) ) {
-					icl_unregister_string( 'Contact link', $id . '_contact_link' );
-					icl_register_string( 'Contact link', $id . '_contact_link', $link );
-				} else {
-					icl_unregister_string( 'Contact link', $id . '_contact_link' );
-				}
-
-				if ( ! empty( $icon ) ) {
-					icl_unregister_string( 'Contact icon', $id . '_contact_icon' );
-					icl_register_string( 'Contact icon', $id . '_contact_icon', $icon );
-				} else {
-					icl_unregister_string( 'Contact icon', $id . '_contact_icon' );
-				}
-			}
-		}
-	}
-
-	/*Logo*/
-	$llorix_one_lite_logos_pl = get_theme_mod( 'llorix_one_lite_logos_content' );
-	if ( ! empty( $llorix_one_lite_logos_pl ) ) {
-		$llorix_one_lite_logos_pl_decoded = json_decode( $llorix_one_lite_logos_pl );
-		foreach ( $llorix_one_lite_logos_pl_decoded as $llorix_one_logo_box ) {
-			$image = $llorix_one_logo_box->image_url;
-			$link  = $llorix_one_logo_box->link;
-			$id    = $llorix_one_logo_box->id;
-			if ( ! empty( $id ) ) {
-				if ( ! empty( $image ) ) {
-					icl_unregister_string( 'Logo image', $id . '_logo_image' );
-					icl_register_string( 'Logo image', $id . '_logo_image', $image );
-				} else {
-					icl_unregister_string( 'Logo image', $id . '_logo_image' );
-				}
-
-				if ( ! empty( $link ) ) {
-					icl_unregister_string( 'Logo link', $id . '_logo_link' );
-					icl_register_string( 'Logo link', $id . '_logo_link', $link );
-				} else {
-					icl_unregister_string( 'Logo link', $id . '_logo_link' );
-				}
-			}
-		}
-	}
-
-	/*Header*/
-	$llorix_one_lite_very_top_social_icons_pl = get_theme_mod( 'llorix_one_lite_very_top_social_icons' );
-	if ( ! empty( $llorix_one_lite_very_top_social_icons_pl ) ) {
-		$llorix_one_lite_very_top_social_icons_pl_decoded = json_decode( $llorix_one_lite_very_top_social_icons_pl );
-		foreach ( $llorix_one_lite_very_top_social_icons_pl_decoded as $llorix_one_lite_very_top_social_box ) {
-			$icon = $llorix_one_lite_very_top_social_box->icon_value;
-			$link = $llorix_one_lite_very_top_social_box->link;
-			$id   = $llorix_one_lite_very_top_social_box->id;
-			if ( ! empty( $id ) ) {
-				if ( ! empty( $icon ) ) {
-					icl_unregister_string( 'Header Social Icon', $id . '_header_social_icon' );
-					icl_register_string( 'Header Social Icon', $id . '_header_social_icon', $icon );
-				} else {
-					icl_unregister_string( 'Header Social Icon', $id . '_header_social_icon' );
-				}
-
-				if ( ! empty( $link ) ) {
-					icl_unregister_string( 'Header Social Link', $id . '_header_social_link' );
-					icl_register_string( 'Header Social Link', $id . '_header_social_link', $link );
-				} else {
-					icl_unregister_string( 'Header Social Link', $id . '_header_social_link' );
-				}
-			}
-		}
-	}
-
-	/*Footer*/
-	$llorix_one_lite_social_icons_pl = get_theme_mod( 'llorix_one_lite_social_icons' );
-	if ( ! empty( $llorix_one_lite_social_icons_pl ) ) {
-		$llorix_one_lite_social_icons_pl_decoded = json_decode( $llorix_one_lite_social_icons_pl );
-		foreach ( $llorix_one_lite_social_icons_pl_decoded as $llorix_one_header_social_box ) {
-			$icon = $llorix_one_header_social_box->icon_value;
-			$link = $llorix_one_header_social_box->link;
-			$id   = $llorix_one_header_social_box->id;
-			if ( ! empty( $id ) ) {
-				if ( ! empty( $icon ) ) {
-					icl_unregister_string( 'Footer Social Icon', $id . '_footer_social_icon' );
-					icl_register_string( 'Footer Social Icon', $id . '_footer_social_icon', $icon );
-				} else {
-					icl_unregister_string( 'Footer Social Icon', $id . '_footer_social_icon' );
-				}
-
-				if ( ! empty( $link ) ) {
-					icl_unregister_string( 'Footer Social Link', $id . '_footer_social_link' );
-					icl_register_string( 'Footer Social Link', $id . '_footer_social_link', $link );
-				} else {
-					icl_unregister_string( 'Footer Social Link', $id . '_footer_social_link' );
-				}
-			}
-		}
-	}
-}
 
 /**
  * Check if Repeater is empty
@@ -720,6 +604,7 @@ function llorix_one_lite_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'llorix_one_lite_excerpt_more' );
 
 
+
 /*
  * Hooks
  */
@@ -727,4 +612,33 @@ add_filter( 'excerpt_more', 'llorix_one_lite_excerpt_more' );
 require get_template_directory() . '/inc/hooks.php';
 
 
+/**
+ * Function to display social icons.
+ *
+ * @param string $social_icons Social icons input.
+ */
+function llorix_one_lite_social_icons( $social_icons, $is_footer ) {
+	if ( ! empty( $social_icons ) ) {
+		$llorix_one_lite_social_icons_decoded = json_decode( $social_icons );
+		if ( ! empty( $llorix_one_lite_social_icons_decoded ) ) { ?>
+			<ul class="social-icons">
+				<?php
 
+				foreach ( $llorix_one_lite_social_icons_decoded as $llorix_one_lite_social_icon ) {
+					$icon = ( ! empty( $llorix_one_lite_social_icon->icon_value ) ? apply_filters( 'llorix_one_lite_language_filter', $llorix_one_lite_social_icon->icon_value ) : '' );
+					$link = ( ! empty( $llorix_one_lite_social_icon->link ) ? apply_filters( 'llorix_one_lite_language_filter', $llorix_one_lite_social_icon->link ) : '' );
+					if ( ! empty( $icon ) && $icon !== 'No Icon' && ! empty( $link ) ) { ?>
+						<li>
+							<a href="<?php esc_url( $link ); ?>">
+								<span class="screen-reader-text"><?php echo esc_attr( $icon ) ?></span>
+								<i class="fa <?php if ( $is_footer === true ) { echo 'llorix-one-lite-footer-icons '; } echo esc_attr( $icon ); ?> transparent-text-dark" aria-hidden="true"></i>
+							</a>
+						</li>
+						<?php
+					}
+				} ?>
+			</ul>
+			<?php
+		}
+	}
+}

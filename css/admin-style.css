@@ -75,7 +75,6 @@ button.llorix_one_lite_general_control_remove_field:hover {
 	height: 40px;
 	padding: 0 10px !important;
 	border: 1px solid #dfdfdf;
-	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	color: #00a0d2;
 	background: #f9f9f9;
@@ -113,7 +112,6 @@ button.llorix_one_lite_general_control_remove_field:hover {
 	width: 100%;
 	height: 24px;
 	padding: 0;
-	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	background-color: #fff;
 	background-image: url(../images/transparency-grid.png);
@@ -128,7 +126,6 @@ button.llorix_one_lite_general_control_remove_field:hover {
 	margin-top: -2px;
 	padding: 3px;
 	border: 1px solid #aaa;
-	-webkit-border-radius: 4px;
 	border-radius: 4px;
 	opacity: 0.9;
 	color: #777;
@@ -165,21 +162,16 @@ button.llorix_one_lite_general_control_remove_field:hover {
 	border-bottom: none;
 }
 
-#accordion-section-llorix_one_lite_shop_section .accordion-section-title,
-#accordion-section-llorix_one_lite_sections_order .accordion-section-title,
-#accordion-section-llorix_one_lite_features_ribbon_section .accordion-section-title,
-#accordion-section-llorix_one_lite_portfolio_section .accordion-section-title,
-#accordion-section-llorix_one_lite_shortcodes_section .accordion-section-title,
-#accordion-section-llorix_one_lite_new_features .accordion-section-title {
-	background-image: url(../images/gray-lines.png);
-	background-repeat: repeat;
+#customize-control-llorix_one_lite_new_color,
+#customize-control-llorix_one_lite_portfolio_text {
+	text-align: center;
 }
 
-#accordion-section-llorix_one_lite_shop_section .accordion-section-title:after,
-#accordion-section-llorix_one_lite_sections_order .accordion-section-title:after,
-#accordion-section-llorix_one_lite_features_ribbon_section .accordion-section-title:after,
-#accordion-section-llorix_one_lite_portfolio_section .accordion-section-title:after,
-#accordion-section-llorix_one_lite_shortcodes_section .accordion-section-title:after,
-#accordion-section-llorix_one_lite_new_features .accordion-section-title:after {
-	content: "\f160";
+#customize-control-llorix_one_lite_new_color:after {
+	font: 400 20px/1 dashicons;
+	content: "\f540";
+}
+
+.frontpage-sections-upsell {
+	padding: 10px 10px 11px 14px;
 }
