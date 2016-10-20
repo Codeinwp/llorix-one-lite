@@ -22,82 +22,100 @@
 	/* If section is not disabled */
 	if ( isset( $llorix_one_lite_ribbon_show ) && $llorix_one_lite_ribbon_show != 1 ) {
 
-	if ( ! empty( $llorix_one_lite_ribbon_title ) || ! empty( $llorix_one_lite_button_text ) ) {
+		if ( ! empty( $llorix_one_lite_ribbon_title ) || ! empty( $llorix_one_lite_button_text ) ) {
 
-		if ( ! empty( $ribbon_background ) ) {
-			echo '<section class="call-to-action ribbon-wrap" id="ribbon" style="background-image:url(' . $ribbon_background . ');" role="region" aria-label="' . esc_html__( 'Ribbon','llorix-one-lite' ) . '">';
+			if ( ! empty( $ribbon_background ) ) {
+				echo '<section class="call-to-action ribbon-wrap" id="ribbon" style="background-image:url(' . $ribbon_background . ');" role="region" aria-label="' . esc_html__( 'Ribbon','llorix-one-lite' ) . '">';
 			} else {
-			echo '<section class="call-to-action ribbon-wrap" id="ribbon" role="region" aria-label="' . esc_html__( 'Ribbon','llorix-one-lite' ) . '">';
+				echo '<section class="call-to-action ribbon-wrap" id="ribbon" role="region" aria-label="' . esc_html__( 'Ribbon','llorix-one-lite' ) . '">';
 			}
+			?>
+				<div class="section-overlay-layer">
+					<div class="container">
+						<div class="row">
 
-	?>
-		<div class="section-overlay-layer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
+							<?php llorix_one_lite_home_ribbon_section_open_trigger(); ?>
 
-						<?php
-							if ( ! empty( $llorix_one_lite_ribbon_title ) ) {
-							echo '<h2 class="white-text strong">' . esc_attr( $llorix_one_lite_ribbon_title ) . '</h2>';
-							} elseif ( isset( $wp_customize )   ) {
-							echo '<h2 class="white-text strong llorix_one_lite_only_customizer"></h2>';
-							}
+							<div class="col-md-8 col-md-offset-2">
 
-							if ( ! empty( $llorix_one_lite_button_text ) ) {
-							if ( empty( $llorix_one_lite_button_link ) ) {
-								echo '<button class="btn btn-primary standard-button llorix_one_lite_only_customizer" type="button" data-toggle="modal" data-target="#stamp-modal"><span class="screen-reader-text">' . esc_html__( 'Ribbon button label:','llorix-one-lite' ) . $llorix_one_lite_button_text . '</span>' . $llorix_one_lite_button_text . '</button>';
-							} else {
-								echo '<button onclick="window.location=\'' . esc_url( $llorix_one_lite_button_link ) . '\'" class="btn btn-primary standard-button" type="button" data-toggle="modal" data-target="#stamp-modal"><span class="screen-reader-text">' . esc_html__( 'Ribbon button label:','llorix-one-lite' ) . $llorix_one_lite_button_text . '</span>' . esc_attr( $llorix_one_lite_button_text ) . '</button>';
-							}
-							} elseif ( isset( $wp_customize ) ) {
-							echo '<button class="btn btn-primary standard-button llorix_one_lite_only_customizer" type="button" data-toggle="modal" data-target="#stamp-modal"></button>';
-							}
-						?>
+								<?php
+									if ( ! empty( $llorix_one_lite_ribbon_title ) ) {
+										echo '<h2 class="white-text strong">' . esc_attr( $llorix_one_lite_ribbon_title ) . '</h2>';
+									} elseif ( isset( $wp_customize )   ) {
+										echo '<h2 class="white-text strong llorix_one_lite_only_customizer"></h2>';
+									}
+
+									llorix_one_lite_home_ribbon_section_subtitle_trigger();
+
+									if ( ! empty( $llorix_one_lite_button_text ) ) {
+										if ( empty( $llorix_one_lite_button_link ) ) {
+											echo '<button class="btn btn-primary standard-button llorix_one_lite_only_customizer" type="button" data-toggle="modal" data-target="#stamp-modal"><span class="screen-reader-text">' . esc_html__( 'Ribbon button label:','llorix-one-lite' ) . $llorix_one_lite_button_text . '</span>' . $llorix_one_lite_button_text . '</button>';
+										} else {
+											echo '<button onclick="window.location=\'' . esc_url( $llorix_one_lite_button_link ) . '\'" class="btn btn-primary standard-button" type="button" data-toggle="modal" data-target="#stamp-modal"><span class="screen-reader-text">' . esc_html__( 'Ribbon button label:','llorix-one-lite' ) . $llorix_one_lite_button_text . '</span>' . esc_attr( $llorix_one_lite_button_text ) . '</button>';
+										}
+									} elseif ( isset( $wp_customize ) ) {
+										echo '<button class="btn btn-primary standard-button llorix_one_lite_only_customizer" type="button" data-toggle="modal" data-target="#stamp-modal"></button>';
+									}
+								?>
+
+							</div>
+
+							<?php llorix_one_lite_home_ribbon_section_close_trigger(); ?>
 
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		
-	<?php
-	}
+			</section>
+		<?php
+		}
 	/* If section is disabled, but we are in Customize, display section with class llorix_one_lite_only_customizer */
 	} elseif ( isset( $wp_customize ) ) {
-	if ( ! empty( $ribbon_background ) ) {
-		echo '<section class="call-to-action ribbon-wrap llorix_one_lite_only_customizer" id="ribbon" style="background-image:url(' . $ribbon_background . ');" role="region" aria-label="' . esc_html__( 'Ribbon','llorix-one-lite' ) . '">';
+		if ( ! empty( $ribbon_background ) ) {
+			echo '<section class="call-to-action ribbon-wrap llorix_one_lite_only_customizer" id="ribbon" style="background-image:url(' . $ribbon_background . ');" role="region" aria-label="' . esc_html__( 'Ribbon','llorix-one-lite' ) . '">';
 		} else {
-		echo '<section class="call-to-action ribbon-wrap llorix_one_lite_only_customizer" id="ribbon" role="region" aria-label="' . esc_html__( 'Ribbon','llorix-one-lite' ) . '">';
+			echo '<section class="call-to-action ribbon-wrap llorix_one_lite_only_customizer" id="ribbon" role="region" aria-label="' . esc_html__( 'Ribbon','llorix-one-lite' ) . '">';
 		}
-?>
-<div class="section-overlay-layer">
-<div class="container">
-<div class="row">
-<div class="col-md-8 col-md-offset-2">
+		?>
 
-<?php
-if ( ! empty( $llorix_one_lite_ribbon_title ) ) {
-	echo '<h2 class="white-text strong">' . esc_attr( $llorix_one_lite_ribbon_title ) . '</h2>';
-	} elseif ( isset( $wp_customize )   ) {
-	echo '<h2 class="white-text strong llorix_one_lite_only_customizer"></h2>';
-	}
+			<div class="section-overlay-layer">
+				<div class="container">
+					<div class="row">
 
-if ( ! empty( $llorix_one_lite_button_text ) ) {
-	if ( empty( $llorix_one_lite_button_link ) ) {
-					echo '<button class="btn btn-primary standard-button llorix_one_lite_only_customizer" type="button" data-toggle="modal" data-target="#stamp-modal"><span class="screen-reader-text">' . esc_html__( 'Ribbon button label:','llorix-one-lite' ) . $llorix_one_lite_button_text . '</span>' . $llorix_one_lite_button_text . '</button>';
-	} else {
-	echo '<button onclick="window.location=\'' . esc_url( $llorix_one_lite_button_link ) . '\'" class="btn btn-primary standard-button" type="button" data-toggle="modal" data-target="#stamp-modal"><span class="screen-reader-text">' . esc_html__( 'Ribbon button label:','llorix-one-lite' ) . $llorix_one_lite_button_text . '</span>' . esc_attr( $llorix_one_lite_button_text ) . '</button>';
-	}
-	} elseif ( isset( $wp_customize ) ) {
-	echo '<button class="btn btn-primary standard-button llorix_one_lite_only_customizer" type="button" data-toggle="modal" data-target="#stamp-modal"></button>';
+						<?php llorix_one_lite_home_ribbon_section_open_trigger(); ?>
+
+						<div class="col-md-8 col-md-offset-2">
+
+							<?php
+								if ( ! empty( $llorix_one_lite_ribbon_title ) ) {
+									echo '<h2 class="white-text strong">' . esc_attr( $llorix_one_lite_ribbon_title ) . '</h2>';
+								} elseif ( isset( $wp_customize )   ) {
+									echo '<h2 class="white-text strong llorix_one_lite_only_customizer"></h2>';
+								}
+
+								llorix_one_lite_home_ribbon_section_subtitle_trigger();
+
+								if ( ! empty( $llorix_one_lite_button_text ) ) {
+									if ( empty( $llorix_one_lite_button_link ) ) {
+										echo '<button class="btn btn-primary standard-button llorix_one_lite_only_customizer" type="button" data-toggle="modal" data-target="#stamp-modal"><span class="screen-reader-text">' . esc_html__( 'Ribbon button label:','llorix-one-lite' ) . $llorix_one_lite_button_text . '</span>' . $llorix_one_lite_button_text . '</button>';
+									} else {
+										echo '<button onclick="window.location=\'' . esc_url( $llorix_one_lite_button_link ) . '\'" class="btn btn-primary standard-button" type="button" data-toggle="modal" data-target="#stamp-modal"><span class="screen-reader-text">' . esc_html__( 'Ribbon button label:','llorix-one-lite' ) . $llorix_one_lite_button_text . '</span>' . esc_attr( $llorix_one_lite_button_text ) . '</button>';
+									}
+								} elseif ( isset( $wp_customize ) ) {
+									echo '<button class="btn btn-primary standard-button llorix_one_lite_only_customizer" type="button" data-toggle="modal" data-target="#stamp-modal"></button>';
+								}
+							?>
+
+						</div>
+
+						<?php llorix_one_lite_home_ribbon_section_close_trigger(); ?>
+
+					</div>
+				</div>
+			</div>
+		</section>
+	<?php
 	}
 ?>
 
-</div>
-</div>
-</div>
-</div>
-</section>
-<?php
-	}
-?>
+
+
