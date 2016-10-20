@@ -76,7 +76,9 @@ if ( (isset( $llorix_one_lite_our_story_show ) && $llorix_one_lite_our_story_sho
 								<div class="brief-content-text llorix_one_lite_only_customizer"></div>
 								<?php
 							}
-						} ?>
+						}
+						llorix_one_lite_home_about_section_content_one_after_trigger();
+						?>
 					</div>
 				</div>
 			</div>

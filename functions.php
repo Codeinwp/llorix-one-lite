@@ -718,3 +718,13 @@ function llorix_one_lite_excerpt_more( $more ) {
 }
 
 add_filter( 'excerpt_more', 'llorix_one_lite_excerpt_more' );
+
+
+/*
+ * Hooks
+ */
+/* Enables user customization via WordPress plugin API. */
+require get_template_directory() . '/inc/hooks.php';
+
+
+
