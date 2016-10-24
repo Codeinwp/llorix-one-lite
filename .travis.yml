@@ -11,6 +11,12 @@ php:
 sudo: false
 env:
     - WP_VERSION=master WP_MULTISITE=0
+install:
+  - . $HOME/.nvm/nvm.sh
+  - nvm install stable
+  - nvm use stable
+  - npm install
+  - npm install grunt-cli -g
 before_script:
     ## Install the wordpress latest version
     - export WP_DEVELOP_DIR=/tmp/wordpress/
@@ -34,7 +40,6 @@ before_script:
     - phpcs --config-set installed_paths $WP_DEVELOP_DIR/wordpress-coding-standards
     - phpenv rehash
     - cd $theme_dir
-    - npm install
 
 script:
      grunt travis

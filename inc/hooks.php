@@ -1,6 +1,9 @@
 <?php
-
-/* Header *********************/
+/**
+ * Llorix One Lite hooks
+ *
+ * @package llorix-one-lite
+ */
 
 /**
  * Very top header
@@ -10,11 +13,13 @@ function llorix_one_lite_header_top_right_open_trigger() {
 	do_action( 'llorix_one_lite_header_top_right_open' );
 }
 
+/**
+ * Very top header
+ * HTML context: within `.very-top-right`
+ */
 function llorix_one_lite_header_top_right_close_trigger() {
 	do_action( 'llorix_one_lite_header_top_right_close' );
 }
-
-/* Logos section ***************/
 
 /**
  * Logos section on homepage
@@ -24,11 +29,13 @@ function llorix_one_lite_home_logos_section_open_trigger() {
 	do_action( 'llorix_one_lite_home_logos_section_open' );
 }
 
+/**
+ * Logos section on homepage
+ * HTML context: within `.clients`
+ */
 function llorix_one_lite_home_logos_section_close_trigger() {
 	do_action( 'llorix_one_lite_home_logos_section_close' );
 }
-
-/* About us section **************/
 
 /**
  * About us after content
@@ -37,8 +44,6 @@ function llorix_one_lite_home_logos_section_close_trigger() {
 function llorix_one_lite_home_about_section_content_one_after_trigger() {
 	do_action( 'llorix_one_lite_home_about_section_content_one_after' );
 }
-
-/* Ribbon section *****************/
 
 /**
  * Ribbon subtitle

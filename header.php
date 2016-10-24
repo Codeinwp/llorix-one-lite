@@ -19,7 +19,7 @@
 <body itemscope itemtype="http://schema.org/WebPage" <?php body_class(); ?> dir="<?php if ( is_rtl() ) { echo 'rtl'; } else { echo 'ltr';} ?>">
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'llorix-one-lite' ); ?></a>
 <!-- =========================
- PRE LOADER
+	PRE LOADER
 ============================== -->
 <?php
 
@@ -41,7 +41,7 @@ endif; ?>
 
 
 <!-- =========================
- SECTION: HOME / HEADER
+	SECTION: HOME / HEADER
 ============================== -->
 <!--header-->
 <header itemscope itemtype="http://schema.org/WPHeader" id="masthead" role="banner" data-stellar-background-ratio="0.5" class="header header-style-one site-header">
