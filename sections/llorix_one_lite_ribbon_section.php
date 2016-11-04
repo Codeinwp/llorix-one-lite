@@ -39,7 +39,7 @@
 
 							<?php
 								if ( ! empty( $llorix_one_lite_ribbon_title ) ) {
-								echo '<h2 class="white-text strong">' . esc_attr( $llorix_one_lite_ribbon_title ) . '</h2>';
+								echo '<h2 class="white-text strong">' . wp_kses_post( $llorix_one_lite_ribbon_title ) . '</h2>';
 								} elseif ( is_customize_preview() ) {
 								echo '<h2 class="white-text strong llorix_one_lite_only_customizer"></h2>';
 								}
