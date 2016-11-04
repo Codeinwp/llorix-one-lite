@@ -24,9 +24,9 @@
 
 		foreach ( $llorix_one_lite_required_actions as $llorix_one_required_action_key => $llorix_one_required_action_value ) :
 
-			if ( @$llorix_one_lite_show_required_actions[ $llorix_one_required_action_value['id'] ] === false ) { continue;
+			if ( $llorix_one_lite_show_required_actions[ $llorix_one_required_action_value['id'] ] === false ) { continue;
 			}
-			if ( @$llorix_one_required_action_value['check'] ) { continue;
+			if ( isset( $llorix_one_required_action_value['check'] ) && $llorix_one_required_action_value['check'] ) { continue;
 			}
 			?>
 			<div class="llorix-one-lite-action-required-box">

@@ -10,7 +10,9 @@
   "keywords": [
     "wordpress-theme"
   ],
-  "textdomain": "llorix-one-lite" ,
+  "theme": {
+    "textdomain": "llorix-one-lite"
+  },
   "author": "ThemeIsle <friends@themeisle.com>",
   "license": "GPL-2.0+",
   "bugs": {

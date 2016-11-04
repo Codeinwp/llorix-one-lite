@@ -1,7 +1,7 @@
 <?php
 /**
  * Changelog
- * 
+ *
  * @package llorix-one-lite
  */
 
