@@ -1,6 +1,8 @@
 <?php
 /**
  * Getting started template
+ *
+ * @package llorix-one-lite
  */
 
 $customizer_url = admin_url() . 'customize.php' ;
@@ -10,9 +12,9 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 	<div class="llorix-one-lite-tab-pane-center">
 
-		<h1 class="llorix-one-welcome-title"><?php _e('Welcome to Llorix One Lite!','llorix-one-lite'); ?> <?php if( !empty($llorix_one['Version']) ): ?> <sup id="llorix-one-lite-theme-version"><?php echo esc_attr( $llorix_one['Version'] ); ?> </sup><?php endif; ?></h1>
+		<h1 class="llorix-one-welcome-title"><?php _e( 'Welcome to Llorix One Lite!','llorix-one-lite' ); ?> <?php if ( ! empty( $llorix_one['Version'] ) ) :  ?> <sup id="llorix-one-lite-theme-version"><?php echo esc_attr( $llorix_one['Version'] ); ?> </sup><?php endif; ?></h1>
 
-		<p><?php esc_html_e( 'Our most elegant and professional one-page theme, which turns your scrolling into a smooth and pleasant experience.','llorix-one-lite'); ?></p>
+		<p><?php esc_html_e( 'Our most elegant and professional one-page theme, which turns your scrolling into a smooth and pleasant experience.','llorix-one-lite' ); ?></p>
 		<p><?php esc_html_e( 'We want to make sure you have the best experience using Llorix One Lite and that is why we gathered here all the necessary informations for you. We hope you will enjoy using Llorix One Lite, as much as we enjoy creating great products.', 'llorix-one-lite' ); ?>
 
 	</div>
@@ -106,8 +108,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
 
 			<?php
-		}
-		else { ?>
+		} else { ?>
 
 				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=llorix-one-companion' ), 'install-plugin_llorix-one-companion' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Llorix One Companion', 'llorix-one-lite' ); ?></a></p>
 
@@ -125,8 +126,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
 
 			<?php
-		}
-		else { ?>
+		} else { ?>
 
 				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=pirate-forms' ), 'install-plugin_pirate-forms' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Pirate Forms', 'llorix-one-lite' ); ?></a></p>
 
@@ -144,8 +144,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
 
 			<?php
-		}
-		else { ?>
+		} else { ?>
 
 				<p><a href="<?php echo esc_url( 'http://themeisle.com/plugins/easy-content-types/' ); ?>" class="button button-primary"><?php esc_html_e( 'Download Easy Content Types', 'llorix-one-lite' ); ?></a></p>
 
@@ -167,21 +166,20 @@ $customizer_url = admin_url() . 'customize.php' ;
 		<!-- Page Builder by SiteOrigin -->
 		<h4><?php esc_html_e( 'Page Builder by SiteOrigin', 'llorix-one-lite' ); ?></h4>
 		<p><?php esc_html_e( 'Build responsive page layouts using the widgets you know and love using this simple drag and drop page builder.', 'llorix-one-lite' ); ?></p>
- 
- 		<?php if ( is_plugin_active( 'siteorigin-panels/siteorigin-panels.php' ) ) { ?>
- 
- 				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
- 
- 			<?php
- 		}
- 		else { ?>
- 
- 				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=siteorigin-panels' ), 'install-plugin_siteorigin-panels' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Page Builder by SiteOrigin', 'llorix-one-lite' ); ?></a></p>
- 
- 			<?php
- 		}
- 
- 		?>
+	
+			<?php if ( is_plugin_active( 'siteorigin-panels/siteorigin-panels.php' ) ) { ?>
+	
+					<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
+	
+				<?php
+			} else { ?>
+	
+					<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=siteorigin-panels' ), 'install-plugin_siteorigin-panels' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Page Builder by SiteOrigin', 'llorix-one-lite' ); ?></a></p>
+	
+				<?php
+			}
+
+			?>
 		<hr />
 		<!-- Intergeo Maps -->
 		<h4><?php esc_html_e( 'Intergeo Maps - Google Maps Plugin', 'llorix-one-lite' ); ?></h4>
@@ -192,8 +190,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
 
 			<?php
-		}
-		else { ?>
+		} else { ?>
 
 				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=intergeo-maps' ), 'install-plugin_intergeo-maps' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Intergeo Maps', 'llorix-one-lite' ); ?></a></p>
 
@@ -211,10 +208,9 @@ $customizer_url = admin_url() . 'customize.php' ;
 				<p><span class="llorix-one-lite-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
 
 			<?php
-		}
-		else { ?>
+		} else { ?>
 
-				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=feedzy-rss-feeds' ), 'install-plugin_feedzy-rss-feeds' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install', 'llorix-one-lite'); ?> FEEDZY RSS Feeds</a></p>
+				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=feedzy-rss-feeds' ), 'install-plugin_feedzy-rss-feeds' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install', 'llorix-one-lite' ); ?> FEEDZY RSS Feeds</a></p>
 
 			<?php
 		}
@@ -230,8 +226,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 				<p><span class="parallax-one-w-activated button"><?php esc_html_e( 'Already activated', 'llorix-one-lite' ); ?></span></p>
 
 			<?php
-		}
-		else { ?>
+		} else { ?>
 
 				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=adblock-notify-by-bweb' ), 'install-plugin_adblock-notify-by-bweb' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install', 'llorix-one-lite' ); ?> Adblock Notify</a></p>
 

@@ -4,7 +4,7 @@ Theme URI: http://themeisle.com/themes/llorix-one/
 Author: ThemeIsle
 Author URI: http://themeisle.com/
 Description: Llorix One Lite is a free and beautiful one page business WordPress theme, with a flat and clean bootstrap based design and an elegant parallax effect. It provides a simple,minimal and modern look that can be used for any kind of personal businesses or startup mobile app. The landing page has a fullscreen hero image and blue & orange appearance with buttons and icons promoting simplicity and elegance at their best. The theme provides a responsive blog section, is eCommerce ready (WooCommerce store compatible), WPML, bbPress, Photo Gallery Grid,Contact Form 7,Meta Slider,SiteOrigin Page Builder, JetPack compatible  and SEO friendly. You can use it for your business / startup shop, agency, corporate website, or photography portfolio.
-Version: 0.1.20
+Version: 0.1.21
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: llorix-one-lite
@@ -167,10 +167,6 @@ a:focus {
 }
 
 @-ms-viewport {
-	width: device-width;
-}
-
-@-o-viewport {
 	width: device-width;
 }
 
@@ -355,13 +351,15 @@ strong,
 --------------------------------------------------------------*/
 
 html {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+	        box-sizing: inherit;
 }
 
 body {
@@ -556,8 +554,6 @@ big {
    2.4 BUTTONS
 -----------------------------------------*/
 .standard-button {
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -571,8 +567,6 @@ big {
 }
 
 .secondary-button {
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -594,8 +588,6 @@ big {
 }
 
 .secondary-button-dark {
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -748,8 +740,6 @@ input[type="submit"] {
 	background-size: contain;
 	text-shadow: none;
 	border: none;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -781,7 +771,8 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	border-color: #aaa #bbb #bbb;
-	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	        box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 input[type="text"],
@@ -801,8 +792,6 @@ textarea,
 select {
 	color: #666;
 	border: 1px solid #dedede;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	padding: 5px;
 }
@@ -832,8 +821,6 @@ textarea {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	border: 1px solid #dedede;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	color: #999999;
 	line-height: auto;
@@ -1121,7 +1108,8 @@ header .navbar-brand {
 	display: none;
 	-webkit-flex: 0 1 100%;
 	-ms-flex: 0 1 100%;
-	flex: 0 1 100%;
+	-webkit-box-flex: 0;
+	        flex: 0 1 100%;
 }
 
 .site-header-menu.toggled-on,
@@ -1180,7 +1168,8 @@ button.dropdown-toggle:active {
     height: 45px;
     padding: 10px;
     background: none;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     line-height: 25px;
 }
 
@@ -1189,8 +1178,6 @@ button.dropdown-toggle .dropdown-toggle-inner {
     height: 25px;
     margin: 0;
     padding: 0;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
     border-radius: 2px;
     background: #999999;
     float: left;
@@ -1232,7 +1219,6 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	-webkit-transform: rotate(-180deg);
-	-moz-transform: rotate(-180deg);
 	-ms-transform: rotate(-180deg);
 	transform: rotate(-180deg);
 }
@@ -1294,8 +1280,6 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 	background-color: #f16c20;
 	height: 4px;
 	width: 30px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
 	border-radius: 2px;
 }
 
@@ -1303,8 +1287,6 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 	display: block;
 	width: 22px;
 	height: 2px;
-	-webkit-border-radius: 1px;
-	-moz-border-radius: 1px;
 	border-radius: 1px;
 }
 .navbar-toggle {
@@ -1399,8 +1381,6 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 	padding: 15px 32px 32px 32px;
 	margin-top: 84px;
 	float: right;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	-webkit-box-shadow: 0px 0px 3px 0px #000000;
 	box-shadow: 0px 0px 3px 0px #000000;
@@ -1456,8 +1436,6 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 .header-style-four .horizontal-subscribe-form {
 	display: inline-block;
 	background: rgba(0, 0, 0, 0.45);
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
 	border-radius: 6px;
 	padding: 25px 25px 25px 25px;
 }
@@ -1654,8 +1632,6 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 /* ACCORDION */
 .panel-default {
 	border: 0;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	margin-top: 35px;
 	display: block;
@@ -1786,8 +1762,6 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 
 .single-pricing {
 	background: #ffffff;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	padding-bottom: 25px;
 	border: 1px solid #e4e7e7;
@@ -1802,8 +1776,6 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 	line-height: 60px;
 	margin-top: 0;
 	margin-bottom: 0;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
 
@@ -1863,7 +1835,6 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 -----------------------------------------*/
 .features {
 	background: transparent;
-	-webkit-background-size: cover;
 	background-size: cover;
 }
 
@@ -1959,8 +1930,6 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 	width: 150px;
 	height: 150px;
 	line-height: 150px;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
 	border-radius: 50%;
 	margin-left: -75px;
 	padding-top: 0;
@@ -2067,8 +2036,6 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 	position: relative;
 	overflow: hidden;
 	margin: 20px auto 0 auto;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
 
@@ -2115,7 +2082,8 @@ button.control_next:active,
 button.control_next:focus,
 button.control_prev:active,
 button.control_prev:focus{
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	outline: 1px dotted #f16c20;
 }
 
@@ -2145,8 +2113,6 @@ button.control_next:hover {
 }
 
 button.control_prev {
-	-webkit-border-radius: 0 2px 2px 0;
-	-moz-border-radius: 0 2px 2px 0;
 	border-radius: 0 2px 2px 0;
 }
 
@@ -2380,8 +2346,6 @@ div.wpcf7-mail-sent-ng {
 	width: 100%;
 	padding: 10px 5px 10px 5px;
 	border: 1px solid #E7E7E7;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
 
@@ -2442,8 +2406,6 @@ div.wpcf7-mail-sent-ng {
 	line-height: 50px;
 	padding: 0;
 	background-color:rgba(19, 149, 186, 0.9);
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
 	border-radius: 0px;
 }
 
@@ -2526,7 +2488,6 @@ div.wpcf7-mail-sent-ng {
 
 .product .comment-form #review_form #respond textarea {
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
 }
@@ -2560,8 +2521,6 @@ div.wpcf7-mail-sent-ng {
 .product .comment-form p.stars span a:hover,
 .product .comment-form p.stars span a:focus{
 	-webkit-transition: initial;
-	-moz-transition: initial;
-	-o-transition: initial;
 	transition: initial;
 }
 
@@ -2689,8 +2648,6 @@ div.wpcf7-mail-sent-ng {
 	background-size: contain;
 	-webkit-box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.3);
 	box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.3);
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -2765,8 +2722,6 @@ div.wpcf7-mail-sent-ng {
 	line-height: 70px;
 	padding: 0;
 	background-color: rgba(19, 149, 186, 0.9);
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
 	border-radius: 0px;
 }
 
@@ -2832,8 +2787,6 @@ div.wpcf7-mail-sent-ng {
 	padding: 11px 0;
 	font-weight: bold;
 	border: 1px solid #E7E7E7;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	line-height: 20px;
 }
@@ -2871,7 +2824,8 @@ div.wpcf7-mail-sent-ng {
 }
 
 .woocommerce div.product .woocommerce-tabs .panel {
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 }
 
 .woocommerce #reviews #comments ol.commentlist {
@@ -2881,8 +2835,6 @@ div.wpcf7-mail-sent-ng {
 }
 
 .woocommerce #reviews #comments ol.commentlist li img.avatar {
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
 	border-radius: 50%;
 	width: 60px;
 }
@@ -2904,10 +2856,9 @@ div.wpcf7-mail-sent-ng {
 
 .woocommerce #review_form #respond .form-submit input {
 	background: #f16c20;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	font-weight: 500;
 	text-align: center;
 	line-height: 30px;
@@ -3041,8 +2992,6 @@ div.wpcf7-mail-sent-ng {
 	background-color: #39AFEA;
 	border-bottom: 3px solid #f16c20;
 	color: #EEF9FF;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	line-height: 18px;
 }
@@ -3100,10 +3049,9 @@ div.wpcf7-mail-sent-ng {
 .woocommerce .cart input.button {
 	float: none;
 	background: #f16c20;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	font-weight: 500;
 	text-align: center;
 	line-height: 28px;
@@ -3156,8 +3104,6 @@ div.wpcf7-mail-sent-ng {
 	color: #FFF;
 	border: none;
 	border-bottom: 3px solid #C84E54;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	border: none;
 }
@@ -3199,10 +3145,9 @@ div.wpcf7-mail-sent-ng {
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
 	float: none;
 	background: #f16c20;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	font-weight: 500;
 	text-align: center;
 	line-height: 28px;
@@ -3228,8 +3173,6 @@ div.wpcf7-mail-sent-ng {
 .woocommerce form .form-row textarea,
 .woocommerce form .form-row select{
 	border: 1px solid #E7E7E7;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	line-height: 16px;
 	padding: 7px 10px;
@@ -3249,8 +3192,6 @@ div.wpcf7-mail-sent-ng {
 .woocommerce .woocommerce-info {
 	border: none;
 	border-bottom: 3px solid #f16c20;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
 
@@ -3293,8 +3234,6 @@ div.wpcf7-mail-sent-ng {
 
 .woocommerce-checkout #payment {
 	background: #FCFCFC;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
 
@@ -3307,8 +3246,6 @@ div.wpcf7-mail-sent-ng {
 	line-height: 18px;
 	background: #FFF;
 	border-bottom: 1px solid #ccc;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
 
@@ -3334,10 +3271,9 @@ div.wpcf7-mail-sent-ng {
 .woocommerce-page #payment #place_order {
 	float: none;
 	background: #f16c20;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	font-weight: 500;
 	text-align: center;
 	line-height: 28px;
@@ -3362,10 +3298,9 @@ div.wpcf7-mail-sent-ng {
 .woocommerce input.button {
 	float: none;
 	background: #f16c20;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	font-weight: 500;
 	text-align: center;
 	line-height: 28px;
@@ -3402,7 +3337,6 @@ div.wpcf7-mail-sent-ng {
 	top: .618em;
 	right: 1em;
 	-webkit-animation: spin 2s linear infinite;
-	-moz-animation: spin 2s linear infinite;
 	animation: spin 2s linear infinite;
 	top: 0;
 }
@@ -3419,8 +3353,6 @@ div.wpcf7-mail-sent-ng {
 	font-size: 13px;
 	-webkit-box-shadow: 0px 3px 0px #005885;
 	box-shadow: 0px 3px 0px rgb(218, 218, 218);
-	-webkit-border-radius: 0 3px 3px 0;
-	-moz-border-radius: 0 3px 3px 0;
 	border-radius: 3px;
 	border: 1px solid rgb(218, 218, 218);
 	margin-top: 10px;
@@ -3431,12 +3363,10 @@ div.wpcf7-mail-sent-ng {
 	float: right;
 	margin-top: 36px;
 	float: left;
-	background-color: rgba(19, 149, 186, 0.7)
+	background-color: rgba(19, 149, 186, 0.7);
 	color: #FFF;
 	font-size: 12px;
 	padding: 0px 5px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	margin-left: 15px;
 }
@@ -3493,6 +3423,7 @@ div.wpcf7-mail-sent-ng {
 	border-right: 1px solid #eaeaea;
 	border-bottom: 4px solid #eaeaea;
 	padding: 15px;
+	-webkit-transition: all ease 0.55s;
 	transition: all ease 0.55s;
 	list-style: none;
 	text-align: center;
@@ -3628,7 +3559,8 @@ div.wpcf7-mail-sent-ng {
 	margin-left: 4px;
 	width: 65px;
 	height: auto;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 }
 
 .woocommerce .upsells.products ul > li,
@@ -3837,24 +3769,18 @@ div.bbp-template-notice a {
 
 #bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content {
 	border: 1px solid #E7E7E7;
-	-webkit-border-radius: 0 0 3px 3px;
-	-moz-border-radius: 0 0 3px 3px;
 	border-radius: 0 0 3px 3px;
 	font-size: 14px;
 }
 
 #bbpress-forums div.bbp-the-content-wrapper div.quicktags-toolbar {
 	border: 1px solid #E7E7E7;
-	-webkit-border-radius: 3px 3px 0 0;
-	-moz-border-radius: 3px 3px 0 0;
 	border-radius: 3px 3px 0 0;
 	border-bottom: none;
 }
 
 #bbpress-forums div.bbp-the-content-wrapper div.quicktags-toolbar {
 	border: 1px solid #E7E7E7;
-	-webkit-border-radius: 3px 3px 0 0;
-	-moz-border-radius: 3px 3px 0 0;
 	border-radius: 3px 3px 0 0;
 	border-bottom: none;
 }
@@ -3868,7 +3794,8 @@ li.bbp-topic-freshness {
 
 #bbpress-forums div.bbp-the-content-wrapper div.quicktags-toolbar input {
     padding: 5px;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     background-color: #FBFBFB;
     border: 1px solid #E7E7E7;
 }
@@ -3876,8 +3803,6 @@ li.bbp-topic-freshness {
 #bbpress-forums fieldset.bbp-form select {
 	color: #666;
 	border: 1px solid #dedede;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	padding: 5px;
 }
@@ -4204,11 +4129,13 @@ footer.footer #wp-calendar td {
 	padding: 0;
 	text-indent: -99999999px;
 	border: none;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 }
 
 .widget_search .search-submit:hover {
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	background: none;
 }
 
@@ -4226,7 +4153,6 @@ footer.footer #wp-calendar td {
 	background-image: url(images/loader-red.gif);
 	background-repeat: no-repeat;
 	background-position: center;
-	-webkit-background-size: cover;
 	background-size: cover;
 }
 
@@ -4348,8 +4274,6 @@ a:hover {
 	border-bottom: 4px solid #eaeaea;
 	float: left;
 	width: 100%;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	padding: 10px;
 	margin-bottom: 40px;
@@ -4716,8 +4640,6 @@ h2.screen-reader-text {
 
 .comment-list .comment > article {
 	border: 1px solid #eaeaea;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
 	border-radius: 6px;
 	margin-left: 80px;
 	position: relative;
@@ -4729,8 +4651,6 @@ h2.screen-reader-text {
 	position: absolute;
 	top: 0;
 	left: -80px;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
 	border-radius: 50%;
 	border: 5px solid #e4e4e4;
 }
@@ -4817,10 +4737,9 @@ h2.screen-reader-text {
 
 .comment-form .form-submit input, #recaptcha-submit-btn-area input{
 	background: #f16c20;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	font-weight: 500;
 	text-align: center;
 	line-height: 30px;
@@ -5148,11 +5067,13 @@ h2.screen-reader-text {
 	padding: 0;
 	text-indent: -99999999px;
 	border: none;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 }
 
 .widget_search .search-submit:hover {
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 }
 
 .widget_search .search-form:before {
@@ -5242,8 +5163,6 @@ h2.screen-reader-text {
 @media (max-width: 1200px) {
 	.woocommerce ul.products li.product a.added_to_cart {
 		padding: 6px 15px 6px 15px;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
 		border-radius: 3px;
 		margin-top: 10px;
 		width: auto !important;
@@ -5615,7 +5534,9 @@ h2.screen-reader-text {
 
 	.main-navigation ul ul {
 
-		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+
+		        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 		display: block;
 		float: left;
 		margin: 0;
@@ -5671,7 +5592,6 @@ h2.screen-reader-text {
 
 	.main-navigation ul ul .menu-item-has-children > a:after {
 		-webkit-transform: rotate(-90deg);
-		-moz-transform: rotate(-90deg);
 		-ms-transform: rotate(-90deg);
 		transform: rotate(-90deg);
 		top: 0;
@@ -5764,7 +5684,8 @@ h2.screen-reader-text {
 	.navbar-inverse .navbar-toggle:hover,
     .navbar-inverse .navbar-toggle:focus {
 		background-color: inherit;
-		box-shadow: none;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
 	}
 
 	.sticky-navigation .main-navigation li a {
@@ -5888,7 +5809,8 @@ h2.screen-reader-text {
 	}
 
 	.sticky-navigation .main-navigation ul {
-		box-shadow: none;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
 		padding: 0;
 	}
 
@@ -5906,8 +5828,6 @@ h2.screen-reader-text {
 		height: 25px;
 		margin: 0;
 		padding: 0;
-		-webkit-border-radius: 2px;
-		-moz-border-radius: 2px;
 		border-radius: 2px;
 		background: #999999;
 	}
@@ -5918,7 +5838,7 @@ h2.screen-reader-text {
 	}
 
 	.dropdownmenu:before {
-		content "";
+		content: "";
 		text-align: center;
 		width: 25px;
 		height: 25px;
@@ -6117,8 +6037,6 @@ h2.screen-reader-text {
 	   padding: 7px 16px 16px 16px;
 	   margin-top: 34px;
 	   width: 100%;
-		-webkit-border-radius: 0px;
-		-moz-border-radius: 0px;
 		border-radius: 0px;
 	   -webkit-box-shadow: none;
 	   box-shadow: none;
@@ -6406,10 +6324,9 @@ h2.screen-reader-text {
 }
 #jp-carousel-comment-form-button-submit {
 	background: #f16c20 !important;
-	-webkit-border-radius: 3px !important;
-	-moz-border-radius: 3px !important;
 	border-radius: 3px !important;
-	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	        box-shadow: none !important;
 	font-weight: 500 !important;
 	text-align: center !important;
 	font-size: 14px !important;
@@ -6504,8 +6421,6 @@ input[type=submit].edd-submit {
     color: #FFF;
     border: none;
     border-bottom: 3px solid #C84E54;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
     border: none;
 }
@@ -6532,6 +6447,7 @@ p.edd-alert-error,
     border-bottom: 4px solid #eaeaea;
     margin: 0 15px;
     padding: 15px;
+    -webkit-transition: all ease 0.55s;
     transition: all ease 0.55s;
     list-style: none;
     text-align: center;

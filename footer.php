@@ -83,40 +83,25 @@
 					echo '</div>';
 					/* SOCIAL ICONS */
 
-					$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_social_icons',
-						json_encode(array(
-								array( 'icon_value' => 'fa-facebook' , 'link' => '#', 'id' => 'llorix_one_lite_56d069b78cb6e' ),
-								array( 'icon_value' => 'fa-twitter' , 'link' => '#', 'id' => 'llorix_one_lite_56d450842cb39' ),
-								array( 'icon_value' => 'fa-google-plus-square' , 'link' => '#', 'id' => 'llorix_one_lite_56d450512cb38' ),
-							)
-						));
-
-					if ( ! empty( $llorix_one_lite_social_icons ) ) {
-
-							$llorix_one_lite_social_icons_decoded = json_decode( $llorix_one_lite_social_icons );
-
-							if ( ! empty( $llorix_one_lite_social_icons_decoded ) ) {
-
-								echo '<ul class="social-icons">';
-
-								foreach ( $llorix_one_lite_social_icons_decoded as $llorix_one_lite_social_icon ) {
-									if ( ! empty( $llorix_one_lite_social_icon->icon_value ) && ($llorix_one_lite_social_icon->icon_value != 'No Icon') ) {
-										explode( '-',$llorix_one_lite_social_icon->icon_value );
-										if ( ! empty( $llorix_one_lite_social_icon->icon_value[2] ) ) {
-											if ( function_exists( 'icl_t' ) ) {
-												echo '<li><a href="' . esc_url( icl_t( 'Footer Social Link',$llorix_one_lite_social_icon->id . '_footer_social_link', $llorix_one_lite_social_icon->link ) ) . '"><i class="fa llorix-one-lite-footer-icons ' . icl_t( 'Footer Social Icon',$llorix_one_lite_social_icon->id . '_footer_social_icon',esc_attr( $llorix_one_lite_social_icon->icon_value ) ) . ' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">' . esc_attr( $llorix_one_lite_social_icon->icon_value[2] ) . '</span></a></li>';
-											} else {
-												echo '<li><a href="' . esc_url( $llorix_one_lite_social_icon->link ) . '"><i class="fa llorix-one-lite-footer-icons ' . esc_attr( $llorix_one_lite_social_icon->icon_value ) . ' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">' . esc_attr( $llorix_one_lite_social_icon->icon_value[2] ) . '</span></a></li>';
-											}
-										}
-									}
-}
-
-								echo '</ul>';
-
-								}
-					}
-				?>
+					$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_social_icons', json_encode( array(
+						array(
+							'icon_value' => 'fa-facebook',
+							'link' => '#',
+							'id' => 'llorix_one_lite_56d069b78cb6e',
+						),
+						array(
+							'icon_value' => 'fa-twitter',
+							'link' => '#',
+							'id' => 'llorix_one_lite_56d450842cb39',
+						),
+						array(
+							'icon_value' => 'fa-google-plus-square',
+							'link' => '#',
+							'id' => 'llorix_one_lite_56d450512cb38',
+						),
+) )
+					);
+					llorix_one_lite_social_icons( $llorix_one_lite_social_icons, true ); ?>
 	            
 	        </div><!-- .footer-bottom-wrap -->
 

@@ -100,21 +100,16 @@
     top: 100%;
     left: 0;
     overflow: auto;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 0;
     max-width: 100%;
     height: 100%;
     background-color: #000000;
     color: #ffffff;
     -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
     -webkit-transition-delay: 500ms;
-    -moz-transition-delay: 500ms;
-    -ms-transition-delay: 500ms;
-    -o-transition-delay: 500ms;
     transition-delay: 500ms;
 }
 
@@ -152,7 +147,6 @@
     font-weight: 600;
     margin: 1px 0 0 2px;
     vertical-align: top;
-    -webkit-border-radius: 10px;
     border-radius: 10px;
     z-index: 26;
 }

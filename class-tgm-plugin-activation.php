@@ -3597,15 +3597,15 @@ if ( ! class_exists( 'TGMPA_Utils' ) ) {
 
 			if ( is_bool( $value ) ) {
 				return $value;
-			} else if ( is_int( $value ) && ( 0 === $value || 1 === $value ) ) {
+			} elseif ( is_int( $value ) && ( 0 === $value || 1 === $value ) ) {
 				return (bool) $value;
-			} else if ( ( is_float( $value ) && ! is_nan( $value ) ) && ( (float) 0 === $value || (float) 1 === $value ) ) {
+			} elseif ( ( is_float( $value ) && ! is_nan( $value ) ) && ( (float) 0 === $value || (float) 1 === $value ) ) {
 				return (bool) $value;
-			} else if ( is_string( $value ) ) {
+			} elseif ( is_string( $value ) ) {
 				$value = trim( $value );
 				if ( in_array( $value, $true, true ) ) {
 					return true;
-				} else if ( in_array( $value, $false, true ) ) {
+				} elseif ( in_array( $value, $false, true ) ) {
 					return false;
 				} else {
 					return false;
