@@ -623,13 +623,12 @@ function llorix_one_lite_social_icons( $social_icons, $is_footer ) {
 		if ( ! empty( $llorix_one_lite_social_icons_decoded ) ) { ?>
 			<ul class="social-icons">
 				<?php
-
 				foreach ( $llorix_one_lite_social_icons_decoded as $llorix_one_lite_social_icon ) {
 					$icon = ( ! empty( $llorix_one_lite_social_icon->icon_value ) ? apply_filters( 'llorix_one_lite_language_filter', $llorix_one_lite_social_icon->icon_value ) : '' );
 					$link = ( ! empty( $llorix_one_lite_social_icon->link ) ? apply_filters( 'llorix_one_lite_language_filter', $llorix_one_lite_social_icon->link ) : '' );
 					if ( ! empty( $icon ) && $icon !== 'No Icon' && ! empty( $link ) ) { ?>
 						<li>
-							<a href="<?php esc_url( $link ); ?>">
+							<a href="<?php echo esc_url( $link ); ?>">
 								<span class="screen-reader-text"><?php echo esc_attr( $icon ) ?></span>
 								<i class="fa <?php if ( $is_footer === true ) { echo 'llorix-one-lite-footer-icons '; } echo esc_attr( $icon ); ?> transparent-text-dark" aria-hidden="true"></i>
 							</a>
