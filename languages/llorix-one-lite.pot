@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Llorix One Lite 0.1.20\n"
+"Project-Id-Version: Llorix One Lite 0.1.21\n"
 "Report-Msgid-Bugs-To: https://github.com/Codeinwp/llorix-one-lite/issues\n"
-"POT-Creation-Date: 2016-10-17 16:36:43+00:00\n"
+"POT-Creation-Date: 2016-11-09 08:55:48+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -316,8 +316,8 @@ msgid "Upgrade message from the plugin author:"
 msgstr ""
 
 #: class-tgm-plugin-activation.php:2603
-#: inc/admin/welcome-screen/sections/getting-started.php:217
-#: inc/admin/welcome-screen/sections/getting-started.php:236
+#: inc/admin/welcome-screen/sections/getting-started.php:213
+#: inc/admin/welcome-screen/sections/getting-started.php:231
 msgid "Install"
 msgstr ""
 
@@ -526,7 +526,7 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#: functions.php:46 header.php:238
+#: functions.php:46 header.php:243
 msgid "Primary Menu"
 msgstr ""
 
@@ -648,37 +648,37 @@ msgstr ""
 msgid "Call us: "
 msgstr ""
 
-#: header.php:132 header.php:136
+#: header.php:135 header.php:139
 msgid "Call us:"
 msgstr ""
 
-#: header.php:183
+#: header.php:188
 msgid "Toggle Menu"
 msgstr ""
 
-#: header.php:184
+#: header.php:189
 msgid "Toggle navigation"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/actions-required.php:9
+#: inc/admin/welcome-screen/sections/actions-required.php:11
 msgid "Keep up with Llorix One Lite's recommended actions"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/actions-required.php:58
+#: inc/admin/welcome-screen/sections/actions-required.php:62
 msgid "Hooray! There are no recommended actions for you right now."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:13
+#: inc/admin/welcome-screen/sections/getting-started.php:15
 msgid "Welcome to Llorix One Lite!"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:15
+#: inc/admin/welcome-screen/sections/getting-started.php:17
 msgid ""
 "Our most elegant and professional one-page theme, which turns your "
 "scrolling into a smooth and pleasant experience."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:16
+#: inc/admin/welcome-screen/sections/getting-started.php:18
 msgid ""
 "We want to make sure you have the best experience using Llorix One Lite and "
 "that is why we gathered here all the necessary informations for you. We "
@@ -686,34 +686,34 @@ msgid ""
 "great products."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:24
-#: inc/admin/welcome-screen/welcome-screen.php:164
+#: inc/admin/welcome-screen/sections/getting-started.php:26
+#: inc/admin/welcome-screen/welcome-screen.php:171
 msgid "Getting started"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:26
+#: inc/admin/welcome-screen/sections/getting-started.php:28
 msgid "Customize everything in a single place."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:27
+#: inc/admin/welcome-screen/sections/getting-started.php:29
 msgid ""
 "Using the WordPress Customizer you can easily customize every aspect of the "
 "theme."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:28
+#: inc/admin/welcome-screen/sections/getting-started.php:30
 msgid "Go to Customizer"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:36
+#: inc/admin/welcome-screen/sections/getting-started.php:38
 msgid "FAQ"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:42
+#: inc/admin/welcome-screen/sections/getting-started.php:44
 msgid "Create a child theme"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:43
+#: inc/admin/welcome-screen/sections/getting-started.php:45
 msgid ""
 "If you want to make changes to the theme's files, those changes are likely "
 "to be overwritten when you next update the theme. In order to prevent that "
@@ -721,41 +721,41 @@ msgid ""
 "the documentation below."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:44
-#: inc/admin/welcome-screen/sections/getting-started.php:50
-#: inc/admin/welcome-screen/sections/getting-started.php:56
-#: inc/admin/welcome-screen/sections/getting-started.php:64
-#: inc/admin/welcome-screen/sections/getting-started.php:70
-#: inc/admin/welcome-screen/sections/getting-started.php:76
+#: inc/admin/welcome-screen/sections/getting-started.php:46
+#: inc/admin/welcome-screen/sections/getting-started.php:52
+#: inc/admin/welcome-screen/sections/getting-started.php:58
+#: inc/admin/welcome-screen/sections/getting-started.php:66
+#: inc/admin/welcome-screen/sections/getting-started.php:72
+#: inc/admin/welcome-screen/sections/getting-started.php:78
 msgid "View how to do this"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:48
+#: inc/admin/welcome-screen/sections/getting-started.php:50
 msgid "How to Internationalize Your Website"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:49
+#: inc/admin/welcome-screen/sections/getting-started.php:51
 msgid ""
 "Although English is the most used language on the internet, you should "
 "consider all your web users as well. Find out what it takes to make your "
 "website ready for foreign markets from this document."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:54
+#: inc/admin/welcome-screen/sections/getting-started.php:56
 msgid "Build a landing page with a drag-and-drop content builder"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:55
+#: inc/admin/welcome-screen/sections/getting-started.php:57
 msgid ""
 "In the below documentation you will find an easy way to build a great "
 "looking landing page using a drag-and-drop content builder plugin."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:62
+#: inc/admin/welcome-screen/sections/getting-started.php:64
 msgid "Speed up your site"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:63
+#: inc/admin/welcome-screen/sections/getting-started.php:65
 msgid ""
 "If you find yourself in the situation where everything on your site is "
 "running very slow, you might consider having a look at the below "
@@ -763,76 +763,76 @@ msgid ""
 "possible solutions for each of the issues."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:68
+#: inc/admin/welcome-screen/sections/getting-started.php:70
 msgid "Link Menu to sections"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:69
+#: inc/admin/welcome-screen/sections/getting-started.php:71
 msgid ""
 "Linking the frontpage sections with the top menu is very simple, all you "
 "need to do is assign section anchors to the menu. In the below "
 "documentation you will find a nice tutorial about this."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:74
+#: inc/admin/welcome-screen/sections/getting-started.php:76
 msgid "Change anchors"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:75
+#: inc/admin/welcome-screen/sections/getting-started.php:77
 msgid ""
 "To better suit your site's needs, you can change each section's anchor to "
 "what you want. The entire process is described below."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:86
+#: inc/admin/welcome-screen/sections/getting-started.php:88
 msgid "View full documentation"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:87
+#: inc/admin/welcome-screen/sections/getting-started.php:89
 msgid ""
 "Need more details? Please check our full documentation for detailed "
 "information on how to use Llorix One."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:88
+#: inc/admin/welcome-screen/sections/getting-started.php:90
 msgid "Read full documentation"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:95
+#: inc/admin/welcome-screen/sections/getting-started.php:97
 msgid "Recommended plugins"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:101
+#: inc/admin/welcome-screen/sections/getting-started.php:103
 msgid "Llorix One Companion"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:102
+#: inc/admin/welcome-screen/sections/getting-started.php:104
 msgid ""
 "The Llorix One Companion plugin is a simple, easy and in the same time "
 "quite powerful plugins that adds options for Our Services, Our Team and "
 "Testimonials sections on frontpage."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:106
-#: inc/admin/welcome-screen/sections/getting-started.php:125
+#: inc/admin/welcome-screen/sections/getting-started.php:108
+#: inc/admin/welcome-screen/sections/getting-started.php:126
 #: inc/admin/welcome-screen/sections/getting-started.php:144
-#: inc/admin/welcome-screen/sections/getting-started.php:173
-#: inc/admin/welcome-screen/sections/getting-started.php:192
-#: inc/admin/welcome-screen/sections/getting-started.php:211
-#: inc/admin/welcome-screen/sections/getting-started.php:230
+#: inc/admin/welcome-screen/sections/getting-started.php:172
+#: inc/admin/welcome-screen/sections/getting-started.php:190
+#: inc/admin/welcome-screen/sections/getting-started.php:208
+#: inc/admin/welcome-screen/sections/getting-started.php:226
 msgid "Already activated"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:112
+#: inc/admin/welcome-screen/sections/getting-started.php:113
 msgid "Install Llorix One Companion"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:120
+#: inc/admin/welcome-screen/sections/getting-started.php:121
 #: inc/customizer.php:733
 msgid "Pirate Forms"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:121
+#: inc/admin/welcome-screen/sections/getting-started.php:122
 msgid ""
 "Makes your contact page more engaging by creating a good-looking contact "
 "form on your website. The interaction with your visitors was never easier."
@@ -850,127 +850,127 @@ msgstr ""
 msgid "Custom Post Types, Taxonomies and Metaboxes in Minutes"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:150
+#: inc/admin/welcome-screen/sections/getting-started.php:149
 msgid "Download Easy Content Types"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:168
+#: inc/admin/welcome-screen/sections/getting-started.php:167
 msgid "Page Builder by SiteOrigin"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:169
+#: inc/admin/welcome-screen/sections/getting-started.php:168
 msgid ""
 "Build responsive page layouts using the widgets you know and love using "
 "this simple drag and drop page builder."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:179
+#: inc/admin/welcome-screen/sections/getting-started.php:177
 msgid "Install Page Builder by SiteOrigin"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:187
+#: inc/admin/welcome-screen/sections/getting-started.php:185
 msgid "Intergeo Maps - Google Maps Plugin"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:188
+#: inc/admin/welcome-screen/sections/getting-started.php:186
 msgid ""
 "The Intergeo Google Maps plugin is a simple, easy and in the same time "
 "quite powerful tool for handling Google Maps in your website. The plugin "
 "allows users to create new maps by using powerful UI builder."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/getting-started.php:198
+#: inc/admin/welcome-screen/sections/getting-started.php:195
 msgid "Install Intergeo Maps"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/github.php:9
+#: inc/admin/welcome-screen/sections/github.php:11
 msgid "How can I contribute?"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/github.php:15
+#: inc/admin/welcome-screen/sections/github.php:17
 msgid "Found a bug? Want to contribute with a fix or create a new feature?"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/github.php:17
+#: inc/admin/welcome-screen/sections/github.php:19
 msgid "GitHub is the place to go!"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/github.php:20
+#: inc/admin/welcome-screen/sections/github.php:22
 msgid "Llorix One Lite on GitHub"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/github.php:28
+#: inc/admin/welcome-screen/sections/github.php:30
 msgid ""
 "Are you a polyglot? Want to translate Llorix One Lite into your own "
 "language?"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/github.php:30
+#: inc/admin/welcome-screen/sections/github.php:32
 msgid "Get involved at WordPress.org."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/github.php:33
+#: inc/admin/welcome-screen/sections/github.php:35
 msgid "Translate Llorix One Lite"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/github.php:40
+#: inc/admin/welcome-screen/sections/github.php:42
 msgid "Are you enjoying Llorix One Lite?"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/github.php:42
-msgid "Rate our theme on %sWordPress.org%s. We'd really appreciate it!"
-msgstr ""
-
-#: inc/admin/welcome-screen/sections/support.php:9
-msgid "Need more details?"
+#: inc/admin/welcome-screen/sections/github.php:44
+msgid "Rate our theme on %1$sWordPress.org%1$s. We'd really appreciate it!"
 msgstr ""
 
 #: inc/admin/welcome-screen/sections/support.php:11
+msgid "Need more details?"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/support.php:13
 msgid ""
 "Please check our full documentation for detailed information on how to use "
 "Llorix One."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/support.php:14
+#: inc/admin/welcome-screen/sections/support.php:16
 msgid "Llorix One Lite documentation"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/support.php:17
+#: inc/admin/welcome-screen/sections/support.php:19
 msgid "Or would you like to contact us? Write on our support forum."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/support.php:20
+#: inc/admin/welcome-screen/sections/support.php:22
 msgid "Support forum"
 msgstr ""
 
-#: inc/admin/welcome-screen/welcome-screen.php:53
+#: inc/admin/welcome-screen/welcome-screen.php:60
 msgid ""
 "Welcome! Thank you for choosing Llorix One Lite! To fully take advantage of "
-"the best our theme can offer please make sure you visit our %swelcome "
-"page%s."
+"the best our theme can offer please make sure you visit our %1$swelcome "
+"page%1$s."
 msgstr ""
 
-#: inc/admin/welcome-screen/welcome-screen.php:54
+#: inc/admin/welcome-screen/welcome-screen.php:61
 msgid "Get started with Llorix One Lite"
 msgstr ""
 
-#: inc/admin/welcome-screen/welcome-screen.php:87
+#: inc/admin/welcome-screen/welcome-screen.php:94
 msgid "Hooray! There are no required actions for you right now."
 msgstr ""
 
-#: inc/admin/welcome-screen/welcome-screen.php:165
+#: inc/admin/welcome-screen/welcome-screen.php:172
 msgid "Actions recommended"
 msgstr ""
 
-#: inc/admin/welcome-screen/welcome-screen.php:167
+#: inc/admin/welcome-screen/welcome-screen.php:174
 msgid "Contribute"
 msgstr ""
 
-#: inc/admin/welcome-screen/welcome-screen.php:168
+#: inc/admin/welcome-screen/welcome-screen.php:175
 msgid "Support"
 msgstr ""
 
-#: inc/admin/welcome-screen/welcome-screen.php:169
+#: inc/admin/welcome-screen/welcome-screen.php:176
 msgid "Change log"
 msgstr ""
 
@@ -1095,7 +1095,7 @@ msgstr ""
 msgid "Llorix One Lite theme general appearance options"
 msgstr ""
 
-#: inc/customizer.php:158 inc/extras.php:241 inc/extras.php:245
+#: inc/customizer.php:158 inc/extras.php:242 inc/extras.php:246
 msgid "Logo"
 msgstr ""
 
@@ -1183,13 +1183,13 @@ msgstr ""
 
 #: inc/customizer.php:373 inc/customizer.php:599
 #: sections/llorix_one_lite_header_section.php:16
-#: sections/llorix_one_lite_ribbon_section.php:16
+#: sections/llorix_one_lite_ribbon_section.php:15
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 msgstr ""
 
 #: inc/customizer.php:385 inc/customizer.php:611
 #: sections/llorix_one_lite_header_section.php:17
-#: sections/llorix_one_lite_ribbon_section.php:17
+#: sections/llorix_one_lite_ribbon_section.php:16
 msgid "GET STARTED"
 msgstr ""
 
@@ -1424,8 +1424,8 @@ msgstr ""
 msgid "Read more %s"
 msgstr ""
 
-#: sections/llorix_one_lite_logos_section.php:49
-#: sections/llorix_one_lite_logos_section.php:61
+#: sections/llorix_one_lite_logos_section.php:47
+#: sections/llorix_one_lite_logos_section.php:59
 msgid "Affiliates Logos"
 msgstr ""
 
@@ -1434,17 +1434,17 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: sections/llorix_one_lite_ribbon_section.php:28
-#: sections/llorix_one_lite_ribbon_section.php:30
-#: sections/llorix_one_lite_ribbon_section.php:68
-#: sections/llorix_one_lite_ribbon_section.php:70
+#: sections/llorix_one_lite_ribbon_section.php:27
+#: sections/llorix_one_lite_ribbon_section.php:29
+#: sections/llorix_one_lite_ribbon_section.php:73
+#: sections/llorix_one_lite_ribbon_section.php:75
 msgid "Ribbon"
 msgstr ""
 
-#: sections/llorix_one_lite_ribbon_section.php:48
-#: sections/llorix_one_lite_ribbon_section.php:50
-#: sections/llorix_one_lite_ribbon_section.php:87
-#: sections/llorix_one_lite_ribbon_section.php:89
+#: sections/llorix_one_lite_ribbon_section.php:51
+#: sections/llorix_one_lite_ribbon_section.php:53
+#: sections/llorix_one_lite_ribbon_section.php:98
+#: sections/llorix_one_lite_ribbon_section.php:100
 msgid "Ribbon button label:"
 msgstr ""
 
