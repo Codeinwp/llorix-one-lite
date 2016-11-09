@@ -1,4 +1,8 @@
 
+### 0.1.22 - 09/11/2016
+**Changes:** 
+- Fixed social icons not working in header and footer
+
 ### 0.1.21 - 04/11/2016
 **Changes:** 
 - Added filters and hooks to improve child themes creation
