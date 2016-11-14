@@ -220,9 +220,9 @@ jQuery(window).scroll(function(){
     if( window.innerWidth > 768 ) {
         var window_offset       = $body.offset().top - jQuery(window).scrollTop();
         if( isAdminBar ) {
-            limit = -veryTopHeaderHeight + adminBarHeight;
+            limit = ($nav.parent().hasClass( 'sticky-navigation-open' ) ? -veryTopHeaderHeight : 0 )  + adminBarHeight;
         } else {
-            limit = -veryTopHeaderHeight;
+            limit = $nav.parent().hasClass( 'sticky-navigation-open' ) ? -veryTopHeaderHeight : 0;
         }
         if( window_offset < limit ) {
             $nav.css('top', limit );

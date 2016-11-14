@@ -52,7 +52,7 @@ endif; ?>
 	if ( isset( $llorix_one_lite_sticky_header ) && ($llorix_one_lite_sticky_header != 1) ) {
 		$fixedheader = 'sticky-navigation-open';
 	} else {
-		if ( ! is_front_page() || is_page_template( 'template-frontpage.php' ) ) {
+		if ( ! is_front_page() && is_page_template( 'template-frontpage.php' ) ) {
 			$fixedheader = 'sticky-navigation-open';
 		} else {
 			$fixedheader = '';
