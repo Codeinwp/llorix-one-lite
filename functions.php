@@ -157,7 +157,9 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		 */
 		add_theme_support( 'eventbrite' );
 
-		require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-llorix-one-lite-customize-upsell.php' );
+		if(!class_exists('Llorix_One_Plus')){
+			require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-llorix-one-lite-customize-upsell.php' );
+		}
 	}
 endif; // llorix_one_lite_setup
 add_action( 'after_setup_theme', 'llorix_one_lite_setup' );
