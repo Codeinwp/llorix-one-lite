@@ -739,6 +739,9 @@ big {
 
 .header {
 	overflow: hidden;
+}
+
+.header.headr-parallax-effect {
 	position: relative;
 }
 

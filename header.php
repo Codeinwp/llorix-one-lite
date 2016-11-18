@@ -44,7 +44,16 @@ endif; ?>
 	SECTION: HOME / HEADER
 ============================== -->
 <!--header-->
-<header itemscope itemtype="http://schema.org/WPHeader" id="masthead" role="banner" data-stellar-background-ratio="0.5" class="header header-style-one site-header">
+<?php
+	$parallax_effect = '';
+	$llorix_one_lite_enable_move = get_theme_mod( 'llorix_one_lite_enable_move' );
+	if ( ! empty( $llorix_one_lite_enable_move ) && $llorix_one_lite_enable_move ) {
+		$parallax_effect = ' headr-parallax-effect';
+	}
+
+?>
+
+<header itemscope itemtype="http://schema.org/WPHeader" id="masthead" role="banner" data-stellar-background-ratio="0.5" class="header header-style-one site-header<?php echo $parallax_effect; ?>">
 
 	<!-- COLOR OVER IMAGE -->
 	<?php
