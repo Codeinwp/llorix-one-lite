@@ -219,15 +219,21 @@ jQuery(window).scroll(function(){
     /* sticky menu without top part */
     if( window.innerWidth > 768 ) {
         var window_offset       = $body.offset().top - jQuery(window).scrollTop();
-        if( isAdminBar ) {
-            limit = ($nav.parent().hasClass( 'sticky-navigation-open' ) ? -veryTopHeaderHeight : 0 )  + adminBarHeight;
-        } else {
-            limit = $nav.parent().hasClass( 'sticky-navigation-open' ) ? -veryTopHeaderHeight : 0;
-        }
-        if( window_offset < limit ) {
-            $nav.css('top', limit );
-        } else {
-            $nav.css('top', window_offset );
+        if( typeof $nav !== 'undefined' ) {
+            if (isAdminBar) {
+                if( typeof $nav.parent() !== 'undefined' ) {
+                    limit = ($nav.parent().hasClass('sticky-navigation-open') ? -veryTopHeaderHeight : 0 ) + adminBarHeight;
+                }
+            } else {
+                if( typeof $nav.parent() !== 'undefined' ) {
+                    limit = $nav.parent().hasClass('sticky-navigation-open') ? -veryTopHeaderHeight : 0;
+                }
+            }
+            if (window_offset < limit) {
+                $nav.css('top', limit);
+            } else {
+                $nav.css('top', window_offset);
+            }
         }
     }
 
