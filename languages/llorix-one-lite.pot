@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Llorix One Lite 0.1.21\n"
+"Project-Id-Version: Llorix One Lite 0.1.22\n"
 "Report-Msgid-Bugs-To: https://github.com/Codeinwp/llorix-one-lite/issues\n"
-"POT-Creation-Date: 2016-11-09 08:55:48+00:00\n"
+"POT-Creation-Date: 2016-11-16 14:52:54+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,29 +34,29 @@ msgid ""
 "links below or a search?"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:333 functions.php:369
+#: class-tgm-plugin-activation.php:333 functions.php:371
 msgid "Install Required Plugins"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:334 functions.php:370
+#: class-tgm-plugin-activation.php:334 functions.php:372
 msgid "Install Plugins"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:335 functions.php:371
+#: class-tgm-plugin-activation.php:335 functions.php:373
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:336 functions.php:372
+#: class-tgm-plugin-activation.php:336 functions.php:374
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:337 functions.php:373
+#: class-tgm-plugin-activation.php:337 functions.php:375
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:342 functions.php:374
+#: class-tgm-plugin-activation.php:342 functions.php:376
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
@@ -72,7 +72,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:352 functions.php:379
+#: class-tgm-plugin-activation.php:352 functions.php:381
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
 "maximum compatibility with this theme: %1$s."
@@ -98,13 +98,13 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:367 functions.php:376
+#: class-tgm-plugin-activation.php:367 functions.php:378
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:372 functions.php:377
+#: class-tgm-plugin-activation.php:372 functions.php:379
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
@@ -120,7 +120,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:382 functions.php:381
+#: class-tgm-plugin-activation.php:382 functions.php:383
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
@@ -132,13 +132,13 @@ msgid_plural "Begin updating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:392 functions.php:382
+#: class-tgm-plugin-activation.php:392 functions.php:384
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:397 functions.php:383
+#: class-tgm-plugin-activation.php:397 functions.php:385
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
@@ -147,7 +147,7 @@ msgid "Return to the dashboard"
 msgstr ""
 
 #: class-tgm-plugin-activation.php:399 class-tgm-plugin-activation.php:3029
-#: functions.php:384
+#: functions.php:386
 msgid "Plugin activated successfully."
 msgstr ""
 
@@ -556,23 +556,23 @@ msgid ""
 "Contact section -> Map shortcode"
 msgstr ""
 
-#: functions.php:188
+#: functions.php:190
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:200
+#: functions.php:202
 msgid "Footer area %d"
 msgstr ""
 
-#: functions.php:244
+#: functions.php:246
 msgid "expand child menu"
 msgstr ""
 
-#: functions.php:245
+#: functions.php:247
 msgid "collapse child menu"
 msgstr ""
 
-#: functions.php:375
+#: functions.php:377
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s "
 "plugin. Contact the administrator of this site for help on getting the "
@@ -584,7 +584,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:378
+#: functions.php:380
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
 "plugin. Contact the administrator of this site for help on getting the "
@@ -596,7 +596,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:380
+#: functions.php:382
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
 "Contact the administrator of this site for help on getting the plugin "
@@ -608,31 +608,31 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:385
+#: functions.php:387
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
-#: functions.php:505
+#: functions.php:507
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:505 functions.php:527
+#: functions.php:507 functions.php:529
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:515
+#: functions.php:517
 msgid "<span itemprop=\"name\">%s </span><span class=\"says\">says:</span>"
 msgstr ""
 
-#: functions.php:518
+#: functions.php:520
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:524
+#: functions.php:526
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:601
+#: functions.php:603
 msgid "Read more about "
 msgstr ""
 
@@ -1548,7 +1548,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:523
+#: functions.php:525
 msgctxt "comment time format"
 msgid "l, F j, Y, g:i a"
 msgstr ""
