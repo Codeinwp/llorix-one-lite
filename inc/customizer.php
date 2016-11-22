@@ -310,30 +310,15 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'priority'   => 4,
 	)));
 
-	/* Frontpage - instructions for users when not on Frontpage template */
 
-	$wp_customize->add_section( 'llorix_one_lite_front_page_instructions', array(
-		'title'    => __( 'Frontpage settings', 'llorix-one-lite' ),
-		'priority' => 70,
-	) );
 
-	$wp_customize->add_setting( 'llorix_one_lite_front_page_instructions', array(
-		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-	) );
-
-	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_front_page_instructions',
-		array(
-			'section' => 'llorix_one_lite_front_page_instructions',
-			'priority' => 1,
-			'llorix_one_lite_message' => __( 'To customize the Frontpage sections please create a page and select the template "Frontpage" for that page. After that, go to Appearance -> Customize -> Static Front Page and under "Static Front Page" select "A static page". Finally, for "Front page" choose the page you previously created.','llorix-one-lite' ) . '<br><br>' . __( 'Need further informations? Check this','llorix-one-lite' ) . ' <a href="http://docs.themeisle.com/article/236-how-to-set-up-the-home-page-for-llorix-one">' . __( 'doc','llorix-one-lite' ) . '</a>',
-		)
-	));
 
 	/* FRONTPAGE SECTIONS */
 
 	$wp_customize->add_panel( 'llorix_one_lite_front_page_sections', array(
 		'title'    => __( 'Frontpage sections', 'llorix-one-lite' ),
 		'priority' => 90,
+		'description' => __( 'To customize the Frontpage sections please create a page and select the template "Frontpage" for that page. After that, go to Appearance -> Customize -> Static Front Page and under "Static Front Page" select "A static page". Finally, for "Front page" choose the page you previously created.','llorix-one-lite' ) . '<br><br>' . __( 'Need further informations? Check this','llorix-one-lite' ) . ' <a href="http://docs.themeisle.com/article/236-how-to-set-up-the-home-page-for-llorix-one">' . __( 'doc','llorix-one-lite' ) . '</a>',
 	) );
 
 	/* BIG TITLE SECTION */
