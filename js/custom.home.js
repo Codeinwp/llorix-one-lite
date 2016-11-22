@@ -144,7 +144,7 @@ jQuery(document).ready(function(){
     }
     // Fix homepage header background on IE
     if(navigator.userAgent.match(/MSIE 10/i) || navigator.userAgent.match(/Trident\/7\./) ) {
-        jQuery('body').on("mousewheel", function () {
+        jQuery('body').on('mousewheel', function () {
             event.preventDefault();
             var wd = event.wheelDelta;
             var csp = window.pageYOffset;

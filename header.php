@@ -48,7 +48,7 @@ endif; ?>
 	$parallax_effect = '';
 	$llorix_one_lite_enable_move = get_theme_mod( 'llorix_one_lite_enable_move' );
 	if ( ! empty( $llorix_one_lite_enable_move ) && $llorix_one_lite_enable_move ) {
-		$parallax_effect = ' headr-parallax-effect';
+	$parallax_effect = ' headr-parallax-effect';
 	}
 
 ?>
