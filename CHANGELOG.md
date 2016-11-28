@@ -1,4 +1,10 @@
 
+### 0.2.0 - 28/11/2016
+**Changes:** 
+- Fixed issue with header visibility control not working
+- Fixed issue with jerky background on IE and Edge
+- Added hooks and filters for child themes
+
 ### 0.1.22 - 09/11/2016
 **Changes:** 
 - Fixed social icons not working in header and footer
