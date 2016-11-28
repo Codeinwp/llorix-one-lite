@@ -69,3 +69,15 @@ The exceptions to this license are as follows:
 			Source: https://download.unsplash.com/photo-1433170897235-615700336230
 	Screenshot image:
 			Source: https://pixabay.com/en/woman-blonde-model-female-918614/
+
+* Hooks
+
+    - llorix_one_lite_before_entry_meta_content
+
+* Filters
+
+	- llorix_one_lite_post_date_box
+
+	- llorix_one_lite_filter_article_title_on_index
+
+	- llorix_one_lite_filter_article_title_on_search
