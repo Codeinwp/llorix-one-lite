@@ -34,11 +34,10 @@
 					<?php } ?>
 
 				</a>
-				<div class="post-date entry-published updated">
-					<span class="post-date-day"><?php the_time( 'd' ); ?></span>
-					<span class="post-date-month"><?php the_time( 'M' ); ?></span>
-				</div>
+				<?php llorix_one_lite_post_date_index_box_trigger(); ?>
 			</div>
+
+			<?php llorix_one_lite_before_entry_meta_content_trigger(); ?>
 			
 			<div class="entry-meta list-post-entry-meta">
 				<span itemscope itemprop="author" itemtype="http://schema.org/Person" class="entry-author post-author">
@@ -47,6 +46,7 @@
 						<a itemprop="url" class="url fn n" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author"><?php the_author(); ?> </a>
 					</span>
 				</span>
+				<?php llorix_one_lite_after_author_in_entry_meta_trigger(); ?>
 				<span class="posted-in entry-terms-categories" itemprop="articleSection">
 					<i class="fa fa-folder" aria-hidden="true"></i>
 					<?php _e( 'Posted in','llorix-one-lite' ); ?>
@@ -61,13 +61,14 @@
 						}
 					?>
 				</span>
+				<?php llorix_one_lite_after_categories_in_entry_meta_trigger(); ?>
 				<a href="<?php comments_link(); ?>" class="post-comments">
 					<i class="fa fa-comment" aria-hidden="true"></i>
 					<?php comments_number( esc_html__( 'No comments','llorix-one-lite' ), esc_html__( 'One comment','llorix-one-lite' ), esc_html__( '% comments','llorix-one-lite' ) ); ?>
 				</a>
 			</div><!-- .entry-meta -->
 
-		<?php the_title( sprintf( '<h1 class="entry-title" itemprop="headline"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		<?php the_title( sprintf( '<h1 class="entry-title" itemprop="headline"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>', apply_filters( 'llorix_one_lite_filter_article_title_on_index',true ) ); ?>
 		<div class="colored-line-left"></div>
 		<div class="clearfix"></div>
 

@@ -36,18 +36,17 @@
 					<?php } ?>
 
 				</a>
-				<div class="post-date">
-					<span class="post-date-day"><?php the_time( 'd' ); ?></span>
-					<span class="post-date-month"><?php the_time( 'M' ); ?></span>
-				</div>
+				<?php llorix_one_lite_post_date_search_box_trigger(); ?>
 			</div>
+
+			<?php llorix_one_lite_before_entry_meta_content_trigger(); ?>
 
 			<div class="entry-meta list-post-entry-meta">
 				<span class="post-author">
 					<i class="fa fa-user" aria-hidden="true"></i>
 					<?php the_author_posts_link(); ?>
 				</span>
-				
+					<?php llorix_one_lite_after_author_in_entry_meta_trigger(); ?>
 					<?php
 						/* translators: used between list items, there is a space after the comma */
 						$categories_list = get_the_category_list( esc_html__( ', ', 'llorix-one-lite' ) );
@@ -66,7 +65,7 @@
 							}
 						echo '</span>';
 						}
-					?>
+					llorix_one_lite_after_categories_in_entry_meta_trigger(); ?>
 				
 				<a href="<?php comments_link(); ?>" class="post-comments">
 					<i class="fa fa-comment" aria-hidden="true"></i>
@@ -74,7 +73,7 @@
 				</a>
 			</div><!-- .entry-meta -->
 
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>', apply_filters( 'llorix_one_lite_filter_article_title_on_search',true ) ); ?>
 		<div class="colored-line-left"></div>
 		<div class="clearfix"></div>
 

@@ -157,7 +157,9 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		 */
 		add_theme_support( 'eventbrite' );
 
-		require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-llorix-one-lite-customize-upsell.php' );
+		if ( ! class_exists( 'Llorix_One_Plus' ) ) {
+			require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-llorix-one-lite-customize-upsell.php' );
+		}
 	}
 endif; // llorix_one_lite_setup
 add_action( 'after_setup_theme', 'llorix_one_lite_setup' );
@@ -641,3 +643,19 @@ function llorix_one_lite_social_icons( $social_icons, $is_footer ) {
 		}
 	}
 }
+
+
+if ( ! function_exists( 'llorix_one_lite_post_date_box_function' ) ) {
+	/**
+	 * Function to create the box with the post date
+	 */
+	function llorix_one_lite_post_date_box_function( $class ) {
+		?>
+		<div class="post-date">
+			<span class="post-date-day"><?php the_time( 'd' ); ?></span>
+			<span class="post-date-month"><?php the_time( 'M' ); ?></span>
+		</div>
+		<?php
+	}
+}
+add_action( 'llorix_one_lite_post_date_box','llorix_one_lite_post_date_box_function', 10, 1 );
