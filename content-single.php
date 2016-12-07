@@ -19,10 +19,12 @@
 					<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" itemprop="url" rel="author"><?php the_author(); ?></a>
 				</span>
 			</span>
+			<?php llorix_one_lite_after_author_in_entry_meta_trigger(); ?>
 			<time class="post-time posted-on published" datetime="<?php the_time( 'c' ); ?>" itemprop="datePublished">
 				<i class="fa fa-clock-o" aria-hidden="true"></i>
 				<?php the_time( get_option( 'date_format' ) ); ?>
 			</time>
+			<?php llorix_one_lite_after_date_in_entry_meta_trigger(); ?>
 			<a href="<?php comments_link(); ?>" class="post-comments">
 				<i class="fa fa-comment" aria-hidden="true"></i>
 				<?php comments_number( esc_html__( 'No comments','llorix-one-lite' ), esc_html__( 'One comment','llorix-one-lite' ), esc_html__( '% comments','llorix-one-lite' ) ); ?>
