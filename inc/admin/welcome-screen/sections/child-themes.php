@@ -63,7 +63,7 @@
 				<?php if ( 'Clarina' != $current_theme['Name'] ) { ?>
 					<div class="theme-details">
 						<span class="theme-name">Clarina</span>
-						<a href="http://themeisle.com/themes/clarina" class="button button-primary install right"><?php echo 'Get now'; ?></a>
+						<a href="https://wordpress.org/themes/download/clarina.0.1.zip?nostats=1" class="button button-primary install right"><?php echo 'Get now'; ?></a>
 						<a class="button button-secondary preview right" target="_blank" href="http://themeisle.com/demo/?theme=Clarina"><?php echo 'Live Preview'; ?></a>
 						<div class="llorix-one-lite-clear"></div>
 					</div>
