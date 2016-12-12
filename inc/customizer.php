@@ -310,14 +310,11 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'priority'   => 4,
 	)));
 
-
-
-
 	/* FRONTPAGE SECTIONS */
 
 	$wp_customize->add_panel( 'llorix_one_lite_front_page_sections', array(
 		'title'    => __( 'Frontpage sections', 'llorix-one-lite' ),
-		'priority' => 90
+		'priority' => 90,
 	) );
 
 	/* BIG TITLE SECTION */
