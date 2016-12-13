@@ -47,4 +47,34 @@
     </div>
 
 
+    <div class="llorix-one-lite-tab-pane-half llorix-one-lite-tab-pane-last-half">
+
+        <!-- Clarina -->
+        <div class="llorix-one-lite-child-theme-container">
+            <div class="llorix-one-lite-child-theme-image-container">
+                <img src="<?php echo esc_url( get_template_directory_uri() ) . '/inc/admin/welcome-screen/img/clarina.png'; ?>" alt="" />
+                <div class="llorix-one-lite-child-theme-description">
+                    <h2><?php echo 'Clarina'; ?></h2>
+                </div>
+            </div>
+            <div class="llorix-one-lite-child-theme-details">
+                <?php if ( 'Clarina' != $current_theme['Name'] ) { ?>
+                    <div class="theme-details">
+                        <span class="theme-name">Clarina</span>
+	                    <a href="https://wordpress.org/themes/download/clarina.0.1.zip?nostats=1" class="button button-primary install right"><?php echo 'Get now'; ?></a>
+                        <a class="button button-secondary preview right" target="_blank" href="http://justfreethemes.com/demo?theme=Clarina"><?php echo 'Live Preview'; ?></a>
+                        <div class="llorix-one-lite-clear"></div>
+                    </div>
+                <?php } else { ?>
+                    <div class="theme-details active">
+                        <span class="theme-name"><?php echo 'Clarina - Current theme'; ?></span>
+                        <a class="button button-secondary customize right" target="_blank" href="<?php echo get_site_url() . '/wp-admin/customize.php' ?>"><?php echo 'Customize'; ?></a>
+                        <div class="llorix-one-lite-clear"></div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+
+    </div>
+
 </div>
