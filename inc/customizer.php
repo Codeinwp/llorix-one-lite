@@ -663,6 +663,26 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'priority'    => 10,
 	));
 
+	/* FRONTPAGE CONTENT SECTION */
+
+	$wp_customize->add_section( 'llorix_one_lite_frontpage_content_section' , array(
+		'title'       => esc_html__( 'Frontpage content section', 'llorix-one-lite' ),
+		'priority'    => 95,
+		'panel' => 'llorix_one_lite_front_page_sections',
+	));
+
+	/* Frontpage content show/hide */
+	$wp_customize->add_setting( 'llorix_one_lite_frontpage_content_show', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+	));
+
+	$wp_customize->add_control( 'llorix_one_lite_frontpage_content_show', array(
+		'type' => 'checkbox',
+		'label' => __( 'Disable the Frontpage Content section?','llorix-one-lite' ),
+		'section' => 'llorix_one_lite_frontpage_content_section',
+		'priority'    => 1,
+	));
+
 	/* CONTACT INFO SECTION */
 
 	$wp_customize->add_section( 'llorix_one_lite_contact_section' , array(
@@ -908,7 +928,7 @@ function llorix_one_lite_sanitize_html( $input ) {
  * @return mixed
  */
 function llorix_one_lite_show_on_front() {
-	return is_page_template( 'template-frontpage.php' );
+	return is_front_page();
 }
 
 /**
@@ -917,5 +937,5 @@ function llorix_one_lite_show_on_front() {
  * @return mixed
  */
 function llorix_one_lite_not_show_on_front() {
-	return ! is_page_template( 'template-frontpage.php' );
+	return ! is_front_page();
 }
