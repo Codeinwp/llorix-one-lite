@@ -4262,8 +4262,8 @@ a:hover {
 	color: #fff;
 	background: rgba(241,108,32,0.4);
 	font-size: 20px;
-	text-decoration: none;
 	white-space: initial;
+	text-decoration: none;
 }
 
 .standard-button:hover,
