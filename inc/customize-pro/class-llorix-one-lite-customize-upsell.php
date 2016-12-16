@@ -84,7 +84,7 @@ final class Llorix_One_Lite_Customizer_Upsell {
 		);
 
 		$page_on_front_id = get_option( 'page_on_front' );
-		// die(get_page_template_slug($page_on_front_id));
+
 		if ( get_page_template_slug( $page_on_front_id ) !== 'template-frontpage.php' ) {
 			$manager->add_section( new Llorix_One_Lite_Customizer_Upsell_Frontpage_Sections( $manager, 'llorix-one-lite-frontpage-instrucctions',
 					array(
