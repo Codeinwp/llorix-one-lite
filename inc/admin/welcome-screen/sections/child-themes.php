@@ -1,8 +1,6 @@
 <?php
 /**
  * Child themes template
- *
- * @package llorix-one-lite
  */
 ?>
 <div id="child_themes" class="llorix-one-lite-tab-pane">
@@ -39,7 +37,7 @@
 				<?php } else { ?>
 					<div class="theme-details active">
 						<span class="theme-name"><?php echo 'Naturelle - Current theme'; ?></span>
-						<a class="button button-secondary customize right" target="_blank" href="<?php echo get_site_url() . '/wp-admin/customize.php' ?>"><?php echo 'Customize'; ?></a>
+						<a class="button button-secondary customize right" target="_blank" href="<?php echo get_site_url(). '/wp-admin/customize.php' ?>"><?php echo 'Customize'; ?></a>
 						<div class="llorix-one-lite-clear"></div>
 					</div>
 				<?php } ?>
@@ -49,7 +47,7 @@
 	</div>
 
 
-	<div class="llorix-one-lite-tab-pane-half llorix-one-lite-tab-pane-first-half">
+	<div class="llorix-one-lite-tab-pane-half llorix-one-lite-tab-pane-last-half">
 
 		<!-- Clarina -->
 		<div class="llorix-one-lite-child-theme-container">
@@ -64,7 +62,7 @@
 					<div class="theme-details">
 						<span class="theme-name">Clarina</span>
 						<a href="https://wordpress.org/themes/download/clarina.0.1.zip?nostats=1" class="button button-primary install right"><?php echo 'Get now'; ?></a>
-						<a class="button button-secondary preview right" target="_blank" href="http://themeisle.com/demo/?theme=Clarina"><?php echo 'Live Preview'; ?></a>
+						<a class="button button-secondary preview right" target="_blank" href="http://justfreethemes.com/demo?theme=Clarina"><?php echo 'Live Preview'; ?></a>
 						<div class="llorix-one-lite-clear"></div>
 					</div>
 				<?php } else { ?>
