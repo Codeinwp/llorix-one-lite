@@ -648,7 +648,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 	$wp_customize->add_section( 'llorix_one_lite_frontpage_content_section' , array(
 		'title'       => esc_html__( 'Frontpage content section', 'llorix-one-lite' ),
-		'priority'    => 95,
+		'priority'    => 150,
 		'panel' => 'llorix_one_lite_front_page_sections',
 	));
 
