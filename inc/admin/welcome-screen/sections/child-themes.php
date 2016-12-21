@@ -1,6 +1,8 @@
 <?php
 /**
  * Child themes template
+ *
+ * @package Llorix One Lite
  */
 ?>
 <div id="child_themes" class="llorix-one-lite-tab-pane">
@@ -37,7 +39,7 @@
 				<?php } else { ?>
 					<div class="theme-details active">
 						<span class="theme-name"><?php echo 'Naturelle - Current theme'; ?></span>
-						<a class="button button-secondary customize right" target="_blank" href="<?php echo get_site_url(). '/wp-admin/customize.php' ?>"><?php echo 'Customize'; ?></a>
+						<a class="button button-secondary customize right" target="_blank" href="<?php echo get_site_url() . '/wp-admin/customize.php' ?>"><?php echo 'Customize'; ?></a>
 						<div class="llorix-one-lite-clear"></div>
 					</div>
 				<?php } ?>
