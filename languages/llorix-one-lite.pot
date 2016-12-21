@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Llorix One Lite 0.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/Codeinwp/llorix-one-lite/issues\n"
-"POT-Creation-Date: 2016-12-19 14:56:44+00:00\n"
+"POT-Creation-Date: 2016-12-21 16:45:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -526,7 +526,7 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#: functions.php:46 header.php:252
+#: functions.php:46 header.php:255
 msgid "Primary Menu"
 msgstr ""
 
@@ -640,23 +640,23 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:93 inc/customizer.php:225
+#: header.php:95 inc/customizer.php:225
 msgid "(+9) 0999.500.400"
 msgstr ""
 
-#: header.php:94 inc/customizer.php:214
+#: header.php:96 inc/customizer.php:214
 msgid "Call us: "
 msgstr ""
 
-#: header.php:144 header.php:148
+#: header.php:147 header.php:151
 msgid "Call us:"
 msgstr ""
 
-#: header.php:197
+#: header.php:200
 msgid "Toggle Menu"
 msgstr ""
 
-#: header.php:198
+#: header.php:201
 msgid "Toggle navigation"
 msgstr ""
 
@@ -1044,7 +1044,6 @@ msgid ""
 msgstr ""
 
 #: inc/customize-pro/class-llorix-one-lite-customize-upsell.php:91
-#: inc/customize-pro/class-llorix-one-lite-customize-upsell.php:101
 msgid ""
 "To customize the Frontpage sections please create a page and select the "
 "template \"Frontpage\" for that page. After that, go to Appearance -> "
@@ -1054,12 +1053,10 @@ msgid ""
 msgstr ""
 
 #: inc/customize-pro/class-llorix-one-lite-customize-upsell.php:91
-#: inc/customize-pro/class-llorix-one-lite-customize-upsell.php:101
 msgid "Need further informations? Check this"
 msgstr ""
 
 #: inc/customize-pro/class-llorix-one-lite-customize-upsell.php:91
-#: inc/customize-pro/class-llorix-one-lite-customize-upsell.php:101
 msgid "doc"
 msgstr ""
 

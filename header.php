@@ -99,7 +99,7 @@ endif; ?>
 						if ( ! empty( $llorix_one_lite_very_top_header_phone ) || ! empty( $llorix_one_lite_very_top_header_phone_text ) ) {
 							echo '<div class="very-top-left">';
 							echo $llorix_one_lite_very_top_header_phone_text;
-							echo '<span>' .  wp_kses( $llorix_one_lite_very_top_header_phone, 'post', $allowed_protocols ) . '</span>';
+							echo '<span>' . wp_kses( $llorix_one_lite_very_top_header_phone, 'post', $allowed_protocols ) . '</span>';
 							echo '</div>';
 						} elseif ( isset( $wp_customize ) ) {
 							echo '<div class="very-top-left llorix_one_lite_only_customizer"><span></span></div>';
