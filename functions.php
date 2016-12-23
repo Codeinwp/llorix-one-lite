@@ -659,3 +659,12 @@ if ( ! function_exists( 'llorix_one_lite_post_date_box_function' ) ) {
 	}
 }
 add_action( 'llorix_one_lite_post_date_box','llorix_one_lite_post_date_box_function', 10, 1 );
+
+/**
+ * Filter the front page template so it's bypassed entirely if the user selects
+ * to display blog posts on their homepage instead of a static page.
+ */
+function llorix_one_lite_filter_front_page_template( $template ) {
+	return is_home() ? '' : $template;
+}
+add_filter( 'frontpage_template', 'llorix_one_lite_filter_front_page_template' );
