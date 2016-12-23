@@ -1,4 +1,13 @@
 
+### 0.2.1 - 23/12/2016
+**Changes:** 
+- Improve Customize layout
+- Fixed issue with the button in Big Title section fixed width
+- Added Clarina child theme in the About Llorix page
+- Rempved frontpage template and use the front-page.php file for the frontpage
+- Fixed compatibility with Llorix One Companion and Llorix One Plus
+- Allow tel protocol in the very top header - phone number
+
 ### 0.2.0 - 28/11/2016
 **Changes:** 
 - Fixed issue with header visibility control not working
