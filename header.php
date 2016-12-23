@@ -83,6 +83,8 @@ endif; ?>
 
 			/* VERY TOP HEADER */
 			$llorix_one_lite_very_top_header_show = get_theme_mod( 'llorix_one_lite_very_top_header_show', apply_filters( 'llorix_one_lite_very_top_header_show_filter',0 ) );
+			$allowed_protocols = wp_allowed_protocols();
+			array_push( $allowed_protocols,'callto' );
 
 			/* If section is not disabled */
 			if ( isset( $llorix_one_lite_very_top_header_show ) && $llorix_one_lite_very_top_header_show != 1 ) {
@@ -93,10 +95,11 @@ endif; ?>
 						$llorix_one_lite_very_top_header_phone = get_theme_mod( 'llorix_one_lite_very_top_header_phone',esc_html__( '(+9) 0999.500.400','llorix-one-lite' ) );
 						$llorix_one_lite_very_top_header_phone_text = get_theme_mod( 'llorix_one_lite_very_top_header_phone_text',esc_html__( 'Call us: ','llorix-one-lite' ) );
 
+
 						if ( ! empty( $llorix_one_lite_very_top_header_phone ) || ! empty( $llorix_one_lite_very_top_header_phone_text ) ) {
 							echo '<div class="very-top-left">';
 							echo $llorix_one_lite_very_top_header_phone_text;
-							echo '<span>' . esc_attr( $llorix_one_lite_very_top_header_phone ) . '</span>';
+							echo '<span>' . wp_kses( $llorix_one_lite_very_top_header_phone, 'post', $allowed_protocols ) . '</span>';
 							echo '</div>';
 						} elseif ( isset( $wp_customize ) ) {
 							echo '<div class="very-top-left llorix_one_lite_only_customizer"><span></span></div>';
@@ -142,7 +145,7 @@ endif; ?>
 						if ( ! empty( $llorix_one_lite_very_top_header_phone ) ) {
 							echo '<div class="very-top-left">';
 							echo esc_html_e( 'Call us:', 'llorix-one-lite' ) . ' ';
-							echo '<span>' . esc_attr( $llorix_one_lite_very_top_header_phone ) . '</span>';
+							echo '<span>' . wp_kses( $llorix_one_lite_very_top_header_phone, 'post', $allowed_protocols ) . '</span>';
 							echo '</div>';
 						} elseif ( isset( $wp_customize ) ) {
 							echo '<div class="very-top-left llorix_one_lite_only_customizer">' . esc_html_e( 'Call us:', 'llorix-one-lite' ) . '<span></span></div>';
