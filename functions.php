@@ -171,7 +171,7 @@ add_action( 'after_setup_theme', 'llorix_one_lite_setup' );
  */
 function llorix_one_lite_is_not_static_front_page() {
 	$frontpage_id = get_option( 'page_on_front' );
-	if ( get_option( 'show_on_front' ) === 'page' && ! empty( $frontpage_id ) && get_page_template_slug( $frontpage_id ) === 'template-frontpage.php' ) {
+	if ( get_option( 'show_on_front' ) === 'page' ) {
 		return true;
 	}
 
@@ -248,14 +248,14 @@ function llorix_one_lite_scripts() {
 	) );
 
 	$llorix_one_lite_enable_move = get_theme_mod( 'llorix_one_lite_enable_move' );
-	if ( ! empty( $llorix_one_lite_enable_move ) && $llorix_one_lite_enable_move && ( is_front_page() || is_page_template( 'template-frontpage.php' ) ) ) {
+	if ( ! empty( $llorix_one_lite_enable_move ) && $llorix_one_lite_enable_move && ( is_front_page() ) ) {
 
 		wp_enqueue_script( 'llorix-one-lite-parallax', llorix_one_lite_get_file( '/js/vendor/parallax.min.js' ), array(), '1.0.1', true );
 		wp_enqueue_script( 'llorix-one-lite-home-plugin', llorix_one_lite_get_file( '/js/plugin.home.js' ), array( 'jquery', 'llorix-one-lite-custom-all', 'llorix-one-lite-parallax' ), '1.0.1', true );
 
 	}
 
-	if ( is_front_page() || is_page_template( 'template-frontpage.php' ) ) {
+	if ( is_front_page() ) {
 
 		wp_enqueue_script( 'llorix-one-lite-custom-home', llorix_one_lite_get_file( '/js/custom.home.js' ), array( 'jquery' ), '1.0.0', true );
 	}
@@ -414,7 +414,7 @@ function llorix_one_lite_php_style() {
 		$custom_css .= 'body{ color: ' . $llorix_one_lite_text_color . '}';
 	}
 
-	if ( ( empty( $llorix_one_lite_enable_move ) || ! $llorix_one_lite_enable_move ) && ( is_front_page() || is_page_template( 'template-frontpage.php' ) ) ) {
+	if ( ( empty( $llorix_one_lite_enable_move ) || ! $llorix_one_lite_enable_move ) && ( is_front_page() ) ) {
 
 		if ( ! empty( $llorix_one_header_image ) ) {
 			$custom_css .= '.header{ background-image: url(' . $llorix_one_header_image . ');}';
@@ -659,3 +659,12 @@ if ( ! function_exists( 'llorix_one_lite_post_date_box_function' ) ) {
 	}
 }
 add_action( 'llorix_one_lite_post_date_box','llorix_one_lite_post_date_box_function', 10, 1 );
+
+/**
+ * Filter the front page template so it's bypassed entirely if the user selects
+ * to display blog posts on their homepage instead of a static page.
+ */
+function llorix_one_lite_filter_front_page_template( $template ) {
+	return is_home() ? '' : $template;
+}
+add_filter( 'frontpage_template', 'llorix_one_lite_filter_front_page_template' );

@@ -4,7 +4,7 @@ Theme URI: http://themeisle.com/themes/llorix-one/
 Author: ThemeIsle
 Author URI: http://themeisle.com/
 Description: Llorix One Lite is a free and beautiful one page business WordPress theme, with a flat and clean bootstrap based design and an elegant parallax effect. It provides a simple,minimal and modern look that can be used for any kind of personal businesses or startup mobile app. The landing page has a fullscreen hero image and blue & orange appearance with buttons and icons promoting simplicity and elegance at their best. The theme provides a responsive blog section, is eCommerce ready (WooCommerce store compatible), WPML, bbPress, Photo Gallery Grid,Contact Form 7,Meta Slider,SiteOrigin Page Builder, JetPack compatible  and SEO friendly. You can use it for your business / startup shop, agency, corporate website, or photography portfolio.
-Version: 0.2.0
+Version: 0.2.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: llorix-one-lite
@@ -55,6 +55,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     3.15 TEMPLATE: CONTACT PAGE
     3.16 WOOCOMMERCE STYLE
     3.17 FOOTER
+    3.18 FRONTPAGE CONTENT
 
 4. DEFAULT COLORS
 
@@ -1044,6 +1045,14 @@ header .navbar-brand {
 	color: #fff;
 	font-size: 14px;
 	font-weight: bold;
+}
+
+.very-top-left a {
+	color: #fff;
+}
+
+.very-top-left a:hover {
+	text-decoration: none;
 }
 
 .very-top-right {
@@ -4199,6 +4208,31 @@ footer.footer #wp-calendar td {
 
 
 /*---------------------------------------
+3.18 FRONTPAGE CONTENT
+-----------------------------------------*/
+
+.frontpage-content:after {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+	content: " ";
+}
+
+.frontpage-content {
+	padding: 80px 0;
+}
+
+.overlay-layer-wrap.frontpage-content {
+	background-position: center;
+	background-size: cover;
+}
+
+
+/*---------------------------------------
    4. DEFAULT COLORS
 -----------------------------------------*/
 
@@ -4262,6 +4296,7 @@ a:hover {
 	color: #fff;
 	background: rgba(241,108,32,0.4);
 	font-size: 20px;
+	white-space: initial;
 	text-decoration: none;
 }
 

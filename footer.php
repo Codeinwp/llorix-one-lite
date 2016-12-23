@@ -105,9 +105,9 @@
 	            
 	        </div><!-- .footer-bottom-wrap -->
 
-	        <div class="powered-by">
-	            <?php echo apply_filters( 'llorix_one_lite_powered_by',"<a class='' href='http://themeisle.com/themes/llorix-one/' rel='nofollow'>Llorix One Lite </a>" . esc_html__( 'powered by','llorix-one-lite' ) . "<a class='' href='http://wordpress.org/' rel='nofollow'>" . esc_html__( 'WordPress','llorix-one-lite' ) . '</a>' ); ?>
-	        </div>
+
+			<?php echo apply_filters( 'llorix_one_plus_footer_text_filter','<div class="powered-by"><a href="http://themeisle.com/themes/llorix-one/" rel="nofollow">Llorix One Lite </a>' . esc_html__( 'powered by','llorix-one-lite' ) . '<a href="http://wordpress.org/" rel="nofollow">' . esc_html__( 'WordPress','llorix-one-lite' ) . '</a></div>' ); ?>
+
 
 	    </div><!-- container -->
 
