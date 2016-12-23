@@ -85,7 +85,7 @@ final class Llorix_One_Lite_Customizer_Upsell {
 
 		$page_on_front_id = get_option( 'page_on_front' );
 
-		if ( 'posts' === get_option( 'show_on_front' ) || get_page_template_slug( $page_on_front_id ) !== 'template-frontpage.php' ) {
+		if ( 'posts' === get_option( 'show_on_front' ) ) {
 			$manager->add_section( new Llorix_One_Lite_Customizer_Upsell_Frontpage_Sections( $manager, 'llorix-one-lite-frontpage-instrucctions',
 					array(
 						'upsell_text'               => __( 'To customize the Frontpage sections please create a page and select the template "Frontpage" for that page. After that, go to Appearance -> Customize -> Static Front Page and under "Static Front Page" select "A static page". Finally, for "Front page" choose the page you previously created.','llorix-one-lite' ) . '<br><br>' . __( 'Need further informations? Check this','llorix-one-lite' ) . ' <a href="http://docs.themeisle.com/article/236-how-to-set-up-the-home-page-for-llorix-one">' . __( 'doc','llorix-one-lite' ) . '</a>',

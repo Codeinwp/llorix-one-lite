@@ -171,7 +171,7 @@ add_action( 'after_setup_theme', 'llorix_one_lite_setup' );
  */
 function llorix_one_lite_is_not_static_front_page() {
 	$frontpage_id = get_option( 'page_on_front' );
-	if ( get_option( 'show_on_front' ) === 'page' && ! empty( $frontpage_id ) && get_page_template_slug( $frontpage_id ) === 'template-frontpage.php' ) {
+	if ( get_option( 'show_on_front' ) === 'page' ) {
 		return true;
 	}
 
