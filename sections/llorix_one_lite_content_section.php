@@ -33,8 +33,10 @@ if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontp
 		<div class="container">
 			<div class="row">
 				<?php
-
-				$llorix_fp_title = get_the_title();
+				$llorix_frontpage_id = get_option( 'page_on_front' );
+				if ( ! empty( $llorix_frontpage_id ) ) {
+					$llorix_fp_title = get_the_title( $llorix_frontpage_id );
+				}
 				if ( ! empty( $llorix_fp_title ) ) {
 					echo '<h2 class="text-left dark-text">' . $llorix_fp_title . '</h2>';
 					echo '<div class="colored-line-left"></div>';
