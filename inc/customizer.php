@@ -655,6 +655,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	/* Frontpage content show/hide */
 	$wp_customize->add_setting( 'llorix_one_lite_frontpage_content_show', array(
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+		'default' => 1
 	));
 
 	$wp_customize->add_control( 'llorix_one_lite_frontpage_content_show', array(
