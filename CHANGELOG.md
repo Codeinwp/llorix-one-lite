@@ -1,4 +1,9 @@
 
+### 0.2.2 - 28/12/2016
+**Changes:** 
+- Made frontpage content section hidden by default
+- Added the page title to the frontpage section
+
 ### 0.2.1 - 23/12/2016
 **Changes:** 
 - Improve Customize layout
