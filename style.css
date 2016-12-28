@@ -4211,26 +4211,9 @@ footer.footer #wp-calendar td {
 3.18 FRONTPAGE CONTENT
 -----------------------------------------*/
 
-.frontpage-content:after {
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: rgba(0,0,0,0.5);
-	content: " ";
-}
-
 .frontpage-content {
 	padding: 80px 0;
 }
-
-.overlay-layer-wrap.frontpage-content {
-	background-position: center;
-	background-size: cover;
-}
-
 
 /*---------------------------------------
    4. DEFAULT COLORS

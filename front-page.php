@@ -48,9 +48,9 @@ llorix_one_lite_get_template_part( apply_filters( 'llorix_one_lite_header_layout
 		array(
 			'sections/llorix_one_lite_logos_section',
 			'sections/llorix_one_lite_our_story_section',
+			'sections/llorix_one_lite_content_section',
 			'sections/llorix_one_lite_ribbon_section',
 			'sections/llorix_one_lite_latest_news_section',
-			'sections/llorix_one_lite_content_section',
 			'sections/llorix_one_lite_contact_info_section',
 			'sections/llorix_one_lite_map_section',
 		)
