@@ -11,7 +11,7 @@
  * @link        http://themeisle.com
  */
 
-$llorix_one_lite_frontpage_content_show = get_theme_mod( 'llorix_one_lite_frontpage_content_show' );
+$llorix_one_lite_frontpage_content_show = get_theme_mod( 'llorix_one_lite_frontpage_content_show',1 );
 
 if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontpage_content_show != 1 ) {
 	$class_to_add = '';
@@ -20,7 +20,7 @@ if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontp
 		$class_to_add                  = 'overlay-layer-wrap white-text';
 		$llorix_one_frontpage_featured = get_the_post_thumbnail_url();
 	} else {
-		$class_to_add = 'brief entry-content';
+		$class_to_add = 'brief';
 	}
 
 	?>
@@ -33,6 +33,15 @@ if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontp
 		<div class="container">
 			<div class="row">
 				<?php
+				$llorix_frontpage_id = get_option( 'page_on_front' );
+				if ( ! empty( $llorix_frontpage_id ) ) {
+					$llorix_fp_title = get_the_title( $llorix_frontpage_id );
+				}
+				if ( ! empty( $llorix_fp_title ) ) {
+					echo '<h2 class="text-left dark-text">' . $llorix_fp_title . '</h2>';
+					echo '<div class="colored-line-left"></div>';
+				}
+
 				// Show the selected frontpage content
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post();
