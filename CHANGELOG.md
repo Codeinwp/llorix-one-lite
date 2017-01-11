@@ -1,4 +1,10 @@
 
+### 0.2.3 - 11/01/2017
+**Changes:** 
+- Added an option to allow the old frontpage template
+- Fixed fatal error in eventbride template
+- Hide about llorix page if a child theme is beeing used
+
 ### 0.2.2 - 28/12/2016
 **Changes:** 
 - Made frontpage content section hidden by default
