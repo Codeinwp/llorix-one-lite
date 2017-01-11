@@ -120,7 +120,7 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		/**
 		 * Welcome screen
 		 */
-		if ( is_admin() ) {
+		if ( is_admin() && ! is_child_theme() ) {
 
 			global $llorix_one_lite_required_actions;
 
