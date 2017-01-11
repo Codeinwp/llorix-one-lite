@@ -63,6 +63,19 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		$nav_menu_locations_primary->priority = 6;
 	}
 
+	/**
+	 * Option to get the frontpage settings to the old default template if a static frontpage is selected
+	 */
+	$wp_customize->add_setting( 'llorix_one_lite_keep_old_fp_template', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+	));
+	$wp_customize->add_control( 'llorix_one_lite_keep_old_fp_template', array(
+		'type' => 'checkbox',
+		'label' => esc_html__( 'Keep the old static frontpage template?','llorix-one-lite' ),
+		'section' => 'llorix_one_lite_general_section',
+		'priority'    => 6,
+	));
+
 	/* Disable preloader */
 	$wp_customize->add_setting( 'llorix_one_lite_disable_preloader', array(
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',

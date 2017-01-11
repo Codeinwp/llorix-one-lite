@@ -665,6 +665,11 @@ add_action( 'llorix_one_lite_post_date_box','llorix_one_lite_post_date_box_funct
  * to display blog posts on their homepage instead of a static page.
  */
 function llorix_one_lite_filter_front_page_template( $template ) {
-	return is_home() ? '' : $template;
+	$llorix_one_lite_keep_old_fp_template = get_theme_mod( 'llorix_one_lite_keep_old_fp_template' );
+	if ( ! $llorix_one_lite_keep_old_fp_template ) {
+		return is_home() ? '' : $template;
+	} else {
+		return '';
+	}
 }
 add_filter( 'frontpage_template', 'llorix_one_lite_filter_front_page_template' );
