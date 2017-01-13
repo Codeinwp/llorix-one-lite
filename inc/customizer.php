@@ -459,7 +459,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'Logos Bar section', 'llorix-one-lite' ),
 		'priority'    => 30,
 		'panel'       => 'llorix_one_lite_front_page_sections',
-		'active_callback'   =>  'llorix_one_lite_show_on_front',
+		'active_callback'   => 'llorix_one_lite_show_on_front',
 	));
 
 	/* Logos bar show/hide */
@@ -505,7 +505,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'About section', 'llorix-one-lite' ),
 		'priority'    => 50,
 		'panel'       => 'llorix_one_lite_front_page_sections',
-		'active_callback'   =>  'llorix_one_lite_show_on_front',
+		'active_callback'   => 'llorix_one_lite_show_on_front',
 	));
 
 	/* About show/hide */
@@ -565,7 +565,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'Ribbon section', 'llorix-one-lite' ),
 		'priority'    => 80,
 		'panel'       => 'llorix_one_lite_front_page_sections',
-		'active_callback'   =>  'llorix_one_lite_show_on_front',
+		'active_callback'   => 'llorix_one_lite_show_on_front',
 	));
 
 	/* Ribbon show/hide */
@@ -635,7 +635,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'Latest news section', 'llorix-one-lite' ),
 		'priority'    => 90,
 		'panel'       => 'llorix_one_lite_front_page_sections',
-		'active_callback'   =>  'llorix_one_lite_show_on_front',
+		'active_callback'   => 'llorix_one_lite_show_on_front',
 	));
 
 	/* Latest news show/hide */
@@ -669,7 +669,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'Frontpage content section', 'llorix-one-lite' ),
 		'priority'    => 150,
 		'panel' => 'llorix_one_lite_front_page_sections',
-		'active_callback'   =>  'llorix_one_lite_show_on_front',
+		'active_callback'   => 'llorix_one_lite_show_on_front',
 	));
 
 	/* Frontpage content show/hide */
@@ -691,7 +691,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'Contact info section', 'llorix-one-lite' ),
 		'priority'    => 100,
 		'panel'       => 'llorix_one_lite_front_page_sections',
-		'active_callback'   =>  'llorix_one_lite_show_on_front',
+		'active_callback'   => 'llorix_one_lite_show_on_front',
 	));
 
 	/* Contact info show/hide */
