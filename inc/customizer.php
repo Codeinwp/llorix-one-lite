@@ -336,6 +336,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'Big title section', 'llorix-one-lite' ),
 		'priority'    => 10,
 		'panel' => 'llorix_one_lite_front_page_sections',
+		'active_callback' => 'llorix_one_lite_show_on_front',
 	));
 
 	/* Header Logo	*/
@@ -402,6 +403,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	$wp_customize->get_section( 'header_image' )->panel = 'llorix_one_lite_front_page_sections';
 	$wp_customize->get_section( 'header_image' )->title = esc_html__( 'Big title section background', 'llorix-one-lite' );
 	$wp_customize->get_section( 'header_image' )->priority = 20;
+	$wp_customize->get_section( 'header_image' )->active_callback = 'llorix_one_lite_show_on_front';
 
 	/* Enable parallax effect*/
 	$wp_customize->add_setting( 'llorix_one_lite_enable_move', array(
@@ -457,6 +459,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'Logos Bar section', 'llorix-one-lite' ),
 		'priority'    => 30,
 		'panel'       => 'llorix_one_lite_front_page_sections',
+		'active_callback'   =>  'llorix_one_lite_show_on_front',
 	));
 
 	/* Logos bar show/hide */
@@ -502,6 +505,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'About section', 'llorix-one-lite' ),
 		'priority'    => 50,
 		'panel'       => 'llorix_one_lite_front_page_sections',
+		'active_callback'   =>  'llorix_one_lite_show_on_front',
 	));
 
 	/* About show/hide */
@@ -561,6 +565,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'Ribbon section', 'llorix-one-lite' ),
 		'priority'    => 80,
 		'panel'       => 'llorix_one_lite_front_page_sections',
+		'active_callback'   =>  'llorix_one_lite_show_on_front',
 	));
 
 	/* Ribbon show/hide */
@@ -630,6 +635,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'Latest news section', 'llorix-one-lite' ),
 		'priority'    => 90,
 		'panel'       => 'llorix_one_lite_front_page_sections',
+		'active_callback'   =>  'llorix_one_lite_show_on_front',
 	));
 
 	/* Latest news show/hide */
@@ -663,6 +669,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'Frontpage content section', 'llorix-one-lite' ),
 		'priority'    => 150,
 		'panel' => 'llorix_one_lite_front_page_sections',
+		'active_callback'   =>  'llorix_one_lite_show_on_front',
 	));
 
 	/* Frontpage content show/hide */
@@ -684,6 +691,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'title'       => esc_html__( 'Contact info section', 'llorix-one-lite' ),
 		'priority'    => 100,
 		'panel'       => 'llorix_one_lite_front_page_sections',
+		'active_callback'   =>  'llorix_one_lite_show_on_front',
 	));
 
 	/* Contact info show/hide */
@@ -923,14 +931,5 @@ function llorix_one_lite_sanitize_html( $input ) {
  * @return mixed
  */
 function llorix_one_lite_show_on_front() {
-	return is_front_page();
-}
-
-/**
- * Active callback function
- *
- * @return mixed
- */
-function llorix_one_lite_not_show_on_front() {
-	return ! is_front_page();
+	return is_front_page() && 'posts' !== get_option( 'show_on_front' );
 }
