@@ -36,6 +36,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 			'section' => 'llorix_one_lite_general_section',
 			'priority' => 100,
 			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the NEW PORTFOLIO SECTION!', 'llorix-one-lite' ),
+			'active_callback' => 'llorix_one_lite_check_pro',
 		)
 	));
 
@@ -146,13 +147,12 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'llorix_one_lite_new_color', array(
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
 	) );
-	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_new_color',
-		array(
-			'section' => 'colors',
-			'priority' => 100,
-			'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the COLOR SCHEME!', 'llorix-one-lite' ),
-		)
-	));
+	$wp_customize->add_control( new Llorix_One_Lite_Message( $wp_customize, 'llorix_one_lite_new_color', array(
+		'section' => 'colors',
+		'priority' => 100,
+		'llorix_one_lite_message' => __( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the COLOR SCHEME!', 'llorix-one-lite' ),
+		'active_callback' => 'llorix_one_lite_check_pro',
+	)));
 
 	/* General options */
 	$wp_customize->add_section( 'llorix_one_lite_appearance_general' , array(
@@ -933,4 +933,13 @@ function llorix_one_lite_show_on_front() {
  */
 function llorix_one_lite_not_show_on_front() {
 	return ! is_front_page();
+}
+
+/**
+ * Active callback to check if Llorix Plus is installed
+ *
+ * @return bool
+ */
+function llorix_one_lite_check_pro(){
+	return !class_exists('Llorix_One_Plus');
 }
