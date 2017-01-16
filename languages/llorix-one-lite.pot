@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Llorix One Lite 0.2.3\n"
 "Report-Msgid-Bugs-To: https://github.com/Codeinwp/llorix-one-lite/issues\n"
-"POT-Creation-Date: 2017-01-13 09:51:22+00:00\n"
+"POT-Creation-Date: 2017-01-16 12:53:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1074,31 +1074,31 @@ msgid ""
 "version</a> for full control over the NEW PORTFOLIO SECTION!"
 msgstr ""
 
-#: inc/customizer.php:74
+#: inc/customizer.php:75
 msgid "Keep the old static frontpage template?"
 msgstr ""
 
-#: inc/customizer.php:85
+#: inc/customizer.php:86
 msgid "Disable preloader?"
 msgstr ""
 
-#: inc/customizer.php:86
+#: inc/customizer.php:87
 msgid "If this box is checked, the preloader will be disabled from homepage."
 msgstr ""
 
-#: inc/customizer.php:97
+#: inc/customizer.php:98
 msgid "Change the template to Full width for all the pages?"
 msgstr ""
 
-#: inc/customizer.php:108
+#: inc/customizer.php:109
 msgid "Appearance"
 msgstr ""
 
-#: inc/customizer.php:122
+#: inc/customizer.php:123
 msgid "Text color"
 msgstr ""
 
-#: inc/customizer.php:139
+#: inc/customizer.php:140
 msgid "Title color"
 msgstr ""
 

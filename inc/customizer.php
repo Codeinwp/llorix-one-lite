@@ -939,6 +939,6 @@ function llorix_one_lite_show_on_front() {
  *
  * @return bool
  */
-function llorix_one_lite_check_pro(){
-	return !class_exists('Llorix_One_Plus');
+function llorix_one_lite_check_pro() {
+	return ! class_exists( 'Llorix_One_Plus' );
 }
