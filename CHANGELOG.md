@@ -1,4 +1,8 @@
 
+### 0.2.4 - 18/01/2017
+**Changes:** 
+- Fixes for Llorix One Plus plugin
+
 ### 0.2.3 - 11/01/2017
 **Changes:** 
 - Added an option to allow the old frontpage template
