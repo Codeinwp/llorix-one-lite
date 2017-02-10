@@ -818,6 +818,69 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'llorix_one_lite_link_control' => true,
 	) ) );
 
+	/* Upsell Section */
+	if ( ! class_exists( 'Llorix_One_Plus' ) ) {
+
+		$wp_customize->add_section( 'llorix_one_lite_theme_info_main_section', array(
+			'title'    => __( 'View PRO Features', 'llorix-one-lite' ),
+			'priority' => 0,
+		) );
+
+		$wp_customize->add_setting( 'llorix_one_lite_theme_info_main_control', array(
+			'sanitize_callback' => 'esc_html',
+		) );
+
+		$wp_customize->add_control( new Llorix_One_Lite_Control_Upsell_Theme_Info( $wp_customize, 'llorix_one_lite_theme_info_main_control', array(
+			'section'            => 'llorix_one_lite_theme_info_main_section',
+			'priority'           => 100,
+			'options'            => array(
+				esc_html__( 'Unlimited Color Options', 'llorix-one-lite' ),
+				esc_html__( 'Shop Section', 'llorix-one-lite' ),
+				esc_html__( 'Portfolio Section', 'llorix-one-lite' ),
+				esc_html__( 'Shortcodes Section', 'llorix-one-lite' ),
+				esc_html__( 'Section Reordering', 'llorix-one-lite' ),
+				esc_html__( 'Aleternative Header Layout', 'llorix-one-lite' ),
+				esc_html__( 'Support', 'llorix-one-lite' ),
+			),
+			'button_url'         => esc_url( 'https://themeisle.com/plugins/llorix-one-plus/' ),
+			'button_text'        => esc_html__( 'Get the PRO version!', 'llorix-one-lite' ),
+		) ) );
+
+		$wp_customize->add_setting( 'llorix_one_lite_theme_info_portfolio_control', array(
+			'sanitize_callback' => 'esc_html',
+		) );
+
+		$wp_customize->add_control( new Llorix_One_Lite_Control_Upsell_Theme_Info( $wp_customize, 'llorix_one_lite_theme_info_portfolio_control', array(
+			'section'            => 'llorix_one_lite_general_section',
+			'priority'           => 100,
+			'options'            => array(
+				esc_html__( 'Portfolio Section', 'llorix-one-lite' ),
+			),
+			'explained_features' => array(
+				esc_html__( 'Check out the PRO version for full control over the NEW PORTFOLIO SECTION!', 'llorix-one-lite' ),
+			),
+			'button_url'         => esc_url( 'https://themeisle.com/plugins/llorix-one-plus/' ),
+			'button_text'        => esc_html__( 'Get the PRO version!', 'llorix-one-lite' ),
+		) ) );
+
+		$wp_customize->add_setting( 'llorix_one_lite_theme_info_colors_control', array(
+			'sanitize_callback' => 'esc_html',
+		) );
+
+		$wp_customize->add_control( new Llorix_One_Lite_Control_Upsell_Theme_Info( $wp_customize, 'llorix_one_lite_theme_info_colors_control', array(
+			'section'            => 'colors',
+			'priority'           => 100,
+			'options'            => array(
+				esc_html__( 'Unlimited Color Options', 'llorix-one-lite' ),
+			),
+			'explained_features' => array(
+				esc_html__( 'Check out the PRO version for full control over the COLOR SCHEME!', 'llorix-one-lite' ),
+			),
+			'button_url'         => esc_url( 'https://themeisle.com/plugins/llorix-one-plus/' ),
+			'button_text'        => esc_html__( 'Get the PRO version!', 'llorix-one-lite' ),
+		) ) );
+
+	}
 }
 add_action( 'customize_register', 'llorix_one_lite_customize_register' );
 
