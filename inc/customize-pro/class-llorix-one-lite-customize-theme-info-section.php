@@ -134,7 +134,7 @@ class Llorix_One_Lite_Customizer_Theme_Info_Section extends WP_Customize_Section
 										<li>* {{ data.explained_features[feature] }}</li>
 										<# } #>
 								</ul>
-                            <# } #>
+							<# } #>
 		</div>
 	<?php }
 }

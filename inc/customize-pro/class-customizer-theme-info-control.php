@@ -108,7 +108,7 @@ if ( ! class_exists( 'Llorix_One_Lite_Control_Upsell_Theme_Info' ) ) :
 							<# } #>
 
 								<# if ( data.explained_features.length > 0 ) { #>
-                                    <hr />
+									<hr />
 
 									<ul class="themeisle-upsell-feature-list">
 										<# for (requirement in data.explained_features) { #>
