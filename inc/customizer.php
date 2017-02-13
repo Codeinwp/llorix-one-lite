@@ -16,6 +16,11 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	require_once( 'class/llorix-one-lite-text-control.php' );
 	require_once( 'class/llorix-one-lite-alpha-control.php' );
 
+	if ( ! class_exists( 'Llorix_One_Plus' ) ) {
+		require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-customizer-theme-info-root.php' );
+		require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-customizer-theme-info-control.php' );
+	}
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
