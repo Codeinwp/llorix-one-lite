@@ -106,7 +106,7 @@ final class Llorix_One_Lite_Customizer_Upsell {
 			),
 
 			'button_url'  => esc_url( 'https://themeisle.com/plugins/llorix-one-plus/' ),
-			'button_text' => esc_html__( 'Get the PRO version!', 'llorix-one-lite' ),
+			'button_text' => esc_html__( 'View PRO version', 'llorix-one-lite' ),
 		) ) );
 	}
 

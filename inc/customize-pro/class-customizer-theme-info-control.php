@@ -1,8 +1,8 @@
 <?php
 /**
- *  Hestia Upsell Theme Info Class
+ *  Llorix One Lite Upsell Theme Info Class
  *
- * @package Hestia
+ * @package Llorix One Lite
  */
 
 if ( ! class_exists( 'Llorix_One_Lite_Control_Upsell_Theme_Info' ) ) :
@@ -48,13 +48,6 @@ if ( ! class_exists( 'Llorix_One_Lite_Control_Upsell_Theme_Info' ) ) :
 		public $explained_features = array();
 
 		/**
-		 * Label text for each feature
-		 *
-		 * @var string|void label text
-		 */
-		public $pro_label = '';
-
-		/**
 		 * Llorix_One_Lite_Control_Upsell_Theme_Info constructor.
 		 *
 		 * @param WP_Customize_Manager $manager the customize manager class.
@@ -63,7 +56,6 @@ if ( ! class_exists( 'Llorix_One_Lite_Control_Upsell_Theme_Info' ) ) :
 		 */
 		public function __construct( WP_Customize_Manager $manager, $id, array $args ) {
 			$this->button_text;
-			$this->pro_label   = __( 'Pro', 'llorix-one-lite' );
 			$manager->register_control_type( 'Llorix_One_Lite_Control_Upsell_Theme_Info' );
 			parent::__construct( $manager, $id, $args );
 
@@ -84,7 +76,6 @@ if ( ! class_exists( 'Llorix_One_Lite_Control_Upsell_Theme_Info' ) ) :
 			$this->json['button_url']   = $this->button_url;
 			$this->json['options']      = $this->options;
 			$this->json['explained_features'] = $this->explained_features;
-			$this->json['pro_label'] = $this->pro_label;
 		}
 
 		/**
@@ -96,7 +87,7 @@ if ( ! class_exists( 'Llorix_One_Lite_Control_Upsell_Theme_Info' ) ) :
 				<# if ( data.options ) { #>
 					<ul class="themeisle-upsell-features">
 						<# for (option in data.options) { #>
-							<li><span class="upsell-pro-label">{{ data.pro_label }}</span>{{ data.options[option] }}
+							<li><span class="upsell-pro-label"></span>{{ data.options[option] }}
 							</li>
 							<# } #>
 					</ul>
@@ -112,7 +103,7 @@ if ( ! class_exists( 'Llorix_One_Lite_Control_Upsell_Theme_Info' ) ) :
 
 									<ul class="themeisle-upsell-feature-list">
 										<# for (requirement in data.explained_features) { #>
-											<li>* {{ data.explained_features[requirement] }}</li>
+											<li>* {{{ data.explained_features[requirement] }}}</li>
 											<# } #>
 									</ul>
 									<# } #>

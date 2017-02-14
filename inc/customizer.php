@@ -16,11 +16,6 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	require_once( 'class/llorix-one-lite-text-control.php' );
 	require_once( 'class/llorix-one-lite-alpha-control.php' );
 
-	if ( ! class_exists( 'Llorix_One_Plus' ) ) {
-		require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-customizer-theme-info-root.php' );
-		require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-customizer-theme-info-control.php' );
-	}
-
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -805,7 +800,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	if ( ! class_exists( 'Llorix_One_Plus' ) ) {
 
 		$wp_customize->add_section( 'llorix_one_lite_theme_info_main_section', array(
-			'title'    => __( 'View PRO Features', 'llorix-one-lite' ),
+			'title'    => __( 'View PRO version', 'llorix-one-lite' ),
 			'priority' => 0,
 		) );
 
@@ -826,7 +821,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 				esc_html__( 'Support', 'llorix-one-lite' ),
 			),
 			'button_url'         => esc_url( 'https://themeisle.com/plugins/llorix-one-plus/' ),
-			'button_text'        => esc_html__( 'Get the PRO version!', 'llorix-one-lite' ),
+			'button_text'        => esc_html__( 'View PRO version', 'llorix-one-lite' ),
 		) ) );
 
 		$wp_customize->add_setting( 'llorix_one_lite_theme_info_portfolio_control', array(
@@ -840,10 +835,10 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 				esc_html__( 'Portfolio Section', 'llorix-one-lite' ),
 			),
 			'explained_features' => array(
-				esc_html__( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the NEW PORTFOLIO SECTION!', 'llorix-one-lite' ),
+				__( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the NEW PORTFOLIO SECTION!', 'llorix-one-lite' ),
 			),
 			'button_url'         => esc_url( 'https://themeisle.com/plugins/llorix-one-plus/' ),
-			'button_text'        => esc_html__( 'Get the PRO version!', 'llorix-one-lite' ),
+			'button_text'        => esc_html__( 'View PRO version', 'llorix-one-lite' ),
 		) ) );
 
 		$wp_customize->add_setting( 'llorix_one_lite_theme_info_colors_control', array(
@@ -857,10 +852,10 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 				esc_html__( 'Unlimited Color Options', 'llorix-one-lite' ),
 			),
 			'explained_features' => array(
-				esc_html__( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the NEW PORTFOLIO SECTION!', 'llorix-one-lite' ),
+				__( 'Check out the <a href="http://themeisle.com/plugins/llorix-one-plus/">PRO version</a> for full control over the NEW PORTFOLIO SECTION!', 'llorix-one-lite' ),
 			),
 			'button_url'         => esc_url( 'https://themeisle.com/plugins/llorix-one-plus/' ),
-			'button_text'        => esc_html__( 'Get the PRO version!', 'llorix-one-lite' ),
+			'button_text'        => esc_html__( 'View PRO version', 'llorix-one-lite' ),
 		) ) );
 
 	}

@@ -5,7 +5,7 @@
  * Pro customizer section.
  *
  * @package WordPress
- * @subpackage Hestia
+ * @subpackage Llorix One Lite
  */
 
 /**

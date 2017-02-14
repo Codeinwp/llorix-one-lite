@@ -67,3 +67,7 @@
 #customize-controls #accordion-section-llorix_one_lite_theme_info_main_section.control-section .accordion-section-title:hover:after {
     color: #fff;
 }
+
+.upsell-pro-label:before {
+    content: "pro";
+}

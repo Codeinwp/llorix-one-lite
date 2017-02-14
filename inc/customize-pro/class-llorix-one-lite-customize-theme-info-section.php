@@ -5,7 +5,7 @@
  * Pro customizer section.
  *
  * @package WordPress
- * @subpackage Hestia
+ * @subpackage Llorix One Lite
  */
 
 /**
@@ -67,16 +67,6 @@ class Llorix_One_Lite_Customizer_Theme_Info_Section extends WP_Customize_Section
 	 */
 	public $explained_features = array();
 
-
-	/**
-	 * Label text to output.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @var    string
-	 */
-	public $pro_label = 'pro';
-
 	/**
 	 * Llorix_One_Lite_Customizer_Theme_Info_Section constructor.
 	 */
@@ -98,7 +88,6 @@ class Llorix_One_Lite_Customizer_Theme_Info_Section extends WP_Customize_Section
 		$json['button_url']         = esc_url( $this->button_url );
 		$json['options']            = $this->options;
 		$json['explained_features'] = $this->explained_features;
-		$json['pro_label']          = esc_html( $this->pro_label );
 
 		return $json;
 	}
@@ -116,25 +105,25 @@ class Llorix_One_Lite_Customizer_Theme_Info_Section extends WP_Customize_Section
 			<# if ( data.options.length > 0 ) { #>
 				<ul class="themeisle-upsell-features">
 					<# for (option in data.options) { #>
-						<li><span class="upsell-pro-label">{{ data.pro_label }}</span>{{ data.options[option] }}
+						<li>
+                            <span class="upsell-pro-label"></span>{{ data.options[option] }}
 						</li>
-						<# } #>
+                    <# } #>
 				</ul>
-				<# } #>
+            <# } #>
 
-					<# if ( data.button_text && data.button_url ) { #>
-						<a target="_blank" href="{{ data.button_url }}" class="button button-primary" target="_blank">{{
-							data.button_text }}</a>
-						<# } #>
+            <# if ( data.button_text && data.button_url ) { #>
+                <a target="_blank" href="{{ data.button_url }}" class="button button-primary" target="_blank">{{ data.button_text }}</a>
+            <# } #>
 
-							<# if ( data.explained_features.length > 0 ) { #>
-								<hr />
-								<ul class="themeisle-upsell-feature-list">
-									<# for ( feature in data.explained_features ) { #>
-										<li>* {{ data.explained_features[feature] }}</li>
-										<# } #>
-								</ul>
-							<# } #>
+            <# if ( data.explained_features.length > 0 ) { #>
+                <hr />
+                <ul class="themeisle-upsell-feature-list">
+                    <# for ( feature in data.explained_features ) { #>
+                        <li>* {{{ data.explained_features[feature] }}}</li>
+                        <# } #>
+                </ul>
+            <# } #>
 		</div>
 	<?php }
 }
