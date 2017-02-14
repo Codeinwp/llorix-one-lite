@@ -1,4 +1,8 @@
 
+### 0.2.5 - 14/02/2017
+**Changes:** 
+- Update Customize upsells layout
+
 ### 0.2.4 - 18/01/2017
 **Changes:** 
 - Fixes for Llorix One Plus plugin
