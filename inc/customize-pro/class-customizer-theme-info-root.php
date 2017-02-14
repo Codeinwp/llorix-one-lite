@@ -96,7 +96,8 @@ final class Llorix_One_Lite_Customizer_Upsell {
 
 		// Frontpage Sections Upsell.
 		$manager->add_section( new Llorix_One_Lite_Customizer_Theme_Info_Section( $manager, 'llorix-one-lite-theme-info-section', array(
-			'panel'       => 'llorix_one_lite_front_page_sections',
+		'active_callback' => 'llorix_one_lite_show_on_front',
+		'panel'       => 'llorix_one_lite_front_page_sections',
 			'priority'    => 500,
 			'options'     => array(
 				esc_html__( 'Shop Section', 'llorix-one-lite' ),
