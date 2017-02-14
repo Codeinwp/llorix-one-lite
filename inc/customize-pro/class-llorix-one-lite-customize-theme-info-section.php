@@ -106,24 +106,24 @@ class Llorix_One_Lite_Customizer_Theme_Info_Section extends WP_Customize_Section
 				<ul class="themeisle-upsell-features">
 					<# for (option in data.options) { #>
 						<li>
-                            <span class="upsell-pro-label"></span>{{ data.options[option] }}
+							<span class="upsell-pro-label"></span>{{ data.options[option] }}
 						</li>
-                    <# } #>
+					<# } #>
 				</ul>
-            <# } #>
+			<# } #>
 
-            <# if ( data.button_text && data.button_url ) { #>
-                <a target="_blank" href="{{ data.button_url }}" class="button button-primary" target="_blank">{{ data.button_text }}</a>
-            <# } #>
+			<# if ( data.button_text && data.button_url ) { #>
+				<a target="_blank" href="{{ data.button_url }}" class="button button-primary" target="_blank">{{ data.button_text }}</a>
+			<# } #>
 
-            <# if ( data.explained_features.length > 0 ) { #>
-                <hr />
-                <ul class="themeisle-upsell-feature-list">
-                    <# for ( feature in data.explained_features ) { #>
-                        <li>* {{{ data.explained_features[feature] }}}</li>
-                        <# } #>
-                </ul>
-            <# } #>
+			<# if ( data.explained_features.length > 0 ) { #>
+				<hr />
+				<ul class="themeisle-upsell-feature-list">
+					<# for ( feature in data.explained_features ) { #>
+						<li>* {{{ data.explained_features[feature] }}}</li>
+						<# } #>
+				</ul>
+			<# } #>
 		</div>
 	<?php }
 }
