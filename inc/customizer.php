@@ -15,6 +15,8 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	require_once( 'class/llorix-one-lite-general-control.php' );
 	require_once( 'class/llorix-one-lite-text-control.php' );
 	require_once( 'class/llorix-one-lite-alpha-control.php' );
+	require_once( trailingslashit( get_template_directory() ) . 'inc/customizer-page-editor/customizer-page-editor.php' );
+
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -663,6 +665,45 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'priority'    => 1,
 	));
 
+	/* Frontpage content editor control */
+	$frontpage_id = get_option( 'page_on_front' );
+	$default = '';
+
+	if ( ! empty( $frontpage_id ) ) {
+		$content_post = get_post( $frontpage_id );
+		$default      = $content_post->post_content;
+		$default      = apply_filters( 'the_content', $default );
+		$default      = str_replace( ']]>', ']]&gt;', $default );
+	}
+
+		$wp_customize->add_setting( 'llorix_one_lite_page_editor', array(
+			'default'           => $default,
+			'sanitize_callback' => 'wp_kses_post',
+		) );
+
+		$wp_customize->add_control( new Llorix_One_Lite_Page_Editor( $wp_customize, 'llorix_one_lite_page_editor', array(
+			'label'           => __( 'Content', 'llorix-one-lite' ),
+			'section'         => 'llorix_one_lite_frontpage_content_section',
+			'priority'        => 10,
+			'active_callback' => 'llorix_one_lite_show_on_front',
+		) ) );
+
+		$default = '';
+		if ( has_post_thumbnail( $frontpage_id ) ) {
+			$default = get_the_post_thumbnail_url( $frontpage_id );
+		}
+		$wp_customize->add_setting( 'llorix_one_lite_feature_thumbnail', array(
+			'sanitize_callback' => 'esc_url',
+			'default'           => $default,
+		) );
+
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'llorix_one_lite_feature_thumbnail', array(
+			'label'           => esc_html__( 'Background', 'llorix-one-lite' ),
+			'section'         => 'llorix_one_lite_frontpage_content_section',
+			'priority'        => 15,
+			'active_callback' => 'llorix_one_lite_show_on_front',
+		) ) );
+
 	/* CONTACT INFO SECTION */
 
 	$wp_customize->add_section( 'llorix_one_lite_contact_section' , array(
@@ -809,9 +850,9 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Llorix_One_Lite_Control_Upsell_Theme_Info( $wp_customize, 'llorix_one_lite_theme_info_main_control', array(
-			'section'            => 'llorix_one_lite_theme_info_main_section',
-			'priority'           => 100,
-			'options'            => array(
+			'section'     => 'llorix_one_lite_theme_info_main_section',
+			'priority'    => 100,
+			'options'     => array(
 				esc_html__( 'Unlimited Color Options', 'llorix-one-lite' ),
 				esc_html__( 'Shop Section', 'llorix-one-lite' ),
 				esc_html__( 'Portfolio Section', 'llorix-one-lite' ),
@@ -820,8 +861,8 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 				esc_html__( 'Alternative Header Layout', 'llorix-one-lite' ),
 				esc_html__( 'Support', 'llorix-one-lite' ),
 			),
-			'button_url'         => esc_url( 'https://themeisle.com/plugins/llorix-one-plus/' ),
-			'button_text'        => esc_html__( 'View PRO version', 'llorix-one-lite' ),
+			'button_url'  => esc_url( 'https://themeisle.com/plugins/llorix-one-plus/' ),
+			'button_text' => esc_html__( 'View PRO version', 'llorix-one-lite' ),
 		) ) );
 
 		$wp_customize->add_setting( 'llorix_one_lite_theme_info_portfolio_control', array(
