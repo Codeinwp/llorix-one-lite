@@ -470,7 +470,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	));
 
 	$wp_customize->add_control( new Llorix_One_Lite_General_Repeater( $wp_customize, 'llorix_one_lite_logos_content', array(
-		'label'   => esc_html__( 'Add new social icon','llorix-one-lite' ),
+		'label'   => esc_html__( 'Add new logo','llorix-one-lite' ),
 		'section' => 'llorix_one_lite_logos_settings_section',
 		'priority' => 10,
 		'llorix_one_lite_image_control' => true,
