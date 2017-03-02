@@ -845,7 +845,31 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'llorix_one_lite_link_control' => true,
 	) ) );
 
-	/* Upsell Section */
+	/* Selective refresh */
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'llorix_one_lite_ribbon_title', array(
+			'selector'        => '.call-to-action h2',
+			'settings'        => 'llorix_one_lite_ribbon_title',
+			'render_callback' => function () {
+				return wp_kses_post( get_theme_mod( 'llorix_one_lite_ribbon_title' ) );
+			},
+		) );
+		$wp_customize->selective_refresh->add_partial( 'llorix_one_lite_our_story_text', array(
+			'selector'        => '.brief .brief-content-text',
+			'settings'        => 'llorix_one_lite_our_story_text',
+			'render_callback' => function () {
+				return wp_kses_post( get_theme_mod( 'llorix_one_lite_our_story_text' ) );
+			},
+		) );
+	}
+}
+add_action( 'customize_register', 'llorix_one_lite_customize_register' );
+
+/**
+ * Registed Upsells
+ */
+function llorix_one_lite_customize_upsells_register( $wp_customize ) {
+
 	if ( ! class_exists( 'Llorix_One_Plus' ) ) {
 
 		$wp_customize->add_section( 'llorix_one_lite_theme_info_main_section', array(
@@ -874,26 +898,8 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		) ) );
 
 	}
-
-	/* Selective refresh */
-	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'llorix_one_lite_ribbon_title', array(
-			'selector'        => '.call-to-action h2',
-			'settings'        => 'llorix_one_lite_ribbon_title',
-			'render_callback' => function () {
-				return wp_kses_post( get_theme_mod( 'llorix_one_lite_ribbon_title' ) );
-			},
-		) );
-		$wp_customize->selective_refresh->add_partial( 'llorix_one_lite_our_story_text', array(
-			'selector'        => '.brief .brief-content-text',
-			'settings'        => 'llorix_one_lite_our_story_text',
-			'render_callback' => function () {
-				return wp_kses_post( get_theme_mod( 'llorix_one_lite_our_story_text' ) );
-			},
-		) );
-	}
 }
-add_action( 'customize_register', 'llorix_one_lite_customize_register' );
+add_action( 'customize_register', 'llorix_one_lite_customize_upsells_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.

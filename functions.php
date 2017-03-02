@@ -157,13 +157,21 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		 */
 		add_theme_support( 'eventbrite' );
 
-		if ( is_customize_preview() && ! class_exists( 'Llorix_One_Plus' ) ) {
-			require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-customizer-theme-info-root.php' );
-			require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-customizer-theme-info-control.php' );
-		}
 	}
 endif; // llorix_one_lite_setup
 add_action( 'after_setup_theme', 'llorix_one_lite_setup' );
+
+/**
+ * Setup used for upsells
+ */
+function llorix_one_lite_upsells_setup() {
+	if ( is_customize_preview() && ! class_exists( 'Llorix_One_Plus' ) ) {
+		require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-customizer-theme-info-root.php' );
+		require_once( trailingslashit( get_template_directory() ) . 'inc/customize-pro/class-customizer-theme-info-control.php' );
+	}
+}
+
+add_action( 'after_setup_theme', 'llorix_one_lite_upsells_setup' );
 
 /**
  * Check if theme it's set to static front page
