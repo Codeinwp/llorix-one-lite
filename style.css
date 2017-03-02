@@ -1621,6 +1621,10 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 	width: 95%;
 }
 
+.brief .brief-content-text a.llorix-one-lite-default-links {
+	color: #313131;
+}
+
 .feature-list {
 	margin-top: 15px;
 }
