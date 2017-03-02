@@ -2198,6 +2198,10 @@ button.control_next.fade-btn {
 	line-height: 3.125rem;
 }
 
+.call-to-action h2 a {
+	color: #fff;
+}
+
 .modal-content {
 	padding: 10px 30px 30px 30px;
 }
