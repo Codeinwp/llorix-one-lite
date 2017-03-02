@@ -49,7 +49,7 @@ if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontp
 					$llorix_fp_title = get_the_title( $llorix_frontpage_id );
 				}
 				if ( ! empty( $llorix_fp_title ) ) {
-					echo '<h2 class="text-left '. esc_attr( $title_class ) .'">' . $llorix_fp_title . '</h2>';
+					echo '<h2 class="text-left ' . esc_attr( $title_class ) . '">' . $llorix_fp_title . '</h2>';
 					echo '<div class="colored-line-left"></div>';
 				}
 

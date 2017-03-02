@@ -17,7 +17,6 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	require_once( 'class/llorix-one-lite-alpha-control.php' );
 	require_once( trailingslashit( get_template_directory() ) . 'inc/customizer-page-editor/customizer-page-editor.php' );
 
-
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -690,7 +689,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 		$default = '';
 		if ( has_post_thumbnail( $frontpage_id ) ) {
-			$default = get_the_post_thumbnail_url( $frontpage_id );
+		$default = get_the_post_thumbnail_url( $frontpage_id );
 		}
 		$wp_customize->add_setting( 'llorix_one_lite_feature_thumbnail', array(
 			'sanitize_callback' => 'esc_url',
