@@ -813,7 +813,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	}
 	/* Copyright */
 	$wp_customize->add_setting( 'llorix_one_lite_copyright', array(
-		'default' => 'Themeisle',
+		'default' => apply_filters( 'llorix_one_lite_copyright_default_filter','Themeisle' ),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
 		'transport' => 'postMessage',
 	));

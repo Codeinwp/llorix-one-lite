@@ -60,7 +60,7 @@
 					global $wp_customize;
 
 					/* COPYRIGHT */
-					$llorix_one_lite_copyright = get_theme_mod( 'llorix_one_lite_copyright','Themeisle' );
+					$llorix_one_lite_copyright = get_theme_mod( 'llorix_one_lite_copyright',apply_filters( 'llorix_one_lite_copyright_default_filter','Themeisle' ) );
 
 					if ( ! empty( $llorix_one_lite_copyright ) ) {
 					echo '<span class="llorix_one_lite_copyright_content">' . esc_attr( $llorix_one_lite_copyright ) . '</span>';
