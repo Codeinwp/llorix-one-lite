@@ -850,20 +850,36 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		$wp_customize->selective_refresh->add_partial( 'llorix_one_lite_ribbon_title', array(
 			'selector'        => '.call-to-action h2',
 			'settings'        => 'llorix_one_lite_ribbon_title',
-			'render_callback' => function () {
-				return wp_kses_post( get_theme_mod( 'llorix_one_lite_ribbon_title' ) );
-			},
+			'render_callback' => 'llorix_one_lite_ribbon_title_render_callback',
 		) );
+
+
 		$wp_customize->selective_refresh->add_partial( 'llorix_one_lite_our_story_text', array(
 			'selector'        => '.brief .brief-content-text',
 			'settings'        => 'llorix_one_lite_our_story_text',
-			'render_callback' => function () {
-				return wp_kses_post( get_theme_mod( 'llorix_one_lite_our_story_text' ) );
-			},
+			'render_callback' => 'llorix_one_lite_our_story_text_render_callback',
 		) );
 	}
 }
 add_action( 'customize_register', 'llorix_one_lite_customize_register' );
+
+/**
+ * Render callback for llorix_one_lite_ribbon_title
+ *
+ * @return mixed
+ */
+function llorix_one_lite_ribbon_title_render_callback() {
+    return wp_kses_post( get_theme_mod( 'llorix_one_lite_ribbon_title' ) );
+}
+
+/**
+ * Render callback for llorix_one_lite_our_story_text
+ *
+ * @return mixed
+ */
+function llorix_one_lite_our_story_text_render_callback() {
+    return wp_kses_post( get_theme_mod( 'llorix_one_lite_our_story_text' ) );
+}
 
 /**
  * Registed Upsells
