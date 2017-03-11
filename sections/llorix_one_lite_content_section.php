@@ -66,4 +66,4 @@ if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontp
 		</div>
 	</section>
 	<?php
-}
+}// End if().

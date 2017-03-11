@@ -90,4 +90,4 @@ if ( (isset( $llorix_one_lite_our_story_show ) && $llorix_one_lite_our_story_sho
 		</div>
 	</section><!-- .brief-design-one -->
 	<?php
-}
+}// End if().
