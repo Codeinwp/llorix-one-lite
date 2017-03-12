@@ -1,4 +1,11 @@
 
+### 0.2.6 - 12/03/2017
+**Changes:** 
+- Added a new Full width with no title page template.
+- Added customize controls for Frontpage content section
+- Added sane defaults for frontpage sections
+- Added filters for footer copyright and powered by content
+
 ### 0.2.5 - 14/02/2017
 **Changes:** 
 - Update Customize upsells layout
