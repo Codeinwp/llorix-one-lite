@@ -69,7 +69,7 @@ get_header(); ?>
 						<?php endif;
 						// Return $post to its rightful owner.
 						wp_reset_postdata();
-					}
+					}// End if().
 				?>
 
 			</main><!-- #main -->

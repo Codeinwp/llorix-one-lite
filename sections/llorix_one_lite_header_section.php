@@ -13,7 +13,13 @@
 
 	$llorix_one_lite_header_logo = get_theme_mod( 'llorix_one_lite_header_logo', apply_filters( 'llorix_one_lite_header_logo_filter',llorix_one_lite_get_file( '/images/logo-2.png' ) ) );
 	$llorix_one_lite_header_title = get_theme_mod( 'llorix_one_lite_header_title', apply_filters( 'llorix_one_lite_header_title_filter',esc_html__( 'Simple, Reliable and Awesome.','llorix-one-lite' ) ) );
-	$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle', apply_filters( 'llorix_one_lite_header_subtitle_filter',esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one-lite' ) ) );
+
+	if ( current_user_can( 'edit_theme_options' ) ) {
+	$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle', sprintf( __( 'Change this text in %s','llorix-one-lite' ), sprintf( '<a href="%1$s" class="llorix-one-lite-default-links">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=llorix_one_lite_header_subtitle' ) ), __( 'Big title section','llorix-one-lite' ) ) ) );
+	} else {
+	$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle' );
+	}
+
 	$llorix_one_lite_header_button_text = get_theme_mod( 'llorix_one_lite_header_button_text',esc_html__( 'GET STARTED','llorix-one-lite' ) );
 	$llorix_one_lite_header_button_link = get_theme_mod( 'llorix_one_lite_header_button_link','#' );
 	$llorix_one_lite_enable_move = get_theme_mod( 'llorix_one_lite_enable_move' );
@@ -81,7 +87,7 @@ if ( ! empty( $llorix_one_lite_header_logo ) || ! empty( $llorix_one_lite_header
 
 							<?php
 							if ( ! empty( $llorix_one_lite_header_subtitle ) ) {
-								echo '<h5 id="intro_section_text_2" class="white-text">' . esc_attr( $llorix_one_lite_header_subtitle ) . '</h5>';
+								echo '<h5 id="intro_section_text_2" class="white-text">' . wp_kses_post( $llorix_one_lite_header_subtitle ) . '</h5>';
 								} elseif ( isset( $wp_customize )   ) {
 								echo '<h5 id="intro_section_text_2" class="white-text llorix_one_lite_only_customizer"></h5>';
 								}
@@ -108,7 +114,7 @@ if ( ! empty( $llorix_one_lite_header_logo ) || ! empty( $llorix_one_lite_header
 						</div>
 						<!-- /END HEADNING AND BUTTONS -->
 					<?php
-					}
+					}// End if().
 ?>
 </div>
 </div>
@@ -116,5 +122,5 @@ if ( ! empty( $llorix_one_lite_header_logo ) || ! empty( $llorix_one_lite_header
 </div>
 
 <?php
-	}
+	}// End if().
 ?>

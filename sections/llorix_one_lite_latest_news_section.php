@@ -130,8 +130,8 @@
 					</div>
 				</section>
 		<?php
-		}
-		}
+		}// End if().
+		}// End if().
 	/* If section is disabled, but we are in Customize, display section with class llorix_one_lite_only_customizer */
 	} elseif ( isset( $wp_customize ) ) {
 
@@ -243,7 +243,7 @@
 					</div>
 				</section>
 		<?php
-		}
-		}
-}
+		}// End if().
+		}// End if().
+}// End if().
 ?>

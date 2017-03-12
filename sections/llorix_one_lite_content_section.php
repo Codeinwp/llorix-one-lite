@@ -15,12 +15,23 @@ $llorix_one_lite_frontpage_content_show = get_theme_mod( 'llorix_one_lite_frontp
 
 if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontpage_content_show != 1 ) {
 	$class_to_add = '';
-
-	if ( has_post_thumbnail() ) {
-		$class_to_add                  = 'overlay-layer-wrap white-text';
-		$llorix_one_frontpage_featured = get_the_post_thumbnail_url();
+	$title_class  = '';
+	if ( is_customize_preview() ) {
+		$llorix_one_frontpage_featured = get_theme_mod( 'llorix_one_lite_feature_thumbnail' );
+		if ( ! empty( $llorix_one_frontpage_featured ) ) {
+			$class_to_add = 'overlay-layer-wrap white-text';
+		} else {
+			$class_to_add = 'brief';
+			$title_class  = 'dark-text';
+		}
 	} else {
-		$class_to_add = 'brief';
+		if ( has_post_thumbnail() ) {
+			$class_to_add                  = 'overlay-layer-wrap white-text';
+			$llorix_one_frontpage_featured = get_the_post_thumbnail_url();
+		} else {
+			$class_to_add = 'brief';
+			$title_class  = 'dark-text';
+		}
 	}
 
 	?>
@@ -38,7 +49,7 @@ if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontp
 					$llorix_fp_title = get_the_title( $llorix_frontpage_id );
 				}
 				if ( ! empty( $llorix_fp_title ) ) {
-					echo '<h2 class="text-left dark-text">' . $llorix_fp_title . '</h2>';
+					echo '<h2 class="text-left ' . esc_attr( $title_class ) . '">' . $llorix_fp_title . '</h2>';
 					echo '<div class="colored-line-left"></div>';
 				}
 
@@ -55,4 +66,4 @@ if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontp
 		</div>
 	</section>
 	<?php
-}
+}// End if().

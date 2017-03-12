@@ -187,7 +187,7 @@ endif; ?>
 					</div>
 				</div>
 				<?php
-			}
+			}// End if().
 			?>
 
 			<!-- CONTAINER -->

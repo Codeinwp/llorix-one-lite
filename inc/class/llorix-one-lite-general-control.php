@@ -343,7 +343,7 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 
 				<?php
 				$it++;
-			}
+			}// End foreach().
 		} else { ?>
 			<div class="llorix_one_lite_general_control_repeater_container">
 				<div
@@ -404,6 +404,6 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 				</div>
 			</div>
 			<?php
-		}
+		}// End if().
 	}
 }
