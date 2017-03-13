@@ -682,3 +682,39 @@ function llorix_one_lite_filter_front_page_template( $template ) {
 	}
 }
 add_filter( 'frontpage_template', 'llorix_one_lite_filter_front_page_template' );
+
+
+/**
+ * Add starter content for fresh sites
+ *
+ * @since 0.2.5
+ */
+function llorix_one_lite_starter_content() {
+	/*
+	 * Starter Content Support
+	 */
+	add_theme_support( 'starter-content', array(
+		// Twenty Seventeen
+		'posts' => array(
+			'home',
+			'blog',
+		),
+
+		'nav_menus' => array(
+			'primary' => array(
+				'name'  => __( 'Primary Menu', 'llorix-one-lite' ),
+				'items' => array(
+					'page_home',
+					'page_blog',
+				),
+			),
+		),
+
+		'options' => array(
+			'show_on_front'  => 'page',
+			'page_on_front'  => '{{home}}',
+			'page_for_posts' => '{{blog}}',
+		),
+	) );
+}
+add_action( 'after_setup_theme', 'llorix_one_lite_starter_content' );
