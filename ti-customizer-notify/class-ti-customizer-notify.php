@@ -132,10 +132,10 @@ class Ti_Customizer_Notify {
 		require get_template_directory() . '/ti-customizer-notify/ti-notify-system-checks.php';
 
 		// Register the section
-		add_action( 'customize_register', array( $this,'ti_customizer_notify_customize_register') );
+		add_action( 'customize_register', array( $this, 'ti_customizer_notify_customize_register' ) );
 
 		// Enqueue scripts and styles
-		add_action( 'customize_controls_enqueue_scripts', array( $this,'ti_customizer_notify_scripts_for_customizer'), 0 );
+		add_action( 'customize_controls_enqueue_scripts', array( $this, 'ti_customizer_notify_scripts_for_customizer' ), 0 );
 
 		/* ajax callback for dismissable recommended actions */
 		add_action( 'wp_ajax_ti_customizer_notify_dismiss_recommended_action', array( $this, 'ti_customizer_notify_dismiss_recommended_action_callback' ) );
@@ -188,7 +188,7 @@ class Ti_Customizer_Notify {
 					'title'    => $this->recommended_actions_title,
 					'plugin_text'	=> $this->recommended_plugins_title,
 					'dismiss_button' => $this->dismiss_button,
-					'priority' => 0
+					'priority' => 0,
 				)
 			)
 		);
