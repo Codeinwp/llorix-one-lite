@@ -157,6 +157,24 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		 */
 		add_theme_support( 'eventbrite' );
 
+/*
+ * Notifications in customize
+ */
+		require get_template_directory() . '/ti-customizer-notify/class-ti-customizer-notify.php';
+
+		$config_customizer = array(
+			'recommended_plugins' => array(
+				'llorix-one-companion' 		=> array( 'recommended' => true, 'description' => sprintf( esc_html__( 'If you want to take full advantage of the options this theme has to offer, please install and activate %s','llorix-one-lite' ), sprintf( '<strong>%s</strong>', 'Llorix One Companion' ) ) ),
+			),
+			'recommended_actions' => array(),
+			'recommended_actions_title' => '',
+			'recommended_plugins_title' => esc_html__( 'Recommended Plugins', 'llorix-one-lite' ),
+			'install_button_label' => esc_html__( 'Install', 'llorix-one-lite' ),
+			'activate_button_label' => esc_html__( 'Activate', 'llorix-one-lite' ),
+			'deactivate_button_label' => esc_html__( 'Deactivate', 'llorix-one-lite' ),
+		);
+		Ti_Customizer_Notify::init( $config_customizer );
+
 	}
 endif; // llorix_one_lite_setup
 add_action( 'after_setup_theme', 'llorix_one_lite_setup' );
@@ -682,3 +700,39 @@ function llorix_one_lite_filter_front_page_template( $template ) {
 	}
 }
 add_filter( 'frontpage_template', 'llorix_one_lite_filter_front_page_template' );
+
+
+/**
+ * Add starter content for fresh sites
+ *
+ * @since 0.2.5
+ */
+function llorix_one_lite_starter_content() {
+	/*
+	 * Starter Content Support
+	 */
+	add_theme_support( 'starter-content', array(
+		// Twenty Seventeen
+		'posts' => array(
+			'home',
+			'blog',
+		),
+
+		'nav_menus' => array(
+			'primary' => array(
+				'name'  => __( 'Primary Menu', 'llorix-one-lite' ),
+				'items' => array(
+					'page_home',
+					'page_blog',
+				),
+			),
+		),
+
+		'options' => array(
+			'show_on_front'  => 'page',
+			'page_on_front'  => '{{home}}',
+			'page_for_posts' => '{{blog}}',
+		),
+	) );
+}
+add_action( 'after_setup_theme', 'llorix_one_lite_starter_content' );
