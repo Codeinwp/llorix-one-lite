@@ -1,4 +1,9 @@
 
+### 0.2.7 - 14/03/2017
+**Changes:** 
+- Added starter content for new users
+- Added a notification in Customize to suggest the Llorix One Companion plugin
+
 ### 0.2.6 - 12/03/2017
 **Changes:** 
 - Added a new Full width with no title page template.
