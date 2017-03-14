@@ -910,7 +910,7 @@ function llorix_one_lite_customize_upsells_register( $wp_customize ) {
 
 		$wp_customize->add_section( 'llorix_one_lite_theme_info_main_section', array(
 			'title'    => __( 'View PRO version', 'llorix-one-lite' ),
-			'priority' => 0,
+			'priority' => 1,
 		) );
 
 		$wp_customize->add_setting( 'llorix_one_lite_theme_info_main_control', array(
