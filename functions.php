@@ -157,7 +157,7 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		 */
 		add_theme_support( 'eventbrite' );
 
-		/*
+/*
  * Notifications in customize
  */
 		require get_template_directory() . '/ti-customizer-notify/class-ti-customizer-notify.php';
@@ -167,9 +167,8 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 				'llorix-one-companion' 		=> array( 'recommended' => true, 'description' => sprintf( esc_html__( 'If you want to take full advantage of the options this theme has to offer, please install and activate %s','llorix-one-lite' ), sprintf( '<strong>%s</strong>', 'Llorix One Companion' ) ) ),
 			),
 			'recommended_actions' => array(),
-			'recommended_actions_title' => esc_html__( 'Recommended Actions', 'llorix-one-lite' ),
+			'recommended_actions_title' => '',
 			'recommended_plugins_title' => esc_html__( 'Recommended Plugins', 'llorix-one-lite' ),
-			'dismiss_button' => esc_html__( 'Dismiss', 'llorix-one-lite' ),
 			'install_button_label' => esc_html__( 'Install', 'llorix-one-lite' ),
 			'activate_button_label' => esc_html__( 'Activate', 'llorix-one-lite' ),
 			'deactivate_button_label' => esc_html__( 'Deactivate', 'llorix-one-lite' ),
