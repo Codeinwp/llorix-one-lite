@@ -57,23 +57,22 @@ endif; ?>
 
 	<!-- COLOR OVER IMAGE -->
 	<?php
+
+	$fixedheader = 'sticky-navigation-open';
+
 	$llorix_one_lite_sticky_header = get_theme_mod( 'llorix_one_lite_sticky_header','llorix-one-lite' );
-	if ( isset( $llorix_one_lite_sticky_header ) && ($llorix_one_lite_sticky_header != 1) ) {
-		$fixedheader = 'sticky-navigation-open';
-	} else {
-		if ( is_front_page() ) {
-			$fixedheader = 'sticky-navigation-open';
-		} else {
+
+	$llorix_one_lite_keep_old_fp_template = get_theme_mod( 'llorix_one_lite_keep_old_fp_template' );
+
+	/**
+	 * Header toggle option should only be available for the custom frontpage
+	 */
+	if ( is_front_page() && ( 'page' == get_option( 'show_on_front' ) ) ) {
+		if ( isset( $llorix_one_lite_sticky_header ) && ( $llorix_one_lite_sticky_header == 1 ) && ! $llorix_one_lite_keep_old_fp_template ) {
 			$fixedheader = '';
-			if ( 'posts' != get_option( 'show_on_front' ) ) {
-				if ( isset( $llorix_one_lite_sticky_header ) && ($llorix_one_lite_sticky_header != 1) ) {
-					$fixedheader = 'sticky-navigation-open';
-				} else {
-					$fixedheader = '';
-				}
-			}
 		}
 	}
+
 	?>
 	<div class="overlay-layer-nav <?php if ( ! empty( $fixedheader ) ) {echo esc_attr( $fixedheader );} ?>">
 
