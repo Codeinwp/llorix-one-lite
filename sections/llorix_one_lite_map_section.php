@@ -30,8 +30,7 @@
 		</div><!-- .container-fluid -->
 	<?php
 	}
-	/* If section is disabled, but we are in Customize, display section with class llorix_one_lite_only_customizer */
-	} elseif ( isset( $wp_customize ) ) {
+} elseif ( isset( $wp_customize ) ) {
 	if ( ! empty( $llorix_one_lite_frontpage_map_shortcode ) ) {
 	?>
 		<div id="container-fluid" class="contactinfo-map llorix_one_lite_only_customizer">

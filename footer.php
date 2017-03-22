@@ -64,7 +64,7 @@
 
 					if ( ! empty( $llorix_one_lite_copyright ) ) {
 					echo '<span class="llorix_one_lite_copyright_content">' . esc_attr( $llorix_one_lite_copyright ) . '</span>';
-					} elseif ( isset( $wp_customize )   ) {
+					} elseif ( isset( $wp_customize ) ) {
 					echo '<span class="llorix_one_lite_copyright_content llorix_one_lite_only_customizer"></span>';
 					}
 

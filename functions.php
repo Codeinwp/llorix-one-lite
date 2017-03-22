@@ -164,7 +164,10 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 
 		$config_customizer = array(
 			'recommended_plugins' => array(
-				'llorix-one-companion' 		=> array( 'recommended' => true, 'description' => sprintf( esc_html__( 'If you want to take full advantage of the options this theme has to offer, please install and activate %s','llorix-one-lite' ), sprintf( '<strong>%s</strong>', 'Llorix One Companion' ) ) ),
+				'llorix-one-companion' 		=> array(
+					'recommended' => true,
+					'description' => /* translators: %1$s is the name for the theme */ sprintf( esc_html__( 'If you want to take full advantage of the options this theme has to offer, please install and activate %s','llorix-one-lite' ), sprintf( '<strong>%s</strong>', 'Llorix One Companion' ) ),
+				),
 			),
 			'recommended_actions' => array(),
 			'recommended_actions_title' => '',
@@ -226,7 +229,7 @@ function llorix_one_lite_widgets_init() {
 
 	register_sidebars( 4,
 		array(
-			'name'          => esc_html__( 'Footer area %d', 'llorix-one-lite' ),
+			'name'          => /* translators: %d is the number of footer sidebars registered */ esc_html__( 'Footer area %d', 'llorix-one-lite' ),
 			'id'            => 'footer-area',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
@@ -247,7 +250,10 @@ add_action( 'widgets_init', 'llorix_one_lite_widgets_init' );
  */
 function llorix_one_lite_wp_page_menu() {
 	echo '<ul class="nav navbar-nav navbar-right main-navigation small-text no-menu">';
-	wp_list_pages( array( 'title_li' => '', 'depth' => 1 ) );
+	wp_list_pages( array(
+		'title_li' => '',
+		'depth' => 1,
+	) );
 	echo '</ul>';
 }
 
@@ -394,26 +400,6 @@ function llorix_one_lite_register_required_plugins() {
 		'dismiss_msg'  => '',
 		'is_automatic' => false,
 		'message'      => '',
-		'strings'      => array(
-			'page_title'                      => esc_html__( 'Install Required Plugins', 'llorix-one-lite' ),
-			'menu_title'                      => esc_html__( 'Install Plugins', 'llorix-one-lite' ),
-			'installing'                      => esc_html__( 'Installing Plugin: %s', 'llorix-one-lite' ),
-			'oops'                            => esc_html__( 'Something went wrong with the plugin API.', 'llorix-one-lite' ),
-			'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'llorix-one-lite' ),
-			'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'llorix-one-lite' ),
-			'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'llorix-one-lite' ),
-			'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'llorix-one-lite' ),
-			'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'llorix-one-lite' ),
-			'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'llorix-one-lite' ),
-			'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'llorix-one-lite' ),
-			'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'llorix-one-lite' ),
-			'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'llorix-one-lite' ),
-			'activate_link'                   => _n_noop( 'Begin activating plugin', 'Begin activating plugins', 'llorix-one-lite' ),
-			'return'                          => esc_html__( 'Return to Required Plugins Installer', 'llorix-one-lite' ),
-			'plugin_activated'                => esc_html__( 'Plugin activated successfully.', 'llorix-one-lite' ),
-			'complete'                        => esc_html__( 'All plugins installed and activated successfully. %s', 'llorix-one-lite' ),
-			'nag_type'                        => 'updated',
-		),
 	);
 
 	tgmpa( $plugins, $config );
@@ -541,7 +527,7 @@ function llorix_one_lite_comment( $comment, $args, $depth ) {
 				<footer>
 					<div itemscope itemprop="creator" itemtype="http://schema.org/Person" class="comment-author vcard">
 						<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
-						<?php printf( __( '<span itemprop="name">%s </span><span class="says">says:</span>', 'llorix-one-lite' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link() ) ); ?>
+						<?php /* translators: %s is the author link */ printf( __( '<span itemprop="name">%s </span><span class="says">says:</span>', 'llorix-one-lite' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link() ) ); ?>
 					</div><!-- .comment-author .vcard -->
 					<?php if ( $comment->comment_approved == '0' ) : ?>
 						<em><?php _e( 'Your comment is awaiting moderation.', 'llorix-one-lite' ); ?></em>
@@ -550,7 +536,10 @@ function llorix_one_lite_comment( $comment, $args, $depth ) {
 					<div class="comment-metadata">
 						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>" class="comment-permalink" itemprop="url">
 							<time class="comment-published" datetime="<?php comment_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php comment_time( _x( 'l, F j, Y, g:i a', 'comment time format', 'llorix-one-lite' ) ); ?>" itemprop="commentTime">
-								<?php printf( __( '%1$s at %2$s', 'llorix-one-lite' ), get_comment_date(), get_comment_time() ); ?>
+								<?php
+								/* translators: %1$s is the date of the comment and %2$s is the comment title */
+								printf( __( '%1$s at %2$s', 'llorix-one-lite' ), get_comment_date(), get_comment_time() );
+								?>
 							</time>
 						</a>
 						<?php edit_comment_link( __( '(Edit)', 'llorix-one-lite' ), ' ' ); ?>
@@ -560,7 +549,10 @@ function llorix_one_lite_comment( $comment, $args, $depth ) {
 				<div class="comment-content" itemprop="commentText"><?php comment_text(); ?></div>
 
 				<div class="reply">
-					<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+					<?php comment_reply_link( array_merge( $args, array(
+	'depth' => $depth,
+	'max_depth' => $args['max_depth'],
+) ) ); ?>
 				</div><!-- .reply -->
 			</article><!-- #comment-## -->
 			<?php
@@ -659,7 +651,8 @@ function llorix_one_lite_social_icons( $social_icons, $is_footer ) {
 						<li>
 							<a href="<?php echo esc_url( $link ); ?>">
 								<span class="screen-reader-text"><?php echo esc_attr( $icon ) ?></span>
-								<i class="fa <?php if ( $is_footer === true ) { echo 'llorix-one-lite-footer-icons '; } echo esc_attr( $icon ); ?> transparent-text-dark" aria-hidden="true"></i>
+								<i class="fa <?php if ( $is_footer === true ) { echo 'llorix-one-lite-footer-icons ';
+} echo esc_attr( $icon ); ?> transparent-text-dark" aria-hidden="true"></i>
 							</a>
 						</li>
 						<?php

@@ -18,6 +18,10 @@
 
         <exclude name="WordPress.PHP.YodaConditions.NotYoda" />
         <exclude name="WordPress.Files.FileName.UnderscoresNotAllowed" />
+
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName" />
+        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
+
     </rule>
     <rule ref="WordPress-Docs">
 

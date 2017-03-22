@@ -31,11 +31,14 @@
 			?>
 			<div class="llorix-one-lite-action-required-box">
 				<span class="dashicons dashicons-no-alt llorix-one-lite-dismiss-required-action" id="<?php echo $llorix_one_required_action_value['id']; ?>"></span>
-				<h4><?php echo $llorix_one_required_action_key + 1; ?>. <?php if ( ! empty( $llorix_one_required_action_value['title'] ) ) :  echo $llorix_one_required_action_value['title']; endif; ?></h4>
-				<p><?php if ( ! empty( $llorix_one_required_action_value['description'] ) ) :  echo $llorix_one_required_action_value['description']; endif; ?></p>
+				<h4><?php echo $llorix_one_required_action_key + 1; ?>. <?php if ( ! empty( $llorix_one_required_action_value['title'] ) ) :  echo $llorix_one_required_action_value['title'];
+endif; ?></h4>
+				<p><?php if ( ! empty( $llorix_one_required_action_value['description'] ) ) :  echo $llorix_one_required_action_value['description'];
+endif; ?></p>
 				<?php
 					if ( ! empty( $llorix_one_required_action_value['plugin_slug'] ) ) :
-					?><p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $llorix_one_required_action_value['plugin_slug'] ), 'install-plugin_' . $llorix_one_required_action_value['plugin_slug'] ) ); ?>" class="button button-primary"><?php if ( ! empty( $llorix_one_required_action_value['title'] ) ) :  echo $llorix_one_required_action_value['title']; endif; ?></a></p><?php
+					?><p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $llorix_one_required_action_value['plugin_slug'] ), 'install-plugin_' . $llorix_one_required_action_value['plugin_slug'] ) ); ?>" class="button button-primary"><?php if ( ! empty( $llorix_one_required_action_value['title'] ) ) :  echo $llorix_one_required_action_value['title'];
+endif; ?></a></p><?php
 					endif;
 				?>
 

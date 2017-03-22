@@ -16,7 +16,8 @@
 	<?php wp_head(); ?>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" <?php body_class(); ?> dir="<?php if ( is_rtl() ) { echo 'rtl'; } else { echo 'ltr';} ?>">
+<body itemscope itemtype="http://schema.org/WebPage" <?php body_class(); ?> dir="<?php if ( is_rtl() ) { echo 'rtl';
+} else { echo 'ltr';} ?>">
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'llorix-one-lite' ); ?></a>
 <!-- =========================
 	PRE LOADER
@@ -57,25 +58,24 @@ endif; ?>
 
 	<!-- COLOR OVER IMAGE -->
 	<?php
+
+	$fixedheader = 'sticky-navigation-open';
+
 	$llorix_one_lite_sticky_header = get_theme_mod( 'llorix_one_lite_sticky_header','llorix-one-lite' );
-	if ( isset( $llorix_one_lite_sticky_header ) && ($llorix_one_lite_sticky_header != 1) ) {
-		$fixedheader = 'sticky-navigation-open';
-	} else {
-		if ( is_front_page() ) {
-			$fixedheader = 'sticky-navigation-open';
-		} else {
+
+	$llorix_one_lite_keep_old_fp_template = get_theme_mod( 'llorix_one_lite_keep_old_fp_template' );
+
+	/**
+	 * Header toggle option should only be available for the custom frontpage
+	 */
+	if ( is_front_page() && ( 'page' == get_option( 'show_on_front' ) ) ) {
+		if ( isset( $llorix_one_lite_sticky_header ) && ( $llorix_one_lite_sticky_header == 1 ) && ! $llorix_one_lite_keep_old_fp_template ) {
 			$fixedheader = '';
-			if ( 'posts' != get_option( 'show_on_front' ) ) {
-				if ( isset( $llorix_one_lite_sticky_header ) && ($llorix_one_lite_sticky_header != 1) ) {
-					$fixedheader = 'sticky-navigation-open';
-				} else {
-					$fixedheader = '';
-				}
-			}
 		}
 	}
+
 	?>
-	<div class="overlay-layer-nav <?php if ( ! empty( $fixedheader ) ) {echo esc_attr( $fixedheader );} ?>">
+	<div class="overlay-layer-nav <?php if ( ! empty( $fixedheader ) ) { echo esc_attr( $fixedheader ); } ?>">
 
 		<!-- STICKY NAVIGATION -->
 		<div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation appear-on-scroll">
@@ -157,9 +157,21 @@ endif; ?>
 							/* SOCIAL ICONS */
 							$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_very_top_social_icons',json_encode(
 								array(
-									array( 'icon_value' => 'fa-facebook' , 'link' => '#', 'id' => 'llorix_one_lite_56d069ad8cb6b' ),
-									array( 'icon_value' => 'fa-twitter' , 'link' => '#', 'id' => 'llorix_one_lite_56d069b48cb6c' ),
-									array( 'icon_value' => 'fa-google-plus-square' , 'link' => '#', 'id' => 'llorix_one_lite_56d069b58cb6d' ),
+									array(
+										'icon_value' => 'fa-facebook',
+										'link' => '#',
+										'id' => 'llorix_one_lite_56d069ad8cb6b',
+									),
+									array(
+										'icon_value' => 'fa-twitter',
+										'link' => '#',
+										'id' => 'llorix_one_lite_56d069b48cb6c',
+									),
+									array(
+										'icon_value' => 'fa-google-plus-square',
+										'link' => '#',
+										'id' => 'llorix_one_lite_56d069b58cb6d',
+									),
 								)
 							));
 

@@ -66,7 +66,7 @@ add_filter( 'pre_set_theme_mod_llorix_one_lite_feature_thumbnail', 'llorix_one_l
  * @param int $post_id Page id.
  */
 function llorix_one_lite_sync_control_from_page( $post_id, $ajax_call = false ) {
-	if ( ! wp_is_post_revision( $post_id )  ) {
+	if ( ! wp_is_post_revision( $post_id ) ) {
 		$return_value = array();
 		remove_action( 'save_post', 'llorix_one_lite_sync_control_from_thumbnail' );
 

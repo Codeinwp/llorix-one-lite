@@ -260,7 +260,14 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 					</div>
 					<div class="llorix-one-lite-box-content-hidden">
 						<?php
-						$choice = $image_url = $icon_value = $title = $subtitle = $text = $link = $shortcode = '';
+						$choice = '';
+						$image_url = '';
+						$icon_value = '';
+						$title = '';
+						$subtitle = '';
+						$text = '';
+						$link = '';
+						$shortcode = '';
 
 						if ( ! empty( $icon->choice ) ) {
 							$choice = $icon->choice;

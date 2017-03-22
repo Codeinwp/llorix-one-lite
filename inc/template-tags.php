@@ -54,12 +54,12 @@ function llorix_one_lite_posted_on() {
 		esc_html( get_the_modified_date() )
 			);
 
-			$posted_on = sprintf(
+			$posted_on = sprintf( /* translators: %s is the date */
 			_x( 'Posted on %s', 'post date', 'llorix-one-lite' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 			);
 
-			$byline = sprintf(
+			$byline = sprintf( /* translators: %s is the post author */
 			_x( 'by %s', 'post author', 'llorix-one-lite' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 			);
@@ -79,12 +79,14 @@ function llorix_one_lite_entry_footer() {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'llorix-one-lite' ) );
 			if ( $categories_list && llorix_one_lite_categorized_blog() ) {
+				/* translators: %1$s is the categories list */
 				printf( '<span class="cat-links"><i class="fa fa-folder-open" aria-hidden="true"></i>' . esc_html__( 'Posted in %1$s', 'llorix-one-lite' ) . '</span>', $categories_list );
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'llorix-one-lite' ) );
 			if ( $tags_list ) {
+				/* translators: %1$s is the tags list */
 				printf( '<span class="tags-links"><i class="fa fa-tags" aria-hidden="true"></i>' . esc_html__( 'Tagged %1$s', 'llorix-one-lite' ) . '</span>', $tags_list );
 			}
 			}
@@ -105,7 +107,8 @@ endif;
  * @return bool
  */
 function llorix_one_lite_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'llorix_one_lite_categories' ) ) ) {
+	$all_the_cool_cats = get_transient( 'llorix_one_lite_categories' );
+	if ( false === $all_the_cool_cats ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
