@@ -1,4 +1,9 @@
 
+### 0.2.8 - 22/03/2017
+**Changes:** 
+- Fixed issue with Header visibility option not working just for frontpage
+- Fixed travis issues
+
 ### 0.2.7 - 14/03/2017
 **Changes:** 
 - Added starter content for new users
