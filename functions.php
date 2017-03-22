@@ -536,7 +536,10 @@ function llorix_one_lite_comment( $comment, $args, $depth ) {
 					<div class="comment-metadata">
 						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>" class="comment-permalink" itemprop="url">
 							<time class="comment-published" datetime="<?php comment_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php comment_time( _x( 'l, F j, Y, g:i a', 'comment time format', 'llorix-one-lite' ) ); ?>" itemprop="commentTime">
-								<?php/* translators: %1$s is the date of the comment and %2$s is the comment title */  printf( __( '%1$s at %2$s', 'llorix-one-lite' ), get_comment_date(), get_comment_time() ); ?>
+								<?php
+								/* translators: %1$s is the date of the comment and %2$s is the comment title */
+								printf( __( '%1$s at %2$s', 'llorix-one-lite' ), get_comment_date(), get_comment_time() );
+								?>
 							</time>
 						</a>
 						<?php edit_comment_link( __( '(Edit)', 'llorix-one-lite' ), ' ' ); ?>
