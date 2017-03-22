@@ -81,7 +81,7 @@
 	<div class="entry-content">
 		<?php
 			$ismore = strpos( $post->post_content, '<!--more-->' );
-			if ( $ismore ) : the_content( sprintf( esc_html__( 'Read more %s ...','llorix-one-lite' ), '<span class="screen-reader-text">' . esc_html__( 'about ', 'llorix-one-lite' ) . get_the_title() . '</span>' ) );
+			if ( $ismore ) : the_content( /* translators: %s is the post title */ sprintf( esc_html__( 'Read more %s ...','llorix-one-lite' ), '<span class="screen-reader-text">' . esc_html__( 'about ', 'llorix-one-lite' ) . get_the_title() . '</span>' ) );
 			else : the_excerpt();
 			endif;
 

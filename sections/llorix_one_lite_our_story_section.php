@@ -15,6 +15,7 @@ $llorix_one_lite_our_story_image = get_theme_mod( 'llorix_one_lite_our_story_ima
 $llorix_one_lite_our_story_title = get_theme_mod( 'llorix_one_lite_our_story_title', esc_html__( 'Our Story','llorix-one-lite' ) );
 
 if ( current_user_can( 'edit_theme_options' ) ) {
+	/* translators: %1$s is the customize link %2$s the customize link label */
 	$llorix_one_lite_our_story_text = get_theme_mod( 'llorix_one_lite_our_story_text', sprintf( __( 'Change this text in %s','llorix-one-lite' ), sprintf( '<a href="%1$s" class="llorix-one-lite-default-links">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=llorix_one_lite_our_story_text' ) ), __( 'About section','llorix-one-lite' ) ) ) );
 } else {
 	$llorix_one_lite_our_story_text = get_theme_mod( 'llorix_one_lite_our_story_text' );
@@ -54,7 +55,8 @@ if ( (isset( $llorix_one_lite_our_story_show ) && $llorix_one_lite_our_story_sho
 					<?php
 					} ?>
 
-					<div class="<?php if ( ! empty( $llorix_one_lite_our_story_image ) ) {  echo 'col-md-6'; } else { echo 'col-md-12'; } ?> content-section brief-content-one">
+					<div class="<?php if ( ! empty( $llorix_one_lite_our_story_image ) ) {  echo 'col-md-6';
+} else { echo 'col-md-12'; } ?> content-section brief-content-one">
 						<?php
 						if ( ! empty( $llorix_one_lite_our_story_title ) ) { ?>
 							<h2 class="text-left dark-text">

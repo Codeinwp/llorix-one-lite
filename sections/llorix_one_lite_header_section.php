@@ -15,9 +15,10 @@
 	$llorix_one_lite_header_title = get_theme_mod( 'llorix_one_lite_header_title', apply_filters( 'llorix_one_lite_header_title_filter',esc_html__( 'Simple, Reliable and Awesome.','llorix-one-lite' ) ) );
 
 	if ( current_user_can( 'edit_theme_options' ) ) {
-	$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle', sprintf( __( 'Change this text in %s','llorix-one-lite' ), sprintf( '<a href="%1$s" class="llorix-one-lite-default-links">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=llorix_one_lite_header_subtitle' ) ), __( 'Big title section','llorix-one-lite' ) ) ) );
+		/* translators: %1$s is the customize link %2$s the customize link label */
+		$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle', sprintf( __( 'Change this text in %s','llorix-one-lite' ), sprintf( '<a href="%1$s" class="llorix-one-lite-default-links">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=llorix_one_lite_header_subtitle' ) ), __( 'Big title section','llorix-one-lite' ) ) ) );
 	} else {
-	$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle' );
+		$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle' );
 	}
 
 	$llorix_one_lite_header_button_text = get_theme_mod( 'llorix_one_lite_header_button_text',esc_html__( 'GET STARTED','llorix-one-lite' ) );
@@ -61,7 +62,7 @@ if ( ! empty( $llorix_one_lite_enable_move ) && $llorix_one_lite_enable_move ) {
 <?php
 if ( ! empty( $llorix_one_lite_header_logo ) ) {
 	echo '<div class="only-logo"><div id="only-logo-inner" class="navbar"><div id="llorix_one_lite_only_logo" class="navbar-header"><img src="' . esc_url( $llorix_one_lite_header_logo ) . '"   alt=""></div></div></div>';
-	} elseif ( isset( $wp_customize )   ) {
+	} elseif ( isset( $wp_customize ) ) {
 	echo '<div class="only-logo"><div id="only-logo-inner" class="navbar"><div id="llorix_one_lite_only_logo" class="navbar-header"><img src="" alt=""></div></div></div>';
 	}
 ?>
@@ -79,7 +80,7 @@ if ( ! empty( $llorix_one_lite_header_logo ) || ! empty( $llorix_one_lite_header
 							<?php
 							if ( ! empty( $llorix_one_lite_header_title ) ) {
 								echo '<h1 id="intro_section_text_1" class="intro white-text">' . wp_kses_post( $llorix_one_lite_header_title ) . '</h1>';
-								} elseif ( isset( $wp_customize )   ) {
+								} elseif ( isset( $wp_customize ) ) {
 								echo '<h1 id="intro_section_text_1" class="intro white-text llorix_one_lite_only_customizer"></h1>';
 								}
 							?>
@@ -88,7 +89,7 @@ if ( ! empty( $llorix_one_lite_header_logo ) || ! empty( $llorix_one_lite_header
 							<?php
 							if ( ! empty( $llorix_one_lite_header_subtitle ) ) {
 								echo '<h5 id="intro_section_text_2" class="white-text">' . wp_kses_post( $llorix_one_lite_header_subtitle ) . '</h5>';
-								} elseif ( isset( $wp_customize )   ) {
+								} elseif ( isset( $wp_customize ) ) {
 								echo '<h5 id="intro_section_text_2" class="white-text llorix_one_lite_only_customizer"></h5>';
 								}
 							?>
@@ -105,7 +106,7 @@ if ( ! empty( $llorix_one_lite_header_logo ) || ! empty( $llorix_one_lite_header
 										echo '<button id="inpage_scroll_btn" class="btn btn-primary standard-button inpage-scroll" onClick="parent.location=\'' . esc_url( $llorix_one_lite_header_button_link ) . '\'"><span class="screen-reader-text">' . esc_html__( 'Header button label:','llorix-one-lite' ) . $llorix_one_lite_header_button_text . '</span>' . $llorix_one_lite_header_button_text . '</button>';
 										}
 									}
-								} elseif ( isset( $wp_customize )   ) {
+								} elseif ( isset( $wp_customize ) ) {
 								echo '<div id="intro_section_text_3" class="button"><div id="inpage_scroll_btn"><a href="" class="btn btn-primary standard-button inpage-scroll llorix_one_lite_only_customizer"></a></div></div>';
 								}
 							?>

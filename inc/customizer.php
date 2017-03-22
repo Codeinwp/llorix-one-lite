@@ -229,9 +229,21 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'llorix_one_lite_sanitize_repeater',
 		'default' => json_encode(
 			array(
-				array( 'icon_value' => 'fa-facebook' , 'link' => '#', 'id' => 'llorix_one_lite_56d069ad8cb6b' ),
-				array( 'icon_value' => 'fa-twitter' , 'link' => '#', 'id' => 'llorix_one_lite_56d069b48cb6c' ),
-				array( 'icon_value' => 'fa-google-plus-square' , 'link' => '#', 'id' => 'llorix_one_lite_56d069b58cb6d' ),
+				array(
+					'icon_value' => 'fa-facebook',
+					'link' => '#',
+					'id' => 'llorix_one_lite_56d069ad8cb6b',
+				),
+				array(
+					'icon_value' => 'fa-twitter',
+					'link' => '#',
+					'id' => 'llorix_one_lite_56d069b48cb6c',
+				),
+				array(
+					'icon_value' => 'fa-google-plus-square',
+					'link' => '#',
+					'id' => 'llorix_one_lite_56d069b58cb6d',
+				),
 			)
 		),
 
@@ -345,6 +357,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	/* Header subtitle */
 	$llorix_one_lite_header_subtitle_default = '';
 	if ( current_user_can( 'edit_theme_options' ) ) {
+		/* translators: %1$s is the customize link %2$s the customize link label */
 		$llorix_one_lite_header_subtitle_default = sprintf( __( 'Change this text in %s','llorix-one-lite' ), sprintf( '<a href="%1$s" class="llorix-one-lite-default-links">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=llorix_one_lite_header_subtitle' ) ), __( 'Big title section','llorix-one-lite' ) ) );
 	}
 	$wp_customize->add_setting( 'llorix_one_lite_header_subtitle', array(
@@ -462,11 +475,31 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'llorix_one_lite_sanitize_repeater',
 		'default' => json_encode(
 				array(
-					array( 'image_url' => llorix_one_lite_get_file( '/images/companies/1.png' ) ,'link' => '#','id' => 'llorix_one_lite_56d069bb8cb71' ),
-					array( 'image_url' => llorix_one_lite_get_file( '/images/companies/2.png' ) ,'link' => '#','id' => 'llorix_one_lite_56d069bc8cb72' ),
-					array( 'image_url' => llorix_one_lite_get_file( '/images/companies/3.png' ) ,'link' => '#','id' => 'llorix_one_lite_56d069bd8cb73' ),
-					array( 'image_url' => llorix_one_lite_get_file( '/images/companies/4.png' ) ,'link' => '#','id' => 'llorix_one_lite_56d06d128cb74' ),
-					array( 'image_url' => llorix_one_lite_get_file( '/images/companies/5.png' ) ,'link' => '#','id' => 'llorix_one_lite_56d06d3d8cb75' ),
+					array(
+						'image_url' => llorix_one_lite_get_file( '/images/companies/1.png' ),
+						'link' => '#',
+						'id' => 'llorix_one_lite_56d069bb8cb71',
+					),
+					array(
+						'image_url' => llorix_one_lite_get_file( '/images/companies/2.png' ),
+						'link' => '#',
+						'id' => 'llorix_one_lite_56d069bc8cb72',
+					),
+					array(
+						'image_url' => llorix_one_lite_get_file( '/images/companies/3.png' ),
+						'link' => '#',
+						'id' => 'llorix_one_lite_56d069bd8cb73',
+					),
+					array(
+						'image_url' => llorix_one_lite_get_file( '/images/companies/4.png' ),
+						'link' => '#',
+						'id' => 'llorix_one_lite_56d06d128cb74',
+					),
+					array(
+						'image_url' => llorix_one_lite_get_file( '/images/companies/5.png' ),
+						'link' => '#',
+						'id' => 'llorix_one_lite_56d06d3d8cb75',
+					),
 				)
 		),
 
@@ -519,6 +552,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	/* About Content */
 	$llorix_one_lite_our_story_text_default = '';
 	if ( current_user_can( 'edit_theme_options' ) ) {
+		/* translators: %1$s is the customize link %2$s the customize link label */
 		$llorix_one_lite_our_story_text_default = sprintf( __( 'Change this text in %s','llorix-one-lite' ), sprintf( '<a href="%1$s" class="llorix-one-lite-default-links">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=llorix_one_lite_our_story_text' ) ), __( 'About section','llorix-one-lite' ) ) );
 	}
 	$wp_customize->add_setting( 'llorix_one_lite_our_story_text', array(
@@ -583,6 +617,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	/* Ribbon Title */
 	$llorix_one_lite_ribbon_title_default = '';
 	if ( current_user_can( 'edit_theme_options' ) ) {
+		/* translators: %1$s is the customize link %2$s the customize link label */
 		$llorix_one_lite_ribbon_title_default = sprintf( __( 'Change this text in %s','llorix-one-lite' ), sprintf( '<a href="%1$s">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=llorix_one_lite_ribbon_title' ) ), __( 'Ribbon section','llorix-one-lite' ) ) );
 	}
 
@@ -743,9 +778,24 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'llorix_one_lite_sanitize_repeater',
 		'default' => json_encode(
 			array(
-				array( 'icon_value' => 'fa-envelope' ,'text' => 'contact@site.com', 'link' => '#','id' => 'llorix_one_lite_56d450a72cb3a' ),
-				array( 'icon_value' => 'fa-map-marker' ,'text' => 'Company address', 'link' => '#','id' => 'llorix_one_lite_56d069b88cb6f' ),
-				array( 'icon_value' => 'fa-tablet' ,'text' => '0 332 548 954', 'link' => '#','id' => 'llorix_one_lite_56d069b98cb70' ),
+				array(
+					'icon_value' => 'fa-envelope',
+					'text' => 'contact@site.com',
+					'link' => '#',
+					'id' => 'llorix_one_lite_56d450a72cb3a',
+				),
+				array(
+					'icon_value' => 'fa-map-marker',
+					'text' => 'Company address',
+					'link' => '#',
+					'id' => 'llorix_one_lite_56d069b88cb6f',
+				),
+				array(
+					'icon_value' => 'fa-tablet',
+					'text' => '0 332 548 954',
+					'link' => '#',
+					'id' => 'llorix_one_lite_56d069b98cb70',
+				),
 			)
 		),
 	));
@@ -832,9 +882,21 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'llorix_one_lite_sanitize_repeater',
 		'default' => json_encode(
 			array(
-				array( 'icon_value' => 'fa-facebook' , 'link' => '#', 'id' => 'llorix_one_lite_56d069b78cb6e' ),
-				array( 'icon_value' => 'fa-twitter' , 'link' => '#', 'id' => 'llorix_one_lite_56d450842cb39' ),
-				array( 'icon_value' => 'fa-google-plus-square' , 'link' => '#', 'id' => 'llorix_one_lite_56d450512cb38' ),
+				array(
+					'icon_value' => 'fa-facebook',
+					'link' => '#',
+					'id' => 'llorix_one_lite_56d069b78cb6e',
+				),
+				array(
+					'icon_value' => 'fa-twitter',
+					'link' => '#',
+					'id' => 'llorix_one_lite_56d450842cb39',
+				),
+				array(
+					'icon_value' => 'fa-google-plus-square',
+					'link' => '#',
+					'id' => 'llorix_one_lite_56d450512cb38',
+				),
 			)
 		),
 

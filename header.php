@@ -16,7 +16,8 @@
 	<?php wp_head(); ?>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" <?php body_class(); ?> dir="<?php if ( is_rtl() ) { echo 'rtl'; } else { echo 'ltr';} ?>">
+<body itemscope itemtype="http://schema.org/WebPage" <?php body_class(); ?> dir="<?php if ( is_rtl() ) { echo 'rtl';
+} else { echo 'ltr';} ?>">
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'llorix-one-lite' ); ?></a>
 <!-- =========================
 	PRE LOADER
@@ -156,9 +157,21 @@ endif; ?>
 							/* SOCIAL ICONS */
 							$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_very_top_social_icons',json_encode(
 								array(
-									array( 'icon_value' => 'fa-facebook' , 'link' => '#', 'id' => 'llorix_one_lite_56d069ad8cb6b' ),
-									array( 'icon_value' => 'fa-twitter' , 'link' => '#', 'id' => 'llorix_one_lite_56d069b48cb6c' ),
-									array( 'icon_value' => 'fa-google-plus-square' , 'link' => '#', 'id' => 'llorix_one_lite_56d069b58cb6d' ),
+									array(
+										'icon_value' => 'fa-facebook',
+										'link' => '#',
+										'id' => 'llorix_one_lite_56d069ad8cb6b',
+									),
+									array(
+										'icon_value' => 'fa-twitter',
+										'link' => '#',
+										'id' => 'llorix_one_lite_56d069b48cb6c',
+									),
+									array(
+										'icon_value' => 'fa-google-plus-square',
+										'link' => '#',
+										'id' => 'llorix_one_lite_56d069b58cb6d',
+									),
 								)
 							));
 

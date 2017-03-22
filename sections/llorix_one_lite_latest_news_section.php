@@ -15,17 +15,22 @@
 	$llorix_one_lite_latest_news_show = get_theme_mod( 'llorix_one_lite_latest_news_show' );
 
 	$llorix_one_lite_number_of_posts = get_option( 'posts_per_page' );
-	$args = array( 'post_type' => 'post', 'posts_per_page' => $llorix_one_lite_number_of_posts, 'order' => 'DESC','ignore_sticky_posts' => true );
+	$args = array(
+		'post_type' => 'post',
+		'posts_per_page' => $llorix_one_lite_number_of_posts,
+		'order' => 'DESC',
+		'ignore_sticky_posts' => true,
+	);
 
 	/* If section is not disabled */
 	if ( isset( $llorix_one_lite_latest_news_show ) && $llorix_one_lite_latest_news_show != 1 ) {
 
 	$the_query = new WP_Query( $args );
 	if ( $the_query->have_posts() ) {
-		$llorix_one_lite_latest_news_title = get_theme_mod( 'llorix_one_lite_latest_news_title',esc_html__( 'Latest news','llorix-one-lite' ) );
-		if ( $llorix_one_lite_number_of_posts > 0 ) {
-			?>
-			<section class="brief timeline" id="latestnews" role="region" aria-label="<?php esc_html_e( 'Latest blog posts','llorix-one-lite' ); ?>">
+			$llorix_one_lite_latest_news_title = get_theme_mod( 'llorix_one_lite_latest_news_title',esc_html__( 'Latest news','llorix-one-lite' ) );
+			if ( $llorix_one_lite_number_of_posts > 0 ) {
+				?>
+				<section class="brief timeline" id="latestnews" role="region" aria-label="<?php esc_html_e( 'Latest blog posts','llorix-one-lite' ); ?>">
 				<div class="section-overlay-layer">
 					<div class="container">
 						<div class="row">
@@ -34,7 +39,7 @@
 							<?php
 								if ( ! empty( $llorix_one_lite_latest_news_title ) ) {
 								echo '<div class="col-md-12 timeline-text text-left"><h2 class="text-left dark-text">' . esc_attr( $llorix_one_lite_latest_news_title ) . '</h2><div class="colored-line-left"></div></div>';
-								} elseif ( isset( $wp_customize )   ) {
+								} elseif ( isset( $wp_customize ) ) {
 								echo '<div class="col-md-12 timeline-text text-left llorix_one_lite_only_customizer"><h2 class="text-left dark-text "></h2><div class="colored-line-left "></div></div>';
 								}
 
@@ -54,7 +59,7 @@
 
 											$i_latest_posts = 0;
 
-											while (  $the_query->have_posts() ) :  $the_query->the_post();
+											while ( $the_query->have_posts() ) :  $the_query->the_post();
 
 											$i_latest_posts++;
 
@@ -67,7 +72,7 @@
 											}
 											?>
 
-											<div itemscope itemprop="blogPosts" itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" class="timeline-box-wrap" title="<?php printf( esc_html__( 'Latest News: %s', 'llorix-one-lite' ), get_the_title() ) ?>">
+											<div itemscope itemprop="blogPosts" itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" class="timeline-box-wrap" title="<?php /* translators: %s is the title */ printf( esc_html__( 'Latest News: %s', 'llorix-one-lite' ), get_the_title() ) ?>">
 											<div datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>" class="entry-published date small-text strong">
 											<?php echo get_the_date( 'M, j' ); ?>
 											</div>
@@ -105,7 +110,7 @@
 												</header>
 												<div itemprop="description" class="entry-content entry-summary">
 												<?php the_excerpt(); ?>
-												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more"><?php printf( esc_html__( 'Read more %s', 'llorix-one-lite' ), '<span class="screen-reader-text">  ' . get_the_title() . '</span>' ); ?></a>
+												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more"><?php /* translators: %s is the title */ printf( esc_html__( 'Read more %s', 'llorix-one-lite' ), '<span class="screen-reader-text">  ' . get_the_title() . '</span>' ); ?></a>
 												</div>
 												</div>
 												</div>
@@ -119,28 +124,27 @@
 													echo '</li>';
 												}
 
-											endwhile;
+												endwhile;
 										wp_reset_postdata();
 										?>
 										</ul>
-									</div>
-								</div><!-- .llorix-one-lite-slider-whole-wrap -->
+										</div>
+									</div><!-- .llorix-one-lite-slider-whole-wrap -->
+								</div>
 							</div>
 						</div>
-					</div>
-				</section>
-		<?php
+					</section>
+			<?php
+			}// End if().
 		}// End if().
-		}// End if().
-	/* If section is disabled, but we are in Customize, display section with class llorix_one_lite_only_customizer */
-	} elseif ( isset( $wp_customize ) ) {
+} elseif ( isset( $wp_customize ) ) {
 
-	$the_query = new WP_Query( $args );
-	if ( $the_query->have_posts() ) {
-		$llorix_one_lite_latest_news_title = get_theme_mod( 'llorix_one_lite_latest_news_title',esc_html__( 'Latest news','llorix-one-lite' ) );
-		if ( $llorix_one_lite_number_of_posts > 0 ) {
-			?>
-			<section class="brief timeline llorix_one_lite_only_customizer" id="latestnews" role="region" aria-label="<?php esc_html_e( 'Latest blog posts','llorix-one-lite' ); ?>">
+		$the_query = new WP_Query( $args );
+		if ( $the_query->have_posts() ) {
+			$llorix_one_lite_latest_news_title = get_theme_mod( 'llorix_one_lite_latest_news_title',esc_html__( 'Latest news','llorix-one-lite' ) );
+			if ( $llorix_one_lite_number_of_posts > 0 ) {
+				?>
+				<section class="brief timeline llorix_one_lite_only_customizer" id="latestnews" role="region" aria-label="<?php esc_html_e( 'Latest blog posts','llorix-one-lite' ); ?>">
 				<div class="section-overlay-layer">
 					<div class="container">
 						<div class="row">
@@ -149,7 +153,7 @@
 							<?php
 								if ( ! empty( $llorix_one_lite_latest_news_title ) ) {
 								echo '<div class="col-md-12 timeline-text text-left"><h2 class="text-left dark-text">' . esc_attr( $llorix_one_lite_latest_news_title ) . '</h2><div class="colored-line-left"></div></div>';
-								} elseif ( isset( $wp_customize )   ) {
+								} elseif ( isset( $wp_customize ) ) {
 								echo '<div class="col-md-12 timeline-text text-left llorix_one_lite_only_customizer"><h2 class="text-left dark-text "></h2><div class="colored-line-left "></div></div>';
 								}
 							?>
@@ -167,7 +171,7 @@
 
 											$i_latest_posts = 0;
 
-											while (  $the_query->have_posts() ) :  $the_query->the_post();
+											while ( $the_query->have_posts() ) :  $the_query->the_post();
 
 											$i_latest_posts++;
 
@@ -180,7 +184,7 @@
 											}
 											?>
 
-											<div itemscope itemprop="blogPosts" itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" class="timeline-box-wrap" title="<?php printf( esc_html__( 'Latest News: %s', 'llorix-one-lite' ), get_the_title() ) ?>">
+											<div itemscope itemprop="blogPosts" itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" class="timeline-box-wrap" title="<?php /* translators: %s is the title */ printf( esc_html__( 'Latest News: %s', 'llorix-one-lite' ), get_the_title() ) ?>">
 											<div datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>" class="entry-published date small-text strong">
 											<?php echo get_the_date( 'M, j' ); ?>
 											</div>
@@ -218,7 +222,12 @@
 												</header>
 												<div itemprop="description" class="entry-content entry-summary">
 												<?php the_excerpt(); ?>
-												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more"><?php printf( esc_html__( 'Read more %s', 'llorix-one-lite' ), '<span class="screen-reader-text">  ' . get_the_title() . '</span>' ); ?></a>
+												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more">
+													<?php
+													/* translators: %s is the post name */
+													printf( esc_html__( 'Read more %s', 'llorix-one-lite' ), '<span class="screen-reader-text">  ' . get_the_title() . '</span>' );
+													?>
+												</a>
 												</div>
 												</div>
 												</div>
@@ -232,18 +241,18 @@
 													echo '</li>';
 												}
 
-											endwhile;
+												endwhile;
 										wp_reset_postdata();
 										?>
 										</ul>
-									</div>
-								</div><!-- .llorix-one-lite-slider-whole-wrap -->
+										</div>
+									</div><!-- .llorix-one-lite-slider-whole-wrap -->
+								</div>
 							</div>
 						</div>
-					</div>
-				</section>
-		<?php
-		}// End if().
-		}// End if().
+					</section>
+			<?php
+			}// End if().
+			}// End if().
 }// End if().
 ?>

@@ -41,7 +41,7 @@
 
 		<h4><?php esc_html_e( 'Are you enjoying Llorix One Lite?', 'llorix-one-lite' ); ?></h4>
 
-		<p class="review-link"><?php echo sprintf( esc_html__( 'Rate our theme on %1$sWordPress.org%1$s. We\'d really appreciate it!', 'llorix-one-lite' ), '<a href="https://wordpress.org/support/theme/llorix-one-lite/">', '</a>' ); ?></p>
+		<p class="review-link"><?php /* translators: %1$s is the leave a review link */ echo sprintf( esc_html__( 'Rate our theme on %1$sWordPress.org%1$s. We\'d really appreciate it!', 'llorix-one-lite' ), '<a href="https://wordpress.org/support/theme/llorix-one-lite/">', '</a>' ); ?></p>
 
 		<p><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></p>
 

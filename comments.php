@@ -22,10 +22,10 @@ if ( post_password_required() ) {
 
 	<?php // You can start editing here -- including this comment! ?>
 
-	<?php if ( have_comments() ) : ?>
+	<?php if ( have_comments() ) { ?>
 		<h2 class="comments-title">
 			<?php
-			printf( // WPCS: XSS OK.
+			printf( /* translators: %1$s is the number of comments and %2$s is the post title */
 				esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'llorix-one-lite' ) ),
 				number_format_i18n( get_comments_number() ),
 				'<span>' . get_the_title() . '</span>'
@@ -67,7 +67,7 @@ if ( post_password_required() ) {
 		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
-	<?php endif; // have_comments() ?>
+	<?php } // End if(). ?>
 
 	<?php
 		// If comments are closed and there are comments, let's leave a little note, shall we?

@@ -57,7 +57,7 @@ class Llorix_One_Lite_Welcome {
 	public function llorix_one_lite_welcome_admin_notice() {
 		?>
 			<div class="updated notice is-dismissible">
-				<p><?php echo sprintf( esc_html__( 'Welcome! Thank you for choosing Llorix One Lite! To fully take advantage of the best our theme can offer please make sure you visit our %1$swelcome page%1$s.', 'llorix-one-lite' ), '<a href="' . esc_url( admin_url( 'themes.php?page=llorix-one-lite-welcome' ) ) . '">', '</a>' ); ?></p>
+				<p><?php /* translators: %1$s is the link */ echo sprintf( esc_html__( 'Welcome! Thank you for choosing Llorix One Lite! To fully take advantage of the best our theme can offer please make sure you visit our %1$swelcome page%1$s.', 'llorix-one-lite' ), '<a href="' . esc_url( admin_url( 'themes.php?page=llorix-one-lite-welcome' ) ) . '">', '</a>' ); ?></p>
 				<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=llorix-one-lite-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with Llorix One Lite', 'llorix-one-lite' ); ?></a></p>
 			</div>
 		<?php
