@@ -1,4 +1,9 @@
 
+### 0.2.9 - 29/03/2017
+**Changes:** 
+- Made some changes for child themes usage
+- Added wraith for automatic demo changes reports
+
 ### 0.2.8 - 22/03/2017
 **Changes:** 
 - Fixed issue with Header visibility option not working just for frontpage
