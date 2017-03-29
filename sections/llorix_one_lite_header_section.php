@@ -15,10 +15,10 @@
 	$llorix_one_lite_header_title = get_theme_mod( 'llorix_one_lite_header_title', apply_filters( 'llorix_one_lite_header_title_filter',esc_html__( 'Simple, Reliable and Awesome.','llorix-one-lite' ) ) );
 
 	if ( current_user_can( 'edit_theme_options' ) ) {
-		/* translators: %1$s is the customize link %2$s the customize link label */
-		$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle', sprintf( __( 'Change this text in %s','llorix-one-lite' ), sprintf( '<a href="%1$s" class="llorix-one-lite-default-links">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=llorix_one_lite_header_subtitle' ) ), __( 'Big title section','llorix-one-lite' ) ) ) );
+	/* translators: %1$s is the customize link %2$s the customize link label */
+	$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle', sprintf( __( 'Change this text in %s','llorix-one-lite' ), sprintf( '<a href="%1$s" class="llorix-one-lite-default-links">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=llorix_one_lite_header_subtitle' ) ), __( 'Big title section','llorix-one-lite' ) ) ) );
 	} else {
-		$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle' );
+	$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle' );
 	}
 
 	$llorix_one_lite_header_button_text = get_theme_mod( 'llorix_one_lite_header_button_text',esc_html__( 'GET STARTED','llorix-one-lite' ) );
