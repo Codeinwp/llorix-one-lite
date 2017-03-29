@@ -21,7 +21,7 @@
 
 <?php
 	$llorix_one_lite_blog_header_image = get_theme_mod( 'llorix_one_lite_blog_header_image', apply_filters( 'llorix_one_lite_blog_header_image_filter',llorix_one_lite_get_file( '/images/background-images/background-blog.jpg' ) ) );
-	$llorix_one_lite_blog_header_title = get_theme_mod( 'llorix_one_lite_blog_header_title', 'This Theme Supports a Custom FrontPage' );
+	$llorix_one_lite_blog_header_title = get_theme_mod( 'llorix_one_lite_blog_header_title', apply_filters( 'llorix_one_lite_blog_header_title_default_filter', 'This Theme Supports a Custom FrontPage' ) );
 	$llorix_one_lite_blog_header_subtitle = get_theme_mod( 'llorix_one_lite_blog_header_subtitle' );
 
 	if ( ! empty( $llorix_one_lite_blog_header_image ) || ! empty( $llorix_one_lite_blog_header_title ) || ! empty( $llorix_one_lite_blog_header_subtitle ) ) :

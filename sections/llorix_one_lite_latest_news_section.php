@@ -223,10 +223,10 @@
 												<div itemprop="description" class="entry-content entry-summary">
 												<?php the_excerpt(); ?>
 												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more">
-													<?php
-													/* translators: %s is the post name */
-													printf( esc_html__( 'Read more %s', 'llorix-one-lite' ), '<span class="screen-reader-text">  ' . get_the_title() . '</span>' );
-													?>
+												<?php
+												/* translators: %s is the post name */
+												printf( esc_html__( 'Read more %s', 'llorix-one-lite' ), '<span class="screen-reader-text">  ' . get_the_title() . '</span>' );
+												?>
 												</a>
 												</div>
 												</div>

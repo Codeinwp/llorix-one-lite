@@ -83,24 +83,7 @@
 					echo '</div>';
 					/* SOCIAL ICONS */
 
-					$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_social_icons', json_encode( array(
-						array(
-							'icon_value' => 'fa-facebook',
-							'link' => '#',
-							'id' => 'llorix_one_lite_56d069b78cb6e',
-						),
-						array(
-							'icon_value' => 'fa-twitter',
-							'link' => '#',
-							'id' => 'llorix_one_lite_56d450842cb39',
-						),
-						array(
-							'icon_value' => 'fa-google-plus-square',
-							'link' => '#',
-							'id' => 'llorix_one_lite_56d450512cb38',
-						),
-) )
-					);
+					$llorix_one_lite_social_icons = get_theme_mod( 'llorix_one_lite_social_icons' );
 					llorix_one_lite_social_icons( $llorix_one_lite_social_icons, true ); ?>
 	            
 	        </div><!-- .footer-bottom-wrap -->

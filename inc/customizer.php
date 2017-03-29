@@ -268,7 +268,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 	/* Blog Header title */
 	$wp_customize->add_setting( 'llorix_one_lite_blog_header_title', array(
-		'default' 			=> 'This Theme Supports a Custom FrontPage',
+		'default' 			=> apply_filters( 'llorix_one_lite_blog_header_title_default_filter', 'This Theme Supports a Custom FrontPage' ),
 		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
 		'transport' 		=> 'postMessage',
 	));
@@ -880,26 +880,6 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	/* Socials icons */
 	$wp_customize->add_setting( 'llorix_one_lite_social_icons', array(
 		'sanitize_callback' => 'llorix_one_lite_sanitize_repeater',
-		'default' => json_encode(
-			array(
-				array(
-					'icon_value' => 'fa-facebook',
-					'link' => '#',
-					'id' => 'llorix_one_lite_56d069b78cb6e',
-				),
-				array(
-					'icon_value' => 'fa-twitter',
-					'link' => '#',
-					'id' => 'llorix_one_lite_56d450842cb39',
-				),
-				array(
-					'icon_value' => 'fa-google-plus-square',
-					'link' => '#',
-					'id' => 'llorix_one_lite_56d450512cb38',
-				),
-			)
-		),
-
 	));
 	$wp_customize->add_control( new Llorix_One_Lite_General_Repeater( $wp_customize, 'llorix_one_lite_social_icons', array(
 		'label'   => esc_html__( 'Add new social icon','llorix-one-lite' ),
