@@ -109,24 +109,8 @@ endif; ?>
 							<?php
 							llorix_one_lite_header_top_right_open_trigger();
 							/* SOCIAL ICONS */
-							$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_very_top_social_icons',json_encode( array(
-									array(
-										'icon_value' => 'fa-facebook',
-										'link' => '#',
-										'id' => 'llorix_one_lite_56d069ad8cb6b',
-									),
-									array(
-										'icon_value' => 'fa-twitter',
-										'link' => '#',
-										'id' => 'llorix_one_lite_56d069b48cb6c',
-									),
-									array(
-										'icon_value' => 'fa-google-plus-square',
-										'link' => '#',
-										'id' => 'llorix_one_lite_56d069b58cb6d',
-									),
-								)	)
-							);
+							$default = llorix_one_lite_header_social_icons_get_default_content();
+							$llorix_one_lite_social_icons = get_theme_mod( 'llorix_one_lite_very_top_social_icons',$default );
 							llorix_one_lite_social_icons( $llorix_one_lite_social_icons, false );
 							llorix_one_lite_header_top_right_close_trigger();
 							?>
@@ -155,25 +139,8 @@ endif; ?>
 							<?php
 							llorix_one_lite_header_top_right_open_trigger();
 							/* SOCIAL ICONS */
-							$llorix_one_lite_social_icons = get_theme_mod('llorix_one_lite_very_top_social_icons',json_encode(
-								array(
-									array(
-										'icon_value' => 'fa-facebook',
-										'link' => '#',
-										'id' => 'llorix_one_lite_56d069ad8cb6b',
-									),
-									array(
-										'icon_value' => 'fa-twitter',
-										'link' => '#',
-										'id' => 'llorix_one_lite_56d069b48cb6c',
-									),
-									array(
-										'icon_value' => 'fa-google-plus-square',
-										'link' => '#',
-										'id' => 'llorix_one_lite_56d069b58cb6d',
-									),
-								)
-							));
+							$default = llorix_one_lite_header_social_icons_get_default_content();
+							$llorix_one_lite_social_icons = get_theme_mod( 'llorix_one_lite_very_top_social_icons',$default );
 
 							if ( ! empty( $llorix_one_lite_social_icons ) ) {
 								$llorix_one_lite_social_icons_decoded = json_decode( $llorix_one_lite_social_icons );

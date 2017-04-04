@@ -323,6 +323,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
+ * Translations
+ */
+require get_template_directory() . '/inc/translations/general.php';
+
+/**
  * Enqueue scripts in customizer.
  */
 function llorix_one_lite_admin_scripts() {
@@ -645,8 +650,9 @@ function llorix_one_lite_social_icons( $social_icons, $is_footer ) {
 			<ul class="social-icons">
 				<?php
 				foreach ( $llorix_one_lite_social_icons_decoded as $llorix_one_lite_social_icon ) {
-					$icon = ( ! empty( $llorix_one_lite_social_icon->icon_value ) ? apply_filters( 'llorix_one_lite_language_filter', $llorix_one_lite_social_icon->icon_value ) : '' );
-					$link = ( ! empty( $llorix_one_lite_social_icon->link ) ? apply_filters( 'llorix_one_lite_language_filter', $llorix_one_lite_social_icon->link ) : '' );
+				    $language_context = $is_footer === true ? 'Social icons in footer' : 'Social icons in header';
+					$icon = ! empty( $llorix_one_lite_social_icon->icon_value ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_social_icon->icon_value, $language_context ) : '';
+					$link = ! empty( $llorix_one_lite_social_icon->link ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_social_icon->link, $language_context ) : '';
 					if ( ! empty( $icon ) && $icon !== 'No Icon' && ! empty( $link ) ) { ?>
 						<li>
 							<a href="<?php echo esc_url( $link ); ?>">

@@ -83,8 +83,8 @@ function llorix_one_lite_logos_content( $llorix_one_lite_logos_decoded ) {
 		<ul class="client-logos">
 			<?php
 			foreach ( $llorix_one_lite_logos_decoded as $llorix_one_lite_logo ) {
-				$image = ( ! empty( $llorix_one_lite_logo->image_url ) ? apply_filters( 'llorix_one_lite_language_filter', $llorix_one_lite_logo->image_url ) : '' );
-				$link = ( ! empty( $llorix_one_lite_logo->link ) ? apply_filters( 'llorix_one_lite_language_filter', $llorix_one_lite_logo->link ) : '' );
+				$image = ! empty( $llorix_one_lite_logo->image_url ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_logo->image_url, 'Logos Section' ) : '';
+				$link = ! empty( $llorix_one_lite_logo->link ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_logo->link, 'Logos Section' ) : '';
 				if ( ! empty( $image ) ) { ?>
 					<li>
 						<?php
@@ -122,9 +122,9 @@ function llorix_one_lite_contact_content( $llorix_one_lite_contact_info_item_dec
 				<?php
 				if ( ! empty( $llorix_one_lite_contact_info_item_decoded ) ) {
 					foreach ( $llorix_one_lite_contact_info_item_decoded as $llorix_one_contact_item ) {
-						$link = ( ! empty( $llorix_one_contact_item->link ) ? apply_filters( 'llorix_one_lite_language_filter',$llorix_one_contact_item->link ) : '' );
-						$icon = ( ! empty( $llorix_one_contact_item->icon_value ) ? apply_filters( 'llorix_one_lite_language_filter',$llorix_one_contact_item->icon_value ) : '');
-						$text = ( ! empty( $llorix_one_contact_item->text ) ? apply_filters( 'llorix_one_lite_language_filter',$llorix_one_contact_item->text ) : '' );
+						$link = ( ! empty( $llorix_one_contact_item->link ) ? apply_filters( 'llorix_one_lite_translate_single_string',$llorix_one_contact_item->link, 'Contact section' ) : '' );
+						$icon = ( ! empty( $llorix_one_contact_item->icon_value ) ? apply_filters( 'llorix_one_lite_translate_single_string',$llorix_one_contact_item->icon_value, 'Contact section' ) : '');
+						$text = ( ! empty( $llorix_one_contact_item->text ) ? apply_filters( 'llorix_one_lite_translate_single_string',$llorix_one_contact_item->text, 'Contact section' ) : '' );
 						if ( ! empty( $icon ) || ! empty( $text ) ) { ?>
 							<div class="col-sm-4 contact-link-box col-xs-12">
 								<?php

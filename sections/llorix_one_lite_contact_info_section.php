@@ -12,27 +12,8 @@
  */
 
 $llorix_one_lite_contact_info_show = get_theme_mod( 'llorix_one_lite_contact_info_show' );
-$llorix_one_lite_contact_info_item = get_theme_mod('llorix_one_lite_contact_info_content', json_encode( array(
-	array(
-		'icon_value' => 'fa-envelope',
-		'text' => 'contact@site.com',
-		'link' => '#',
-		'id' => 'llorix_one_lite_56d450a72cb3a',
-	),
-	array(
-		'icon_value' => 'fa-map-marker',
-		'text' => 'Company address',
-		'link' => '#',
-		'id' => 'llorix_one_lite_56d069b88cb6f',
-	),
-	array(
-		'icon_value' => 'fa-tablet',
-		'text' => '0 332 548 954',
-		'link' => '#',
-		'id' => 'llorix_one_lite_56d069b98cb70',
-	),
-) )
-);
+$default = llorix_one_lite_contact_get_default_content();
+$llorix_one_lite_contact_info_item = get_theme_mod( 'llorix_one_lite_contact_info_content', $default );
 
 /* If section is not disabled */
 if ( isset( $llorix_one_lite_contact_info_show ) && $llorix_one_lite_contact_info_show != 1 ) {
