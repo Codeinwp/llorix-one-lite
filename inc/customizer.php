@@ -5,6 +5,9 @@
  * @package llorix-one-lite
  */
 
+/* Include customizer repeater */
+require_once get_template_directory() . '/inc/customizer-repeater/functions.php';
+
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
@@ -12,7 +15,6 @@
  */
 function llorix_one_lite_customize_register( $wp_customize ) {
 
-	require_once( 'class/llorix-one-lite-general-control.php' );
 	require_once( 'class/llorix-one-lite-text-control.php' );
 	require_once( 'class/llorix-one-lite-alpha-control.php' );
 	require_once( trailingslashit( get_template_directory() ) . 'inc/customizer-page-editor/customizer-page-editor.php' );
