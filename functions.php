@@ -569,7 +569,7 @@ function llorix_one_lite_comment( $comment, $args, $depth ) {
 /**
  * Check if Repeater is empty
  *
- * @param     json $llorix_one_lite_arr Repeater json array.
+ * @param     string $llorix_one_lite_arr Repeater json array.
  *
  * @return bool
  */

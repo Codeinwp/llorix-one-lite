@@ -2,7 +2,7 @@
 /**
  * General functions for translation.
  *
- * @package parallax-one
+ * @package llorix-one-lite
  */
 if ( ! function_exists( 'llorix_one_lite_translate_single_string' ) ) {
 	/**
@@ -95,7 +95,12 @@ if ( ! function_exists( 'llorix_one_lite_include_translations' ) ) {
 			if ( file_exists( $llorix_one_lite_file_to_include ) ) {
 				include_once( $llorix_one_lite_file_to_include );
 			} else {
-				if ( defined( 'LLORIX_ONE_PLUS_PATH' ) ) {
+				if( defined ('LLORIX_ONE_COMPANION_PATH') ){
+					$llorix_one_lite_file_to_include_from_companion = LLORIX_ONE_COMPANION_PATH . '/inc/' . $file . '.php';
+					if ( file_exists( $llorix_one_lite_file_to_include_from_companion ) ) {
+						include_once( $llorix_one_lite_file_to_include_from_companion );
+					}
+				} elseif ( defined( 'LLORIX_ONE_PLUS_PATH' ) ) {
 					$llorix_one_lite_file_to_include_from_pro = LLORIX_ONE_PLUS_PATH . 'public/inc/' . $file . '.php';
 					if ( file_exists( $llorix_one_lite_file_to_include_from_pro ) ) {
 						include_once( $llorix_one_lite_file_to_include_from_pro );

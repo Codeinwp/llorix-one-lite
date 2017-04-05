@@ -45,4 +45,7 @@ if ( ! function_exists( 'llorix_one_lite_header_social_icons_register_strings' )
 		llorix_one_lite_pll_string_register_helper( 'llorix_one_lite_very_top_social_icons', $default, 'Header social icons' );
 	}
 }
-add_action( 'after_setup_theme', 'llorix_one_lite_header_social_icons_register_strings', 11 );
+
+if( function_exists( 'llorix_one_lite_header_social_icons_register_strings' ) ){
+	add_action( 'after_setup_theme', 'llorix_one_lite_header_social_icons_register_strings', 11 );
+}
