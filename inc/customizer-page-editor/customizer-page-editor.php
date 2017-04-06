@@ -80,7 +80,7 @@ function llorix_one_lite_sync_control_from_page( $post_id, $ajax_call = false ) 
 
 		$content = '';
 		if ( ! empty( $frontpage_id ) ) {
-			$content = get_post_field('post_content', $frontpage_id);
+			$content = get_post_field( 'post_content', $frontpage_id );
 		}
 		set_theme_mod( 'llorix_one_lite_page_editor', $content );
 
@@ -107,7 +107,7 @@ add_action( 'save_post', 'llorix_one_lite_sync_control_from_page' );
 /**
  * Ajax call to sync page content and thumbnail when you switch to static frontpage
  */
-function llorix_one_lite_ajax_call(){
+function llorix_one_lite_ajax_call() {
 	$pid = $_POST['pid'];
 	llorix_one_lite_sync_control_from_page( $pid, true );
 	die();

@@ -15,7 +15,8 @@
 
 <div class="content-wrap">
 	<div class="container">
-		<?php $page_title = get_the_title(); ?>
+		<?php
+		$page_title = get_the_title(); ?>
 		<div id="primary" class="content-area col-md-12 <?php if ( empty( $page_title ) ) {  echo 'llorix-one-lite-top-margin-5px'; } ?>">
 			<main id="main" class="site-main" role="main">
 

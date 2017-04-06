@@ -717,7 +717,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	$default = '';
 
 	if ( ! empty( $frontpage_id ) ) {
-		$default = get_post_field('post_content', $frontpage_id);
+		$default = get_post_field( 'post_content', $frontpage_id );
 	}
 
 		$wp_customize->add_setting( 'llorix_one_lite_page_editor', array(
