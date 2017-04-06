@@ -11,7 +11,7 @@
                 url: requestpost.ajaxurl,
                 type: 'post',
                 data: {
-                    action: 'request_post',
+                    action: 'llorix_one_lite_ajax_call',
                     pid: newval,
                 },
                 beforeSend: function () {
@@ -20,7 +20,7 @@
                 success: function (result) {
                     if(result !== '' && result !== 'undefined' ){
                         result = JSON.parse(result);
-                        var id = 'llorix_one_lite_page_editor';
+                        var id = requestpost.editor_control;
                         var editor = tinyMCE.get(id);
 
                         editor.setContent(result.post_content);

@@ -717,10 +717,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	$default = '';
 
 	if ( ! empty( $frontpage_id ) ) {
-		$content_post = get_post( $frontpage_id );
-		$default      = $content_post->post_content;
-		$default      = apply_filters( 'the_content', $default );
-		$default      = str_replace( ']]>', ']]&gt;', $default );
+		$default = get_post_field('post_content', $frontpage_id);
 	}
 
 		$wp_customize->add_setting( 'llorix_one_lite_page_editor', array(
@@ -733,6 +730,9 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 			'section'         => 'llorix_one_lite_frontpage_content_section',
 			'priority'        => 10,
 			'active_callback' => 'llorix_one_lite_show_on_front',
+			'include_admin_print_footer' => true,
+			'needsync' => true,
+			'teeny' => true,
 		) ) );
 
 		$default = '';
