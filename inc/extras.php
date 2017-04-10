@@ -136,7 +136,7 @@ function llorix_one_lite_contact_content( $llorix_one_lite_contact_info_item_dec
 								}
 								if ( ! empty( $text ) ) { ?>
 									<a <?php echo ( ! empty( $link ) ? 'href="' . esc_url( $link ) . '"' : '') ?> class="strong">
-										<?php echo html_entity_decode( $llorix_one_contact_item->text ); ?>
+										<?php echo html_entity_decode( $text ); ?>
 									</a>
 									<?php
 								} ?>
