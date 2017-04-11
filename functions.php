@@ -157,10 +157,10 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		 */
 		add_theme_support( 'eventbrite' );
 
-        /*
+		/*
          * Notifications in customize
          */
-        if( ! defined('LLORIX_ONE_PLUS_PATH') ) {
+		if ( ! defined( 'LLORIX_ONE_PLUS_PATH' ) ) {
 	        require get_template_directory() . '/ti-customizer-notify/class-ti-customizer-notify.php';
 
 	        $config_customizer = array(
@@ -179,7 +179,7 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		        'deactivate_button_label'   => esc_html__( 'Deactivate', 'llorix-one-lite' ),
 	        );
 	        Ti_Customizer_Notify::init( $config_customizer );
-        }
+		}
 	}
 endif; // llorix_one_lite_setup
 add_action( 'after_setup_theme', 'llorix_one_lite_setup' );

@@ -29,9 +29,9 @@ if ( ! function_exists( 'llorix_one_lite_pll_string_register_helper' ) ) {
 	/**
 	 * Helper to register pll string.
 	 *
-	 * @param String $theme_mod Theme mod name.
+	 * @param String     $theme_mod Theme mod name.
 	 * @param bool /json $default Default value.
-	 * @param String $name Name for polylang backend.
+	 * @param String     $name Name for polylang backend.
 	 */
 	function llorix_one_lite_pll_string_register_helper( $theme_mod, $default = false, $name ) {
 		if ( ! function_exists( 'pll_register_string' ) ) {
