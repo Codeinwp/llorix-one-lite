@@ -17,8 +17,10 @@ if ( ! function_exists( 'llorix_one_lite_translate_single_string' ) ) {
 				return pll__( $original_value );
 			}
 		}
+
 		return $wpml_translation;
 	}
+
 	add_filter( 'llorix_one_lite_translate_single_string', 'llorix_one_lite_translate_single_string', 10, 2 );
 }
 
@@ -27,9 +29,9 @@ if ( ! function_exists( 'llorix_one_lite_pll_string_register_helper' ) ) {
 	/**
 	 * Helper to register pll string.
 	 *
-	 * @param String     $theme_mod Theme mod name.
+	 * @param String $theme_mod Theme mod name.
 	 * @param bool /json $default Default value.
-	 * @param String     $name Name for polylang backend.
+	 * @param String $name Name for polylang backend.
 	 */
 	function llorix_one_lite_pll_string_register_helper( $theme_mod, $default = false, $name ) {
 		if ( ! function_exists( 'pll_register_string' ) ) {
@@ -95,7 +97,7 @@ if ( ! function_exists( 'llorix_one_lite_include_translations' ) ) {
 			if ( file_exists( $llorix_one_lite_file_to_include ) ) {
 				include_once( $llorix_one_lite_file_to_include );
 			} else {
-				if( defined ('LLORIX_ONE_COMPANION_PATH') ){
+				if ( defined( 'LLORIX_ONE_COMPANION_PATH' ) ) {
 					$llorix_one_lite_file_to_include_from_companion = LLORIX_ONE_COMPANION_PATH . '/inc/' . $file . '.php';
 					if ( file_exists( $llorix_one_lite_file_to_include_from_companion ) ) {
 						include_once( $llorix_one_lite_file_to_include_from_companion );

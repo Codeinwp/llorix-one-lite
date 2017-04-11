@@ -141,25 +141,7 @@ endif; ?>
 							/* SOCIAL ICONS */
 							$default = llorix_one_lite_header_social_icons_get_default_content();
 							$llorix_one_lite_social_icons = get_theme_mod( 'llorix_one_lite_very_top_social_icons',$default );
-
-							if ( ! empty( $llorix_one_lite_social_icons ) ) {
-								$llorix_one_lite_social_icons_decoded = json_decode( $llorix_one_lite_social_icons );
-
-								if ( ! empty( $llorix_one_lite_social_icons_decoded ) ) {
-									echo '<ul class="social-icons">';
-									foreach ( $llorix_one_lite_social_icons_decoded as $llorix_one_social_icon ) {
-										if ( ! empty( $llorix_one_social_icon->icon_value ) ) {
-											explode( '-',$llorix_one_social_icon->icon_value );
-											if ( ! empty( $llorix_one_social_icon->icon_value[2] ) ) {
-
-												echo '<li><a href="' . esc_url( $llorix_one_social_icon->link ) . '"><i class="fa ' . esc_attr( $llorix_one_social_icon->icon_value ) . ' transparent-text-dark" aria-hidden="true"></i><span class="screen-reader-text">' . esc_attr( $llorix_one_social_icon->icon_value[2] ) . '</span></a></li>';
-
-											}
-										}
-									}
-									echo '</ul>';
-								}
-							}
+							llorix_one_lite_social_icons( $llorix_one_lite_social_icons, false );
 							llorix_one_lite_header_top_right_close_trigger();
 							?>
 						</div>

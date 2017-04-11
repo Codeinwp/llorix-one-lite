@@ -658,7 +658,7 @@ function llorix_one_lite_social_icons( $social_icons, $is_footer ) {
 					if ( ! empty( $icon ) && $icon !== 'No Icon' && ! empty( $link ) ) { ?>
 						<li>
 							<a href="<?php echo esc_url( $link ); ?>">
-								<span class="screen-reader-text"><?php echo esc_attr( $icon ) ?></span>
+								<span class="screen-reader-text"><?php echo wp_kses_post( $icon ) ?></span>
 								<i class="fa <?php if ( $is_footer === true ) { echo 'llorix-one-lite-footer-icons ';
 } echo esc_attr( $icon ); ?> transparent-text-dark" aria-hidden="true"></i>
 							</a>

@@ -11,7 +11,7 @@
  * @link        http://themeisle.com
  */
 
-$llorix_one_lite_frontpage_content_show = get_theme_mod( 'llorix_one_lite_frontpage_content_show',1 );
+$llorix_one_lite_frontpage_content_show = get_theme_mod( 'llorix_one_lite_frontpage_content_show', 1 );
 
 if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontpage_content_show != 1 ) {
 	$class_to_add = '';
@@ -36,13 +36,13 @@ if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontp
 
 	?>
 
-	<section class="frontpage-content <?php if ( ! empty( $class_to_add ) ) {
+    <section class="frontpage-content <?php if ( ! empty( $class_to_add ) ) {
 		echo esc_attr( $class_to_add );
 	} ?> " <?php if ( ! empty( $llorix_one_frontpage_featured ) ) {
-	echo 'style="background-image: url(\'' . esc_url( $llorix_one_frontpage_featured ) . '\')"';
+		echo 'style="background-image: url(\'' . esc_url( $llorix_one_frontpage_featured ) . '\')"';
 	} ?>>
-		<div class="container">
-			<div class="row">
+        <div class="container">
+            <div class="row">
 				<?php
 				$llorix_frontpage_id = get_option( 'page_on_front' );
 				if ( ! empty( $llorix_frontpage_id ) ) {
@@ -62,8 +62,8 @@ if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontp
 					get_template_part( 'content', 'none' );
 				endif;
 				?>
-			</div>
-		</div>
-	</section>
+            </div>
+        </div>
+    </section>
 	<?php
 }// End if().

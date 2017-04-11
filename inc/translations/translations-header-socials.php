@@ -14,18 +14,18 @@ if ( ! function_exists( 'llorix_one_lite_header_social_icons_get_default_content
 			array(
 				array(
 					'icon_value' => 'fa-facebook',
-					'link' => '#',
-					'id' => 'llorix_one_lite_56d069ad8cb6b',
+					'link'       => '#',
+					'id'         => 'llorix_one_lite_56d069ad8cb6b',
 				),
 				array(
 					'icon_value' => 'fa-twitter',
-					'link' => '#',
-					'id' => 'llorix_one_lite_56d069b48cb6c',
+					'link'       => '#',
+					'id'         => 'llorix_one_lite_56d069b48cb6c',
 				),
 				array(
 					'icon_value' => 'fa-google-plus-square',
-					'link' => '#',
-					'id' => 'llorix_one_lite_56d069b58cb6d',
+					'link'       => '#',
+					'id'         => 'llorix_one_lite_56d069b58cb6d',
 				),
 			)
 		);
@@ -46,6 +46,6 @@ if ( ! function_exists( 'llorix_one_lite_header_social_icons_register_strings' )
 	}
 }
 
-if( function_exists( 'llorix_one_lite_header_social_icons_register_strings' ) ){
+if ( function_exists( 'llorix_one_lite_header_social_icons_register_strings' ) ) {
 	add_action( 'after_setup_theme', 'llorix_one_lite_header_social_icons_register_strings', 11 );
 }
