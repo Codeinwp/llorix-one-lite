@@ -68,7 +68,10 @@ add_filter( 'pre_set_theme_mod_llorix_one_lite_feature_thumbnail', 'llorix_one_l
 function llorix_one_lite_sync_control_from_page( $post_id, $ajax_call = false ) {
 	if ( ! wp_is_post_revision( $post_id ) ) {
 		$return_value = array();
-		remove_action( 'save_post', 'llorix_one_lite_sync_control_from_thumbnail' );
+
+		remove_action( 'save_post', 'llorix_one_lite_sync_control_from_page' );
+		remove_filter( 'pre_set_theme_mod_llorix_one_lite_feature_thumbnail', 'llorix_one_lite_sync_thumbnail_from_control', 10 );
+		remove_filter( 'pre_set_theme_mod_llorix_one_lite_page_editor', 'llorix_one_lite_sync_content_from_control', 10 );
 
 		$frontpage_id = get_option( 'page_on_front' );
 		if ( (int) $frontpage_id !== (int) $post_id ) {
@@ -77,10 +80,7 @@ function llorix_one_lite_sync_control_from_page( $post_id, $ajax_call = false ) 
 
 		$content = '';
 		if ( ! empty( $frontpage_id ) ) {
-			$content_post = get_post( $frontpage_id );
-			$content      = $content_post->post_content;
-			$content      = apply_filters( 'the_content', $content );
-			$content      = str_replace( ']]>', ']]&gt;', $content );
+			$content = get_post_field( 'post_content', $frontpage_id );
 		}
 		set_theme_mod( 'llorix_one_lite_page_editor', $content );
 
@@ -91,6 +91,8 @@ function llorix_one_lite_sync_control_from_page( $post_id, $ajax_call = false ) 
 		set_theme_mod( 'llorix_one_lite_feature_thumbnail', $llorix_one_lite_frontpage_featured );
 
 		add_action( 'save_post', 'llorix_one_lite_sync_control_from_thumbnail' );
+		add_filter( 'pre_set_theme_mod_llorix_one_lite_feature_thumbnail', 'llorix_one_lite_sync_thumbnail_from_control', 10, 2 );
+		add_filter( 'pre_set_theme_mod_llorix_one_lite_page_editor', 'llorix_one_lite_sync_content_from_control', 10, 2 );
 
 		if ( $ajax_call === true ) {
 			$return_value['post_content'] = $content;
@@ -101,3 +103,43 @@ function llorix_one_lite_sync_control_from_page( $post_id, $ajax_call = false ) 
 	echo '';
 }
 add_action( 'save_post', 'llorix_one_lite_sync_control_from_page' );
+
+/**
+ * Ajax call to sync page content and thumbnail when you switch to static frontpage
+ */
+function llorix_one_lite_ajax_call() {
+	$pid = $_POST['pid'];
+	llorix_one_lite_sync_control_from_page( $pid, true );
+	die();
+}
+add_action( 'wp_ajax_llorix_one_lite_ajax_call', 'llorix_one_lite_ajax_call' );
+
+/**
+ * Change the default editor to html when using the tinyMce editor in customizer.
+ *
+ * @param string $r The current value of the default editor.
+ *
+ * @return string The new value of the editor, if we are in the customizer page.
+ */
+function llorix_one_lite_set_default_editor( $r ) {
+	if ( is_customize_preview() && function_exists( 'get_current_screen' ) ) {
+		$screen = get_current_screen();
+		if ( isset( $screen->id ) ) {
+			if ( $screen->id === 'customize' ) {
+				return 'tmce';
+			}
+		}
+	}
+	return $r;
+}
+add_filter( 'wp_default_editor', 'llorix_one_lite_set_default_editor' );
+
+/**
+ * Filters for text format
+ */
+add_filter( 'llorix_one_lite_text', 'wptexturize' );
+add_filter( 'llorix_one_lite_text', 'convert_smilies' );
+add_filter( 'llorix_one_lite_text', 'convert_chars' );
+add_filter( 'llorix_one_lite_text', 'wpautop' );
+add_filter( 'llorix_one_lite_text', 'shortcode_unautop' );
+add_filter( 'llorix_one_lite_text', 'do_shortcode' );
