@@ -5,6 +5,9 @@
  * @package llorix-one-lite
  */
 
+/* Include customizer repeater */
+require_once get_template_directory() . '/inc/customizer-repeater/functions.php';
+
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
@@ -12,7 +15,6 @@
  */
 function llorix_one_lite_customize_register( $wp_customize ) {
 
-	require_once( 'class/llorix-one-lite-general-control.php' );
 	require_once( 'class/llorix-one-lite-text-control.php' );
 	require_once( 'class/llorix-one-lite-alpha-control.php' );
 	require_once( trailingslashit( get_template_directory() ) . 'inc/customizer-page-editor/customizer-page-editor.php' );
@@ -225,29 +227,12 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	));
 
 	/* social icons header */
+	$default = llorix_one_lite_header_social_icons_get_default_content();
 	$wp_customize->add_setting( 'llorix_one_lite_very_top_social_icons', array(
 		'sanitize_callback' => 'llorix_one_lite_sanitize_repeater',
-		'default' => json_encode(
-			array(
-				array(
-					'icon_value' => 'fa-facebook',
-					'link' => '#',
-					'id' => 'llorix_one_lite_56d069ad8cb6b',
-				),
-				array(
-					'icon_value' => 'fa-twitter',
-					'link' => '#',
-					'id' => 'llorix_one_lite_56d069b48cb6c',
-				),
-				array(
-					'icon_value' => 'fa-google-plus-square',
-					'link' => '#',
-					'id' => 'llorix_one_lite_56d069b58cb6d',
-				),
-			)
-		),
+		'default' => $default,
+	) );
 
-	));
 	$wp_customize->add_control( new Llorix_One_Lite_General_Repeater( $wp_customize, 'llorix_one_lite_very_top_social_icons', array(
 		'label'   					=> esc_html__( 'Add new social icon','llorix-one-lite' ),
 		'section' 					=> 'llorix_one_lite_very_top_header_content',
@@ -471,38 +456,10 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 		'priority'    => 1,
 	));
 
+	$default = llorix_one_lite_logos_get_default_content();
 	$wp_customize->add_setting( 'llorix_one_lite_logos_content', array(
 		'sanitize_callback' => 'llorix_one_lite_sanitize_repeater',
-		'default' => json_encode(
-				array(
-					array(
-						'image_url' => llorix_one_lite_get_file( '/images/companies/1.png' ),
-						'link' => '#',
-						'id' => 'llorix_one_lite_56d069bb8cb71',
-					),
-					array(
-						'image_url' => llorix_one_lite_get_file( '/images/companies/2.png' ),
-						'link' => '#',
-						'id' => 'llorix_one_lite_56d069bc8cb72',
-					),
-					array(
-						'image_url' => llorix_one_lite_get_file( '/images/companies/3.png' ),
-						'link' => '#',
-						'id' => 'llorix_one_lite_56d069bd8cb73',
-					),
-					array(
-						'image_url' => llorix_one_lite_get_file( '/images/companies/4.png' ),
-						'link' => '#',
-						'id' => 'llorix_one_lite_56d06d128cb74',
-					),
-					array(
-						'image_url' => llorix_one_lite_get_file( '/images/companies/5.png' ),
-						'link' => '#',
-						'id' => 'llorix_one_lite_56d06d3d8cb75',
-					),
-				)
-		),
-
+		'default' => $default,
 	));
 
 	$wp_customize->add_control( new Llorix_One_Lite_General_Repeater( $wp_customize, 'llorix_one_lite_logos_content', array(
@@ -774,30 +731,10 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	));
 
 	/* Contact info content */
+	$default = llorix_one_lite_contact_get_default_content();
 	$wp_customize->add_setting( 'llorix_one_lite_contact_info_content', array(
 		'sanitize_callback' => 'llorix_one_lite_sanitize_repeater',
-		'default' => json_encode(
-			array(
-				array(
-					'icon_value' => 'fa-envelope',
-					'text' => 'contact@site.com',
-					'link' => '#',
-					'id' => 'llorix_one_lite_56d450a72cb3a',
-				),
-				array(
-					'icon_value' => 'fa-map-marker',
-					'text' => 'Company address',
-					'link' => '#',
-					'id' => 'llorix_one_lite_56d069b88cb6f',
-				),
-				array(
-					'icon_value' => 'fa-tablet',
-					'text' => '0 332 548 954',
-					'link' => '#',
-					'id' => 'llorix_one_lite_56d069b98cb70',
-				),
-			)
-		),
+		'default' => $default,
 	));
 	$wp_customize->add_control( new Llorix_One_Lite_General_Repeater( $wp_customize, 'llorix_one_lite_contact_info_content', array(
 		'label'   => esc_html__( 'Add new contact field','llorix-one-lite' ),
