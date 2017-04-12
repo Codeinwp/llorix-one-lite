@@ -1,4 +1,9 @@
 
+### 0.2.10 - 12/04/2017
+**Changes:** 
+- Fixed compatibility issues with Polylang and WPML
+- Fixed issues with shortcodes used in the front page
+
 ### 0.2.9 - 29/03/2017
 **Changes:** 
 - Made some changes for child themes usage
