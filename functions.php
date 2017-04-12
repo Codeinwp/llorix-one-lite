@@ -202,7 +202,7 @@ add_action( 'after_setup_theme', 'llorix_one_lite_upsells_setup' );
  * @return bool
  */
 function llorix_one_lite_is_not_static_front_page() {
-	$frontpage_id = get_option( 'page_on_front' );
+	
 	if ( get_option( 'show_on_front' ) === 'page' ) {
 		return true;
 	}
