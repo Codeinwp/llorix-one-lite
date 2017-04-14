@@ -157,6 +157,12 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		 */
 		add_theme_support( 'eventbrite' );
 
+		/* woocommerce support */
+		add_theme_support( 'woocommerce' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
+
 		/*
          * Notifications in customize
          */
@@ -202,7 +208,7 @@ add_action( 'after_setup_theme', 'llorix_one_lite_upsells_setup' );
  * @return bool
  */
 function llorix_one_lite_is_not_static_front_page() {
-	
+
 	if ( get_option( 'show_on_front' ) === 'page' ) {
 		return true;
 	}
