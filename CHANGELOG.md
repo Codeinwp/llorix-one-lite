@@ -1,4 +1,8 @@
 
+### 0.2.11 - 14/04/2017
+**Changes:** 
+- Added support for WooCommerce 3.0.0 gallery
+
 ### 0.2.10 - 12/04/2017
 **Changes:** 
 - Fixed compatibility issues with Polylang and WPML
