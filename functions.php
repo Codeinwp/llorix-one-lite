@@ -627,28 +627,28 @@ require get_template_directory() . '/inc/hooks.php';
  * @param string $social_icons Social icons input.
  */
 function llorix_one_lite_social_icons( $social_icons, $is_footer ) {
-    if ( ! llorix_one_lite_general_repeater_is_empty( $social_icons ) ) {
-        $llorix_one_lite_social_icons_decoded = json_decode( $social_icons ); ?>
-        <ul class="social-icons">
-            <?php
-            foreach ( $llorix_one_lite_social_icons_decoded as $llorix_one_lite_social_icon ) {
-                $language_context = $is_footer === true ? 'Social icons in footer' : 'Social icons in header';
-                $icon = ! empty( $llorix_one_lite_social_icon->icon_value ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_social_icon->icon_value, $language_context ) : '';
-                $link = ! empty( $llorix_one_lite_social_icon->link ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_social_icon->link, $language_context ) : '';
-                if ( ! empty( $icon ) && $icon !== 'No Icon' && ! empty( $link ) ) { ?>
-                    <li>
-                        <a href="<?php echo esc_url( $link ); ?>">
-                            <span class="screen-reader-text"><?php echo wp_kses_post( $icon ) ?></span>
-                            <i class="fa <?php if ( $is_footer === true ) { echo 'llorix-one-lite-footer-icons ';
+	if ( ! llorix_one_lite_general_repeater_is_empty( $social_icons ) ) {
+		$llorix_one_lite_social_icons_decoded = json_decode( $social_icons ); ?>
+		<ul class="social-icons">
+			<?php
+			foreach ( $llorix_one_lite_social_icons_decoded as $llorix_one_lite_social_icon ) {
+				$language_context = $is_footer === true ? 'Social icons in footer' : 'Social icons in header';
+				$icon = ! empty( $llorix_one_lite_social_icon->icon_value ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_social_icon->icon_value, $language_context ) : '';
+				$link = ! empty( $llorix_one_lite_social_icon->link ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_social_icon->link, $language_context ) : '';
+				if ( ! empty( $icon ) && $icon !== 'No Icon' && ! empty( $link ) ) { ?>
+					<li>
+						<a href="<?php echo esc_url( $link ); ?>">
+							<span class="screen-reader-text"><?php echo wp_kses_post( $icon ) ?></span>
+							<i class="fa <?php if ( $is_footer === true ) { echo 'llorix-one-lite-footer-icons ';
 } echo esc_attr( $icon ); ?> transparent-text-dark" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <?php
-                }
-            } ?>
-        </ul>
-        <?php
-    }
+						</a>
+					</li>
+					<?php
+				}
+			} ?>
+		</ul>
+		<?php
+	}
 }
 
 
