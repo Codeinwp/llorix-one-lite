@@ -1,4 +1,10 @@
 
+### 0.2.12 - 19/04/2017
+**Changes:** 
+- Added default image for the Our team section
+- Removed white space in default repeater content
+- Fixed issue with function checking for repeater content
+
 ### 0.2.11 - 14/04/2017
 **Changes:** 
 - Added support for WooCommerce 3.0.0 gallery
