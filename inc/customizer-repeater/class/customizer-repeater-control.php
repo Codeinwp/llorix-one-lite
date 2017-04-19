@@ -417,9 +417,7 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 		if ( ! empty( $options['type'] ) ) {
 			switch ( $options['type'] ) {
 				case 'textarea':?>
-					<textarea class="<?php echo esc_attr( $options['class'] ); ?>" placeholder="<?php echo esc_attr( $options['label'] ); ?>">
-						<?php echo ( ! empty( $options['sanitize_callback'] ) ?  call_user_func_array( $options['sanitize_callback'], array( $value ) ) : esc_attr( $value ) ); ?>
-					</textarea>
+					<textarea class="<?php echo esc_attr( $options['class'] ); ?>" placeholder="<?php echo esc_attr( $options['label'] ); ?>"><?php echo ( ! empty( $options['sanitize_callback'] ) ?  call_user_func_array( $options['sanitize_callback'], array( $value ) ) : esc_attr( $value ) ); ?></textarea>
 					<?php
 					break;
 			}
