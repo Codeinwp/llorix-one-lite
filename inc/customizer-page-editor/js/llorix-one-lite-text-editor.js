@@ -11,7 +11,7 @@
                 content;
 
             if (editor) {
-                editor.on( 'keyUp', function () {
+                editor.onChange.add(function () {
                     this.save();
                     content = editor.getContent();
                     input.val( content ).trigger( 'change' );
