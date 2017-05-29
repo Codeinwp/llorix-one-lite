@@ -689,7 +689,6 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 			'active_callback' => 'llorix_one_lite_show_on_front',
 			'include_admin_print_footer' => true,
 			'needsync' => true,
-			'teeny' => true,
 		) ) );
 
 		$default = '';

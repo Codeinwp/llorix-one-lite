@@ -86,7 +86,6 @@ class Llorix_One_Lite_Page_Editor extends WP_Customize_Control {
 		<?php
 		$settings = array(
 			'textarea_name' => $this->id,
-			'drag_drop_upload' => false,
 			'teeny' => $this->teeny,
 		);
 		$control_content = $this->value();
