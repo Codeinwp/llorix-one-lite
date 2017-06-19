@@ -1,4 +1,9 @@
 
+### 0.2.13 - 19/06/2017
+**Changes:** 
+- New sidebar for the shop page
+- Fixed issue with WYSIWYG editor in customizer
+
 ### 0.2.12 - 19/04/2017
 **Changes:** 
 - Added default image for the Our team section
