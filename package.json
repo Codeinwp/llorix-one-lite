@@ -3,6 +3,7 @@
   "nicename": "Llorix One Lite",
   "version": "1.1.0",
   "description": "Llorix One Lite theme",
+  "category": "themes",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Codeinwp/llorix-one-lite/"

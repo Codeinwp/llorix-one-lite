@@ -60,6 +60,8 @@ class Llorix_One_Lite_Page_Editor extends WP_Customize_Control {
 	 * Enqueue scripts
 	 */
 	public function enqueue() {
+		wp_enqueue_style( 'llorix_one_lite_text_editor_css', get_template_directory_uri() . '/inc/customizer-page-editor/css/customizer-page-editor.css', array(), '1.0.0' );
+
 		wp_enqueue_script( 'llorix_one_lite_text_editor', get_template_directory_uri() . '/inc/customizer-page-editor/js/llorix-one-lite-text-editor.js', array( 'jquery' ), false, true );
 		if ( $this->needsync === true ) {
 		    wp_enqueue_script( 'llorix_one_lite_controls_script', get_template_directory_uri() . '/inc/customizer-page-editor/js/llorix-one-lite-update-controls.js', array( 'jquery' ), false, true );
@@ -84,7 +86,6 @@ class Llorix_One_Lite_Page_Editor extends WP_Customize_Control {
 		<?php
 		$settings = array(
 			'textarea_name' => $this->id,
-			'drag_drop_upload' => false,
 			'teeny' => $this->teeny,
 		);
 		$control_content = $this->value();

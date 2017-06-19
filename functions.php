@@ -246,6 +246,16 @@ function llorix_one_lite_widgets_init() {
 		)
 	);
 
+	register_sidebar( array(
+		'name'          => __( 'Sidebar Shop Page', 'llorix-one-lite' ),
+		'id'            => 'llorix-one-sidebar-shop-archive',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
 }
 
 add_action( 'widgets_init', 'llorix_one_lite_widgets_init' );
@@ -370,10 +380,16 @@ add_action( 'woocommerce_after_main_content', 'llorix_one_lite_wrapper_end', 10 
 function llorix_one_lite_wrapper_start() {
 	echo '</div> </header>';
 	echo '<div class="content-wrap">
-		<div class="container">
-			<div id="primary" class="content-area col-md-12">';
+		<div class="container">';
+	if ( ( is_shop() || is_product_tag() || is_product_category() ) && is_active_sidebar( 'llorix-one-sidebar-shop-archive' ) ) {
+		echo '<div id="sidebar-secondary" class="widget-area col-md-3 sidebar-shop" role="complementary">';
+		dynamic_sidebar( 'llorix-one-sidebar-shop-archive' );
+		echo '</div>';
+		echo '<div id="primary" class="content-area col-md-9">';
+	} else {
+		echo '<div id="primary" class="content-area col-md-12">';
+	}
 }
-
 
 /**
  * WooCommerce Wrapper end.
