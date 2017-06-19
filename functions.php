@@ -382,7 +382,7 @@ function llorix_one_lite_wrapper_start() {
 	echo '<div class="content-wrap">
 		<div class="container">';
 	if ( ( is_shop() || is_product_tag() || is_product_category() ) && is_active_sidebar( 'llorix-one-sidebar-shop-archive' ) ) {
-		echo '<div id="sidebar-secondary" class="widget-area col-md-3" role="complementary">';
+		echo '<div id="sidebar-secondary" class="widget-area col-md-3 sidebar-shop" role="complementary">';
 		dynamic_sidebar( 'llorix-one-sidebar-shop-archive' );
 		echo '</div>';
 		echo '<div id="primary" class="content-area col-md-9">';

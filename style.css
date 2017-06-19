@@ -5079,6 +5079,10 @@ h2.screen-reader-text {
 	text-decoration: none;
 }
 
+#sidebar-secondary.sidebar-shop .widget-title:after {
+	float:none;
+}
+
 /* Calendar Widget */
 .widget_calendar table,
 .widget_calendar td {
