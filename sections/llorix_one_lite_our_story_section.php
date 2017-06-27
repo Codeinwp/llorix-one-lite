@@ -12,11 +12,14 @@
  */
 
 $llorix_one_lite_our_story_image = get_theme_mod( 'llorix_one_lite_our_story_image', apply_filters( 'llorix_one_lite_our_story_image_filter',llorix_one_lite_get_file( '/images/about-us.png' ) ) );
+$llorix_one_lite_our_story_image = apply_filters('llorix_one_lite_translate_single_string', $llorix_one_lite_our_story_image, 'Our story section - image');
 $llorix_one_lite_our_story_title = get_theme_mod( 'llorix_one_lite_our_story_title', esc_html__( 'Our Story','llorix-one-lite' ) );
+$llorix_one_lite_our_story_title = apply_filters('llorix_one_lite_translate_single_string', $llorix_one_lite_our_story_title, 'Our story section - title');
 
 if ( current_user_can( 'edit_theme_options' ) ) {
 	/* translators: %1$s is the customize link %2$s the customize link label */
 	$llorix_one_lite_our_story_text = get_theme_mod( 'llorix_one_lite_our_story_text', sprintf( __( 'Change this text in %s','llorix-one-lite' ), sprintf( '<a href="%1$s" class="llorix-one-lite-default-links">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=llorix_one_lite_our_story_text' ) ), __( 'About section','llorix-one-lite' ) ) ) );
+	$llorix_one_lite_our_story_text = apply_filters('llorix_one_lite_translate_single_string', $llorix_one_lite_our_story_text, 'Our story section - text');
 } else {
 	$llorix_one_lite_our_story_text = get_theme_mod( 'llorix_one_lite_our_story_text' );
 }

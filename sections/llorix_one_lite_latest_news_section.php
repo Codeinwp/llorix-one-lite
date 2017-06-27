@@ -28,6 +28,7 @@
 	$the_query = new WP_Query( $args );
 	if ( $the_query->have_posts() ) {
 			$llorix_one_lite_latest_news_title = get_theme_mod( 'llorix_one_lite_latest_news_title',esc_html__( 'Latest news','llorix-one-lite' ) );
+		    $llorix_one_lite_latest_news_title = apply_filters('llorix_one_lite_translate_single_string', $llorix_one_lite_latest_news_title, 'Latest news section - title');
 			if ( $llorix_one_lite_number_of_posts > 0 ) {
 				?>
 				<section class="brief timeline" id="latestnews" role="region" aria-label="<?php esc_html_e( 'Latest blog posts','llorix-one-lite' ); ?>">
