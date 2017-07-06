@@ -167,24 +167,24 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
          * Notifications in customize
          */
 		if ( ! defined( 'LLORIX_ONE_PLUS_PATH' ) ) {
-	        require get_template_directory() . '/ti-customizer-notify/class-ti-customizer-notify.php';
+			require get_template_directory() . '/ti-customizer-notify/class-ti-customizer-notify.php';
 
-	        $config_customizer = array(
-		        'recommended_plugins'       => array(
-			        'llorix-one-companion' => array(
-				        'recommended' => true,
-				        'description' => /* translators: %1$s is the name for the theme */
-					        sprintf( esc_html__( 'If you want to take full advantage of the options this theme has to offer, please install and activate %s', 'llorix-one-lite' ), sprintf( '<strong>%s</strong>', 'Llorix One Companion' ) ),
-			        ),
-		        ),
-		        'recommended_actions'       => array(),
-		        'recommended_actions_title' => '',
-		        'recommended_plugins_title' => esc_html__( 'Recommended Plugins', 'llorix-one-lite' ),
-		        'install_button_label'      => esc_html__( 'Install', 'llorix-one-lite' ),
-		        'activate_button_label'     => esc_html__( 'Activate', 'llorix-one-lite' ),
-		        'deactivate_button_label'   => esc_html__( 'Deactivate', 'llorix-one-lite' ),
-	        );
-	        Ti_Customizer_Notify::init( $config_customizer );
+			$config_customizer = array(
+				'recommended_plugins'       => array(
+					'llorix-one-companion' => array(
+						'recommended' => true,
+						'description' => /* translators: %1$s is the name for the theme */
+							sprintf( esc_html__( 'If you want to take full advantage of the options this theme has to offer, please install and activate %s', 'llorix-one-lite' ), sprintf( '<strong>%s</strong>', 'Llorix One Companion' ) ),
+					),
+				),
+				'recommended_actions'       => array(),
+				'recommended_actions_title' => '',
+				'recommended_plugins_title' => esc_html__( 'Recommended Plugins', 'llorix-one-lite' ),
+				'install_button_label'      => esc_html__( 'Install', 'llorix-one-lite' ),
+				'activate_button_label'     => esc_html__( 'Activate', 'llorix-one-lite' ),
+				'deactivate_button_label'   => esc_html__( 'Deactivate', 'llorix-one-lite' ),
+			);
+			Ti_Customizer_Notify::init( $config_customizer );
 		}
 	}
 endif; // llorix_one_lite_setup
@@ -447,7 +447,7 @@ function llorix_one_lite_php_style() {
 	$llorix_one_lite_frontpage_opacity = get_theme_mod( 'llorix_one_lite_frontpage_opacity', apply_filters( 'llorix_one_lite_frontpage_opacity_filter','rgba(13, 60, 85, 0.5)' ) );
 	$llorix_one_lite_blog_opacity      = get_theme_mod( 'llorix_one_lite_blog_opacity', apply_filters( 'llorix_one_lite_blog_opacity_filter','rgba(13, 60, 85, 0.6)' ) );
 	$llorix_one_header_image           = get_header_image();
-	$llorix_one_header_image = apply_filters('llorix_one_lite_translate_single_string', $llorix_one_header_image, 'Big title section - background');
+	$llorix_one_header_image = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_header_image, 'Big title section - background' );
 
 	if ( ! empty( $llorix_one_lite_title_color ) ) {
 		$custom_css .= '.dark-text { color: ' . $llorix_one_lite_title_color . ' }';

@@ -55,7 +55,7 @@
 
 			</div><!-- .footer-widget-wrap -->
 
-	        <div class="footer-bottom-wrap">
+			<div class="footer-bottom-wrap">
 				<?php
 					global $wp_customize;
 
@@ -85,14 +85,14 @@
 
 					$llorix_one_lite_social_icons = get_theme_mod( 'llorix_one_lite_social_icons' );
 					llorix_one_lite_social_icons( $llorix_one_lite_social_icons, true ); ?>
-	            
-	        </div><!-- .footer-bottom-wrap -->
+	
+						</div><!-- .footer-bottom-wrap -->
 
 
 			<?php echo apply_filters( 'llorix_one_plus_footer_text_filter','<div class="powered-by"><a href="http://themeisle.com/themes/llorix-one/" rel="nofollow">Llorix One Lite </a>' . esc_html__( 'powered by','llorix-one-lite' ) . '<a href="http://wordpress.org/" rel="nofollow">' . esc_html__( 'WordPress','llorix-one-lite' ) . '</a></div>' ); ?>
 
 
-	    </div><!-- container -->
+		</div><!-- container -->
 
 	</footer>
 

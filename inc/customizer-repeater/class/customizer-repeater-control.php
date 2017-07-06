@@ -443,7 +443,7 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 				<?php
 				/* translators: %s is link to FontAwesome */
 				printf( esc_html__( 'Note: Some icons may not be displayed here. You can see the full list of icons at %s', 'llorix-one-lite' ),
-	                /* translators: %s is link label*/
+					/* translators: %s is link label*/
 					sprintf( '<a href="http://fontawesome.io/icons/" rel="nofollow">%s</a>',
 						esc_html__( 'FontAwesome', 'llorix-one-lite' )
 					)
@@ -519,7 +519,7 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 					</div>
 					<?php get_template_part( $this->llorix_one_lite_icon_container ); ?>
 					<input type="text" class="customizer-repeater-social-repeater-link"
-					       placeholder="<?php esc_attr_e( 'Link', 'llorix-one-lite' ); ?>">
+						   placeholder="<?php esc_attr_e( 'Link', 'llorix-one-lite' ); ?>">
 					<input type="hidden" class="customizer-repeater-social-repeater-id" value="">
 					<button class="social-repeater-remove-social-item" style="display:none">
 						<?php esc_html_e( 'Remove Icon', 'llorix-one-lite' ); ?>
@@ -541,24 +541,24 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 						</div>
 						<?php get_template_part( $this->llorix_one_lite_icon_container ); ?>
 						<input type="text" class="customizer-repeater-social-repeater-link"
-						       placeholder="<?php esc_html_e( 'Link', 'llorix-one-lite' ); ?>"
-						       value="<?php if ( ! empty( $social_icon['link'] ) ) {
+							   placeholder="<?php esc_html_e( 'Link', 'llorix-one-lite' ); ?>"
+							   value="<?php if ( ! empty( $social_icon['link'] ) ) {
 									echo esc_url( $social_icon['link'] );
 } ?>">
 						<input type="hidden" class="customizer-repeater-social-repeater-id"
-						       value="<?php if ( ! empty( $social_icon['id'] ) ) {
+							   value="<?php if ( ! empty( $social_icon['id'] ) ) {
 									echo esc_attr( $social_icon['id'] );
 } ?>">
 						<button class="social-repeater-remove-social-item"
-						        style="<?php if ( $show_del == 1 ) {
-							        echo 'display:none';
+								style="<?php if ( $show_del == 1 ) {
+									echo 'display:none';
 } ?>"><?php esc_html_e( 'Remove Icon', 'llorix-one-lite' ); ?></button>
 					</div>
 					<?php
 				} ?>
 				<input type="hidden" id="social-repeater-socials-repeater-colector"
-				       class="social-repeater-socials-repeater-colector"
-				       value="<?php echo esc_textarea( html_entity_decode( $value ) ); ?>" />
+					   class="social-repeater-socials-repeater-colector"
+					   value="<?php echo esc_textarea( html_entity_decode( $value ) ); ?>" />
 			</div>
 			<button class="social-repeater-add-social-item button-secondary"><?php esc_html_e( 'Add icon', 'llorix-one-lite' ); ?></button>
 			<?php

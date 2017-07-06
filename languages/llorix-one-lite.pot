@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Llorix One Lite 0.2.12\n"
+"Project-Id-Version: Llorix One Lite 0.2.13\n"
 "Report-Msgid-Bugs-To: https://github.com/Codeinwp/llorix-one-lite/issues\n"
-"POT-Creation-Date: 2017-05-25 16:08:53+00:00\n"
+"POT-Creation-Date: 2017-07-06 10:59:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -529,7 +529,7 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#: functions.php:46 functions.php:703 header.php:216
+#: functions.php:46 functions.php:720 header.php:218
 msgid "Primary Menu"
 msgstr ""
 
@@ -583,37 +583,41 @@ msgstr ""
 msgid "Footer area %d"
 msgstr ""
 
-#: functions.php:287
+#: functions.php:250
+msgid "Sidebar Shop Page"
+msgstr ""
+
+#: functions.php:297
 msgid "expand child menu"
 msgstr ""
 
-#: functions.php:288
+#: functions.php:298
 msgid "collapse child menu"
 msgstr ""
 
-#: functions.php:533
+#: functions.php:550
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:533 functions.php:558
+#: functions.php:550 functions.php:575
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:543
+#: functions.php:560
 #. translators: %s is the author link
 msgid "<span itemprop=\"name\">%s </span><span class=\"says\">says:</span>"
 msgstr ""
 
-#: functions.php:546
+#: functions.php:563
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:554
+#: functions.php:571
 #. translators: %1$s is the date of the comment and %2$s is the comment title
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:610
+#: functions.php:627
 msgid "Read more about "
 msgstr ""
 
@@ -625,19 +629,19 @@ msgstr ""
 msgid "(+9) 0999.500.400"
 msgstr ""
 
-#: header.php:96 inc/customizer.php:208
+#: header.php:97 inc/customizer.php:208
 msgid "Call us: "
 msgstr ""
 
-#: header.php:131 header.php:135
+#: header.php:133 header.php:137
 msgid "Call us:"
 msgstr ""
 
-#: header.php:161
+#: header.php:163
 msgid "Toggle Menu"
 msgstr ""
 
-#: header.php:162
+#: header.php:164
 msgid "Toggle navigation"
 msgstr ""
 
@@ -809,7 +813,7 @@ msgid "Install Llorix One Companion"
 msgstr ""
 
 #: inc/admin/welcome-screen/sections/getting-started.php:121
-#: inc/customizer.php:774
+#: inc/customizer.php:773
 msgid "Pirate Forms"
 msgstr ""
 
@@ -949,7 +953,7 @@ msgstr ""
 msgid "Contribute"
 msgstr ""
 
-#: inc/admin/welcome-screen/welcome-screen.php:175 inc/customizer.php:909
+#: inc/admin/welcome-screen/welcome-screen.php:175 inc/customizer.php:908
 msgid "Support"
 msgstr ""
 
@@ -983,27 +987,27 @@ msgid "Documentation"
 msgstr ""
 
 #: inc/customize-pro/class-customizer-theme-info-root.php:103
-#: inc/customizer.php:904
+#: inc/customizer.php:903
 msgid "Shop Section"
 msgstr ""
 
 #: inc/customize-pro/class-customizer-theme-info-root.php:104
-#: inc/customizer.php:905
+#: inc/customizer.php:904
 msgid "Portfolio Section"
 msgstr ""
 
 #: inc/customize-pro/class-customizer-theme-info-root.php:105
-#: inc/customizer.php:906
+#: inc/customizer.php:905
 msgid "Shortcodes Section"
 msgstr ""
 
 #: inc/customize-pro/class-customizer-theme-info-root.php:106
-#: inc/customizer.php:907
+#: inc/customizer.php:906
 msgid "Section Reordering"
 msgstr ""
 
 #: inc/customize-pro/class-customizer-theme-info-root.php:110
-#: inc/customizer.php:891 inc/customizer.php:912
+#: inc/customizer.php:890 inc/customizer.php:911
 msgid "View PRO version"
 msgstr ""
 
@@ -1178,7 +1182,7 @@ msgstr ""
 msgid "Phone number"
 msgstr ""
 
-#: inc/customizer.php:237 inc/customizer.php:822
+#: inc/customizer.php:237 inc/customizer.php:821
 msgid "Add new social icon"
 msgstr ""
 
@@ -1195,7 +1199,7 @@ msgid "Frontpage sections"
 msgstr ""
 
 #: inc/customizer.php:312 inc/customizer.php:346
-#: sections/llorix_one_lite_header_section.php:19
+#: sections/llorix_one_lite_header_section.php:22
 msgid "Big title section"
 msgstr ""
 
@@ -1203,7 +1207,7 @@ msgstr ""
 msgid "Header Logo"
 msgstr ""
 
-#: inc/customizer.php:332 sections/llorix_one_lite_header_section.php:15
+#: inc/customizer.php:332 sections/llorix_one_lite_header_section.php:17
 msgid "Simple, Reliable and Awesome."
 msgstr ""
 
@@ -1213,16 +1217,16 @@ msgid "Main title"
 msgstr ""
 
 #: inc/customizer.php:346 inc/customizer.php:513 inc/customizer.php:578
-#: sections/llorix_one_lite_header_section.php:19
-#: sections/llorix_one_lite_our_story_section.php:19
-#: sections/llorix_one_lite_ribbon_section.php:18
+#: sections/llorix_one_lite_header_section.php:22
+#: sections/llorix_one_lite_our_story_section.php:21
+#: sections/llorix_one_lite_ribbon_section.php:19
 #. translators: %1$s is the customize link %2$s the customize link label
 msgid "Change this text in %s"
 msgstr ""
 
 #: inc/customizer.php:361 inc/customizer.php:594
-#: sections/llorix_one_lite_header_section.php:24
-#: sections/llorix_one_lite_ribbon_section.php:23
+#: sections/llorix_one_lite_header_section.php:30
+#: sections/llorix_one_lite_ribbon_section.php:26
 msgid "GET STARTED"
 msgstr ""
 
@@ -1271,7 +1275,7 @@ msgid "Add new logo"
 msgstr ""
 
 #: inc/customizer.php:478 inc/customizer.php:513
-#: sections/llorix_one_lite_our_story_section.php:19
+#: sections/llorix_one_lite_our_story_section.php:21
 msgid "About section"
 msgstr ""
 
@@ -1279,7 +1283,7 @@ msgstr ""
 msgid "Disable the About section?"
 msgstr ""
 
-#: inc/customizer.php:499 sections/llorix_one_lite_our_story_section.php:15
+#: inc/customizer.php:499 sections/llorix_one_lite_our_story_section.php:16
 msgid "Our Story"
 msgstr ""
 
@@ -1288,7 +1292,7 @@ msgid "Content"
 msgstr ""
 
 #: inc/customizer.php:543 inc/customizer.php:578
-#: sections/llorix_one_lite_ribbon_section.php:18
+#: sections/llorix_one_lite_ribbon_section.php:19
 msgid "Ribbon section"
 msgstr ""
 
@@ -1309,7 +1313,7 @@ msgid "Disable the Latest news section?"
 msgstr ""
 
 #: inc/customizer.php:640 sections/llorix_one_lite_latest_news_section.php:30
-#: sections/llorix_one_lite_latest_news_section.php:144
+#: sections/llorix_one_lite_latest_news_section.php:145
 msgid "Latest news"
 msgstr ""
 
@@ -1321,80 +1325,80 @@ msgstr ""
 msgid "Disable the Frontpage Content section?"
 msgstr ""
 
-#: inc/customizer.php:705
+#: inc/customizer.php:704
 msgid "Background"
 msgstr ""
 
-#: inc/customizer.php:714
+#: inc/customizer.php:713
 msgid "Contact info section"
 msgstr ""
 
-#: inc/customizer.php:728
+#: inc/customizer.php:727
 msgid "Disable the Contact info section?"
 msgstr ""
 
-#: inc/customizer.php:740
+#: inc/customizer.php:739
 msgid "Add new contact field"
 msgstr ""
 
-#: inc/customizer.php:754 inc/customizer.php:785
+#: inc/customizer.php:753 inc/customizer.php:784
 msgid "Map shortcode"
 msgstr ""
 
-#: inc/customizer.php:755 inc/customizer.php:786
+#: inc/customizer.php:754 inc/customizer.php:785
 msgid "To use this section please install "
 msgstr ""
 
-#: inc/customizer.php:755 inc/customizer.php:786
+#: inc/customizer.php:754 inc/customizer.php:785
 msgid "Intergeo Maps"
 msgstr ""
 
-#: inc/customizer.php:755 inc/customizer.php:786
+#: inc/customizer.php:754 inc/customizer.php:785
 msgid " plugin then use it to create a map and paste here the shortcode generated"
 msgstr ""
 
-#: inc/customizer.php:763
+#: inc/customizer.php:762
 msgid "Contact page"
 msgstr ""
 
-#: inc/customizer.php:765
+#: inc/customizer.php:764
 msgid ""
 "To customize the Contact Page you need to first select the template "
 "\"Contact page\" for the page you want to use for this purpose. Then open "
 "that page in the browser and press \"Customize\" in the top bar."
 msgstr ""
 
-#: inc/customizer.php:773
+#: inc/customizer.php:772
 msgid "Contact form shortcode"
 msgstr ""
 
-#: inc/customizer.php:774
+#: inc/customizer.php:773
 msgid "Create a form, copy the shortcode generated and paste it here. We recommend "
 msgstr ""
 
-#: inc/customizer.php:774
+#: inc/customizer.php:773
 msgid " but you can use any plugin you like."
 msgstr ""
 
-#: inc/customizer.php:794
+#: inc/customizer.php:793
 msgid "Footer options"
 msgstr ""
 
-#: inc/customizer.php:796
+#: inc/customizer.php:795
 msgid ""
 "The main content of this section is customizable in: Customize -> Widgets "
 "-> Footer area. "
 msgstr ""
 
-#: inc/customizer.php:812
+#: inc/customizer.php:811
 msgid "Copyright"
 msgstr ""
 
-#: inc/customizer.php:903
+#: inc/customizer.php:902
 msgid "Unlimited Color Options"
 msgstr ""
 
-#: inc/customizer.php:908
+#: inc/customizer.php:907
 msgid "Alternative Header Layout"
 msgstr ""
 
@@ -1443,40 +1447,40 @@ msgstr ""
 msgid "Contact Info"
 msgstr ""
 
-#: sections/llorix_one_lite_header_section.php:101
-#: sections/llorix_one_lite_header_section.php:104
-#: sections/llorix_one_lite_header_section.php:106
+#: sections/llorix_one_lite_header_section.php:109
+#: sections/llorix_one_lite_header_section.php:112
+#: sections/llorix_one_lite_header_section.php:114
 msgid "Header button label:"
 msgstr ""
 
-#: sections/llorix_one_lite_latest_news_section.php:33
-#: sections/llorix_one_lite_latest_news_section.php:147
+#: sections/llorix_one_lite_latest_news_section.php:34
+#: sections/llorix_one_lite_latest_news_section.php:148
 msgid "Latest blog posts"
-msgstr ""
-
-#: sections/llorix_one_lite_latest_news_section.php:51
-#: sections/llorix_one_lite_latest_news_section.php:163
-msgid "Post slider navigation: Down"
 msgstr ""
 
 #: sections/llorix_one_lite_latest_news_section.php:52
 #: sections/llorix_one_lite_latest_news_section.php:164
+msgid "Post slider navigation: Down"
+msgstr ""
+
+#: sections/llorix_one_lite_latest_news_section.php:53
+#: sections/llorix_one_lite_latest_news_section.php:165
 msgid "Post slider navigation: Up"
 msgstr ""
 
-#: sections/llorix_one_lite_latest_news_section.php:75
-#: sections/llorix_one_lite_latest_news_section.php:187
+#: sections/llorix_one_lite_latest_news_section.php:76
+#: sections/llorix_one_lite_latest_news_section.php:188
 #. translators: %s is the title
 msgid "Latest News: %s"
 msgstr ""
 
-#: sections/llorix_one_lite_latest_news_section.php:103
-#: sections/llorix_one_lite_latest_news_section.php:215
+#: sections/llorix_one_lite_latest_news_section.php:104
+#: sections/llorix_one_lite_latest_news_section.php:216
 msgid "by"
 msgstr ""
 
-#: sections/llorix_one_lite_latest_news_section.php:113
-#: sections/llorix_one_lite_latest_news_section.php:228
+#: sections/llorix_one_lite_latest_news_section.php:114
+#: sections/llorix_one_lite_latest_news_section.php:229
 #. translators: %s is the title
 #. translators: %s is the post name
 msgid "Read more %s"
@@ -1487,22 +1491,22 @@ msgstr ""
 msgid "Affiliates Logos"
 msgstr ""
 
-#: sections/llorix_one_lite_our_story_section.php:27
-#: sections/llorix_one_lite_our_story_section.php:31
+#: sections/llorix_one_lite_our_story_section.php:30
+#: sections/llorix_one_lite_our_story_section.php:34
 msgid "About"
 msgstr ""
 
-#: sections/llorix_one_lite_ribbon_section.php:34
-#: sections/llorix_one_lite_ribbon_section.php:36
-#: sections/llorix_one_lite_ribbon_section.php:79
-#: sections/llorix_one_lite_ribbon_section.php:81
+#: sections/llorix_one_lite_ribbon_section.php:38
+#: sections/llorix_one_lite_ribbon_section.php:40
+#: sections/llorix_one_lite_ribbon_section.php:83
+#: sections/llorix_one_lite_ribbon_section.php:85
 msgid "Ribbon"
 msgstr ""
 
-#: sections/llorix_one_lite_ribbon_section.php:58
-#: sections/llorix_one_lite_ribbon_section.php:60
-#: sections/llorix_one_lite_ribbon_section.php:104
-#: sections/llorix_one_lite_ribbon_section.php:106
+#: sections/llorix_one_lite_ribbon_section.php:62
+#: sections/llorix_one_lite_ribbon_section.php:64
+#: sections/llorix_one_lite_ribbon_section.php:108
+#: sections/llorix_one_lite_ribbon_section.php:110
 msgid "Ribbon button label:"
 msgstr ""
 
@@ -1603,7 +1607,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:551
+#: functions.php:568
 msgctxt "comment time format"
 msgid "l, F j, Y, g:i a"
 msgstr ""
@@ -1620,10 +1624,10 @@ msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: sections/llorix_one_lite_latest_news_section.php:76
-#: sections/llorix_one_lite_latest_news_section.php:100
-#: sections/llorix_one_lite_latest_news_section.php:188
-#: sections/llorix_one_lite_latest_news_section.php:212
+#: sections/llorix_one_lite_latest_news_section.php:77
+#: sections/llorix_one_lite_latest_news_section.php:101
+#: sections/llorix_one_lite_latest_news_section.php:189
+#: sections/llorix_one_lite_latest_news_section.php:213
 msgctxt "post time format"
 msgid "l, F j, Y, g:i a"
 msgstr ""
