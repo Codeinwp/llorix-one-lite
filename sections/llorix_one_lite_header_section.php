@@ -20,12 +20,10 @@
 	if ( current_user_can( 'edit_theme_options' ) ) {
 	/* translators: %1$s is the customize link %2$s the customize link label */
 	$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle', sprintf( __( 'Change this text in %s','llorix-one-lite' ), sprintf( '<a href="%1$s" class="llorix-one-lite-default-links">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=llorix_one_lite_header_subtitle' ) ), __( 'Big title section','llorix-one-lite' ) ) ) );
-	$llorix_one_lite_header_subtitle = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_subtitle, 'Big title section - subtitle' );
 	} else {
 	$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle' );
-	$llorix_one_lite_header_subtitle = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_subtitle, 'Big title section - subtitle' );
 	}
-
+	$llorix_one_lite_header_subtitle = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_subtitle, 'Big title section - subtitle' );
 
 	$llorix_one_lite_header_button_text = get_theme_mod( 'llorix_one_lite_header_button_text',esc_html__( 'GET STARTED','llorix-one-lite' ) );
 	$llorix_one_lite_header_button_text = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_button_text, 'Big title section - button text' );

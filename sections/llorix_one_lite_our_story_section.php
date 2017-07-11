@@ -19,10 +19,10 @@ $llorix_one_lite_our_story_title = apply_filters( 'llorix_one_lite_translate_sin
 if ( current_user_can( 'edit_theme_options' ) ) {
 	/* translators: %1$s is the customize link %2$s the customize link label */
 	$llorix_one_lite_our_story_text = get_theme_mod( 'llorix_one_lite_our_story_text', sprintf( __( 'Change this text in %s','llorix-one-lite' ), sprintf( '<a href="%1$s" class="llorix-one-lite-default-links">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=llorix_one_lite_our_story_text' ) ), __( 'About section','llorix-one-lite' ) ) ) );
-	$llorix_one_lite_our_story_text = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_our_story_text, 'Our story section - text' );
 } else {
 	$llorix_one_lite_our_story_text = get_theme_mod( 'llorix_one_lite_our_story_text' );
 }
+$llorix_one_lite_our_story_text = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_our_story_text, 'Our story section - text' );
 $llorix_one_lite_our_story_show = get_theme_mod( 'llorix_one_lite_our_story_show' );
 
 /* If section is not disabled */
