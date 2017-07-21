@@ -1,6 +1,8 @@
 <wpml-config>
 	<admin-texts>
 		<key name="theme_mods_llorix-one-lite">
+			<key name="header_image" />
+			<key name="llorix_one_lite_header_logo" />
 			<key name="llorix_one_lite_header_title" />
 			<key name="llorix_one_lite_header_subtitle" />
 			<key name="llorix_one_lite_header_button_text" />
@@ -20,6 +22,11 @@
 			<key name="llorix_one_lite_our_team_subtitle" />
 			<key name="llorix_one_lite_happy_customers_title" />
 			<key name="llorix_one_lite_happy_customers_subtitle" />
+			<key name="llorix_one_lite_blog_header_title" />
+			<key name="llorix_one_lite_blog_header_subtitle" />
+			<key name="llorix_one_lite_blog_header_image" />
+			<key name="llorix_one_lite_very_top_header_phone_text" />
+			<key name="llorix_one_lite_very_top_header_phone" />
 		</key>
 	</admin-texts>
 </wpml-config>

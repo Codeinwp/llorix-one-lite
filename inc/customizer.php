@@ -27,8 +27,8 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 	$wp_customize->add_section( 'llorix_one_lite_general_section' , array(
 		'title'       => esc_html__( 'Advanced options', 'llorix-one-lite' ),
-	  	'priority'    => 10,
-	  	'description' => esc_html__( 'Llorix One Lite theme general options','llorix-one-lite' ),
+		  'priority'    => 10,
+		  'description' => esc_html__( 'Llorix One Lite theme general options','llorix-one-lite' ),
 	));
 
 	$blogname = $wp_customize->get_control( 'blogname' );
@@ -138,8 +138,8 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 	/* General options */
 	$wp_customize->add_section( 'llorix_one_lite_appearance_general' , array(
 		'title'       => esc_html__( 'General options', 'llorix-one-lite' ),
-	  	'priority'    => 3,
-	  	'description' => esc_html__( 'Llorix One Lite theme general appearance options','llorix-one-lite' ),
+		  'priority'    => 3,
+		  'description' => esc_html__( 'Llorix One Lite theme general appearance options','llorix-one-lite' ),
 		'panel'		  => 'panel_2',
 	));
 
@@ -760,7 +760,7 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 	$wp_customize->add_section( 'llorix_one_lite_contact_page' , array(
 		'title'       => esc_html__( 'Contact page', 'llorix-one-lite' ),
-	  	'priority'    => 110,
+		  'priority'    => 110,
 		'description' => __( 'To customize the Contact Page you need to first select the template "Contact page" for the page you want to use for this purpose. Then open that page in the browser and press "Customize" in the top bar.','llorix-one-lite' ),
 	));
 
@@ -791,8 +791,8 @@ function llorix_one_lite_customize_register( $wp_customize ) {
 
 	$wp_customize->add_section( 'llorix_one_lite_footer_section' , array(
 		'title'       => esc_html__( 'Footer options', 'llorix-one-lite' ),
-	  	'priority'    => 130,
-	  	'description' => esc_html__( 'The main content of this section is customizable in: Customize -> Widgets -> Footer area. ','llorix-one-lite' ),
+		  'priority'    => 130,
+		  'description' => esc_html__( 'The main content of this section is customizable in: Customize -> Widgets -> Footer area. ','llorix-one-lite' ),
 	));
 
 	/* Footer Menu */
