@@ -28,7 +28,7 @@
 	$llorix_one_lite_header_button_text = get_theme_mod( 'llorix_one_lite_header_button_text',esc_html__( 'GET STARTED','llorix-one-lite' ) );
 	$llorix_one_lite_header_button_text = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_button_text, 'Big title section - button text' );
 	$llorix_one_lite_header_button_link = get_theme_mod( 'llorix_one_lite_header_button_link','#' );
-    $llorix_one_lite_header_button_link = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_button_link, 'Big title section - button link' );
+	$llorix_one_lite_header_button_link = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_button_link, 'Big title section - button link' );
 	$llorix_one_lite_enable_move = get_theme_mod( 'llorix_one_lite_enable_move' );
 	$llorix_one_lite_first_layer = get_theme_mod( 'llorix_one_lite_first_layer', llorix_one_lite_get_file( '/images/background1.png' ) );
 	$llorix_one_lite_second_layer = get_theme_mod( 'llorix_one_lite_second_layer',llorix_one_lite_get_file( '/images/background2.png' ) );

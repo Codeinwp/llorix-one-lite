@@ -16,7 +16,7 @@
 	$llorix_one_lite_contact_info_show = get_theme_mod( 'llorix_one_lite_contact_info_show' );
 
 	$llorix_one_lite_frontpage_map_shortcode = get_theme_mod( 'llorix_one_lite_frontpage_map_shortcode' );
-    $llorix_one_lite_frontpage_map_shortcode = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_frontpage_map_shortcode, 'Map section - shortcode' );
+	$llorix_one_lite_frontpage_map_shortcode = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_frontpage_map_shortcode, 'Map section - shortcode' );
 
 	/* If section is not disabled */
 	if ( isset( $llorix_one_lite_contact_info_show ) && $llorix_one_lite_contact_info_show != 1 ) {
