@@ -20,8 +20,24 @@ if ( ! function_exists( 'llorix_one_lite_translate_single_string' ) ) {
 
 		return $wpml_translation;
 	}
-
 	add_filter( 'llorix_one_lite_translate_single_string', 'llorix_one_lite_translate_single_string', 10, 2 );
+
+	/**
+	 * Filter to translate header image
+	 */
+	function llorix_one_lite_translate_header_image( $original_value, $domain ) {
+		if ( is_customize_preview() ) {
+			$wpml_translation = $original_value;
+		} else {
+			$wpml_translation = apply_filters( 'wpml_translate_single_string', $original_value, $domain, $original_value );
+			if ( $wpml_translation === $original_value && function_exists( 'pll__' ) ) {
+				return pll__( $original_value );
+			}
+		}
+
+		return $wpml_translation;
+	}
+	add_filter( 'theme_mod_header_image', 'llorix_one_lite_translate_header_image', 10 );
 }
 
 
