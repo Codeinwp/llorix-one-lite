@@ -20,6 +20,7 @@
 
 			<?php
 				$llorix_one_lite_contact_form_shortcode = get_theme_mod( 'llorix_one_lite_contact_form_shortcode' );
+			    $llorix_one_lite_contact_form_shortcode = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_contact_form_shortcode, 'Contact page - form shortcode' );
 			?>
 			<div class="col-md-6">
 				<?php the_content(); ?>
@@ -43,6 +44,7 @@
 	
 		<?php
 			$llorix_one_lite_contact_map_shortcode = get_theme_mod( 'llorix_one_lite_contact_map_shortcode' );
+		    $llorix_one_lite_contact_map_shortcode = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_contact_map_shortcode, 'Contact page - map shortcode' );
 			if ( ! empty( $llorix_one_lite_contact_map_shortcode ) ) {
 			echo '<div class="contact-page-map-wrap">';
 			echo do_shortcode( $llorix_one_lite_contact_map_shortcode );

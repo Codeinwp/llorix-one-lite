@@ -18,6 +18,7 @@ if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontp
 	$title_class  = '';
 	if ( is_customize_preview() ) {
 		$llorix_one_frontpage_featured = get_theme_mod( 'llorix_one_lite_feature_thumbnail' );
+		$llorix_one_frontpage_featured = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_frontpage_featured, 'Content section - content' );
 		if ( ! empty( $llorix_one_frontpage_featured ) ) {
 			$class_to_add = 'overlay-layer-wrap white-text';
 		} else {

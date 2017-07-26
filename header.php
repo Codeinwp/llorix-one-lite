@@ -127,6 +127,7 @@ endif; ?>
 					<div class="container">
 						<?php
 						$llorix_one_lite_very_top_header_phone = get_theme_mod( 'llorix_one_lite_very_top_header_phone','(+9) 0999.500.400' );
+						$llorix_one_lite_very_top_header_phone = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_very_top_header_phone, 'Very Top Header - phone number' );
 
 						if ( ! empty( $llorix_one_lite_very_top_header_phone ) ) {
 							echo '<div class="very-top-left">';
@@ -170,7 +171,7 @@ endif; ?>
 					<?php
 
 					$llorix_one_lite_logo = get_theme_mod( 'llorix_one_lite_logo' );
-
+					$llorix_one_lite_logo = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_logo, 'Header Logo - Logo' );
 
 
 					if ( ! empty( $llorix_one_lite_logo ) ) :
