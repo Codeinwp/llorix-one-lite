@@ -2,6 +2,7 @@
 /**
  * TI Customizer Notify Class
  */
+
 class Ti_Customizer_Notify {
 
 	/**
@@ -158,11 +159,13 @@ class Ti_Customizer_Notify {
 		wp_enqueue_script( 'updates' );
 
 		wp_enqueue_script( 'ti-customizer-notify-customizer-js', get_template_directory_uri() . '/ti-customizer-notify/js/ti-customizer-notify-customizer.js', array( 'customize-controls' ) );
-		wp_localize_script( 'ti-customizer-notify-customizer-js', 'tiCustomizerNotifyObject', array(
-			'ajaxurl'                  => admin_url( 'admin-ajax.php' ),
-			'template_directory'       => get_template_directory_uri(),
-			'base_path'                => admin_url(),
-		) );
+		wp_localize_script(
+			 'ti-customizer-notify-customizer-js', 'tiCustomizerNotifyObject', array(
+				 'ajaxurl'                  => admin_url( 'admin-ajax.php' ),
+				 'template_directory'       => get_template_directory_uri(),
+				 'base_path'                => admin_url(),
+			 )
+			);
 
 	}
 
@@ -186,7 +189,7 @@ class Ti_Customizer_Notify {
 				'ti-customizer-notify-section',
 				array(
 					'title'    => $this->recommended_actions_title,
-					'plugin_text'	=> $this->recommended_plugins_title,
+					'plugin_text'   => $this->recommended_plugins_title,
 					'dismiss_button' => $this->dismiss_button,
 					'priority' => 0,
 				)

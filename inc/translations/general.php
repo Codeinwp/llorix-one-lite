@@ -90,12 +90,14 @@ if ( ! function_exists( 'llorix_one_lite_filter_translations' ) ) {
 	 * Define Allowed Files to be included.
 	 */
 	function llorix_one_lite_filter_translations( $array ) {
-		return array_merge( $array, array(
-			'translations/translations-header-socials',
-			'translations/translations-logos-section',
-			'translations/translations-contact-section',
-			'translations/translations-footer-socials',
-		) );
+		return array_merge(
+			 $array, array(
+				 'translations/translations-header-socials',
+				 'translations/translations-logos-section',
+				 'translations/translations-contact-section',
+				 'translations/translations-footer-socials',
+			 )
+			);
 	}
 }
 add_filter( 'llorix_one_lite_filter_translations', 'llorix_one_lite_filter_translations' );

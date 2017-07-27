@@ -26,7 +26,7 @@
 		<div id="container-fluid" class="contactinfo-map">
 			<div class="llorix_one_lite_map_overlay"></div>
 			<div id="cd-google-map">
-				<?php echo do_shortcode( $llorix_one_lite_frontpage_map_shortcode );?>
+				<?php echo do_shortcode( $llorix_one_lite_frontpage_map_shortcode ); ?>
 			</div>
 		</div><!-- .container-fluid -->
 	<?php
@@ -37,7 +37,7 @@
 		<div id="container-fluid" class="contactinfo-map llorix_one_lite_only_customizer">
 			<div class="llorix_one_lite_map_overlay"></div>
 			<div id="cd-google-map">
-				<?php echo do_shortcode( $llorix_one_lite_frontpage_map_shortcode );?>
+				<?php echo do_shortcode( $llorix_one_lite_frontpage_map_shortcode ); ?>
 			</div>
 		</div><!-- .container-fluid -->
 	<?php

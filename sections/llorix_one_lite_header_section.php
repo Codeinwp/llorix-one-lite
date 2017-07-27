@@ -80,7 +80,8 @@ if ( ! empty( $llorix_one_lite_header_logo ) ) {
 
 <!-- HEADING AND BUTTONS -->
 <?php
-if ( ! empty( $llorix_one_lite_header_logo ) || ! empty( $llorix_one_lite_header_title ) || ! empty( $llorix_one_lite_header_subtitle ) || ! empty( $llorix_one_lite_header_button_text ) ) { ?>
+if ( ! empty( $llorix_one_lite_header_logo ) || ! empty( $llorix_one_lite_header_title ) || ! empty( $llorix_one_lite_header_subtitle ) || ! empty( $llorix_one_lite_header_button_text ) ) {
+?>
 						<div id="intro-section" class="intro-section">
 
 							<!-- WELCOM MESSAGE -->

@@ -49,8 +49,8 @@
 
 							<div class="llorix-one-lite-slider-whole-wrap">
 								<div class="controls-wrap">
-									<button class="control_next fa fa-angle-up"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Down','llorix-one-lite' )?></span></button>
-									<button class="control_prev fade-btn fa fa-angle-down"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Up','llorix-one-lite' )?></span></button>
+									<button class="control_next fa fa-angle-up"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Down','llorix-one-lite' ); ?></span></button>
+									<button class="control_prev fade-btn fa fa-angle-down"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Up','llorix-one-lite' ); ?></span></button>
 								</div>
 								<!-- TIMLEINE SCROLLER -->
 								<div itemscope itemtype="http://schema.org/Blog" id="llorix_one_slider" class="timeline-section">
@@ -60,7 +60,8 @@
 
 											$i_latest_posts = 0;
 
-											while ( $the_query->have_posts() ) :  $the_query->the_post();
+											while ( $the_query->have_posts() ) :
+$the_query->the_post();
 
 											$i_latest_posts++;
 
@@ -73,7 +74,7 @@
 											}
 											?>
 
-											<div itemscope itemprop="blogPosts" itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" class="timeline-box-wrap" title="<?php /* translators: %s is the title */ printf( esc_html__( 'Latest News: %s', 'llorix-one-lite' ), get_the_title() ) ?>">
+											<div itemscope itemprop="blogPosts" itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" class="timeline-box-wrap" title="<?php /* translators: %s is the title */ printf( esc_html__( 'Latest News: %s', 'llorix-one-lite' ), get_the_title() ); ?>">
 											<div datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>" class="entry-published date small-text strong">
 											<?php echo get_the_date( 'M, j' ); ?>
 											</div>
@@ -83,7 +84,8 @@
 
 											if ( has_post_thumbnail() ) :
 											the_post_thumbnail( 'llorix-one-lite-post-thumbnail-latest-news' );
-												else : ?>
+												else :
+												?>
 															<img src="<?php echo llorix_one_lite_get_file( '/images/no-thumbnail-latest-news.jpg' ); ?>" width="150" height="150" alt="<?php the_title(); ?>">
 															<?php
 															endif;
@@ -97,11 +99,11 @@
 												</h1>
 												<div class="entry-meta">
 												<span class="entry-date">
-												<a href="<?php echo esc_url( get_day_link( get_the_date( 'Y' ), get_the_date( 'm' ), get_the_date( 'd' ) ) ) ?>" rel="bookmark">
+												<a href="<?php echo esc_url( get_day_link( get_the_date( 'Y' ), get_the_date( 'm' ), get_the_date( 'd' ) ) ); ?>" rel="bookmark">
 												<time itemprop="datePublished" datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>" class="entry-date entry-published updated"><?php echo the_time( get_option( 'date_format' ) ); ?></time>
 												</a>
 												</span>
-												<span> <?php esc_html_e( 'by','llorix-one-lite' );?> </span>
+												<span> <?php esc_html_e( 'by','llorix-one-lite' ); ?> </span>
 												<span itemscope itemprop="author" itemtype="http://schema.org/Person" class="author-link">
 												<span  itemprop="name" class="entry-author author vcard">
 												<a itemprop="url" class="url fn n" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author"><?php the_author(); ?> </a>
@@ -161,8 +163,8 @@
 
 							<div class="llorix-one-lite-slider-whole-wrap">
 								<div class="controls-wrap">
-									<button class="control_next fa fa-angle-up"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Down','llorix-one-lite' )?></span></button>
-									<button class="control_prev fade-btn fa fa-angle-down"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Up','llorix-one-lite' )?></span></button>
+									<button class="control_next fa fa-angle-up"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Down','llorix-one-lite' ); ?></span></button>
+									<button class="control_prev fade-btn fa fa-angle-down"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Up','llorix-one-lite' ); ?></span></button>
 								</div>
 								<!-- TIMLEINE SCROLLER -->
 								<div itemscope itemtype="http://schema.org/Blog" id="llorix_one_slider" class="timeline-section">
@@ -172,7 +174,8 @@
 
 											$i_latest_posts = 0;
 
-											while ( $the_query->have_posts() ) :  $the_query->the_post();
+											while ( $the_query->have_posts() ) :
+$the_query->the_post();
 
 											$i_latest_posts++;
 
@@ -185,7 +188,7 @@
 											}
 											?>
 
-											<div itemscope itemprop="blogPosts" itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" class="timeline-box-wrap" title="<?php /* translators: %s is the title */ printf( esc_html__( 'Latest News: %s', 'llorix-one-lite' ), get_the_title() ) ?>">
+											<div itemscope itemprop="blogPosts" itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" class="timeline-box-wrap" title="<?php /* translators: %s is the title */ printf( esc_html__( 'Latest News: %s', 'llorix-one-lite' ), get_the_title() ); ?>">
 											<div datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>" class="entry-published date small-text strong">
 											<?php echo get_the_date( 'M, j' ); ?>
 											</div>
@@ -195,7 +198,8 @@
 
 											if ( has_post_thumbnail() ) :
 											the_post_thumbnail( 'llorix-one-lite-post-thumbnail-latest-news' );
-												else : ?>
+												else :
+												?>
 															<img src="<?php echo llorix_one_lite_get_file( '/images/no-thumbnail-latest-news.jpg' ); ?>" width="150" height="150" alt="<?php the_title(); ?>">
 															<?php
 															endif;
@@ -209,11 +213,11 @@
 												</h1>
 												<div class="entry-meta">
 												<span class="entry-date">
-												<a href="<?php echo esc_url( get_day_link( get_the_date( 'Y' ), get_the_date( 'm' ), get_the_date( 'd' ) ) ) ?>" rel="bookmark">
+												<a href="<?php echo esc_url( get_day_link( get_the_date( 'Y' ), get_the_date( 'm' ), get_the_date( 'd' ) ) ); ?>" rel="bookmark">
 												<time itemprop="datePublished" datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>" class="entry-date entry-published updated"><?php echo the_time( get_option( 'date_format' ) ); ?></time>
 												</a>
 												</span>
-												<span> <?php esc_html_e( 'by','llorix-one-lite' );?> </span>
+												<span> <?php esc_html_e( 'by','llorix-one-lite' ); ?> </span>
 												<span itemscope itemprop="author" itemtype="http://schema.org/Person" class="author-link">
 												<span  itemprop="name" class="entry-author author vcard">
 												<a itemprop="url" class="url fn n" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author"><?php the_author(); ?> </a>
