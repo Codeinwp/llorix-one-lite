@@ -1,10 +1,8 @@
-/**
- *  Global tinyMCE
- *
- *  @package llorix-one-lite
- */
+/* global tinyMCE */
+/* global jQuery */
 
 ( function( $ ) {
+    'use strict';
 	$( document ).on(
 		 'tinymce-editor-init', function() {
 		$( '.customize-control' ).find( '.wp-editor-area' ).each(

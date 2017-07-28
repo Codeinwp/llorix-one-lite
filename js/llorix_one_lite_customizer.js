@@ -1,10 +1,6 @@
-/**
- * Global jQuery
- * Global Color
- * Global wp
- *
- * @package llorix-one-lite
- */
+/* global jQuery */
+/* global Color */
+/* global wp */
 function media_upload(button_class) {
 	'use strict';
 

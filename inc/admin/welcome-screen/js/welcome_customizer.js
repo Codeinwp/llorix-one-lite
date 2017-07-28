@@ -1,8 +1,6 @@
-/**
- *  Global llorixOneWelcomeScreenCustomizerObject
- *
- *  @package llorix-one-lite
- */
+/* global llorixOneWelcomeScreenCustomizerObject */
+/* global jQuery */
+
 jQuery( document ).ready(
 	function() {
 	var llorix_one_aboutpage = llorixOneWelcomeScreenCustomizerObject.aboutpage;

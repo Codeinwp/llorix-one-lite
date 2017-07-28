@@ -1,10 +1,9 @@
-/**
- *  Global llorixOneLiteWelcomeScreenObject
- *
- *  @package llorix-one-lite
- */
+/* global llorixOneLiteWelcomeScreenObject */
+/* global jQuery */
+
 jQuery( document ).ready(
 	function() {
+    'use strict';
 
 	/* If there are required actions, add an icon with the number of required actions in the About L One page -> Actions required tab */
 	var llorix_one_nr_actions_required = llorixOneLiteWelcomeScreenObject.nr_actions_required;

@@ -1,10 +1,6 @@
-/**
- * Global requestpost
- * Global wp
- * Global tinyMCE
- *
- * @package llorix-one-lite
- */
+/* global requestpost */
+/* global wp */
+/* global tinyMCE */
 
 ( function( $ ) {
 	'use strict';
