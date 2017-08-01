@@ -470,7 +470,7 @@ function llorix_one_lite_php_style() {
 	$llorix_one_lite_frontpage_opacity = get_theme_mod( 'llorix_one_lite_frontpage_opacity', apply_filters( 'llorix_one_lite_frontpage_opacity_filter','rgba(13, 60, 85, 0.5)' ) );
 	$llorix_one_lite_blog_opacity      = get_theme_mod( 'llorix_one_lite_blog_opacity', apply_filters( 'llorix_one_lite_blog_opacity_filter','rgba(13, 60, 85, 0.6)' ) );
 	$llorix_one_header_image           = get_header_image();
-	$llorix_one_header_image = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_header_image, 'Big title section - background' );
+	$llorix_one_header_image = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_header_image, 'Big title section' );
 
 	if ( ! empty( $llorix_one_lite_title_color ) ) {
 		$custom_css .= '.dark-text { color: ' . $llorix_one_lite_title_color . ' }';

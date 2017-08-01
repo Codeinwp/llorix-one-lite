@@ -12,10 +12,10 @@
  */
 
 	$llorix_one_lite_header_logo = get_theme_mod( 'llorix_one_lite_header_logo', apply_filters( 'llorix_one_lite_header_logo_filter',llorix_one_lite_get_file( '/images/logo-2.png' ) ) );
-	$llorix_one_lite_header_logo = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_logo, 'Big title section - logo' );
+	$llorix_one_lite_header_logo = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_logo, 'Big title section' );
 
 	$llorix_one_lite_header_title = get_theme_mod( 'llorix_one_lite_header_title', apply_filters( 'llorix_one_lite_header_title_filter',esc_html__( 'Simple, Reliable and Awesome.','llorix-one-lite' ) ) );
-	$llorix_one_lite_header_title = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_title, 'Big title section - title' );
+	$llorix_one_lite_header_title = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_title, 'Big title section' );
 
 	if ( current_user_can( 'edit_theme_options' ) ) {
 	/* translators: %1$s is the customize link %2$s the customize link label */
@@ -23,12 +23,12 @@
 	} else {
 	$llorix_one_lite_header_subtitle = get_theme_mod( 'llorix_one_lite_header_subtitle' );
 	}
-	$llorix_one_lite_header_subtitle = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_subtitle, 'Big title section - subtitle' );
+	$llorix_one_lite_header_subtitle = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_subtitle, 'Big title section' );
 
 	$llorix_one_lite_header_button_text = get_theme_mod( 'llorix_one_lite_header_button_text',esc_html__( 'GET STARTED','llorix-one-lite' ) );
-	$llorix_one_lite_header_button_text = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_button_text, 'Big title section - button text' );
+	$llorix_one_lite_header_button_text = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_button_text, 'Big title section' );
 	$llorix_one_lite_header_button_link = get_theme_mod( 'llorix_one_lite_header_button_link','#' );
-	$llorix_one_lite_header_button_link = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_button_link, 'Big title section - button link' );
+	$llorix_one_lite_header_button_link = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_header_button_link, 'Big title section' );
 	$llorix_one_lite_enable_move = get_theme_mod( 'llorix_one_lite_enable_move' );
 	$llorix_one_lite_first_layer = get_theme_mod( 'llorix_one_lite_first_layer', llorix_one_lite_get_file( '/images/background1.png' ) );
 	$llorix_one_lite_second_layer = get_theme_mod( 'llorix_one_lite_second_layer',llorix_one_lite_get_file( '/images/background2.png' ) );
@@ -44,7 +44,7 @@ if ( ! empty( $llorix_one_lite_enable_move ) && $llorix_one_lite_enable_move ) {
 		if ( empty( $llorix_one_lite_first_layer ) && empty( $llorix_one_lite_second_layer ) ) {
 
 		$llorix_one_header_image2 = get_header_image();
-		$llorix_one_header_image2 = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_header_image2, 'Big title section - background' );
+		$llorix_one_header_image2 = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_header_image2, 'Big title section' );
 		echo '<li class="layer layer1" data-depth="0.10" style="background-image: url(' . $llorix_one_header_image2 . ');"></li>';
 
 		} else {

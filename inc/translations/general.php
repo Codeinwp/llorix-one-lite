@@ -20,8 +20,10 @@ if ( ! function_exists( 'llorix_one_lite_translate_single_string' ) ) {
 
 		return $wpml_translation;
 	}
-	add_filter( 'llorix_one_lite_translate_single_string', 'llorix_one_lite_translate_single_string', 10, 2 );
+}
+add_filter( 'llorix_one_lite_translate_single_string', 'llorix_one_lite_translate_single_string', 10, 2 );
 
+if ( ! function_exists( 'llorix_one_lite_translate_header_image' ) ) {
 	/**
 	 * Filter to translate header image
 	 */
@@ -37,8 +39,9 @@ if ( ! function_exists( 'llorix_one_lite_translate_single_string' ) ) {
 
 		return $wpml_translation;
 	}
-	add_filter( 'theme_mod_header_image', 'llorix_one_lite_translate_header_image', 10 );
 }
+add_filter( 'theme_mod_header_image', 'llorix_one_lite_translate_header_image', 10 );
+
 
 
 if ( ! function_exists( 'llorix_one_lite_pll_string_register_helper' ) ) {

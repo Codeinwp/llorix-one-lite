@@ -105,9 +105,9 @@ echo esc_attr( $fixedheader ); }
 					<div class="container">
 						<?php
 						$llorix_one_lite_very_top_header_phone = get_theme_mod( 'llorix_one_lite_very_top_header_phone',esc_html__( '(+9) 0999.500.400','llorix-one-lite' ) );
-						$llorix_one_lite_very_top_header_phone = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_very_top_header_phone, 'Very Top Header - phone number' );
+						$llorix_one_lite_very_top_header_phone = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_very_top_header_phone, 'Very Top Header' );
 						$llorix_one_lite_very_top_header_phone_text = get_theme_mod( 'llorix_one_lite_very_top_header_phone_text',esc_html__( 'Call us: ','llorix-one-lite' ) );
-						$llorix_one_lite_very_top_header_phone_text = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_very_top_header_phone_text, 'Very Top Header - phone text' );
+						$llorix_one_lite_very_top_header_phone_text = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_very_top_header_phone_text, 'Very Top Header' );
 
 
 						if ( ! empty( $llorix_one_lite_very_top_header_phone ) || ! empty( $llorix_one_lite_very_top_header_phone_text ) ) {
@@ -139,7 +139,7 @@ echo esc_attr( $fixedheader ); }
 					<div class="container">
 						<?php
 						$llorix_one_lite_very_top_header_phone = get_theme_mod( 'llorix_one_lite_very_top_header_phone','(+9) 0999.500.400' );
-						$llorix_one_lite_very_top_header_phone = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_very_top_header_phone, 'Very Top Header - phone number' );
+						$llorix_one_lite_very_top_header_phone = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_very_top_header_phone, 'Very Top Header' );
 
 						if ( ! empty( $llorix_one_lite_very_top_header_phone ) ) {
 							echo '<div class="very-top-left">';
@@ -183,7 +183,7 @@ echo esc_attr( $fixedheader ); }
 					<?php
 
 					$llorix_one_lite_logo = get_theme_mod( 'llorix_one_lite_logo' );
-					$llorix_one_lite_logo = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_logo, 'Header Logo - Logo' );
+					$llorix_one_lite_logo = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_logo, 'Header Logo' );
 
 
 					if ( ! empty( $llorix_one_lite_logo ) ) :
