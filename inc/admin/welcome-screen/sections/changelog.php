@@ -12,7 +12,11 @@ $llorix_one_lite = wp_get_theme( 'llorix-one-lite' );
 
 	<div class="llorix-one-lite-tab-pane-center">
 	
-		<h1>Llorix One Lite <?php if ( ! empty( $llorix_one_lite['Version'] ) ) :  ?> <sup id="llorix-one-lite-theme-version"><?php echo esc_attr( $llorix_one_lite['Version'] ); ?> </sup><?php endif; ?></h1>
+		<h1>Llorix One Lite 
+		<?php
+		if ( ! empty( $llorix_one_lite['Version'] ) ) :
+?>
+ <sup id="llorix-one-lite-theme-version"><?php echo esc_attr( $llorix_one_lite['Version'] ); ?> </sup><?php endif; ?></h1>
 
 	</div>
 

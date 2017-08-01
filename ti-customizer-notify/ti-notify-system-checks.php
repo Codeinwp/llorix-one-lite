@@ -1,4 +1,7 @@
 <?php
+/**
+ * Notify System
+ */
 
 if ( ! class_exists( 'Ti_Customizer_Notify_System' ) ) {
 	/**
