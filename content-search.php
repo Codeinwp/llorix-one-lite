@@ -65,7 +65,8 @@
 							}
 						echo '</span>';
 						}
-					llorix_one_lite_after_categories_in_entry_meta_trigger(); ?>
+					llorix_one_lite_after_categories_in_entry_meta_trigger();
+					?>
 				
 				<a href="<?php comments_link(); ?>" class="post-comments">
 					<i class="fa fa-comment" aria-hidden="true"></i>
@@ -81,14 +82,18 @@
 	<div class="entry-content">
 		<?php
 			$ismore = strpos( $post->post_content, '<!--more-->' );
-			if ( $ismore ) : the_content( /* translators: %s is the post title */ sprintf( esc_html__( 'Read more %s ...','llorix-one-lite' ), '<span class="screen-reader-text">' . esc_html__( 'about ', 'llorix-one-lite' ) . get_the_title() . '</span>' ) );
-			else : the_excerpt();
+			if ( $ismore ) :
+the_content( /* translators: %s is the post title */ sprintf( esc_html__( 'Read more %s ...','llorix-one-lite' ), '<span class="screen-reader-text">' . esc_html__( 'about ', 'llorix-one-lite' ) . get_the_title() . '</span>' ) );
+			else :
+the_excerpt();
 			endif;
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'llorix-one-lite' ),
-				'after'  => '</div>',
-			) );
+			wp_link_pages(
+				 array(
+					 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'llorix-one-lite' ),
+					 'after'  => '</div>',
+				 )
+				);
 		?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

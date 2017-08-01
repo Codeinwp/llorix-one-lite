@@ -61,6 +61,7 @@
 
 					/* COPYRIGHT */
 					$llorix_one_lite_copyright = get_theme_mod( 'llorix_one_lite_copyright',apply_filters( 'llorix_one_lite_copyright_default_filter','Themeisle' ) );
+					$llorix_one_lite_copyright = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_copyright, 'Copyright' );
 
 					if ( ! empty( $llorix_one_lite_copyright ) ) {
 					echo '<span class="llorix_one_lite_copyright_content">' . esc_attr( $llorix_one_lite_copyright ) . '</span>';
@@ -77,14 +78,16 @@
 								'theme_location'    => 'llorix_one_lite_footer_menu',
 								'container'         => false,
 								'menu_class'        => 'footer-links small-text',
-								'depth' 			=> 1,
+								'depth'             => 1,
 								'fallback_cb'       => false,
-) );
+							)
+							);
 					echo '</div>';
 					/* SOCIAL ICONS */
 
 					$llorix_one_lite_social_icons = get_theme_mod( 'llorix_one_lite_social_icons' );
-					llorix_one_lite_social_icons( $llorix_one_lite_social_icons, true ); ?>
+					llorix_one_lite_social_icons( $llorix_one_lite_social_icons, true );
+					?>
 	
 						</div><!-- .footer-bottom-wrap -->
 

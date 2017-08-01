@@ -12,7 +12,7 @@
  */
 
 	$ribbon_background = get_theme_mod( 'llorix_one_lite_ribbon_background', apply_filters( 'llorix_one_lite_ribbon_background_filter',llorix_one_lite_get_file( '/images/background-images/parallax-img/parallax-img1.jpg' ) ) );
-	$ribbon_background = apply_filters( 'llorix_one_lite_translate_single_string', $ribbon_background, 'Ribbon section - background' );
+	$ribbon_background = apply_filters( 'llorix_one_lite_translate_single_string', $ribbon_background, 'Ribbon section' );
 
 	if ( current_user_can( 'edit_theme_options' ) ) {
 	/* translators: %1$s is the customize link %2$s the customize link label */
@@ -20,11 +20,12 @@
 	} else {
 	$llorix_one_lite_ribbon_title = get_theme_mod( 'llorix_one_lite_ribbon_title' );
 	}
-	$llorix_one_lite_ribbon_title = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_ribbon_title, 'Ribbon section - title' );
+	$llorix_one_lite_ribbon_title = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_ribbon_title, 'Ribbon section' );
 
 	$llorix_one_lite_button_text = get_theme_mod( 'llorix_one_lite_button_text',esc_html__( 'GET STARTED','llorix-one-lite' ) );
-	$llorix_one_lite_button_text = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_button_text, 'Ribbon section - button text' );
+	$llorix_one_lite_button_text = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_button_text, 'Ribbon section' );
 	$llorix_one_lite_button_link = get_theme_mod( 'llorix_one_lite_button_link','#' );
+	$llorix_one_lite_button_link = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_button_link, 'Ribbon section' );
 
 	$llorix_one_lite_ribbon_show = get_theme_mod( 'llorix_one_lite_ribbon_show' );
 

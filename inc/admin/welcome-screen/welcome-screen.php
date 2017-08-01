@@ -23,12 +23,12 @@ class Llorix_One_Lite_Welcome {
 		/* enqueue script for customizer */
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'llorix_one_lite_welcome_scripts_for_customizer' ) );
 		/* load welcome screen */
-		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_getting_started' ), 	    10 );
+		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_getting_started' ),       10 );
 		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_actions_required' ),      20 );
-		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_child_themes' ), 		    30 );
-		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_github' ), 		        40 );
-		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_support' ), 			    50 );
-		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_changelog' ), 			60 );
+		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_child_themes' ),          30 );
+		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_github' ),                40 );
+		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_support' ),               50 );
+		add_action( 'llorix_one_lite_welcome', array( $this, 'llorix_one_lite_welcome_changelog' ),             60 );
 
 		/* ajax callback for dismissable required actions */
 		add_action( 'wp_ajax_llorix_one_lite_dismiss_required_action', array( $this, 'llorix_one_lite_dismiss_required_action_callback' ) );
@@ -87,12 +87,14 @@ class Llorix_One_Lite_Welcome {
 					endif;
 				endforeach;
 			endif;
-			wp_localize_script( 'llorix-one-lite-welcome-screen-js', 'llorixOneLiteWelcomeScreenObject', array(
-				'nr_actions_required' => $nr_actions_required,
-				'ajaxurl' => admin_url( 'admin-ajax.php' ),
-				'template_directory' => get_template_directory_uri(),
-				'no_required_actions_text' => __( 'Hooray! There are no required actions for you right now.','llorix-one-lite' ),
-			) );
+			wp_localize_script(
+				 'llorix-one-lite-welcome-screen-js', 'llorixOneLiteWelcomeScreenObject', array(
+					 'nr_actions_required' => $nr_actions_required,
+					 'ajaxurl' => admin_url( 'admin-ajax.php' ),
+					 'template_directory' => get_template_directory_uri(),
+					 'no_required_actions_text' => __( 'Hooray! There are no required actions for you right now.','llorix-one-lite' ),
+				 )
+				);
 		}
 	}
 
@@ -119,11 +121,13 @@ class Llorix_One_Lite_Welcome {
 				endif;
 			endforeach;
 		endif;
-		wp_localize_script( 'llorix-one-lite-welcome-screen-customizer-js', 'llorixOneWelcomeScreenCustomizerObject', array(
-			'nr_actions_required' => $nr_actions_required,
-			'aboutpage' => esc_url( admin_url( 'themes.php?page=llorix-one-lite-welcome#actions_required' ) ),
-			'customizerpage' => esc_url( admin_url( 'customize.php#actions_required' ) ),
-		) );
+		wp_localize_script(
+			 'llorix-one-lite-welcome-screen-customizer-js', 'llorixOneWelcomeScreenCustomizerObject', array(
+				 'nr_actions_required' => $nr_actions_required,
+				 'aboutpage' => esc_url( admin_url( 'themes.php?page=llorix-one-lite-welcome#actions_required' ) ),
+				 'customizerpage' => esc_url( admin_url( 'customize.php#actions_required' ) ),
+			 )
+			);
 	}
 
 	/**
@@ -189,7 +193,8 @@ class Llorix_One_Lite_Welcome {
 			 * @hooked llorix_one_lite_welcome_support - 50
 			 * @hooked llorix_one_lite_welcome_changelog - 60
 			 */
-			do_action( 'llorix_one_lite_welcome' ); ?>
+			do_action( 'llorix_one_lite_welcome' );
+			?>
 
 		</div>
 		<?php
