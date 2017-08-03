@@ -1,6 +1,10 @@
 
 ### 0.2.14 - 03/08/2017
 **Changes:** 
+- Development
+
+### 0.2.14 - 03/08/2017
+**Changes:** 
 - Fixed translations
 
 ### 0.2.13 - 19/06/2017
