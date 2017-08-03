@@ -20,7 +20,8 @@ if ( isset( $llorix_one_lite_logos_show ) && $llorix_one_lite_logos_show != 1 ) 
 		if ( ! empty( $llorix_one_lite_logos_decoded ) ) { ?>
 			<div class="clients white-bg" id="clients" role="region" aria-label="<?php echo __( 'Affiliates Logos','llorix-one-lite' ); ?>">
 				<?php
-				llorix_one_lite_logos_content( $llorix_one_lite_logos_decoded ); ?>
+				llorix_one_lite_logos_content( $llorix_one_lite_logos_decoded );
+				?>
 			</div>
 			<?php
 		}
@@ -29,10 +30,12 @@ if ( isset( $llorix_one_lite_logos_show ) && $llorix_one_lite_logos_show != 1 ) 
 	if ( is_customize_preview() ) {
 		if ( ! empty( $llorix_one_lite_logos ) ) {
 			$llorix_one_lite_logos_decoded = json_decode( $llorix_one_lite_logos );
-			if ( ! empty( $llorix_one_lite_logos_decoded ) ) { ?>
+			if ( ! empty( $llorix_one_lite_logos_decoded ) ) {
+			?>
 				<div class="clients white-bg llorix_one_lite_only_customizer" id="clients" role="region" aria-label="<?php echo __( 'Affiliates Logos','llorix-one-lite' ); ?>">
 					<?php
-					llorix_one_lite_logos_content( $llorix_one_lite_logos_decoded ); ?>
+					llorix_one_lite_logos_content( $llorix_one_lite_logos_decoded );
+					?>
 				</div>
 				<?php
 			}

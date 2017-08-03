@@ -16,8 +16,14 @@
 	<?php wp_head(); ?>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" <?php body_class(); ?> dir="<?php if ( is_rtl() ) { echo 'rtl';
-} else { echo 'ltr';} ?>">
+<body itemscope itemtype="http://schema.org/WebPage" <?php body_class(); ?> dir="
+																		 <?php
+if ( is_rtl() ) {
+																																						echo 'rtl';
+} else {
+																																						echo 'ltr';}
+?>
+">
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'llorix-one-lite' ); ?></a>
 <!-- =========================
 	PRE LOADER
@@ -38,7 +44,8 @@ if ( is_front_page() && ! isset( $wp_customize ) && get_option( 'show_on_front' 
 
 	endif;
 
-endif; ?>
+endif;
+?>
 
 
 <!-- =========================
@@ -75,7 +82,12 @@ endif; ?>
 	}
 
 	?>
-	<div class="overlay-layer-nav <?php if ( ! empty( $fixedheader ) ) { echo esc_attr( $fixedheader ); } ?>">
+	<div class="overlay-layer-nav 
+	<?php
+	if ( ! empty( $fixedheader ) ) {
+echo esc_attr( $fixedheader ); }
+?>
+">
 
 		<!-- STICKY NAVIGATION -->
 		<div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation appear-on-scroll">
@@ -93,7 +105,9 @@ endif; ?>
 					<div class="container">
 						<?php
 						$llorix_one_lite_very_top_header_phone = get_theme_mod( 'llorix_one_lite_very_top_header_phone',esc_html__( '(+9) 0999.500.400','llorix-one-lite' ) );
+						$llorix_one_lite_very_top_header_phone = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_very_top_header_phone, 'Very Top Header' );
 						$llorix_one_lite_very_top_header_phone_text = get_theme_mod( 'llorix_one_lite_very_top_header_phone_text',esc_html__( 'Call us: ','llorix-one-lite' ) );
+						$llorix_one_lite_very_top_header_phone_text = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_very_top_header_phone_text, 'Very Top Header' );
 
 
 						if ( ! empty( $llorix_one_lite_very_top_header_phone ) || ! empty( $llorix_one_lite_very_top_header_phone_text ) ) {
@@ -125,6 +139,7 @@ endif; ?>
 					<div class="container">
 						<?php
 						$llorix_one_lite_very_top_header_phone = get_theme_mod( 'llorix_one_lite_very_top_header_phone','(+9) 0999.500.400' );
+						$llorix_one_lite_very_top_header_phone = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_very_top_header_phone, 'Very Top Header' );
 
 						if ( ! empty( $llorix_one_lite_very_top_header_phone ) ) {
 							echo '<div class="very-top-left">';
@@ -168,7 +183,7 @@ endif; ?>
 					<?php
 
 					$llorix_one_lite_logo = get_theme_mod( 'llorix_one_lite_logo' );
-
+					$llorix_one_lite_logo = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_logo, 'Header Logo' );
 
 
 					if ( ! empty( $llorix_one_lite_logo ) ) :
@@ -213,7 +228,7 @@ endif; ?>
 				</div>
 
 				<!-- MENU -->
-				<div itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="<?php esc_html_e( 'Primary Menu','llorix-one-lite' ) ?>" id="menu-primary" class="navbar-collapse collapse">
+				<div itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="<?php esc_html_e( 'Primary Menu','llorix-one-lite' ); ?>" id="menu-primary" class="navbar-collapse collapse">
 					<!-- LOGO ON STICKY NAV BAR -->
 					<div id="site-header-menu" class="site-header-menu">
 						<nav id="site-navigation" class="main-navigation" role="navigation">
@@ -222,7 +237,7 @@ endif; ?>
 								array(
 									'theme_location'    => 'primary',
 									'menu_class'        => 'primary-menu small-text',
-									'depth'           	=> 4,
+									'depth'             => 4,
 									'fallback_cb'       => 'llorix_one_lite_wp_page_menu',
 								)
 							);

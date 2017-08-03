@@ -20,9 +20,28 @@ if ( ! function_exists( 'llorix_one_lite_translate_single_string' ) ) {
 
 		return $wpml_translation;
 	}
-
-	add_filter( 'llorix_one_lite_translate_single_string', 'llorix_one_lite_translate_single_string', 10, 2 );
 }
+add_filter( 'llorix_one_lite_translate_single_string', 'llorix_one_lite_translate_single_string', 10, 2 );
+
+if ( ! function_exists( 'llorix_one_lite_translate_header_image' ) ) {
+	/**
+	 * Filter to translate header image
+	 */
+	function llorix_one_lite_translate_header_image( $original_value ) {
+		if ( is_customize_preview() ) {
+			$wpml_translation = $original_value;
+		} else {
+			$wpml_translation = apply_filters( 'wpml_translate_single_string', $original_value, 'Header image', $original_value );
+			if ( $wpml_translation === $original_value && function_exists( 'pll__' ) ) {
+				return pll__( $original_value );
+			}
+		}
+
+		return $wpml_translation;
+	}
+}
+add_filter( 'theme_mod_header_image', 'llorix_one_lite_translate_header_image', 10 );
+
 
 
 if ( ! function_exists( 'llorix_one_lite_pll_string_register_helper' ) ) {
@@ -74,12 +93,14 @@ if ( ! function_exists( 'llorix_one_lite_filter_translations' ) ) {
 	 * Define Allowed Files to be included.
 	 */
 	function llorix_one_lite_filter_translations( $array ) {
-		return array_merge( $array, array(
-			'translations/translations-header-socials',
-			'translations/translations-logos-section',
-			'translations/translations-contact-section',
-			'translations/translations-footer-socials',
-		) );
+		return array_merge(
+			 $array, array(
+				 'translations/translations-header-socials',
+				 'translations/translations-logos-section',
+				 'translations/translations-contact-section',
+				 'translations/translations-footer-socials',
+			 )
+			);
 	}
 }
 add_filter( 'llorix_one_lite_filter_translations', 'llorix_one_lite_filter_translations' );

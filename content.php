@@ -10,7 +10,7 @@
 	<header class="entry-header">
 
 			<div class="post-img-wrap">
-			 	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+				 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 
 					<?php
 						if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
@@ -28,7 +28,7 @@
 						} else {
 					?>
 					<picture itemscope itemprop="image">
-					<source media="(max-width: 600px)" srcset="<?php echo llorix_one_lite_get_file( '/images/no-thumbnail-mobile.jpg' );?> ">
+					<source media="(max-width: 600px)" srcset="<?php echo llorix_one_lite_get_file( '/images/no-thumbnail-mobile.jpg' ); ?> ">
 					<img src="<?php echo llorix_one_lite_get_file( '/images/no-thumbnail.jpg' ); ?>" alt="<?php the_title_attribute(); ?>">
 					</picture>
 					<?php } ?>
@@ -76,14 +76,18 @@
 	<div itemprop="description" class="entry-content entry-summary">
 		<?php
 			$ismore = strpos( $post->post_content, '<!--more-->' );
-			if ( $ismore ) : the_content( /* translators: %s is the post link */ sprintf( esc_html__( 'Read more %s ...','llorix-one-lite' ), '<span class="screen-reader-text">' . esc_html__( 'about ', 'llorix-one-lite' ) . get_the_title() . '</span>' ) );
-			else : the_excerpt();
+			if ( $ismore ) :
+the_content( /* translators: %s is the post link */ sprintf( esc_html__( 'Read more %s ...','llorix-one-lite' ), '<span class="screen-reader-text">' . esc_html__( 'about ', 'llorix-one-lite' ) . get_the_title() . '</span>' ) );
+			else :
+the_excerpt();
 			endif;
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'llorix-one-lite' ),
-				'after'  => '</div>',
-			) );
+			wp_link_pages(
+				 array(
+					 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'llorix-one-lite' ),
+					 'after'  => '</div>',
+				 )
+				);
 		?>
 	</div><!-- .entry-content -->
 
