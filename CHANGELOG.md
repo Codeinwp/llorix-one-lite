@@ -1,119 +1,206 @@
 
-### 0.2.14 - 03/08/2017
-**Changes:** 
-- Development
 
-### 0.2.14 - 03/08/2017
-**Changes:** 
-- Fixed translations
+### 0.2.14 - 03/08/2017
 
-### 0.2.13 - 19/06/2017
-**Changes:** 
-- New sidebar for the shop page
-- Fixed issue with WYSIWYG editor in customizer
+**Changes:** 
 
-### 0.2.12 - 19/04/2017
-**Changes:** 
-- Added default image for the Our team section
-- Removed white space in default repeater content
-- Fixed issue with function checking for repeater content
+- Fixed translations
 
-### 0.2.11 - 14/04/2017
-**Changes:** 
-- Added support for WooCommerce 3.0.0 gallery
 
-### 0.2.10 - 12/04/2017
-**Changes:** 
-- Fixed compatibility issues with Polylang and WPML
-- Fixed issues with shortcodes used in the front page
+### 0.2.13 - 19/06/2017
 
-### 0.2.9 - 29/03/2017
-**Changes:** 
-- Made some changes for child themes usage
-- Added wraith for automatic demo changes reports
+**Changes:** 
 
-### 0.2.8 - 22/03/2017
-**Changes:** 
-- Fixed issue with Header visibility option not working just for frontpage
-- Fixed travis issues
+- New sidebar for the shop page
 
-### 0.2.7 - 14/03/2017
-**Changes:** 
-- Added starter content for new users
-- Added a notification in Customize to suggest the Llorix One Companion plugin
+- Fixed issue with WYSIWYG editor in customizer
 
-### 0.2.6 - 12/03/2017
-**Changes:** 
-- Added a new Full width with no title page template.
-- Added customize controls for Frontpage content section
-- Added sane defaults for frontpage sections
-- Added filters for footer copyright and powered by content
 
-### 0.2.5 - 14/02/2017
-**Changes:** 
-- Update Customize upsells layout
+### 0.2.12 - 19/04/2017
 
-### 0.2.4 - 18/01/2017
-**Changes:** 
-- Fixes for Llorix One Plus plugin
+**Changes:** 
 
-### 0.2.3 - 11/01/2017
-**Changes:** 
-- Added an option to allow the old frontpage template
-- Fixed fatal error in eventbride template
-- Hide about llorix page if a child theme is beeing used
+- Added default image for the Our team section
 
-### 0.2.2 - 28/12/2016
-**Changes:** 
-- Made frontpage content section hidden by default
-- Added the page title to the frontpage section
+- Removed white space in default repeater content
 
-### 0.2.1 - 23/12/2016
-**Changes:** 
-- Improve Customize layout
-- Fixed issue with the button in Big Title section fixed width
-- Added Clarina child theme in the About Llorix page
-- Rempved frontpage template and use the front-page.php file for the frontpage
-- Fixed compatibility with Llorix One Companion and Llorix One Plus
-- Allow tel protocol in the very top header - phone number
+- Fixed issue with function checking for repeater content
 
-### 0.2.0 - 28/11/2016
-**Changes:** 
-- Fixed issue with header visibility control not working
-- Fixed issue with jerky background on IE and Edge
-- Added hooks and filters for child themes
 
-### 0.1.22 - 09/11/2016
-**Changes:** 
-- Fixed social icons not working in header and footer
+### 0.2.11 - 14/04/2017
 
-### 0.1.21 - 04/11/2016
-**Changes:** 
-- Added filters and hooks to improve child themes creation
-- Rearange upsells in customize
-- Added Grunt tasks and fixed all grunt issues
+**Changes:** 
 
-### 0.1.20 - 21/09/2016
-**Changes:** 
-- Add recommandated child theme
+- Added support for WooCommerce 3.0.0 gallery
 
-### 0.1.19 - 21/09/2016
-**Changes:** 
-- Redo the layout of the icon picker
-- Allow HTML tags in the About us section
 
-### 0.1.18 - 09/09/2016
-**Changes:** 
-- Update Fontawesome to 4.6.3
-- Fixed issue with Latest news images
-- Increased the About us section, when no image is provided
-- Update tags
-- Made notice of Llorix Companion plugin visible just to admins
+### 0.2.10 - 12/04/2017
 
-### 0.1.17 - 12/07/2016
-**Changes:** 
-- Fixed responsive issue with menu
-- Added filter for footer copyright
+**Changes:** 
+
+- Fixed compatibility issues with Polylang and WPML
+
+- Fixed issues with shortcodes used in the front page
+
+
+### 0.2.9 - 29/03/2017
+
+**Changes:** 
+
+- Made some changes for child themes usage
+
+- Added wraith for automatic demo changes reports
+
+
+### 0.2.8 - 22/03/2017
+
+**Changes:** 
+
+- Fixed issue with Header visibility option not working just for frontpage
+
+- Fixed travis issues
+
+
+### 0.2.7 - 14/03/2017
+
+**Changes:** 
+
+- Added starter content for new users
+
+- Added a notification in Customize to suggest the Llorix One Companion plugin
+
+
+### 0.2.6 - 12/03/2017
+
+**Changes:** 
+
+- Added a new Full width with no title page template.
+
+- Added customize controls for Frontpage content section
+
+- Added sane defaults for frontpage sections
+
+- Added filters for footer copyright and powered by content
+
+
+### 0.2.5 - 14/02/2017
+
+**Changes:** 
+
+- Update Customize upsells layout
+
+
+### 0.2.4 - 18/01/2017
+
+**Changes:** 
+
+- Fixes for Llorix One Plus plugin
+
+
+### 0.2.3 - 11/01/2017
+
+**Changes:** 
+
+- Added an option to allow the old frontpage template
+
+- Fixed fatal error in eventbride template
+
+- Hide about llorix page if a child theme is beeing used
+
+
+### 0.2.2 - 28/12/2016
+
+**Changes:** 
+
+- Made frontpage content section hidden by default
+
+- Added the page title to the frontpage section
+
+
+### 0.2.1 - 23/12/2016
+
+**Changes:** 
+
+- Improve Customize layout
+
+- Fixed issue with the button in Big Title section fixed width
+
+- Added Clarina child theme in the About Llorix page
+
+- Rempved frontpage template and use the front-page.php file for the frontpage
+
+- Fixed compatibility with Llorix One Companion and Llorix One Plus
+
+- Allow tel protocol in the very top header - phone number
+
+
+### 0.2.0 - 28/11/2016
+
+**Changes:** 
+
+- Fixed issue with header visibility control not working
+
+- Fixed issue with jerky background on IE and Edge
+
+- Added hooks and filters for child themes
+
+
+### 0.1.22 - 09/11/2016
+
+**Changes:** 
+
+- Fixed social icons not working in header and footer
+
+
+### 0.1.21 - 04/11/2016
+
+**Changes:** 
+
+- Added filters and hooks to improve child themes creation
+
+- Rearange upsells in customize
+
+- Added Grunt tasks and fixed all grunt issues
+
+
+### 0.1.20 - 21/09/2016
+
+**Changes:** 
+
+- Add recommandated child theme
+
+
+### 0.1.19 - 21/09/2016
+
+**Changes:** 
+
+- Redo the layout of the icon picker
+
+- Allow HTML tags in the About us section
+
+
+### 0.1.18 - 09/09/2016
+
+**Changes:** 
+
+- Update Fontawesome to 4.6.3
+
+- Fixed issue with Latest news images
+
+- Increased the About us section, when no image is provided
+
+- Update tags
+
+- Made notice of Llorix Companion plugin visible just to admins
+
+
+### 0.1.17 - 12/07/2016
+
+**Changes:** 
+
+- Fixed responsive issue with menu
+
+- Added filter for footer copyright
 
 
 ### 0.1.15 - 05/05/2016
