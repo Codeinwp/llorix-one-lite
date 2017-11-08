@@ -27,7 +27,7 @@
 			<?php llorix_one_lite_after_date_in_entry_meta_trigger(); ?>
 			<a href="<?php comments_link(); ?>" class="post-comments">
 				<i class="fa fa-comment" aria-hidden="true"></i>
-				<?php comments_number( esc_html__( 'No comments','llorix-one-lite' ), esc_html__( 'One comment','llorix-one-lite' ), esc_html__( '% comments','llorix-one-lite' ) ); ?>
+				<?php comments_number( esc_html__( 'No comments', 'llorix-one-lite' ), esc_html__( 'One comment', 'llorix-one-lite' ), esc_html__( '% comments', 'llorix-one-lite' ) ); ?>
 			</a>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
@@ -36,11 +36,11 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages(
-				 array(
-					 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'llorix-one-lite' ),
-					 'after'  => '</div>',
-				 )
-				);
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'llorix-one-lite' ),
+					'after'  => '</div>',
+				)
+			);
 		?>
 	</div><!-- .entry-content -->
 

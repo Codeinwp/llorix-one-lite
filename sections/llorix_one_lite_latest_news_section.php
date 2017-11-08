@@ -15,10 +15,10 @@
 	$llorix_one_lite_latest_news_show = get_theme_mod( 'llorix_one_lite_latest_news_show' );
 
 	$llorix_one_lite_number_of_posts = get_option( 'posts_per_page' );
-	$args = array(
-		'post_type' => 'post',
-		'posts_per_page' => $llorix_one_lite_number_of_posts,
-		'order' => 'DESC',
+	$args                            = array(
+		'post_type'           => 'post',
+		'posts_per_page'      => $llorix_one_lite_number_of_posts,
+		'order'               => 'DESC',
 		'ignore_sticky_posts' => true,
 	);
 
@@ -27,11 +27,11 @@
 
 	$the_query = new WP_Query( $args );
 	if ( $the_query->have_posts() ) {
-			$llorix_one_lite_latest_news_title = get_theme_mod( 'llorix_one_lite_latest_news_title',esc_html__( 'Latest news','llorix-one-lite' ) );
+			$llorix_one_lite_latest_news_title = get_theme_mod( 'llorix_one_lite_latest_news_title', esc_html__( 'Latest news', 'llorix-one-lite' ) );
 			$llorix_one_lite_latest_news_title = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_latest_news_title, 'Latest news section' );
 			if ( $llorix_one_lite_number_of_posts > 0 ) {
 				?>
-				<section class="brief timeline" id="latestnews" role="region" aria-label="<?php esc_html_e( 'Latest blog posts','llorix-one-lite' ); ?>">
+				<section class="brief timeline" id="latestnews" role="region" aria-label="<?php esc_html_e( 'Latest blog posts', 'llorix-one-lite' ); ?>">
 				<div class="section-overlay-layer">
 					<div class="container">
 						<div class="row">
@@ -49,8 +49,8 @@
 
 							<div class="llorix-one-lite-slider-whole-wrap">
 								<div class="controls-wrap">
-									<button class="control_next fa fa-angle-up"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Down','llorix-one-lite' ); ?></span></button>
-									<button class="control_prev fade-btn fa fa-angle-down"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Up','llorix-one-lite' ); ?></span></button>
+									<button class="control_next fa fa-angle-up"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Down', 'llorix-one-lite' ); ?></span></button>
+									<button class="control_prev fade-btn fa fa-angle-down"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Up', 'llorix-one-lite' ); ?></span></button>
 								</div>
 								<!-- TIMLEINE SCROLLER -->
 								<div itemscope itemtype="http://schema.org/Blog" id="llorix_one_slider" class="timeline-section">
@@ -103,7 +103,7 @@ $the_query->the_post();
 												<time itemprop="datePublished" datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>" class="entry-date entry-published updated"><?php echo the_time( get_option( 'date_format' ) ); ?></time>
 												</a>
 												</span>
-												<span> <?php esc_html_e( 'by','llorix-one-lite' ); ?> </span>
+												<span> <?php esc_html_e( 'by', 'llorix-one-lite' ); ?> </span>
 												<span itemscope itemprop="author" itemtype="http://schema.org/Person" class="author-link">
 												<span  itemprop="name" class="entry-author author vcard">
 												<a itemprop="url" class="url fn n" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author"><?php the_author(); ?> </a>
@@ -144,10 +144,10 @@ $the_query->the_post();
 
 		$the_query = new WP_Query( $args );
 		if ( $the_query->have_posts() ) {
-			$llorix_one_lite_latest_news_title = get_theme_mod( 'llorix_one_lite_latest_news_title',esc_html__( 'Latest news','llorix-one-lite' ) );
+			$llorix_one_lite_latest_news_title = get_theme_mod( 'llorix_one_lite_latest_news_title', esc_html__( 'Latest news', 'llorix-one-lite' ) );
 			if ( $llorix_one_lite_number_of_posts > 0 ) {
 				?>
-				<section class="brief timeline llorix_one_lite_only_customizer" id="latestnews" role="region" aria-label="<?php esc_html_e( 'Latest blog posts','llorix-one-lite' ); ?>">
+				<section class="brief timeline llorix_one_lite_only_customizer" id="latestnews" role="region" aria-label="<?php esc_html_e( 'Latest blog posts', 'llorix-one-lite' ); ?>">
 				<div class="section-overlay-layer">
 					<div class="container">
 						<div class="row">
@@ -163,8 +163,8 @@ $the_query->the_post();
 
 							<div class="llorix-one-lite-slider-whole-wrap">
 								<div class="controls-wrap">
-									<button class="control_next fa fa-angle-up"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Down','llorix-one-lite' ); ?></span></button>
-									<button class="control_prev fade-btn fa fa-angle-down"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Up','llorix-one-lite' ); ?></span></button>
+									<button class="control_next fa fa-angle-up"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Down', 'llorix-one-lite' ); ?></span></button>
+									<button class="control_prev fade-btn fa fa-angle-down"><span class="screen-reader-text"><?php esc_attr_e( 'Post slider navigation: Up', 'llorix-one-lite' ); ?></span></button>
 								</div>
 								<!-- TIMLEINE SCROLLER -->
 								<div itemscope itemtype="http://schema.org/Blog" id="llorix_one_slider" class="timeline-section">
@@ -217,7 +217,7 @@ $the_query->the_post();
 												<time itemprop="datePublished" datetime="<?php the_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'llorix-one-lite' ) ); ?>" class="entry-date entry-published updated"><?php echo the_time( get_option( 'date_format' ) ); ?></time>
 												</a>
 												</span>
-												<span> <?php esc_html_e( 'by','llorix-one-lite' ); ?> </span>
+												<span> <?php esc_html_e( 'by', 'llorix-one-lite' ); ?> </span>
 												<span itemscope itemprop="author" itemtype="http://schema.org/Person" class="author-link">
 												<span  itemprop="name" class="entry-author author vcard">
 												<a itemprop="url" class="url fn n" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author"><?php the_author(); ?> </a>

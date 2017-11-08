@@ -38,7 +38,7 @@ function llorix_one_lite_sync_content_from_control( $value = '', $old_value = ''
 
 	return $value;
 }
-add_filter( 'pre_set_theme_mod_llorix_one_lite_page_editor', 'llorix_one_lite_sync_content_from_control' , 10 ,2 );
+add_filter( 'pre_set_theme_mod_llorix_one_lite_page_editor', 'llorix_one_lite_sync_content_from_control', 10, 2 );
 
 
 /**
@@ -58,7 +58,7 @@ function llorix_one_lite_sync_thumbnail_from_control( $value, $old_value ) {
 	}
 	return $value;
 }
-add_filter( 'pre_set_theme_mod_llorix_one_lite_feature_thumbnail', 'llorix_one_lite_sync_thumbnail_from_control' , 10 ,2 );
+add_filter( 'pre_set_theme_mod_llorix_one_lite_feature_thumbnail', 'llorix_one_lite_sync_thumbnail_from_control', 10, 2 );
 
 /**
  * Sync page thumbnail and content with customizer control
@@ -95,7 +95,7 @@ function llorix_one_lite_sync_control_from_page( $post_id, $ajax_call = false ) 
 		add_filter( 'pre_set_theme_mod_llorix_one_lite_page_editor', 'llorix_one_lite_sync_content_from_control', 10, 2 );
 
 		if ( $ajax_call === true ) {
-			$return_value['post_content'] = $content;
+			$return_value['post_content']   = $content;
 			$return_value['post_thumbnail'] = $llorix_one_lite_frontpage_featured;
 			echo json_encode( $return_value );
 		}

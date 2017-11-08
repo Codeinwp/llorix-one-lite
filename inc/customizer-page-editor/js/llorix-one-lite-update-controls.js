@@ -1,3 +1,9 @@
+/**
+ * Customizer About section editor scripts for customizer
+ *
+ * @package llorix-one-lite
+ */
+
 /* global requestpost */
 /* global wp */
 /* global tinyMCE */
@@ -22,8 +28,8 @@
 
 					 success: function (result) {
 								   if (result !== '' && result !== 'undefined' ) {
-									result = JSON.parse( result );
-									var id = requestpost.editor_control;
+									result     = JSON.parse( result );
+									var id     = requestpost.editor_control;
 									var editor = tinyMCE.get( id );
 
 									editor.setContent( result.post_content );

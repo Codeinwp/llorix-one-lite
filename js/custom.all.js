@@ -1,3 +1,9 @@
+/**
+ * Custom scripts
+ *
+ * @package llorix-one-lite
+ */
+
 /* global screenReaderText */
 jQuery( window ).load(
 	function(){
@@ -15,17 +21,17 @@ jQuery( window ).resize(
 
 /* CENTERED MENU */
 var callback_menu_align = function () {
-	var headerWrap      = jQuery( 'header.header' );
-	var navWrap         = jQuery( '.main-navigation' );
-	var logoWrap        = jQuery( '.navbar-header' );
-	var containerWrap   = jQuery( '.container' );
-	var classToAdd      = 'menu-align-center';
+	var headerWrap    = jQuery( 'header.header' );
+	var navWrap       = jQuery( '.main-navigation' );
+	var logoWrap      = jQuery( '.navbar-header' );
+	var containerWrap = jQuery( '.container' );
+	var classToAdd    = 'menu-align-center';
 	if ( headerWrap.hasClass( classToAdd ) ) {
 		headerWrap.removeClass( classToAdd );
 	}
-	var logoWidth       = logoWrap.outerWidth();
-	var menuWidth       = navWrap.outerWidth();
-	var containerWidth  = containerWrap.width();
+	var logoWidth      = logoWrap.outerWidth();
+	var menuWidth      = navWrap.outerWidth();
+	var containerWidth = containerWrap.width();
 	if ( menuWidth + logoWidth > containerWidth ) {
 		headerWrap.addClass( classToAdd );
 	} else {
@@ -44,15 +50,15 @@ var callback_menu_align = function () {
 
 /* STICKY FOOTER */
 function fixFooterBottom(){
-	var header      = jQuery( 'header.header' );
-	var footer      = jQuery( 'footer.footer' );
-	var content     = jQuery( '.content-wrap' );
+	var header  = jQuery( 'header.header' );
+	var footer  = jQuery( 'footer.footer' );
+	var content = jQuery( '.content-wrap' );
 	content.css( 'min-height', '1px' );
 	var headerHeight  = header.outerHeight();
 	var footerHeight  = footer.outerHeight();
 	var contentHeight = content.outerHeight();
 	var windowHeight  = jQuery( window ).height();
-	var totalHeight = headerHeight + footerHeight + contentHeight;
+	var totalHeight   = headerHeight + footerHeight + contentHeight;
 	if (totalHeight < windowHeight) {
 	  content.css( 'min-height', windowHeight - headerHeight - footerHeight );
 	} else {
@@ -66,14 +72,14 @@ jQuery( document ).ready(
 	/*---------------------------------------*/
 	/*	BOOTSTRAP FIXES
 	/*---------------------------------------*/
-	var oldSSB = jQuery.fn.modal.Constructor.prototype.setScrollbar;
+	var oldSSB                                    = jQuery.fn.modal.Constructor.prototype.setScrollbar;
 	$.fn.modal.Constructor.prototype.setScrollbar = function() {
 			oldSSB.apply( this );
 			if (this.scrollbarWidth) {
 				jQuery( '.navbar-fixed-top' ).css( 'padding-right', this.scrollbarWidth );
 				}
 	};
-	var oldRSB = $.fn.modal.Constructor.prototype.resetScrollbar;
+	var oldRSB                                      = $.fn.modal.Constructor.prototype.resetScrollbar;
 	$.fn.modal.Constructor.prototype.resetScrollbar = function() {
 			oldRSB.apply( this );
 			jQuery( '.navbar-fixed-top' ).css( 'padding-right', '' );
@@ -99,9 +105,9 @@ jQuery( document ).ready(
   jQuery( '#menu-primary a[href*="#"]:not([href="#"]), a.woocommerce-review-link[href*="#"]:not([href="#"]), a.post-comments[href*="#"]:not([href="#"])' ).bind(
 	  'click',function () {
 			var headerHeight;
-			var hash    = this.hash;
-			var idName  = hash.substring( 1 );    // get id name
-			var alink   = this;                 // this button pressed
+			var hash   = this.hash;
+			var idName = hash.substring( 1 );    // get id name
+			var alink  = this;                 // this button pressed
 			// check if there is a section that had same id as the button pressed
 			if ( jQuery( 'section [id*=' + idName + ']' ).length > 0 && jQuery( window ).innerWidth() >= 767 ) {
 				jQuery( '.current' ).removeClass( 'current' );
@@ -116,7 +122,7 @@ jQuery( document ).ready(
 				}
 			  if (location.pathname.replace( /^\//,'' ) === this.pathname.replace( /^\//,'' ) && location.hostname === this.hostname) {
 				var target = jQuery( this.hash );
-				target = target.length ? target : jQuery( '[name=' + this.hash.slice( 1 ) + ']' );
+				target     = target.length ? target : jQuery( '[name=' + this.hash.slice( 1 ) + ']' );
 				if (target.length) {
 					  jQuery( 'html,body' ).animate(
 						{
@@ -153,13 +159,13 @@ function mainNav() {
 		return false;
 	}
 	var $llorix_one_lite_header_height;
-	var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-	var topMenuClose    = -70;
-	var topMenuOpen     = 0;
+	var top          = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+	var topMenuClose = -70;
+	var topMenuOpen  = 0;
 	if ( jQuery( '.admin-bar' ).length > 0 ) {
 		$llorix_one_lite_header_height = jQuery( '.navbar' ).height();
-		topMenuClose    = $llorix_one_lite_header_height * -1;
-		topMenuOpen     = 32;
+		topMenuClose                   = $llorix_one_lite_header_height * -1;
+		topMenuOpen                    = 32;
 	}
 	if ( top > 40 ) {
 		jQuery( '.appear-on-scroll' ).stop().animate(
@@ -183,16 +189,16 @@ function scrolled() {
 
 	if ( jQuery( window ).width() >= 751 ) {
 		var llorix_one_lite_scrollTop = jQuery( window ).scrollTop();       // cursor position
-		var headerHeight = jQuery( '.sticky-navigation' ).outerHeight();   // header height
-		var isInOneSection = 'no';                              // used for checking if the cursor is in one section or not
+		var headerHeight              = jQuery( '.sticky-navigation' ).outerHeight();   // header height
+		var isInOneSection            = 'no';                              // used for checking if the cursor is in one section or not
 		// for all sections check if the cursor is inside a section
 		jQuery( 'section' ).each(
 			 function() {
-					 var thisID = '#' + jQuery( this ).attr( 'id' );           // section id
+					 var thisID                 = '#' + jQuery( this ).attr( 'id' );           // section id
 					 var llorix_one_lite_offset = jQuery( this ).offset().top;         // distance between top and our section
-					 var thisHeight  = jQuery( this ).outerHeight();         // section height
-					 var thisBegin   = llorix_one_lite_offset - headerHeight;                      // where the section begins
-					 var thisEnd     = llorix_one_lite_offset + thisHeight - headerHeight;         // where the section ends
+					 var thisHeight             = jQuery( this ).outerHeight();         // section height
+					 var thisBegin              = llorix_one_lite_offset - headerHeight;                      // where the section begins
+					 var thisEnd                = llorix_one_lite_offset + thisHeight - headerHeight;         // where the section ends
 					 // if position of the cursor is inside of the this section
 					 if ( llorix_one_lite_scrollTop >= thisBegin && llorix_one_lite_scrollTop <= thisEnd ) {
 						isInOneSection = 'yes';
@@ -244,7 +250,7 @@ jQuery( window ).scroll(
 
 	/* sticky menu without top part */
 	if ( window.innerWidth > 768 ) {
-			var window_offset       = $body.offset().top - jQuery( window ).scrollTop();
+			var window_offset = $body.offset().top - jQuery( window ).scrollTop();
 			if ( typeof $nav !== 'undefined' ) {
 				if (isAdminBar) {
 					if ( typeof $nav.parent() !== 'undefined' ) {
@@ -309,9 +315,9 @@ jQuery( window ).resize(
 			calcMin:                true
 		};
 	function LlorixOneLiteGridPinterest(element, options) {
-		this.element    = element;
-		this.options    = $.extend( {}, defaults, options );
-		this.defaults   = defaults;
+		this.element  = element;
+		this.options  = $.extend( {}, defaults, options );
+		this.defaults = defaults;
 		this.init();
 	}
 	LlorixOneLiteGridPinterest.prototype.init = function () {
@@ -321,14 +327,14 @@ jQuery( window ).resize(
 		self.make_magic( $container, $select_options );
 	};
 	LlorixOneLiteGridPinterest.prototype.make_magic = function (container) {
-		var self            = this;
-		var $container      = $( container ),
-			columns_height  = [],
-			prefix          = 'llorix_one_lite',
-			unique_class    = prefix + '_grid_' + self.make_unique();
-		var local_class     = prefix + '_grid';
+		var self           = this;
+		var $container     = $( container ),
+			columns_height = [],
+			prefix         = 'llorix_one_lite',
+			unique_class   = prefix + '_grid_' + self.make_unique();
+		var local_class    = prefix + '_grid';
 		var classname;
-		var substr_index    = this.element.className.indexOf( prefix + '_grid_' );
+		var substr_index = this.element.className.indexOf( prefix + '_grid_' );
 		if ( substr_index > -1 ) {
 			classname = this.element.className.substr( 0, this.element.className.length - unique_class.length - local_class.length - 2 );
 		} else {
@@ -345,7 +351,7 @@ jQuery( window ).resize(
 		for (i = 1; i <= this.options.columns; i++) {
 			columns_height.push( 0 );
 			var first_cols = '';
-			var last_cols = '';
+			var last_cols  = '';
 			if ( i % self.options.columns === 1 ) {
 first_cols = prefix + '_grid_first'; }
 			if ( i % self.options.columns === 0 ) {
@@ -353,14 +359,14 @@ first_cols = prefix + '_grid_last'; }
 			$( '.' + unique_class ).append( '<div class="' + prefix + '_grid_col_' + this.options.columns + ' ' + prefix + '_grid_column_' + i + ' ' + first_cols + ' ' + last_cols + '"></div>' );
 		}
 		var calcMin = this.options.calcMin;
-		var cols = this.options.columns;
+		var cols    = this.options.columns;
 		if ( this.element.className.indexOf( local_class ) < 0 ) {
 
 						$container.children( this.options.selector ).each(
 				function(index){
 				var this_index;
 				if (calcMin === true) {
-						var min = Math.min.apply( null,columns_height );
+						var min    = Math.min.apply( null,columns_height );
 						this_index = columns_height.indexOf( min ) + 1;
 				} else {
 						this_index = index % cols + 1;
@@ -378,7 +384,7 @@ first_cols = prefix + '_grid_last'; }
 			for ( i = 0; i < no_boxes; i++ ) {
 				var this_index;
 				if (calcMin === true) {
-					var min = Math.min.apply( null,columns_height );
+					var min    = Math.min.apply( null,columns_height );
 					this_index = columns_height.indexOf( min ) + 1;
 				} else {
 					this_index = i % cols + 1;
@@ -393,7 +399,7 @@ first_cols = prefix + '_grid_last'; }
 	};
 
 		LlorixOneLiteGridPinterest.prototype.make_unique = function () {
-		var text = '';
+		var text     = '';
 		var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 		for ( var i = 0; i < 10; i++ ) {
 				text += possible.charAt( Math.floor( Math.random() * possible.length ) );
@@ -420,7 +426,7 @@ first_cols = prefix + '_grid_last'; }
 		}
 			);
 	};
-})(jQuery);
+})( jQuery );
 
 var isMobile = {
 	Android: function() {
@@ -512,10 +518,10 @@ var isMobile = {
 
 		initMainNavigation( $( '.main-navigation' ) );
 
-		var masthead = $( '#masthead' );
-	var menuToggle       = masthead.find( '#menu-toggle' );
-	var siteHeaderMenu   = masthead.find( '#site-header-menu' );
-	var siteNavigation   = masthead.find( '#site-navigation' );
+		var masthead   = $( '#masthead' );
+	var menuToggle     = masthead.find( '#menu-toggle' );
+	var siteHeaderMenu = masthead.find( '#site-header-menu' );
+	var siteNavigation = masthead.find( '#site-navigation' );
 
 		// Enable menuToggle.
 	( function() {

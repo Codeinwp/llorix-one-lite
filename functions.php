@@ -43,50 +43,50 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
-			 array(
-				 'primary'                     => esc_html__( 'Primary Menu', 'llorix-one-lite' ),
-				 'llorix_one_lite_footer_menu' => esc_html__( 'Footer Menu', 'llorix-one-lite' ),
-			 )
-			);
+			array(
+				'primary'                     => esc_html__( 'Primary Menu', 'llorix-one-lite' ),
+				'llorix_one_lite_footer_menu' => esc_html__( 'Footer Menu', 'llorix-one-lite' ),
+			)
+		);
 
-		/*
-		 Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
-		*/
+		/**
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
 		add_theme_support(
-			 'html5', array(
-				 'search-form',
-				 'comment-form',
-				 'comment-list',
-				 'gallery',
-				 'caption',
-			 )
-			);
+			'html5', array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		/*
 		 * Enable support for Post Formats.
 		 * See http://codex.wordpress.org/Post_Formats
 		 */
 		add_theme_support(
-			 'post-formats', array(
-				 'aside',
-				 'image',
-				 'video',
-				 'quote',
-				 'link',
-			 )
-			);
+			'post-formats', array(
+				'aside',
+				'image',
+				'video',
+				'quote',
+				'link',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support(
-			 'custom-background', apply_filters(
-			 'llorix_one_lite_custom_background_args', array(
-				 'default-repeat'     => 'no-repeat',
-				 'default-position-x' => 'center',
-				 'default-attachment' => 'fixed',
-			 )
+			'custom-background', apply_filters(
+				'llorix_one_lite_custom_background_args', array(
+					'default-repeat'     => 'no-repeat',
+					'default-position-x' => 'center',
+					'default-attachment' => 'fixed',
+				)
 			)
-			);
+		);
 
 		/*
 		* This feature enables Custom_Headers support for a theme as of Version 3.4.
@@ -95,26 +95,26 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		*/
 
 		add_theme_support(
-			 'custom-header', apply_filters(
-			 'llorix_one_lite_custom_header_args', array(
-				 'default-image' => llorix_one_lite_get_file( '/images/background-images/background.jpg' ),
-				 'width'         => 1000,
-				 'height'        => 680,
-				 'flex-height'   => true,
-				 'flex-width'    => true,
-				 'header-text'   => false,
-			 )
+			'custom-header', apply_filters(
+				'llorix_one_lite_custom_header_args', array(
+					'default-image' => llorix_one_lite_get_file( '/images/background-images/background.jpg' ),
+					'width'         => 1000,
+					'height'        => 680,
+					'flex-height'   => true,
+					'flex-width'    => true,
+					'header-text'   => false,
+				)
 			)
-			);
+		);
 
 		register_default_headers(
-			 array(
-				 'llorix_one_lite_default_header_image' => array(
-					 'url'           => llorix_one_lite_get_file( '/images/background-images/background.jpg' ),
-					 'thumbnail_url' => llorix_one_lite_get_file( '/images/background-images/background_thumbnail.jpg' ),
-				 ),
-			 )
-			);
+			array(
+				'llorix_one_lite_default_header_image' => array(
+					'url'           => llorix_one_lite_get_file( '/images/background-images/background.jpg' ),
+					'thumbnail_url' => llorix_one_lite_get_file( '/images/background-images/background_thumbnail.jpg' ),
+				),
+			)
+		);
 
 		// Theme Support for WooCommerce
 		add_theme_support( 'woocommerce' );
@@ -252,7 +252,7 @@ function llorix_one_lite_widgets_init() {
 	);
 
 	register_sidebars(
-		 4,
+		4,
 		array(
 			'name'          => /* translators: %d is the number of footer sidebars registered */ esc_html__( 'Footer area %d', 'llorix-one-lite' ),
 			'id'            => 'footer-area',
@@ -264,16 +264,16 @@ function llorix_one_lite_widgets_init() {
 	);
 
 	register_sidebar(
-		 array(
-			 'name'          => __( 'Sidebar Shop Page', 'llorix-one-lite' ),
-			 'id'            => 'llorix-one-sidebar-shop-archive',
-			 'description'   => '',
-			 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			 'after_widget'  => '</aside>',
-			 'before_title'  => '<h3 class="widget-title">',
-			 'after_title'   => '</h3>',
-		 )
-		);
+		array(
+			'name'          => __( 'Sidebar Shop Page', 'llorix-one-lite' ),
+			'id'            => 'llorix-one-sidebar-shop-archive',
+			'description'   => '',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 
 }
 
@@ -288,11 +288,11 @@ add_action( 'widgets_init', 'llorix_one_lite_widgets_init' );
 function llorix_one_lite_wp_page_menu() {
 	echo '<ul class="nav navbar-nav navbar-right main-navigation small-text no-menu">';
 	wp_list_pages(
-		 array(
-			 'title_li' => '',
-			 'depth' => 1,
-		 )
-		);
+		array(
+			'title_li' => '',
+			'depth'    => 1,
+		)
+	);
 	echo '</ul>';
 }
 
@@ -315,11 +315,11 @@ function llorix_one_lite_scripts() {
 	wp_enqueue_script( 'llorix-one-lite-custom-all', llorix_one_lite_get_file( '/js/custom.all.js' ), array( 'jquery' ), '2.0.2', true );
 
 	wp_localize_script(
-		 'llorix-one-lite-custom-all', 'screenReaderText', array(
-			 'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'llorix-one-lite' ) . '</span>',
-			 'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'llorix-one-lite' ) . '</span>',
-		 )
-		);
+		'llorix-one-lite-custom-all', 'screenReaderText', array(
+			'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'llorix-one-lite' ) . '</span>',
+			'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'llorix-one-lite' ) . '</span>',
+		)
+	);
 
 	$llorix_one_lite_enable_move = get_theme_mod( 'llorix_one_lite_enable_move' );
 	if ( ! empty( $llorix_one_lite_enable_move ) && $llorix_one_lite_enable_move && ( is_front_page() ) ) {
@@ -402,8 +402,7 @@ add_action( 'woocommerce_after_main_content', 'llorix_one_lite_wrapper_end', 10 
  */
 function llorix_one_lite_wrapper_start() {
 	echo '</div> </header>';
-	echo '<div class="content-wrap">
-		<div class="container">';
+	echo '<div class="content-wrap"><div class="container">';
 	if ( ( is_shop() || is_product_tag() || is_product_category() ) && is_active_sidebar( 'llorix-one-sidebar-shop-archive' ) ) {
 		echo '<div id="sidebar-secondary" class="widget-area col-md-3 sidebar-shop" role="complementary">';
 		dynamic_sidebar( 'llorix-one-sidebar-shop-archive' );
@@ -467,10 +466,10 @@ function llorix_one_lite_php_style() {
 	$llorix_one_lite_title_color       = get_theme_mod( 'llorix_one_lite_title_color' );
 	$llorix_one_lite_text_color        = get_theme_mod( 'llorix_one_lite_text_color' );
 	$llorix_one_lite_enable_move       = get_theme_mod( 'llorix_one_lite_enable_move' );
-	$llorix_one_lite_frontpage_opacity = get_theme_mod( 'llorix_one_lite_frontpage_opacity', apply_filters( 'llorix_one_lite_frontpage_opacity_filter','rgba(13, 60, 85, 0.5)' ) );
-	$llorix_one_lite_blog_opacity      = get_theme_mod( 'llorix_one_lite_blog_opacity', apply_filters( 'llorix_one_lite_blog_opacity_filter','rgba(13, 60, 85, 0.6)' ) );
+	$llorix_one_lite_frontpage_opacity = get_theme_mod( 'llorix_one_lite_frontpage_opacity', apply_filters( 'llorix_one_lite_frontpage_opacity_filter', 'rgba(13, 60, 85, 0.5)' ) );
+	$llorix_one_lite_blog_opacity      = get_theme_mod( 'llorix_one_lite_blog_opacity', apply_filters( 'llorix_one_lite_blog_opacity_filter', 'rgba(13, 60, 85, 0.6)' ) );
 	$llorix_one_header_image           = get_header_image();
-	$llorix_one_header_image = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_header_image, 'Big title section' );
+	$llorix_one_header_image           = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_header_image, 'Big title section' );
 
 	if ( ! empty( $llorix_one_lite_title_color ) ) {
 		$custom_css .= '.dark-text { color: ' . $llorix_one_lite_title_color . ' }';
@@ -568,15 +567,15 @@ function llorix_one_lite_comment( $comment, $args, $depth ) {
 	switch ( $comment->comment_type ) :
 		case 'pingback':
 		case 'trackback':
-			?>
-			<li class="post pingback">
-			<p><?php _e( 'Pingback:', 'llorix-one-lite' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'llorix-one-lite' ), ' ' ); ?></p>
-			<?php
+		?>
+		<li class="post pingback">
+		<p><?php _e( 'Pingback:', 'llorix-one-lite' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'llorix-one-lite' ), ' ' ); ?></p>
+		<?php
 			break;
 
 		default:
 			?>
-		<li itemscope itemtype="http://schema.org/UserComments" <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+			<li itemscope itemtype="http://schema.org/UserComments" <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 			<article id="comment-<?php comment_ID(); ?>" class="comment-body">
 				<footer>
 					<div itemscope itemprop="creator" itemtype="http://schema.org/Person" class="comment-author vcard">
@@ -605,14 +604,14 @@ function llorix_one_lite_comment( $comment, $args, $depth ) {
 				<div class="reply">
 					<?php
 					comment_reply_link(
-						 array_merge(
-						 $args, array(
-							 'depth' => $depth,
-							 'max_depth' => $args['max_depth'],
-						 )
+						array_merge(
+							$args, array(
+								'depth'     => $depth,
+								'max_depth' => $args['max_depth'],
+							)
 						)
-						);
-?>
+					);
+					?>
 				</div><!-- .reply -->
 			</article><!-- #comment-## -->
 			<?php
@@ -681,20 +680,21 @@ function llorix_one_lite_social_icons( $social_icons, $is_footer ) {
 			<?php
 			foreach ( $llorix_one_lite_social_icons_decoded as $llorix_one_lite_social_icon ) {
 				$language_context = $is_footer === true ? 'Social icons in footer' : 'Social icons in header';
-				$icon = ! empty( $llorix_one_lite_social_icon->icon_value ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_social_icon->icon_value, $language_context ) : '';
-				$link = ! empty( $llorix_one_lite_social_icon->link ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_social_icon->link, $language_context ) : '';
+				$icon             = ! empty( $llorix_one_lite_social_icon->icon_value ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_social_icon->icon_value, $language_context ) : '';
+				$link             = ! empty( $llorix_one_lite_social_icon->link ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_social_icon->link, $language_context ) : '';
 				if ( ! empty( $icon ) && $icon !== 'No Icon' && ! empty( $link ) ) {
-				?>
+					?>
 					<li>
 						<a href="<?php echo esc_url( $link ); ?>">
 							<span class="screen-reader-text"><?php echo wp_kses_post( $icon ); ?></span>
-							<i class="fa 
 							<?php
+							echo '<i class="fa ';
 							if ( $is_footer === true ) {
-echo 'llorix-one-lite-footer-icons ';
-} echo esc_attr( $icon );
-?>
- transparent-text-dark" aria-hidden="true"></i>
+								echo ' llorix-one-lite-footer-icons ';
+							}
+							echo esc_attr( $icon );
+							echo ' transparent-text-dark" aria-hidden="true"></i>';
+							?>
 						</a>
 					</li>
 					<?php
@@ -720,7 +720,7 @@ if ( ! function_exists( 'llorix_one_lite_post_date_box_function' ) ) {
 		<?php
 	}
 }
-add_action( 'llorix_one_lite_post_date_box','llorix_one_lite_post_date_box_function', 10, 1 );
+add_action( 'llorix_one_lite_post_date_box', 'llorix_one_lite_post_date_box_function', 10, 1 );
 
 /**
  * Filter the front page template so it's bypassed entirely if the user selects
@@ -747,29 +747,69 @@ function llorix_one_lite_starter_content() {
 	 * Starter Content Support
 	 */
 	add_theme_support(
-		 'starter-content', array(
-			 // Twenty Seventeen
-			 'posts' => array(
-				 'home',
-				 'blog',
-			 ),
+		'starter-content', array(
+			// Twenty Seventeen
+			'posts'     => array(
+				'home',
+				'blog',
+			),
 
-			 'nav_menus' => array(
-				 'primary' => array(
-					 'name'  => __( 'Primary Menu', 'llorix-one-lite' ),
-					 'items' => array(
-						 'page_home',
-						 'page_blog',
-					 ),
-				 ),
-			 ),
+			'nav_menus' => array(
+				'primary' => array(
+					'name'  => __( 'Primary Menu', 'llorix-one-lite' ),
+					'items' => array(
+						'page_home',
+						'page_blog',
+					),
+				),
+			),
 
-			 'options' => array(
-				 'show_on_front'  => 'page',
-				 'page_on_front'  => '{{home}}',
-				 'page_for_posts' => '{{blog}}',
-			 ),
-		 )
-		);
+			'options'   => array(
+				'show_on_front'  => 'page',
+				'page_on_front'  => '{{home}}',
+				'page_for_posts' => '{{blog}}',
+			),
+		)
+	);
 }
 add_action( 'after_setup_theme', 'llorix_one_lite_starter_content' );
+
+/**
+ * Notice in Customize to announce the theme is not maintained anymore
+ */
+function llorix_one_lite_customize_register_notification( $wp_customize ) {
+	require_once( 'inc/class/class-ti-notify.php' );
+	$wp_customize->register_section_type( 'Ti_Notify' );
+	$wp_customize->add_section(
+		new Ti_Notify(
+			$wp_customize,
+			'ti-notify',
+			array(
+				/* translators: Link to the recommended theme */
+				'text'     => sprintf( __( 'This theme is not maintained anymore, check-out our latest free one-page theme: %1$s.', 'llorix-one-lite' ), sprintf( '<a href="' . admin_url( 'theme-install.php?theme=hestia' ) . '">%s</a>', 'Hestia' ) ),
+				'priority' => 0,
+			)
+		)
+	);
+	$wp_customize->add_setting( 'llorix-one-lite-notify' );
+	$wp_customize->add_control(
+		'llorix-one-lite-notify', array(
+			'label'    => __( 'Notification', 'llorix-one-lite' ),
+			'section'  => 'ti-notify',
+			'priority' => 1,
+		)
+	);
+}
+add_action( 'customize_register', 'llorix_one_lite_customize_register_notification' );
+/**
+ * Notice in admin dashboard to announce the theme is not maintained anymore
+ */
+function llorix_one_lite_admin_notice() {
+	global $pagenow;
+	if ( is_admin() && ( 'themes.php' == $pagenow ) && isset( $_GET['activated'] ) ) {
+		echo '<div class="updated notice is-dismissible"><p>';
+		printf( /* translators: link to the recommended theme */ __( 'This theme is not maintained anymore, check-out our latest free one-page theme: %1$s.', 'llorix-one-lite' ), sprintf( '<a href="' . admin_url( 'theme-install.php?theme=hestia' ) . '">%s</a>', 'Hestia' ) );
+		echo '</p></div>';
+	}
+}
+add_action( 'admin_notices', 'llorix_one_lite_admin_notice', 99 );

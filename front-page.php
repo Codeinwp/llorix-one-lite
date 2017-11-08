@@ -21,7 +21,7 @@ if ( ! isset( $wp_customize ) ) :
 
 	$llorix_one_lite_disable_preloader = get_theme_mod( 'llorix_one_lite_disable_preloader' );
 
-	if ( isset( $llorix_one_lite_disable_preloader ) && ($llorix_one_lite_disable_preloader != 1) ) :
+	if ( isset( $llorix_one_lite_disable_preloader ) && ( $llorix_one_lite_disable_preloader != 1 ) ) :
 
 		echo '<div class="preloader">';
 		echo '<div class="status">&nbsp;</div>';
@@ -31,7 +31,7 @@ if ( ! isset( $wp_customize ) ) :
 
 endif;
 
-llorix_one_lite_get_template_part( apply_filters( 'llorix_one_lite_header_layout','/sections/llorix_one_lite_header_section' ) );
+llorix_one_lite_get_template_part( apply_filters( 'llorix_one_lite_header_layout', '/sections/llorix_one_lite_header_section' ) );
 
 ?>
 </div>

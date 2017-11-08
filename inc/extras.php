@@ -84,7 +84,7 @@ function llorix_one_lite_logos_content( $llorix_one_lite_logos_decoded ) {
 			<?php
 			foreach ( $llorix_one_lite_logos_decoded as $llorix_one_lite_logo ) {
 				$image = ! empty( $llorix_one_lite_logo->image_url ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_logo->image_url, 'Logos Section' ) : '';
-				$link = ! empty( $llorix_one_lite_logo->link ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_logo->link, 'Logos Section' ) : '';
+				$link  = ! empty( $llorix_one_lite_logo->link ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_logo->link, 'Logos Section' ) : '';
 				if ( ! empty( $image ) ) {
 				?>
 					<li>
@@ -92,12 +92,12 @@ function llorix_one_lite_logos_content( $llorix_one_lite_logos_decoded ) {
 						if ( ! empty( $link ) ) {
 						?>
 							<a href="<?php echo esc_url( $link ); ?>" title="">
-								<img src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_html__( 'Logo','llorix-one-lite' ); ?>">
+								<img src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_html__( 'Logo', 'llorix-one-lite' ); ?>">
 							</a>
 							<?php
 						} else {
 						?>
-							<img src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_html__( 'Logo','llorix-one-lite' ); ?>">
+							<img src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_html__( 'Logo', 'llorix-one-lite' ); ?>">
 							<?php
 						}
 						?>
@@ -127,9 +127,9 @@ function llorix_one_lite_contact_content( $llorix_one_lite_contact_info_item_dec
 				<?php
 				if ( ! empty( $llorix_one_lite_contact_info_item_decoded ) ) {
 					foreach ( $llorix_one_lite_contact_info_item_decoded as $llorix_one_contact_item ) {
-						$link = ( ! empty( $llorix_one_contact_item->link ) ? apply_filters( 'llorix_one_lite_translate_single_string',$llorix_one_contact_item->link, 'Contact section' ) : '' );
-						$icon = ( ! empty( $llorix_one_contact_item->icon_value ) ? apply_filters( 'llorix_one_lite_translate_single_string',$llorix_one_contact_item->icon_value, 'Contact section' ) : '');
-						$text = ( ! empty( $llorix_one_contact_item->text ) ? apply_filters( 'llorix_one_lite_translate_single_string',$llorix_one_contact_item->text, 'Contact section' ) : '' );
+						$link = ( ! empty( $llorix_one_contact_item->link ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_contact_item->link, 'Contact section' ) : '' );
+						$icon = ( ! empty( $llorix_one_contact_item->icon_value ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_contact_item->icon_value, 'Contact section' ) : '' );
+						$text = ( ! empty( $llorix_one_contact_item->text ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_contact_item->text, 'Contact section' ) : '' );
 						if ( ! empty( $icon ) || ! empty( $text ) ) {
 						?>
 							<div class="col-sm-4 contact-link-box col-xs-12">
@@ -143,7 +143,7 @@ function llorix_one_lite_contact_content( $llorix_one_lite_contact_info_item_dec
 								}
 								if ( ! empty( $text ) ) {
 								?>
-									<a <?php echo ( ! empty( $link ) ? 'href="' . esc_url( $link ) . '"' : ''); ?> class="strong">
+									<a <?php echo ( ! empty( $link ) ? 'href="' . esc_url( $link ) . '"' : '' ); ?> class="strong">
 										<?php echo html_entity_decode( $text ); ?>
 									</a>
 									<?php

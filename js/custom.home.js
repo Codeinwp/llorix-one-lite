@@ -1,9 +1,15 @@
+/**
+ * Scripts for home page
+ *
+ * @package llorix-one-lite
+ */
+
 /* slider [begin] */
 var slideWidth;
 var slideCount;
-var slideHeight = 0;
+var slideHeight    = 0;
 var sliderUlHeight = 0;
-var marginTop = 0;
+var marginTop      = 0;
 
 /* LATEST NEWS */
 jQuery( document ).ready(
@@ -28,9 +34,9 @@ jQuery( window ).resize(
 	/* maximum height for slides */
 	slideWidth;
 	slideCount;
-	slideHeight = 0;
+	slideHeight    = 0;
 	sliderUlHeight = 0;
-	marginTop = 0;
+	marginTop      = 0;
 
 	jQuery( '#llorix_one_slider > ul > li' ).css( 'height','auto' ).each(
 		function(){
@@ -40,7 +46,7 @@ jQuery( window ).resize(
 	}
 		);
 
-	slideCount = jQuery( '#llorix_one_slider > ul > li' ).length;
+	slideCount     = jQuery( '#llorix_one_slider > ul > li' ).length;
 	sliderUlHeight = slideCount * slideHeight;
 
 		/* set height */
@@ -72,7 +78,7 @@ function llorix_one_latest_news() {
 	}
 		);
 
-	slideCount = jQuery( '#llorix_one_slider > ul > li' ).length;
+	slideCount     = jQuery( '#llorix_one_slider > ul > li' ).length;
 	sliderUlHeight = slideCount * slideHeight;
 
 		/* set height */
@@ -170,7 +176,7 @@ jQuery( document ).ready(
 	function(){
 	if (jQuery( '.overlay-layer-nav' ).hasClass( 'sticky-navigation-open' )) {
 			var llorix_one_lite_header_height = jQuery( '.navbar' ).height();
-			llorix_one_lite_header_height += 84;
+			llorix_one_lite_header_height    += 84;
 			jQuery( '.header .overlay-layer' ).css( 'padding-top',llorix_one_lite_header_height );
 	}
 	// Fix homepage header background on IE
@@ -178,7 +184,7 @@ jQuery( document ).ready(
 			jQuery( 'body' ).on(
 			'mousewheel', function () {
 			event.preventDefault();
-			var wd = event.wheelDelta;
+			var wd  = event.wheelDelta;
 			var csp = window.pageYOffset;
 			window.scrollTo( 0, csp - wd );
 				}

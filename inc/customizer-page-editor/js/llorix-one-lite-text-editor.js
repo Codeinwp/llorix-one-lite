@@ -1,15 +1,21 @@
+/**
+ * Customizer About section editor scripts
+ *
+ * @package llorix-one-lite
+ */
+
 /* global tinyMCE */
 /* global jQuery */
 
 ( function( $ ) {
-    'use strict';
+	'use strict';
 	$( document ).on(
 		 'tinymce-editor-init', function() {
 		$( '.customize-control' ).find( '.wp-editor-area' ).each(
 			function(){
-			var tArea = $( this ),
-				id = tArea.attr( 'id' ),
-				input = $( 'input[data-customize-setting-link="' + id + '"]' ),
+			var tArea  = $( this ),
+				id     = tArea.attr( 'id' ),
+				input  = $( 'input[data-customize-setting-link="' + id + '"]' ),
 				editor = tinyMCE.get( id ),
 				content;
 

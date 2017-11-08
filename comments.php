@@ -19,8 +19,6 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
-
-	
 	<?php if ( have_comments() ) { ?>
 		<h2 class="comments-title">
 			<?php
@@ -51,13 +49,13 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 			<?php
 				wp_list_comments(
-					 array(
-						 'style'       => 'ol',
-						 'short_ping'  => true,
-						 'callback'    => 'llorix_one_lite_comment',
-						 'avatar_size' => 60,
-					 )
-					);
+					array(
+						'style'       => 'ol',
+						'short_ping'  => true,
+						'callback'    => 'llorix_one_lite_comment',
+						'avatar_size' => 60,
+					)
+				);
 			?>
 		</ol><!-- .comment-list -->
 

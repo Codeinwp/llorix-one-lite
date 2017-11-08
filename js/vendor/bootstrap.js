@@ -52,7 +52,7 @@ if (typeof jQuery === 'undefined') {
   // http://blog.alexmaccaw.com/css-transitions
   $.fn.emulateTransitionEnd = function (duration) {
 		var called = false
-		var $el = this
+		var $el    = this
 		$( this ).one( 'bsTransitionEnd', function () { called = true } )
 		var callback = function () { if ( ! called) {
 $( $el ).trigger( $.support.transition.end ) }
@@ -201,7 +201,7 @@ $this.data( 'bs.alert', (data = new Alert( this )) )
 		this.isLoading = false
   }
 
-  Button.VERSION  = '3.3.7'
+  Button.VERSION = '3.3.7'
 
   Button.DEFAULTS = {
 		loadingText: 'loading...'
@@ -353,7 +353,7 @@ $btn.trigger( 'focus' )
 		.on( 'mouseleave.bs.carousel', $.proxy( this.cycle, this ) )
   }
 
-  Carousel.VERSION  = '3.3.7'
+  Carousel.VERSION = '3.3.7'
 
   Carousel.TRANSITION_DURATION = 600
 
@@ -396,11 +396,11 @@ return
 
   Carousel.prototype.getItemForDirection = function (direction, active) {
 		var activeIndex = this.getItemIndex( active )
-		var willWrap = (direction == 'prev' && activeIndex === 0)
+		var willWrap    = (direction == 'prev' && activeIndex === 0)
 				|| (direction == 'next' && activeIndex == (this.$items.length - 1))
 		if (willWrap && ! this.options.wrap) {
 return active
-		var delta = direction == 'prev' ? -1 : 1
+		var delta     = direction == 'prev' ? -1 : 1
 		var itemIndex = (activeIndex + delta) % this.$items.length
 		return this.$items.eq( itemIndex )
 			}
@@ -462,7 +462,7 @@ return
 return (this.sliding = false)
 
 		var relatedTarget = $next[0]
-		var slideEvent = $.Event(
+		var slideEvent    = $.Event(
 		  'slide.bs.carousel', {
 				relatedTarget: relatedTarget,
 				direction: direction
@@ -556,7 +556,7 @@ return (this.sliding = false)
 		var $target = $( $this.attr( 'data-target' ) || (href = $this.attr( 'href' )) && href.replace( /.*(?=#[^\s]+$)/, '' ) ) // strip for ie7
 		if ( ! $target.hasClass( 'carousel' )) {
 return
-		var options = $.extend( {}, $target.data(), $this.data() )
+		var options    = $.extend( {}, $target.data(), $this.data() )
 		var slideIndex = $this.attr( 'data-slide-to' )
 		if (slideIndex) {
 				options.interval = false
@@ -624,7 +624,7 @@ this.toggle()
 			}
 	  }
 
-  Collapse.VERSION  = '3.3.7'
+  Collapse.VERSION = '3.3.7'
 
   Collapse.TRANSITION_DURATION = 350
 
@@ -770,7 +770,7 @@ return complete.call( this )
   function getTargetFromTrigger($trigger) {
 		var href
 		var target = $trigger.attr( 'data-target' )
-		|| (href = $trigger.attr( 'href' )) && href.replace( /.*(?=#[^\s]+$)/, '' ) // strip for ie7
+		|| (href   = $trigger.attr( 'href' )) && href.replace( /.*(?=#[^\s]+$)/, '' ) // strip for ie7
 
 		return $( target )
   }
@@ -813,7 +813,7 @@ options.toggle = false
   // =================
   $( document ).on(
 	  'click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
-		var $this   = $( this )
+		var $this = $( this )
 
 		if ( ! $this.attr( 'data-target' )) {
 e.preventDefault()
@@ -915,7 +915,7 @@ return
 					.on( 'click', clearMenus )
 					}
 
-				var relatedTarget = { relatedTarget: this }
+				var relatedTarget  = { relatedTarget: this }
 				$parent.trigger( e = $.Event( 'show.bs.dropdown', relatedTarget ) )
 
 				if (e.isDefaultPrevented()) {
@@ -959,7 +959,7 @@ $parent.find( toggle ).trigger( 'focus' )
 		}
 			}
 
-		var desc = ' li:not(.disabled):visible a'
+		var desc   = ' li:not(.disabled):visible a'
 		var $items = $parent.find( '.dropdown-menu' + desc )
 
 		if ( ! $items.length) {
@@ -1060,9 +1060,9 @@ $this.data( 'bs.dropdown', (data = new Dropdown( this )) )
 			}
   }
 
-  Modal.VERSION  = '3.3.7'
+  Modal.VERSION = '3.3.7'
 
-  Modal.TRANSITION_DURATION = 300
+  Modal.TRANSITION_DURATION          = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150
 
   Modal.DEFAULTS = {
@@ -1236,7 +1236,7 @@ e.preventDefault()
   }
 
   Modal.prototype.backdrop = function (callback) {
-		var that = this
+		var that    = this
 		var animate = this.$element.hasClass( 'fade' ) ? 'fade' : ''
 
 		if (this.isShown && this.options.backdrop) {
@@ -1325,14 +1325,14 @@ this.$backdrop[0].offsetWidth // force reflow
 		var fullWindowWidth = window.innerWidth
 		if ( ! fullWindowWidth) { // workaround for missing window.innerWidth in IE8
 			var documentElementRect = document.documentElement.getBoundingClientRect()
-			fullWindowWidth = documentElementRect.right - Math.abs( documentElementRect.left )
+			fullWindowWidth         = documentElementRect.right - Math.abs( documentElementRect.left )
 			}
 		this.bodyIsOverflowing = document.body.clientWidth < fullWindowWidth
-		this.scrollbarWidth = this.measureScrollbar()
+		this.scrollbarWidth    = this.measureScrollbar()
   }
 
   Modal.prototype.setScrollbar = function () {
-		var bodyPad = parseInt( (this.$body.css( 'padding-right' ) || 0), 10 )
+		var bodyPad          = parseInt( (this.$body.css( 'padding-right' ) || 0), 10 )
 		this.originalBodyPad = document.body.style.paddingRight || ''
 		if (this.bodyIsOverflowing) {
 this.$body.css( 'padding-right', bodyPad + this.scrollbarWidth )
@@ -1344,10 +1344,10 @@ this.$body.css( 'padding-right', bodyPad + this.scrollbarWidth )
   }
 
   Modal.prototype.measureScrollbar = function () { // thx walsh
-		var scrollDiv = document.createElement( 'div' )
+		var scrollDiv       = document.createElement( 'div' )
 		scrollDiv.className = 'modal-scrollbar-measure'
 		this.$body.append( scrollDiv )
-		var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth
+		var scrollbarWidth  = scrollDiv.offsetWidth - scrollDiv.clientWidth
 		this.$body[0].removeChild( scrollDiv )
 		return scrollbarWidth
   }
@@ -1440,7 +1440,7 @@ e.preventDefault()
 		this.init( 'tooltip', element, options )
   }
 
-  Tooltip.VERSION  = '3.3.7'
+  Tooltip.VERSION = '3.3.7'
 
   Tooltip.TRANSITION_DURATION = 150
 
@@ -1650,7 +1650,7 @@ return
 
 						if (autoPlace) {
 								var orgPlacement = placement
-								var viewportDim = this.getPosition( this.$viewport )
+								var viewportDim  = this.getPosition( this.$viewport )
 
 								placement = placement == 'bottom' && pos.bottom + actualHeight > viewportDim.bottom ? 'top' :
 							placement == 'top' && pos.top - actualHeight < viewportDim.top ? 'bottom' :
@@ -1673,7 +1673,7 @@ return
 			var complete = function () {
 				var prevHoverState = that.hoverState
 				that.$element.trigger( 'shown.bs.' + that.type )
-				that.hoverState = null
+				that.hoverState    = null
 
 				if (prevHoverState == 'out') {
 that.leave( that )
@@ -1694,12 +1694,12 @@ that.leave( that )
 		var height = $tip[0].offsetHeight
 
 		// manually read margins because getBoundingClientRect includes difference
-		var marginTop = parseInt( $tip.css( 'margin-top' ), 10 )
+		var marginTop  = parseInt( $tip.css( 'margin-top' ), 10 )
 		var marginLeft = parseInt( $tip.css( 'margin-left' ), 10 )
 
 		// we must check for NaN for ie 8/9
 		if (isNaN( marginTop )) {
-marginTop  = 0
+marginTop = 0
 		if (isNaN( marginLeft )) {
 				marginLeft = 0
 
@@ -1814,12 +1814,12 @@ return
   }
 
   Tooltip.prototype.getPosition = function ($element) {
-		$element   = $element || this.$element
+		$element = $element || this.$element
 
 		var el     = $element[0]
 		var isBody = el.tagName == 'BODY'
 
-		var elRect    = el.getBoundingClientRect()
+		var elRect = el.getBoundingClientRect()
 		if (elRect.width == null) {
 			// width and height are missing in IE8, so compute them manually; see https://github.com/twbs/bootstrap/issues/14093
 			elRect = $.extend( {}, elRect, { width: elRect.right - elRect.left, height: elRect.bottom - elRect.top } )
@@ -1847,7 +1847,7 @@ return
 		if ( ! this.$viewport) {
 return delta
 
-		var viewportPadding = this.options.viewport && this.options.viewport.padding || 0
+		var viewportPadding    = this.options.viewport && this.options.viewport.padding || 0
 		var viewportDimensions = this.getPosition( this.$viewport )
 
 		if (/right|left/.test( placement )) {
@@ -1948,10 +1948,10 @@ self.enter( self )
 				if (that.$tip) {
 					that.$tip.detach()
 					}
-				that.$tip = null
-				that.$arrow = null
+				that.$tip      = null
+				that.$arrow    = null
 				that.$viewport = null
-				that.$element = null
+				that.$element  = null
 				}
 		  )
   }
@@ -2013,7 +2013,7 @@ self.enter( self )
   if ( ! $.fn.tooltip) {
 		throw new Error( 'Popover requires tooltip.js' )
 
-		Popover.VERSION  = '3.3.7'
+		Popover.VERSION = '3.3.7'
 
 		Popover.DEFAULTS = $.extend(
 		{}, $.fn.tooltip.Constructor.DEFAULTS, {
@@ -2137,7 +2137,7 @@ $tip.find( '.popover-title' ).hide()
 		this.process()
   }
 
-  ScrollSpy.VERSION  = '3.3.7'
+  ScrollSpy.VERSION = '3.3.7'
 
   ScrollSpy.DEFAULTS = {
 		offset: 10
@@ -2148,9 +2148,9 @@ $tip.find( '.popover-title' ).hide()
   }
 
   ScrollSpy.prototype.refresh = function () {
-		var that          = this
-		var offsetMethod  = 'offset'
-		var offsetBase    = 0
+		var that         = this
+		var offsetMethod = 'offset'
+		var offsetBase   = 0
 
 		this.offsets      = []
 		this.targets      = []
@@ -2486,9 +2486,9 @@ return
 		this.checkPosition()
   }
 
-  Affix.VERSION  = '3.3.7'
+  Affix.VERSION = '3.3.7'
 
-  Affix.RESET    = 'affix affix-top affix-bottom'
+  Affix.RESET = 'affix affix-top affix-bottom'
 
   Affix.DEFAULTS = {
 		offset: 0,
@@ -2529,8 +2529,8 @@ return 'top'
 		if (this.pinnedOffset) {
 return this.pinnedOffset
 		this.$element.removeClass( Affix.RESET ).addClass( 'affix' )
-		var scrollTop = this.$target.scrollTop()
-		var position  = this.$element.offset()
+		var scrollTop             = this.$target.scrollTop()
+		var position              = this.$element.offset()
 		return (this.pinnedOffset = position.top - scrollTop)
 			}
 	  }
@@ -2552,7 +2552,7 @@ return
 		if (typeof offset != 'object') {
 				offsetBottom = offsetTop = offset
 				if (typeof offsetTop == 'function') {
-			offsetTop    = offset.top( this.$element )
+			offsetTop = offset.top( this.$element )
 					if (typeof offsetBottom == 'function') {
 					offsetBottom = offset.bottom( this.$element )
 
@@ -2571,7 +2571,7 @@ return
 									return
 
 									this.affixed = affix
-									this.unpin = affix == 'bottom' ? this.getPinnedOffset() : null
+									this.unpin   = affix == 'bottom' ? this.getPinnedOffset() : null
 
 									this.$element
 									.removeClass( Affix.RESET )
@@ -2639,7 +2639,7 @@ return
 				if (data.offsetBottom != null) {
   data.offset.bottom = data.offsetBottom
 				  if (data.offsetTop != null) {
-						data.offset.top    = data.offsetTop
+						data.offset.top = data.offsetTop
 
 						Plugin.call( $spy, data )
 			  }

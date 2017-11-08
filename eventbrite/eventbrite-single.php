@@ -28,10 +28,10 @@ echo 'col-md-8';
 			<?php
 				// Get our event based on the ID passed by query variable.
 				$event = new Eventbrite_Query(
-					 array(
-						 'p' => get_query_var( 'eventbrite_id' ),
-					 )
-					);
+					array(
+						'p' => get_query_var( 'eventbrite_id' ),
+					)
+				);
 
 				if ( $event->have_posts() ) :
 				while ( $event->have_posts() ) :

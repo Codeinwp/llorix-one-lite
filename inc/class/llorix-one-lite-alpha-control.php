@@ -51,7 +51,7 @@ class Llorix_One_Lite_Customize_Alpha_Color_Control extends WP_Customize_Control
 	 * Class render function
 	 */
 	protected function render() {
-		$id = 'customize-control-' . str_replace( '[', '-', str_replace( ']', '', $this->id ) );
+		$id    = 'customize-control-' . str_replace( '[', '-', str_replace( ']', '', $this->id ) );
 		$class = 'customize-control customize-control-alphacolor'; ?>
 		<li id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $class ); ?>">
 			<?php $this->render_content(); ?>
