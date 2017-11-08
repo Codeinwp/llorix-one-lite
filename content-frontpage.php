@@ -8,7 +8,7 @@ echo'<div class="frontpage-content-section-inner">';
 
 if ( is_customize_preview() ) {
 	$frontpage_id = get_option( 'page_on_front' );
-	$default = '';
+	$default      = '';
 	if ( ! empty( $frontpage_id ) ) {
 		$default = get_post_field( 'post_content', $frontpage_id );
 		$content = get_theme_mod( 'llorix_one_lite_page_editor', $default );

@@ -1,3 +1,9 @@
+/**
+ * Fontawesome iconpicker
+ *
+ * @package llorix-one-lite
+ */
+
 (function ($) {
 	'use strict';
 	wp.customizerRepeater = {
@@ -5,7 +11,7 @@
 		init: function () {
 			$( '.iconpicker-items>i' ).on(
 				'click', function () {
-				var iconClass = $( this ).attr( 'class' ).slice( 3 );
+				var iconClass  = $( this ).attr( 'class' ).slice( 3 );
 				var classInput = $( this ).parents( '.iconpicker-popover' ).prev().find( '.icp' );
 				classInput.val( iconClass );
 				classInput.attr( 'value', iconClass );
@@ -21,7 +27,7 @@
 				);
 		},
 		search: function ($searchField) {
-			var itemsList = $searchField.parent().next().find( '.iconpicker-items' );
+			var itemsList  = $searchField.parent().next().find( '.iconpicker-items' );
 			var searchTerm = $searchField.val().toLowerCase();
 			if (searchTerm.length > 0) {
 				itemsList.children().each(
@@ -72,4 +78,4 @@
 	}
 		);
 
-})(jQuery);
+})( jQuery );

@@ -1,9 +1,15 @@
+/**
+ * About page scripts file for customizer
+ *
+ * @package llorix-one-lite
+ */
+
 /* global llorixOneWelcomeScreenCustomizerObject */
 /* global jQuery */
 
 jQuery( document ).ready(
 	function() {
-	var llorix_one_aboutpage = llorixOneWelcomeScreenCustomizerObject.aboutpage;
+	var llorix_one_aboutpage           = llorixOneWelcomeScreenCustomizerObject.aboutpage;
 	var llorix_one_nr_actions_required = llorixOneWelcomeScreenCustomizerObject.nr_actions_required;
 
 	/* Number of required actions */

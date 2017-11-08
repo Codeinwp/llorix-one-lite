@@ -24,7 +24,7 @@ jQuery( document ).ready(
 						jQuery( '.ti-customizer-notify-dismiss-recommended-action' ).click(
 							function () {
 
-							var id = jQuery( this ).attr( 'id' ),
+							var id     = jQuery( this ).attr( 'id' ),
 								action = jQuery( this ).attr( 'data-action' );
 							jQuery.ajax(
 								{
@@ -36,11 +36,11 @@ jQuery( document ).ready(
 										jQuery( '#' + id ).parent().append( '<div id="temp_load" style="text-align:center"><img src="' + tiCustomizerNotifyObject.base_path + '/images/spinner-2x.gif" /></div>' );
 								},
 			success: function (data) {
-															var container = jQuery( '#' + data ).parent().parent();
-															var index = container.next().data( 'index' );
+															var container          = jQuery( '#' + data ).parent().parent();
+															var index              = container.next().data( 'index' );
 															var recommended_sction = jQuery( '#accordion-section-ti_customizer_notify_recomended_actions' );
-															var actions_count = recommended_sction.find( '.ti-customizer-notify-actions-count' );
-															var section_title = recommended_sction.find( '.section-title' );
+															var actions_count      = recommended_sction.find( '.ti-customizer-notify-actions-count' );
+															var section_title      = recommended_sction.find( '.section-title' );
 															jQuery( '.ti-customizer-notify-actions-count .current-index' ).text( index );
 															container.slideToggle().remove();
 															if ( jQuery( '.recomended-actions_container > .epsilon-recommended-actions' ).length === 0 ) {
@@ -66,7 +66,7 @@ jQuery( document ).ready(
 										jQuery( '.ti-customizer-notify-dismiss-button-recommended-plugin' ).click(
 											function () {
 
-										var id = jQuery( this ).attr( 'id' ),
+										var id     = jQuery( this ).attr( 'id' ),
 											action = jQuery( this ).attr( 'data-action' );
 										jQuery.ajax(
 											{
@@ -79,7 +79,7 @@ jQuery( document ).ready(
 														},
 												success: function (data) {
 															var container = jQuery( '#' + data ).parent().parent();
-															var index = container.next().data( 'index' );
+															var index     = container.next().data( 'index' );
 															jQuery( '.ti-customizer-notify-actions-count .current-index' ).text( index );
 															container.slideToggle().remove();
 

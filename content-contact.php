@@ -41,7 +41,6 @@
 
 	</div>
 
-	
 		<?php
 			$llorix_one_lite_contact_map_shortcode = get_theme_mod( 'llorix_one_lite_contact_map_shortcode' );
 			$llorix_one_lite_contact_map_shortcode = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_contact_map_shortcode, 'Map shortcode' );
@@ -51,6 +50,5 @@
 			echo '</div>';
 			}
 		?>
-	
 
 </article><!-- #post-## -->

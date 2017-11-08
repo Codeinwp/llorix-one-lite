@@ -2,7 +2,10 @@
  * Theme Customizer enhancements for a better user experience.
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
+ *
+ * @package llorix-one-lite
  */
+
 /* global wp */
 /* global jQuery */
 ( function( $ ) {
@@ -271,10 +274,10 @@
 		'llorix_one_lite_our_story_title', function(value) {
 		value.bind(
 			function( to ) {
-			var brief = $( '.brief' );
-			var brief_content = brief.find( '.content-section .brief-content-text' );
-			var brief_line = brief.find( '.content-section .colored-line-left' );
-			var brief_header = brief.find( '.content-section h2' );
+			var brief             = $( '.brief' );
+			var brief_content     = brief.find( '.content-section .brief-content-text' );
+			var brief_line        = brief.find( '.content-section .colored-line-left' );
+			var brief_header      = brief.find( '.content-section h2' );
 			var brief_content_two = brief.find( '.brief-content-two' );
 
 			if ( to !== '' ) {
@@ -299,9 +302,9 @@
 		'llorix_one_lite_our_story_text',function(value) {
 		value.bind(
 			function( to ) {
-			var brief = $( '.brief' );
-			var brief_content = brief.find( '.content-section .brief-content-text' );
-			var brief_header = brief.find( '.content-section h2' );
+			var brief             = $( '.brief' );
+			var brief_content     = brief.find( '.content-section .brief-content-text' );
+			var brief_header      = brief.find( '.content-section h2' );
 			var brief_content_two = brief.find( '.brief-content-two' );
 			if ( to !== '' ) {
 					brief.removeClass( 'llorix_one_lite_only_customizer' );
@@ -323,12 +326,12 @@
 		'llorix_one_lite_our_story_image',function(value) {
 		value.bind(
 			function( to ) {
-			var brief = $( '.brief' );
-			var brief_content = brief.find( '.content-section .brief-content-text' );
-			var brief_content_one = brief.find( '.brief-content-one' );
-			var brief_content_two = brief.find( '.brief-content-two' );
+			var brief                   = $( '.brief' );
+			var brief_content           = brief.find( '.content-section .brief-content-text' );
+			var brief_content_one       = brief.find( '.brief-content-one' );
+			var brief_content_two       = brief.find( '.brief-content-two' );
 			var brief_content_two_image = brief_content_two.find( '.brief-image-right img' );
-			var brief_header = brief.find( '.content-section h2' );
+			var brief_header            = brief.find( '.content-section h2' );
 			if ( to !== '' ) {
 					brief.removeClass( 'llorix_one_lite_only_customizer' );
 					brief_content_two.removeClass( 'llorix_one_lite_only_customizer' );
@@ -387,7 +390,7 @@
 		'llorix_one_lite_ribbon_title', function(value) {
 		value.bind(
 			function( to ) {
-			var ribbon_wrap = $( '.ribbon-wrap' );
+			var ribbon_wrap        = $( '.ribbon-wrap' );
 			var ribbon_wrap_header = ribbon_wrap.find( 'h2' );
 			var ribbon_wrap_button = ribbon_wrap.find( 'button' );
 			if ( to !== '' ) {
@@ -410,7 +413,7 @@
 		'llorix_one_lite_button_text', function(value) {
 		value.bind(
 			function( to ) {
-			var ribbon_wrap = $( '.ribbon-wrap' );
+			var ribbon_wrap        = $( '.ribbon-wrap' );
 			var ribbon_wrap_header = ribbon_wrap.find( 'h2' );
 			var ribbon_wrap_button = ribbon_wrap.find( 'button' );
 			if ( to !== '' ) {
@@ -464,7 +467,7 @@
 		'llorix_one_lite_latest_news_title', function(value) {
 		value.bind(
 			function( to ) {
-			var timeline_text = $( '.timeline .timeline-text' );
+			var timeline_text   = $( '.timeline .timeline-text' );
 			var timeline_header = timeline_text.find( 'h2' );
 			if ( to !== '' ) {
 					timeline_text.removeClass( 'llorix_one_lite_only_customizer' );

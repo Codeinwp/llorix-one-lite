@@ -114,7 +114,7 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 			$this->add_field_label = $args['add_field_label'];
 		}
 
-		$this->boxtitle   = esc_html__( 'Cusomizer Repeater','llorix-one-lite' );
+		$this->boxtitle = esc_html__( 'Cusomizer Repeater', 'llorix-one-lite' );
 		if ( ! empty( $args['item_name'] ) ) {
 			$this->boxtitle = $args['item_name'];
 		} elseif ( ! empty( $this->label ) ) {
@@ -167,9 +167,9 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 	 */
 	public function enqueue() {
 
-		wp_enqueue_style( 'llorix-one-lite-font-awesome', llorix_one_lite_get_file( '/css/font-awesome.min.css' ),'4.7' );
+		wp_enqueue_style( 'llorix-one-lite-font-awesome', llorix_one_lite_get_file( '/css/font-awesome.min.css' ), '4.7' );
 
-		wp_enqueue_style( 'llorix-one-lite-admin-stylesheet', llorix_one_lite_get_file( '/inc/customizer-repeater/css/admin-style.css' ),'1.0.0' );
+		wp_enqueue_style( 'llorix-one-lite-admin-stylesheet', llorix_one_lite_get_file( '/inc/customizer-repeater/css/admin-style.css' ), '1.0.0' );
 
 		wp_enqueue_script( 'llorix-one-lite-script', llorix_one_lite_get_file( '/inc/customizer-repeater/js/customizer_repeater.js' ), array( 'jquery', 'jquery-ui-draggable' ), '1.0.1', true );
 
@@ -183,7 +183,7 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 	 */
 	public function render_content() {
 		$repeater_content = $this->value();
-		$values = array();
+		$values           = array();
 		if ( ! empty( $repeater_content ) ) {
 			$values = $repeater_content;
 		} else {
@@ -200,17 +200,12 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 
 				$this->iterate_array( $valuse_decoded );
 				?>
-				<input type="hidden"
-					   id="customizer-repeater-<?php echo esc_attr( $this->id ); ?>-colector" <?php $this->link(); ?>
-					   class="customizer-repeater-colector"
-					   value="<?php echo esc_textarea( json_encode( $valuse_decoded ) ); ?>"/>
+				<input type="hidden" id="customizer-repeater-<?php echo esc_attr( $this->id ); ?>-colector" <?php $this->link(); ?> class="customizer-repeater-colector" value="<?php echo esc_textarea( json_encode( $valuse_decoded ) ); ?>"/>
 				<?php
 			} else {
 				$this->iterate_array();
 				?>
-				<input type="hidden"
-					   id="customizer-repeater-<?php echo esc_attr( $this->id ); ?>-colector" <?php $this->link(); ?>
-					   class="customizer-repeater-colector"/>
+				<input type="hidden" id="customizer-repeater-<?php echo esc_attr( $this->id ); ?>-colector" <?php $this->link(); ?> class="customizer-repeater-colector"/>
 				<?php
 			}
 			?>
@@ -238,15 +233,15 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 					</div>
 					<div class="customizer-repeater-box-content-hidden">
 						<?php
-						$choice = '';
-						$image_url = '';
+						$choice     = '';
+						$image_url  = '';
 						$icon_value = '';
-						$title = '';
-						$subtitle = '';
-						$text = '';
-						$link = '';
-						$shortcode = '';
-						$repeater = '';
+						$title      = '';
+						$subtitle   = '';
+						$text       = '';
+						$link       = '';
+						$shortcode  = '';
+						$repeater   = '';
 
 						if ( ! empty( $icon->id ) ) {
 							$id = $icon->id;
@@ -292,7 +287,7 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 						if ( $this->llorix_one_lite_title_control == true ) {
 							$this->input_control(
 								array(
-									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Title','llorix-one-lite' ), $this->id, 'llorix_one_lite_title_control' ),
+									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Title', 'llorix-one-lite' ), $this->id, 'llorix_one_lite_title_control' ),
 									'class' => 'customizer-repeater-title-control',
 									'type'  => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_title_control' ),
 								), $title
@@ -301,7 +296,7 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 						if ( $this->llorix_one_lite_subtitle_control == true ) {
 							$this->input_control(
 								array(
-									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Subtitle','llorix-one-lite' ), $this->id, 'llorix_one_lite_subtitle_control' ),
+									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Subtitle', 'llorix-one-lite' ), $this->id, 'llorix_one_lite_subtitle_control' ),
 									'class' => 'customizer-repeater-subtitle-control',
 									'type'  => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_subtitle_control' ),
 								), $subtitle
@@ -310,7 +305,7 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 						if ( $this->llorix_one_lite_text_control == true ) {
 							$this->input_control(
 								array(
-									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Text','llorix-one-lite' ), $this->id, 'llorix_one_lite_text_control' ),
+									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Text', 'llorix-one-lite' ), $this->id, 'llorix_one_lite_text_control' ),
 									'class' => 'customizer-repeater-text-control',
 									'type'  => apply_filters( 'repeater_input_types_filter', 'textarea', $this->id, 'llorix_one_lite_text_control' ),
 								), $text
@@ -319,17 +314,17 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 						if ( $this->llorix_one_lite_link_control ) {
 							$this->input_control(
 								array(
-									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Link','llorix-one-lite' ), $this->id, 'llorix_one_lite_link_control' ),
-									'class' => 'customizer-repeater-link-control',
+									'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Link', 'llorix-one-lite' ), $this->id, 'llorix_one_lite_link_control' ),
+									'class'             => 'customizer-repeater-link-control',
 									'sanitize_callback' => 'esc_url_raw',
-									'type'  => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_link_control' ),
+									'type'              => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_link_control' ),
 								), $link
 								);
 						}
 						if ( $this->llorix_one_lite_shortcode_control == true ) {
 							$this->input_control(
 								array(
-									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Shortcode','llorix-one-lite' ), $this->id, 'llorix_one_lite_shortcode_control' ),
+									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Shortcode', 'llorix-one-lite' ), $this->id, 'llorix_one_lite_shortcode_control' ),
 									'class' => 'customizer-repeater-shortcode-control',
 									'type'  => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_shortcode_control' ),
 								), $shortcode
@@ -382,48 +377,48 @@ class Llorix_One_Lite_General_Repeater extends WP_Customize_Control {
 					}
 					if ( $this->llorix_one_lite_title_control == true ) {
 						$this->input_control(
-							 array(
-								 'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Title','llorix-one-lite' ), $this->id, 'llorix_one_lite_title_control' ),
-								 'class' => 'customizer-repeater-title-control',
-								 'type'  => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_title_control' ),
-							 )
-							);
+							array(
+								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Title', 'llorix-one-lite' ), $this->id, 'llorix_one_lite_title_control' ),
+								'class' => 'customizer-repeater-title-control',
+								'type'  => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_title_control' ),
+							)
+						);
 					}
 					if ( $this->llorix_one_lite_subtitle_control == true ) {
 						$this->input_control(
-							 array(
-								 'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Subtitle','llorix-one-lite' ), $this->id, 'llorix_one_lite_subtitle_control' ),
-								 'class' => 'customizer-repeater-subtitle-control',
-								 'type'  => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_subtitle_control' ),
-							 )
-							);
+							array(
+								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Subtitle', 'llorix-one-lite' ), $this->id, 'llorix_one_lite_subtitle_control' ),
+								'class' => 'customizer-repeater-subtitle-control',
+								'type'  => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_subtitle_control' ),
+							)
+						);
 					}
 					if ( $this->llorix_one_lite_text_control == true ) {
 						$this->input_control(
-							 array(
-								 'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Text','llorix-one-lite' ), $this->id, 'llorix_one_lite_text_control' ),
-								 'class' => 'customizer-repeater-text-control',
-								 'type'  => apply_filters( 'repeater_input_types_filter', 'textarea', $this->id, 'llorix_one_lite_text_control' ),
-							 )
-							);
+							array(
+								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Text', 'llorix-one-lite' ), $this->id, 'llorix_one_lite_text_control' ),
+								'class' => 'customizer-repeater-text-control',
+								'type'  => apply_filters( 'repeater_input_types_filter', 'textarea', $this->id, 'llorix_one_lite_text_control' ),
+							)
+						);
 					}
 					if ( $this->llorix_one_lite_link_control == true ) {
 						$this->input_control(
-							 array(
-								 'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Link','llorix-one-lite' ), $this->id, 'llorix_one_lite_link_control' ),
-								 'class' => 'customizer-repeater-link-control',
-								 'type'  => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_link_control' ),
-							 )
-							);
+							array(
+								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Link', 'llorix-one-lite' ), $this->id, 'llorix_one_lite_link_control' ),
+								'class' => 'customizer-repeater-link-control',
+								'type'  => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_link_control' ),
+							)
+						);
 					}
 					if ( $this->llorix_one_lite_shortcode_control == true ) {
 						$this->input_control(
-							 array(
-								 'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Shortcode','llorix-one-lite' ), $this->id, 'llorix_one_lite_shortcode_control' ),
-								 'class' => 'customizer-repeater-shortcode-control',
-								 'type'  => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_shortcode_control' ),
-							 )
-							);
+							array(
+								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Shortcode', 'llorix-one-lite' ), $this->id, 'llorix_one_lite_shortcode_control' ),
+								'class' => 'customizer-repeater-shortcode-control',
+								'type'  => apply_filters( 'repeater_input_types_filter', '', $this->id, 'llorix_one_lite_shortcode_control' ),
+							)
+						);
 					}
 					if ( $this->llorix_one_lite_socials_repeater_control == true ) {
 						$this->repeater_control();
@@ -479,28 +474,29 @@ echo 'style="display:none;"'; }
 ?>
 >
 			<span class="customize-control-title">
-				<?php esc_html_e( 'Icon','llorix-one-lite' ); ?>
+				<?php esc_html_e( 'Icon', 'llorix-one-lite' ); ?>
 			</span>
 			<span class="description customize-control-description">
 				<?php
 
 				printf( /* translators: %s is link to FontAwesome */
-					 esc_html__( 'Note: Some icons may not be displayed here. You can see the full list of icons at %s', 'llorix-one-lite' ),
+					esc_html__( 'Note: Some icons may not be displayed here. You can see the full list of icons at %s', 'llorix-one-lite' ),
 					/* translators: %s is link label*/
 					sprintf(
-						 '<a href="http://fontawesome.io/icons/" rel="nofollow">%s</a>',
+						'<a href="http://fontawesome.io/icons/" rel="nofollow">%s</a>',
 						esc_html__( 'FontAwesome', 'llorix-one-lite' )
 					)
 				);
 				?>
 			</span>
 			<div class="input-group icp-container">
-				<input data-placement="bottomRight" class="icp icp-auto" value="
 				<?php
+				echo '<input data-placement="bottomRight" class="icp icp-auto" value="';
 				if ( ! empty( $value ) ) {
-echo esc_attr( $value );}
-?>
-" type="text">
+					echo esc_attr( $value );
+				}
+				echo '" type="text">';
+				?>
 				<span class="input-group-addon">
 					<i class="fa <?php echo esc_attr( $value ); ?>"></i>
 				</span>
@@ -525,10 +521,10 @@ echo 'style="display:none;"'; }
 ?>
 >
 			<span class="customize-control-title">
-				<?php esc_html_e( 'Image','llorix-one-lite' ); ?>
+				<?php esc_html_e( 'Image', 'llorix-one-lite' ); ?>
 			</span>
 			<input type="text" class="widefat custom-media-url" value="<?php echo esc_attr( $value ); ?>">
-			<input type="button" class="button button-secondary customizer-repeater-custom-media-button" value="<?php esc_attr_e( 'Upload Image','llorix-one-lite' ); ?>" />
+			<input type="button" class="button button-secondary customizer-repeater-custom-media-button" value="<?php esc_attr_e( 'Upload Image', 'llorix-one-lite' ); ?>" />
 		</div>
 		<?php
 	}
@@ -542,12 +538,12 @@ echo 'style="display:none;"'; }
 	private function icon_type_choice( $value = 'llorix_one_lite_icon' ) {
 	?>
 		<span class="customize-control-title">
-			<?php esc_html_e( 'Image type','llorix-one-lite' ); ?>
+			<?php esc_html_e( 'Image type', 'llorix-one-lite' ); ?>
 		</span>
 		<select class="customizer-repeater-image-choice">
-			<option value="llorix_one_lite_icon" <?php selected( $value,'llorix_one_lite_icon' ); ?>><?php esc_html_e( 'Icon','llorix-one-lite' ); ?></option>
-			<option value="llorix_one_lite_image" <?php selected( $value,'llorix_one_lite_image' ); ?>><?php esc_html_e( 'Image','llorix-one-lite' ); ?></option>
-			<option value="llorix_one_lite_none" <?php selected( $value,'llorix_one_lite_none' ); ?>><?php esc_html_e( 'None','llorix-one-lite' ); ?></option>
+			<option value="llorix_one_lite_icon" <?php selected( $value, 'llorix_one_lite_icon' ); ?>><?php esc_html_e( 'Icon', 'llorix-one-lite' ); ?></option>
+			<option value="llorix_one_lite_image" <?php selected( $value, 'llorix_one_lite_image' ); ?>><?php esc_html_e( 'Image', 'llorix-one-lite' ); ?></option>
+			<option value="llorix_one_lite_none" <?php selected( $value, 'llorix_one_lite_none' ); ?>><?php esc_html_e( 'None', 'llorix-one-lite' ); ?></option>
 		</select>
 		<?php
 	}
@@ -571,17 +567,17 @@ echo 'style="display:none;"'; }
 			<div class="customizer-repeater-social-repeater">
 				<div class="customizer-repeater-social-repeater-container">
 					<div class="customizer-repeater-rc input-group icp-container">
-						<input data-placement="bottomRight" class="icp icp-auto" value="
 						<?php
+						echo '<input data-placement="bottomRight" class="icp icp-auto" value="';
 						if ( ! empty( $value ) ) {
-echo esc_attr( $value ); }
-?>
-" type="text">
+							echo esc_attr( $value );
+						}
+						echo '" type="text">';
+						?>
 						<span class="input-group-addon"></span>
 					</div>
 					<?php get_template_part( $this->llorix_one_lite_icon_container ); ?>
-					<input type="text" class="customizer-repeater-social-repeater-link"
-						   placeholder="<?php esc_attr_e( 'Link', 'llorix-one-lite' ); ?>">
+					<input type="text" class="customizer-repeater-social-repeater-link" placeholder="<?php esc_attr_e( 'Link', 'llorix-one-lite' ); ?>">
 					<input type="hidden" class="customizer-repeater-social-repeater-id" value="">
 					<button class="social-repeater-remove-social-item" style="display:none">
 						<?php esc_html_e( 'Remove Icon', 'llorix-one-lite' ); ?>
@@ -600,32 +596,28 @@ echo esc_attr( $value ); }
 					?>
 					<div class="customizer-repeater-social-repeater-container">
 						<div class="customizer-repeater-rc input-group icp-container">
-							<input data-placement="bottomRight" class="icp icp-auto" value="
 							<?php
+							echo '<input data-placement="bottomRight" class="icp icp-auto" value="';
 							if ( ! empty( $social_icon['icon'] ) ) {
-echo esc_attr( $social_icon['icon'] ); }
-?>
-" type="text">
+								echo esc_attr( $social_icon['icon'] );
+							}
+							echo '" type="text">';
+							?>
 							<span class="input-group-addon"><i class="fa <?php echo esc_attr( $social_icon['icon'] ); ?>"></i></span>
 						</div>
-						<?php get_template_part( $this->llorix_one_lite_icon_container ); ?>
-						<input type="text" class="customizer-repeater-social-repeater-link"
-							   placeholder="<?php esc_html_e( 'Link', 'llorix-one-lite' ); ?>"
-							   value="
-							   <?php
-							   if ( ! empty( $social_icon['link'] ) ) {
-									echo esc_url( $social_icon['link'] );
-}
-?>
-">
-						<input type="hidden" class="customizer-repeater-social-repeater-id"
-							   value="
-							   <?php
-							   if ( ! empty( $social_icon['id'] ) ) {
-									echo esc_attr( $social_icon['id'] );
-}
-?>
-">
+						<?php
+						get_template_part( $this->llorix_one_lite_icon_container );
+						echo '<input type="text" class="customizer-repeater-social-repeater-link" placeholder="' . esc_html__( 'Link', 'llorix-one-lite' ) . '" value="';
+						if ( ! empty( $social_icon['link'] ) ) {
+							echo esc_url( $social_icon['link'] );
+						}
+						echo '">';
+						echo '<input type="hidden" class="customizer-repeater-social-repeater-id" value="';
+						if ( ! empty( $social_icon['id'] ) ) {
+							echo esc_attr( $social_icon['id'] );
+						}
+						echo '">';
+						?>
 						<button class="social-repeater-remove-social-item"
 								style="
 								<?php
@@ -638,9 +630,7 @@ echo esc_attr( $social_icon['icon'] ); }
 					<?php
 				}
 				?>
-				<input type="hidden" id="social-repeater-socials-repeater-colector"
-					   class="social-repeater-socials-repeater-colector"
-					   value="<?php echo esc_textarea( html_entity_decode( $value ) ); ?>" />
+				<input type="hidden" id="social-repeater-socials-repeater-colector" class="social-repeater-socials-repeater-colector" value="<?php echo esc_textarea( html_entity_decode( $value ) ); ?>" />
 			</div>
 			<button class="social-repeater-add-social-item button-secondary"><?php esc_html_e( 'Add icon', 'llorix-one-lite' ); ?></button>
 			<?php

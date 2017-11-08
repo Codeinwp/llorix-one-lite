@@ -1,7 +1,6 @@
-/**
+;/**
  * @preserve HTML5 Shiv 3.7.2 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
- */
-;(function(window, document) {
+ */(function(window, document) {
   'use strict';
 
 /*jshint evil:true */
@@ -34,14 +33,14 @@
 
   (function() {
 		try {
-			var a = document.createElement( 'a' );
+			var a       = document.createElement( 'a' );
 			a.innerHTML = '<xyz></xyz>';
 			// if the hidden property is implemented we can assume, that the browser supports basic HTML5 Styles
 			supportsHtml5Styles = ('hidden' in a);
 
 			supportsUnknownElements = a.childNodes.length === 1 || (function() {
 			  // assign a false positive if unable to shiv
-			  (document.createElement)('a');
+			  (document.createElement)( 'a' );
 			  var frag = document.createDocumentFragment();
 			  return (
 				typeof frag.cloneNode === 'undefined' ||
@@ -51,7 +50,7 @@
 			  }());
 			} catch (e) {
 			// assign a false positive if detection fails => unable to shiv
-			supportsHtml5Styles = true;
+			supportsHtml5Styles     = true;
 			supportsUnknownElements = true;
 			}
 
@@ -68,7 +67,7 @@
    * @returns {StyleSheet} The style element.
    */
   function addStyleSheet(ownerDocument, cssText) {
-		var p = ownerDocument.createElement( 'p' ),
+		var p  = ownerDocument.createElement( 'p' ),
 		parent = ownerDocument.getElementsByTagName( 'head' )[0] || ownerDocument.documentElement;
 
 		p.innerHTML = 'x<style>' + cssText + '</style>';
@@ -118,7 +117,7 @@
 			data = {};
 			expanID++;
 			ownerDocument[expando] = expanID;
-			expandoData[expanID] = data;
+			expandoData[expanID]   = data;
 			}
 		return data;
   }
@@ -175,11 +174,11 @@
 		if (supportsUnknownElements) {
 			return ownerDocument.createDocumentFragment();
 			}
-		data = data || getExpandoData( ownerDocument );
+		data      = data || getExpandoData( ownerDocument );
 		var clone = data.frag.cloneNode(),
-		i = 0,
-		elems = getElements(),
-		l = elems.length;
+		i         = 0,
+		elems     = getElements(),
+		l         = elems.length;
 		for (;i < l;i++) {
 			clone.createElement( elems[i] );
 			}
@@ -195,10 +194,10 @@
    */
   function shivMethods(ownerDocument, data) {
 		if ( ! data.cache) {
-			data.cache = {};
+			data.cache      = {};
 			data.createElem = ownerDocument.createElement;
 			data.createFrag = ownerDocument.createDocumentFragment;
-			data.frag = data.createFrag();
+			data.frag       = data.createFrag();
 			}
 
 		ownerDocument.createElement = function(nodeName) {
@@ -222,7 +221,7 @@
 				}
 			) +
 		');return n}'
-		  )(html5, data.frag);
+		  )( html5, data.frag );
   }
 
   /*--------------------------------------------------------------------------*/

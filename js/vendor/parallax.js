@@ -1,4 +1,4 @@
-// ============================================================
+;// ============================================================
 //
 // The MIT License
 //
@@ -35,16 +35,15 @@
  * @description Creates a parallax effect between an array of layers,
  *              driving the motion from the gyroscope output of a smartdevice.
  *              If no gyroscope is available, the cursor position is used.
- */
-;(function(window, document, undefined) {
+ */(function(window, document, undefined) {
 
   // Strict Mode
   'use strict';
 
   // Constants
-  var NAME = 'Parallax';
+  var NAME         = 'Parallax';
   var MAGIC_NUMBER = 30;
-  var DEFAULTS = {
+  var DEFAULTS     = {
 		relativeInput: false,
 		clipRelativeInput: false,
 		calibrationThreshold: 100,
@@ -68,7 +67,7 @@
 
 		// DOM Context
 		this.element = element;
-		this.layers = element.getElementsByClassName( 'layer' );
+		this.layers  = element.getElementsByClassName( 'layer' );
 
 		// Data Extraction
 		var data = {
@@ -98,17 +97,17 @@ delete data[key];
 
 		// States
 		this.calibrationTimer = null;
-		this.calibrationFlag = true;
-		this.enabled = false;
-		this.depths = [];
-		this.raf = null;
+		this.calibrationFlag  = true;
+		this.enabled          = false;
+		this.depths           = [];
+		this.raf              = null;
 
 		// Element Bounds
 		this.bounds = null;
-		this.ex = 0;
-		this.ey = 0;
-		this.ew = 0;
-		this.eh = 0;
+		this.ex     = 0;
+		this.ey     = 0;
+		this.ew     = 0;
+		this.eh     = 0;
 
 		// Element Center
 		this.ecx = 0;
@@ -135,12 +134,12 @@ delete data[key];
 		this.vy = 0;
 
 		// Callbacks
-		this.onMouseMove = this.onMouseMove.bind( this );
+		this.onMouseMove         = this.onMouseMove.bind( this );
 		this.onDeviceOrientation = this.onDeviceOrientation.bind( this );
-		this.onOrientationTimer = this.onOrientationTimer.bind( this );
-		this.onCalibrationTimer = this.onCalibrationTimer.bind( this );
-		this.onAnimationFrame = this.onAnimationFrame.bind( this );
-		this.onWindowResize = this.onWindowResize.bind( this );
+		this.onOrientationTimer  = this.onOrientationTimer.bind( this );
+		this.onCalibrationTimer  = this.onCalibrationTimer.bind( this );
+		this.onAnimationFrame    = this.onAnimationFrame.bind( this );
+		this.onWindowResize      = this.onWindowResize.bind( this );
 
 		// Initialise
 		this.initialise();
@@ -185,19 +184,19 @@ delete data[key];
   };
 
   Parallax.prototype.transformSupport = function(value) {
-		var element = document.createElement( 'div' );
+		var element         = document.createElement( 'div' );
 		var propertySupport = false;
-		var propertyValue = null;
-		var featureSupport = false;
-		var cssProperty = null;
-		var jsProperty = null;
+		var propertyValue   = null;
+		var featureSupport  = false;
+		var cssProperty     = null;
+		var jsProperty      = null;
 		for (var i = 0, l = this.vendors.length; i < l; i++) {
 			if (this.vendors[i] !== null) {
 				cssProperty = this.vendors[i][0] + 'transform';
-				jsProperty = this.vendors[i][1] + 'Transform';
+				jsProperty  = this.vendors[i][1] + 'Transform';
 			} else {
 				cssProperty = 'transform';
-				jsProperty = 'transform';
+				jsProperty  = 'transform';
 			}
 			if (element.style[jsProperty] !== undefined) {
 				propertySupport = true;
@@ -210,19 +209,19 @@ delete data[key];
 			  break;
 			case '3D':
 				if (propertySupport) {
-					var body = document.body || document.createElement( 'body' );
-					var documentElement = document.documentElement;
+					var body             = document.body || document.createElement( 'body' );
+					var documentElement  = document.documentElement;
 					var documentOverflow = documentElement.style.overflow;
 					if ( ! document.body) {
 						documentElement.style.overflow = 'hidden';
 						documentElement.appendChild( body );
-						body.style.overflow = 'hidden';
+						body.style.overflow   = 'hidden';
 						body.style.background = '';
 					}
 					body.appendChild( element );
-					element.style[jsProperty] = 'translate3d(1px,1px,1px)';
-					propertyValue = window.getComputedStyle( element ).getPropertyValue( cssProperty );
-					featureSupport = propertyValue !== undefined && propertyValue.length > 0 && propertyValue !== 'none';
+					element.style[jsProperty]      = 'translate3d(1px,1px,1px)';
+					propertyValue                  = window.getComputedStyle( element ).getPropertyValue( cssProperty );
+					featureSupport                 = propertyValue !== undefined && propertyValue.length > 0 && propertyValue !== 'none';
 					documentElement.style.overflow = documentOverflow;
 					body.removeChild( element );
 				}
@@ -231,19 +230,19 @@ delete data[key];
 		return featureSupport;
   };
 
-  Parallax.prototype.ww = null;
-  Parallax.prototype.wh = null;
-  Parallax.prototype.wcx = null;
-  Parallax.prototype.wcy = null;
-  Parallax.prototype.wrx = null;
-  Parallax.prototype.wry = null;
-  Parallax.prototype.portrait = null;
-  Parallax.prototype.desktop = ! navigator.userAgent.match( /(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i );
-  Parallax.prototype.vendors = [null,['-webkit-','webkit'],['-moz-','Moz'],['-o-','O'],['-ms-','ms']];
-  Parallax.prototype.motionSupport = ! ! window.DeviceMotionEvent;
+  Parallax.prototype.ww                 = null;
+  Parallax.prototype.wh                 = null;
+  Parallax.prototype.wcx                = null;
+  Parallax.prototype.wcy                = null;
+  Parallax.prototype.wrx                = null;
+  Parallax.prototype.wry                = null;
+  Parallax.prototype.portrait           = null;
+  Parallax.prototype.desktop            = ! navigator.userAgent.match( /(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i );
+  Parallax.prototype.vendors            = [null,['-webkit-','webkit'],['-moz-','Moz'],['-o-','O'],['-ms-','ms']];
+  Parallax.prototype.motionSupport      = ! ! window.DeviceMotionEvent;
   Parallax.prototype.orientationSupport = ! ! window.DeviceOrientationEvent;
-  Parallax.prototype.orientationStatus = 0;
-  Parallax.prototype.propertyCache = {};
+  Parallax.prototype.orientationStatus  = 0;
+  Parallax.prototype.propertyCache      = {};
 
   Parallax.prototype.initialise = function() {
 
@@ -281,9 +280,9 @@ this.accelerate( this.element );
 this.accelerate( layer );
 		  }
 			layer.style.position = i ? 'absolute' : 'relative';
-			layer.style.display = 'block';
-			layer.style.left = 0;
-			layer.style.top = 0;
+			layer.style.display  = 'block';
+			layer.style.left     = 0;
+			layer.style.top      = 0;
 
 			// Cache Layer Depth
 			this.depths.push( this.data( layer, 'depth' ) || 0 );
@@ -291,8 +290,8 @@ this.accelerate( layer );
   };
 
   Parallax.prototype.updateDimensions = function() {
-		this.ww = window.innerWidth;
-		this.wh = window.innerHeight;
+		this.ww  = window.innerWidth;
+		this.wh  = window.innerHeight;
 		this.wcx = this.ww * this.originX;
 		this.wcy = this.wh * this.originY;
 		this.wrx = Math.max( this.wcx, this.ww - this.wcx );
@@ -301,14 +300,14 @@ this.accelerate( layer );
 
   Parallax.prototype.updateBounds = function() {
 		this.bounds = this.element.getBoundingClientRect();
-		this.ex = this.bounds.left;
-		this.ey = this.bounds.top;
-		this.ew = this.bounds.width;
-		this.eh = this.bounds.height;
-		this.ecx = this.ew * this.originX;
-		this.ecy = this.eh * this.originY;
-		this.erx = Math.max( this.ecx, this.ew - this.ecx );
-		this.ery = Math.max( this.ecy, this.eh - this.ecy );
+		this.ex     = this.bounds.left;
+		this.ey     = this.bounds.top;
+		this.ew     = this.bounds.width;
+		this.eh     = this.bounds.height;
+		this.ecx    = this.ew * this.originX;
+		this.ecy    = this.eh * this.originY;
+		this.erx    = Math.max( this.ecx, this.ew - this.ecx );
+		this.ery    = Math.max( this.ecy, this.eh - this.ecy );
   };
 
   Parallax.prototype.queueCalibration = function(delay) {
@@ -324,8 +323,8 @@ this.accelerate( layer );
 				window.addEventListener( 'deviceorientation', this.onDeviceOrientation );
 				setTimeout( this.onOrientationTimer, this.supportDelay );
 			} else {
-				this.cx = 0;
-				this.cy = 0;
+				this.cx       = 0;
+				this.cy       = 0;
 				this.portrait = false;
 				window.addEventListener( 'mousemove', this.onMouseMove );
 			}
@@ -416,7 +415,7 @@ this.accelerate( layer );
 			this.css( element, 'transform', 'translate(' + x + ',' + y + ')' );
 			} else {
 		  element.style.left = x;
-		  element.style.top = y;
+		  element.style.top  = y;
 			}
   };
 
@@ -461,8 +460,8 @@ this.accelerate( layer );
 		  this.vx += (this.mx - this.vx) * this.frictionX;
 		  this.vy += (this.my - this.vy) * this.frictionY;
 		  for (var i = 0, l = this.layers.length; i < l; i++) {
-			var layer = this.layers[i];
-			var depth = this.depths[i];
+			var layer   = this.layers[i];
+			var depth   = this.depths[i];
 			var xOffset = this.vx * depth * (this.invertX ? -1 : 1);
 			var yOffset = this.vy * depth * (this.invertY ? -1 : 1);
 			this.setPosition( layer, xOffset, yOffset );
@@ -485,15 +484,15 @@ this.accelerate( layer );
 			// Detect Orientation Change
 			var portrait = this.wh > this.ww;
 			if (this.portrait !== portrait) {
-				this.portrait = portrait;
+				this.portrait        = portrait;
 				this.calibrationFlag = true;
 			}
 
 			// Set Calibration
 			if (this.calibrationFlag) {
 				this.calibrationFlag = false;
-				this.cx = x;
-				this.cy = y;
+				this.cx              = x;
+				this.cy              = y;
 			}
 
 			// Set Input
@@ -534,7 +533,7 @@ this.accelerate( layer );
   // Expose Parallax
   window[NAME] = Parallax;
 
-})(window, document);
+})( window, document );
 
 /**
  * Request Animation Frame Polyfill.
@@ -546,18 +545,18 @@ this.accelerate( layer );
 ;(function() {
 
   var lastTime = 0;
-  var vendors = ['ms', 'moz', 'webkit', 'o'];
+  var vendors  = ['ms', 'moz', 'webkit', 'o'];
 
   for (var x = 0; x < vendors.length && ! window.requestAnimationFrame; ++x) {
 		window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
-		window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+		window.cancelAnimationFrame  = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
   }
 
   if ( ! window.requestAnimationFrame) {
 		window.requestAnimationFrame = function(callback, element) {
-			var currTime = new Date().getTime();
+			var currTime   = new Date().getTime();
 			var timeToCall = Math.max( 0, 16 - (currTime - lastTime) );
-			var id = window.setTimeout(
+			var id         = window.setTimeout(
 			  function() { callback( currTime + timeToCall ); },
 			timeToCall
 			  );

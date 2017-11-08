@@ -1,9 +1,15 @@
+/**
+ * About page scripts file
+ *
+ * @package llorix-one-lite
+ */
+
 /* global llorixOneLiteWelcomeScreenObject */
 /* global jQuery */
 
 jQuery( document ).ready(
 	function() {
-    'use strict';
+	'use strict';
 
 	/* If there are required actions, add an icon with the number of required actions in the About L One page -> Actions required tab */
 	var llorix_one_nr_actions_required = llorixOneLiteWelcomeScreenObject.nr_actions_required;
@@ -72,7 +78,7 @@ jQuery( document ).ready(
 		);
 
 	/* Tab Content height matches admin menu height for scrolling purpouses */
-	var $tab = jQuery( '.llorix-one-lite-tab-content > div' );
+	var $tab               = jQuery( '.llorix-one-lite-tab-content > div' );
 	var $admin_menu_height = jQuery( '#adminmenu' ).height();
 	if ( (typeof $tab !== 'undefined') && (typeof $admin_menu_height !== 'undefined') ) {
 			var $newheight = $admin_menu_height - 180;

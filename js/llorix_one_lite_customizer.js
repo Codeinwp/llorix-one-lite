@@ -1,3 +1,9 @@
+/**
+ * Customizer scripts
+ *
+ * @package llorix-one-lite
+ */
+
 /* global jQuery */
 /* global Color */
 /* global wp */
@@ -6,7 +12,7 @@ function media_upload(button_class) {
 
 	jQuery( 'body' ).on(
 		'click', button_class, function () {
-		var button_id = '#' + jQuery( this ).attr( 'id' );
+		var button_id     = '#' + jQuery( this ).attr( 'id' );
 		var display_field = jQuery( this ).parent().children( 'input:text' );
 		var _custom_media = true;
 
@@ -77,7 +83,7 @@ function llorix_one_uniqid(prefix, more_entropy) {
 	}
 	php_js.uniqidSeed++;
 
-	retId = prefix; // start with prefix, add current milliseconds hex string
+	retId  = prefix; // start with prefix, add current milliseconds hex string
 	retId += formatSeed(
 		parseInt(
 		new Date()
@@ -104,18 +110,18 @@ function llorix_one_refresh_general_control_values() {
 	jQuery( '.llorix_one_lite_general_control_repeater' ).each(
 		function () {
 		var values = [];
-		var th = jQuery( this );
+		var th     = jQuery( this );
 		th.find( '.llorix_one_lite_general_control_repeater_container' ).each(
 			function () {
 			var icon_value = jQuery( this ).find( '.icp' ).val();
-			var text = jQuery( this ).find( '.llorix_one_lite_text_control' ).val();
-			var link = jQuery( this ).find( '.llorix_one_lite_link_control' ).val();
-			var image_url = jQuery( this ).find( '.custom_media_url' ).val();
-			var choice = jQuery( this ).find( '.llorix_one_lite_image_choice' ).val();
-			var title = jQuery( this ).find( '.llorix_one_lite_title_control' ).val();
-			var subtitle = jQuery( this ).find( '.llorix_one_lite_subtitle_control' ).val();
-			var id = jQuery( this ).find( '.llorix_one_lite_box_id' ).val();
-			var shortcode = jQuery( this ).find( '.llorix_one_lite_shortcode_control' ).val();
+			var text       = jQuery( this ).find( '.llorix_one_lite_text_control' ).val();
+			var link       = jQuery( this ).find( '.llorix_one_lite_link_control' ).val();
+			var image_url  = jQuery( this ).find( '.custom_media_url' ).val();
+			var choice     = jQuery( this ).find( '.llorix_one_lite_image_choice' ).val();
+			var title      = jQuery( this ).find( '.llorix_one_lite_title_control' ).val();
+			var subtitle   = jQuery( this ).find( '.llorix_one_lite_subtitle_control' ).val();
+			var id         = jQuery( this ).find( '.llorix_one_lite_box_id' ).val();
+			var shortcode  = jQuery( this ).find( '.llorix_one_lite_shortcode_control' ).val();
 			if (text !== '' || image_url !== '' || title !== '' || subtitle !== '') {
 					values.push(
 					{
@@ -366,7 +372,7 @@ jQuery( document ).ready(
 	$( '.pluto-color-control' ).each(
 		function() {
 		var $control = $( this ),
-			value = $control.val().replace( /\s+/g, '' );
+			value    = $control.val().replace( /\s+/g, '' );
 		var palette;
 		// Manage Palettes
 		var palette_input = $control.attr( 'data-palette' );
@@ -417,7 +423,7 @@ jQuery( document ).ready(
 					$( this ).find( '.ui-slider-handle' ).text( ui.value ); // show value on slider handle
 					// send ajax request to wp.customizer to enable Save & Publish button
 					var _new_value = $control.val();
-					var key = $control.attr( 'data-customize-setting-link' );
+					var key        = $control.attr( 'data-customize-setting-link' );
 					wp.customize(
 					key, function(obj) {
 					obj.set( _new_value );
@@ -437,9 +443,9 @@ jQuery( document ).ready(
 			); // slider
 		$alpha_slider.slider().on(
 			'slidechange', function(event, ui) {
-			var new_alpha_val = parseFloat( ui.value ),
-				iris = $control.data( 'a8cIris' ),
-				color_picker = $control.data( 'wpWpColorPicker' );
+			var new_alpha_val  = parseFloat( ui.value ),
+				iris           = $control.data( 'a8cIris' ),
+				color_picker   = $control.data( 'wpWpColorPicker' );
 			iris._color._alpha = new_alpha_val / 100.0;
 			$control.val( iris._color.toString() );
 			color_picker.toggler.css(

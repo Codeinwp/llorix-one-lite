@@ -35,21 +35,17 @@ if ( isset( $llorix_one_lite_frontpage_content_show ) && $llorix_one_lite_frontp
 		}
 	}
 
-	?>
+	echo '<section class="frontpage-content ';
 
-	<section class="frontpage-content 
-	<?php
 	if ( ! empty( $class_to_add ) ) {
 		echo esc_attr( $class_to_add );
 	}
-	?>
-	 " 
-	<?php
-if ( ! empty( $llorix_one_frontpage_featured ) ) {
+	echo '"';
+	if ( ! empty( $llorix_one_frontpage_featured ) ) {
 		echo 'style="background-image: url(\'' . esc_url( $llorix_one_frontpage_featured ) . '\')"';
 	}
+	echo '>';
 	?>
-	>
 		<div class="container">
 			<div class="row">
 				<?php
