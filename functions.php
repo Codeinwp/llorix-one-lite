@@ -791,7 +791,11 @@ function llorix_one_lite_customize_register_notification( $wp_customize ) {
 			)
 		)
 	);
-	$wp_customize->add_setting( 'llorix-one-lite-notify' );
+	$wp_customize->add_setting(
+		'llorix-one-lite-notify', array(
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
 	$wp_customize->add_control(
 		'llorix-one-lite-notify', array(
 			'label'    => __( 'Notification', 'llorix-one-lite' ),
