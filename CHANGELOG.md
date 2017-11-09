@@ -1,14 +1,16 @@
 
-### 0.2.16 - 09/11/2017
-**Changes:** 
-- Fix theme check
 
-### 0.2.15 - 08/11/2017
-**Changes:** 
-- Updated PHPCS and fixed all the errors
-- Fixed problem with the About section content causing customizer not to load
-- Added retirement notice
-
+### 0.2.16 - 09/11/2017
+
+**Changes:**
+
+- Updated PHPCS and fixed all the errors
+
+- Fixed problem with the About section content causing customizer not to load
+
+- Added retirement notice
+
+
 
 ### 0.2.14 - 03/08/2017
 
