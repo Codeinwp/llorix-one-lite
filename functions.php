@@ -379,6 +379,18 @@ function llorix_one_lite_admin_scripts() {
 add_action( 'customize_controls_enqueue_scripts', 'llorix_one_lite_admin_scripts' );
 
 /**
+ * Allow only 4 products per line if there is a sidebar.
+ *
+ * @since   1.0.0
+ * @access  public
+ * @return mixed
+ */
+function llorix_one_lite_loop_shop_columns() {
+	return apply_filters( 'llorix_loop_shop_columns', 4 ); // 4 products per row
+}
+add_filter( 'loop_shop_columns', 'llorix_one_lite_loop_shop_columns' );
+
+/**
  * Adding IE-only scripts to header.
  */
 function llorix_one_lite_ie() {
