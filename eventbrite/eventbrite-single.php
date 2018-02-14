@@ -15,18 +15,28 @@ get_header(); ?>
 <div class="content-wrap">
 	<div class="container">
 
-		<div id="primary" class="content-area <?php if ( is_active_sidebar( 'sidebar-1' ) ) { echo 'col-md-8';
-} else { echo 'col-md-12';}  ?>">
+		<div id="primary" class="content-area 
+		<?php
+		if ( is_active_sidebar( 'sidebar-1' ) ) {
+echo 'col-md-8';
+} else {
+				echo 'col-md-12';}
+?>
+">
 			<main itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage" id="main" class="site-main" role="main">
 
 			<?php
 				// Get our event based on the ID passed by query variable.
-				$event = new Eventbrite_Query( array(
-					'p' => get_query_var( 'eventbrite_id' ),
-				) );
+				$event = new Eventbrite_Query(
+					array(
+						'p' => get_query_var( 'eventbrite_id' ),
+					)
+				);
 
 				if ( $event->have_posts() ) :
-				while ( $event->have_posts() ) : $event->the_post(); ?>
+				while ( $event->have_posts() ) :
+						$event->the_post();
+						?>
 
 																		<article id="event-<?php the_ID(); ?>" <?php post_class(); ?>>
 																		<header class="entry-header">
@@ -50,7 +60,8 @@ get_header(); ?>
 																		</footer><!-- .entry-footer -->
 																		</article><!-- #post-## -->
 
-																		<?php endwhile; // end of the loop.
+																		<?php
+																		endwhile; // end of the loop.
 				else :
 					// If no content, include the "No posts found" template.
 					get_template_part( 'content', 'none' );

@@ -10,7 +10,8 @@ if ( ! function_exists( 'llorix_one_lite_logos_get_default_content' ) ) {
 	 * Get logos section default content.
 	 */
 	function llorix_one_lite_logos_get_default_content() {
-		return json_encode( array(
+		return json_encode(
+			array(
 				array(
 					'image_url' => llorix_one_lite_get_file( '/images/companies/1.png' ),
 					'link'      => '#',

@@ -18,11 +18,12 @@ get_header(); ?>
 		<div id="primary" class="content-area col-md-12">
 			<main itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage" id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'content', 'single-download' ); ?>
-
-			<?php endwhile; // end of the loop. ?>
+			<?php
+			while ( have_posts() ) {
+				the_post();
+				get_template_part( 'content', 'single-download' );
+			}
+			?>
 
 			</main><!-- #main -->
 		</div><!-- #primary -->

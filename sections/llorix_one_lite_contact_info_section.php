@@ -21,16 +21,19 @@ if ( isset( $llorix_one_lite_contact_info_show ) && $llorix_one_lite_contact_inf
 		$llorix_one_lite_contact_info_item_decoded = json_decode( $llorix_one_lite_contact_info_item ); ?>
 		<div class="contact-info" id="contactinfo" role="region" aria-label="<?php esc_html_e( 'Contact Info', 'llorix-one-lite' ); ?>">
 			<?php
-			llorix_one_lite_contact_content( $llorix_one_lite_contact_info_item_decoded ); ?>
+			llorix_one_lite_contact_content( $llorix_one_lite_contact_info_item_decoded );
+			?>
 		</div><!-- .contact-info -->
 		<?php
 	}
 } else {
 	if ( is_customize_preview() ) {
-		$llorix_one_lite_contact_info_item_decoded = json_decode( $llorix_one_lite_contact_info_item ); ?>
+		$llorix_one_lite_contact_info_item_decoded = json_decode( $llorix_one_lite_contact_info_item );
+		?>
 		<div class="contact-info llorix_one_lite_only_customizer" id="contactinfo" role="region" aria-label="<?php esc_html_e( 'Contact Info', 'llorix-one-lite' ); ?>">
 			<?php
-			llorix_one_lite_contact_content( $llorix_one_lite_contact_info_item_decoded ); ?>
+			llorix_one_lite_contact_content( $llorix_one_lite_contact_info_item_decoded );
+			?>
 		</div><!-- .contact-info -->
 		<?php
 	}

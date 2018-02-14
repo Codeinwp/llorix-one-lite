@@ -17,38 +17,38 @@ get_header(); ?>
 	<div class="container">
 
 		<div id="primary" class="content-area col-md-12">
-			<main <?php if ( have_posts() ) { echo 'itemscope itemtype="http://schema.org/Blog"';} ?> id="main" class="site-main" role="main">
+			<?php
+			echo '<main ';
+			if ( have_posts() ) {
+				echo ' itemscope itemtype="http://schema.org/Blog" ';
+			}
+			echo ' id="main" class="site-main" role="main">';
 
-				<?php if ( have_posts() ) : ?>
+			if ( have_posts() ) {
 
-					<header class="page-header">
-						<?php
-							the_archive_title( '<h1 class="page-title">', '</h1>' );
-							the_archive_description( '<div class="taxonomy-description">', '</div>' );
-						?>
-					</header><!-- .page-header -->
-					
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
+				echo '<header class="page-header">';
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				echo '</header>';
 
-						<?php
+				while ( have_posts() ) {
+					the_post();
+					/**
+					 * Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'content', 'archive-download' );
+				}
 
-						/**
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', 'archive-download' ); ?>
+				the_posts_navigation();
 
-					<?php endwhile; ?>
-					
-					<?php the_posts_navigation(); ?>
+			} else {
 
-				<?php else : ?>
+				get_template_part( 'content', 'none' );
 
-					<?php get_template_part( 'content', 'none' ); ?>
-
-				<?php endif; ?>
+			}
+			?>
 
 			</main><!-- #main -->
 		</div><!-- #primary -->

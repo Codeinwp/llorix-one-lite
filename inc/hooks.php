@@ -73,14 +73,14 @@ function llorix_one_lite_home_ribbon_section_close_trigger() {
  * Post date box - on content-search
  */
 function llorix_one_lite_post_date_search_box_trigger() {
-	do_action( 'llorix_one_lite_post_date_box','' );
+	do_action( 'llorix_one_lite_post_date_box', '' );
 }
 
 /**
  * Post date box - on index
  */
 function llorix_one_lite_post_date_index_box_trigger() {
-	do_action( 'llorix_one_lite_post_date_box','post-date entry-published updated' );
+	do_action( 'llorix_one_lite_post_date_box', 'post-date entry-published updated' );
 }
 
 /**

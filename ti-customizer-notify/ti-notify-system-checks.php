@@ -1,4 +1,9 @@
 <?php
+/**
+ * Notify System
+ *
+ * @package llorix-one-lite
+ */
 
 if ( ! class_exists( 'Ti_Customizer_Notify_System' ) ) {
 	/**

@@ -20,9 +20,12 @@
 <!-- /END HOME / HEADER  -->
 
 <?php
-	$llorix_one_lite_blog_header_image = get_theme_mod( 'llorix_one_lite_blog_header_image', apply_filters( 'llorix_one_lite_blog_header_image_filter',llorix_one_lite_get_file( '/images/background-images/background-blog.jpg' ) ) );
-	$llorix_one_lite_blog_header_title = get_theme_mod( 'llorix_one_lite_blog_header_title', apply_filters( 'llorix_one_lite_blog_header_title_default_filter', 'This Theme Supports a Custom FrontPage' ) );
+	$llorix_one_lite_blog_header_image    = get_theme_mod( 'llorix_one_lite_blog_header_image', apply_filters( 'llorix_one_lite_blog_header_image_filter', llorix_one_lite_get_file( '/images/background-images/background-blog.jpg' ) ) );
+	$llorix_one_lite_blog_header_image    = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_blog_header_image, 'Header' );
+	$llorix_one_lite_blog_header_title    = get_theme_mod( 'llorix_one_lite_blog_header_title', apply_filters( 'llorix_one_lite_blog_header_title_default_filter', 'This Theme Supports a Custom FrontPage' ) );
+	$llorix_one_lite_blog_header_title    = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_blog_header_title, 'Header' );
 	$llorix_one_lite_blog_header_subtitle = get_theme_mod( 'llorix_one_lite_blog_header_subtitle' );
+	$llorix_one_lite_blog_header_subtitle = apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_blog_header_subtitle, 'Header' );
 
 	if ( ! empty( $llorix_one_lite_blog_header_image ) || ! empty( $llorix_one_lite_blog_header_title ) || ! empty( $llorix_one_lite_blog_header_subtitle ) ) :
 
@@ -55,32 +58,27 @@
 <div role="main" id="content" class="content-wrap">
 	<div class="container">
 		<div id="primary" class="content-area col-md-8 post-list">
-			<main <?php if ( have_posts() ) { echo 'itemscope itemtype="http://schema.org/Blog"';} ?> id="main" class="site-main" role="main">
-
-				<?php if ( have_posts() ) : ?>
-				
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-
-						<?php
-
-						/**
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() ); ?>
-
-					<?php endwhile; ?>
-
-					<?php the_posts_navigation(); ?>
-
-				<?php else : ?>
-
-					<?php get_template_part( 'content', 'none' ); ?>
-
-				<?php endif; ?>
-
+			<?php
+			echo '<main ';
+			if ( have_posts() ) {
+				echo ' itemscope itemtype="http://schema.org/Blog" ';
+			}
+			echo ' id="main" class="site-main" role="main">';
+			if ( have_posts() ) {
+				while ( have_posts() ) {
+					the_post();
+					/**
+					 * Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'content', get_post_format() );
+				}
+				the_posts_navigation();
+			} else {
+				get_template_part( 'content', 'none' );
+			}
+			?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 

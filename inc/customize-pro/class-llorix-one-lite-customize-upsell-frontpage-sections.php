@@ -40,8 +40,8 @@ class Llorix_One_Lite_Customizer_Upsell_Frontpage_Sections extends WP_Customize_
 	 * @return array
 	 */
 	public function json() {
-		$json = parent::json();
-		$json['upsell_text']                = wp_kses_post( $this->upsell_text );
+		$json                = parent::json();
+		$json['upsell_text'] = wp_kses_post( $this->upsell_text );
 		return $json;
 	}
 

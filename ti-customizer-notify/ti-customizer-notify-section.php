@@ -1,6 +1,12 @@
 <?php
 /**
  * Ti_Customizer_Notify_Section class
+ *
+ * @package llorix-one-lite
+ */
+
+/**
+ * Ti_Customizer_Notify_Section class
  */
 class Ti_Customizer_Notify_Section extends WP_Customize_Section {
 	/**
@@ -20,9 +26,9 @@ class Ti_Customizer_Notify_Section extends WP_Customize_Section {
 	 */
 	public $recommended_actions = '';
 	public $recommended_plugins = '';
-	public $total_actions = '';
-	public $plugin_text = '';
-	public $dismiss_button = '';
+	public $total_actions       = '';
+	public $plugin_text         = '';
+	public $dismiss_button      = '';
 
 	/**
 	 * Check if plugin is installed/actuvated
@@ -37,10 +43,16 @@ class Ti_Customizer_Notify_Section extends WP_Customize_Section {
 
 			$needs = is_plugin_active( $slug . '/' . $slug . '.php' ) ? 'deactivate' : 'activate';
 
-			return array( 'status' => is_plugin_active( $slug . '/' . $slug . '.php' ), 'needs' => $needs );
+			return array(
+				'status' => is_plugin_active( $slug . '/' . $slug . '.php' ),
+				'needs'  => $needs,
+			);
 		}
 
-		return array( 'status' => false, 'needs' => 'install' );
+		return array(
+			'status' => false,
+			'needs'  => 'install',
+		);
 	}
 
 	/**
@@ -66,22 +78,26 @@ class Ti_Customizer_Notify_Section extends WP_Customize_Section {
 				);
 				break;
 			case 'deactivate':
-				return add_query_arg( array(
-					                      'action'        => 'deactivate',
-					                      'plugin'        => rawurlencode( $slug . '/' . $slug . '.php' ),
-					                      'plugin_status' => 'all',
-					                      'paged'         => '1',
-					                      '_wpnonce'      => wp_create_nonce( 'deactivate-plugin_' . $slug . '/' . $slug . '.php' ),
-				                      ), network_admin_url( 'plugins.php' ) );
+				return add_query_arg(
+					 array(
+						 'action'        => 'deactivate',
+						 'plugin'        => rawurlencode( $slug . '/' . $slug . '.php' ),
+						 'plugin_status' => 'all',
+						 'paged'         => '1',
+						 '_wpnonce'      => wp_create_nonce( 'deactivate-plugin_' . $slug . '/' . $slug . '.php' ),
+					 ), network_admin_url( 'plugins.php' )
+					);
 				break;
 			case 'activate':
-				return add_query_arg( array(
-					                      'action'        => 'activate',
-					                      'plugin'        => rawurlencode( $slug . '/' . $slug . '.php' ),
-					                      'plugin_status' => 'all',
-					                      'paged'         => '1',
-					                      '_wpnonce'      => wp_create_nonce( 'activate-plugin_' . $slug . '/' . $slug . '.php' ),
-				                      ), network_admin_url( 'plugins.php' ) );
+				return add_query_arg(
+					 array(
+						 'action'        => 'activate',
+						 'plugin'        => rawurlencode( $slug . '/' . $slug . '.php' ),
+						 'plugin_status' => 'all',
+						 'paged'         => '1',
+						 '_wpnonce'      => wp_create_nonce( 'activate-plugin_' . $slug . '/' . $slug . '.php' ),
+					 ), network_admin_url( 'plugins.php' )
+					);
 				break;
 		}
 	}
@@ -97,26 +113,28 @@ class Ti_Customizer_Notify_Section extends WP_Customize_Section {
 		include_once( ABSPATH . 'wp-admin/includes/plugin-install.php' );
 
 		if ( false === ( $call_api = get_transient( 'ti_customizer_notify_plugin_information_transient_' . $slug ) ) ) {
-			$call_api = plugins_api( 'plugin_information', array(
-				'slug'   => $slug,
-				'fields' => array(
-					'downloaded'        => false,
-					'rating'            => false,
-					'description'       => false,
-					'short_description' => true,
-					'donate_link'       => false,
-					'tags'              => false,
-					'sections'          => false,
-					'homepage'          => false,
-					'added'             => false,
-					'last_updated'      => false,
-					'compatibility'     => false,
-					'tested'            => false,
-					'requires'          => false,
-					'downloadlink'      => false,
-					'icons'             => false,
-				),
-			) );
+			$call_api = plugins_api(
+				 'plugin_information', array(
+					 'slug'   => $slug,
+					 'fields' => array(
+						 'downloaded'        => false,
+						 'rating'            => false,
+						 'description'       => false,
+						 'short_description' => true,
+						 'donate_link'       => false,
+						 'tags'              => false,
+						 'sections'          => false,
+						 'homepage'          => false,
+						 'added'             => false,
+						 'last_updated'      => false,
+						 'compatibility'     => false,
+						 'tested'            => false,
+						 'requires'          => false,
+						 'downloadlink'      => false,
+						 'icons'             => false,
+					 ),
+				 )
+				);
 			set_transient( 'ti_customizer_notify_plugin_information_transient_' . $slug, $call_api, 30 * MINUTE_IN_SECONDS );
 		}
 
@@ -139,7 +157,7 @@ class Ti_Customizer_Notify_Section extends WP_Customize_Section {
 		global $activate_button_label;
 		global $deactivate_button_label;
 
-		$formatted_array = array();
+		$formatted_array                               = array();
 		$ti_customizer_notify_show_recommended_actions = get_option( 'ti_customizer_notify_show_recommended_actions' );
 		foreach ( $ti_customizer_notify_recommended_actions as $key => $ti_customizer_notify_recommended_action ) {
 			if ( @$ti_customizer_notify_show_recommended_actions[ $ti_customizer_notify_recommended_action['id'] ] === false ) {
@@ -153,7 +171,7 @@ class Ti_Customizer_Notify_Section extends WP_Customize_Section {
 
 			if ( isset( $ti_customizer_notify_recommended_action['plugin_slug'] ) ) {
 				$active = $this->check_active( $ti_customizer_notify_recommended_action['plugin_slug'] );
-				$ti_customizer_notify_recommended_action['url']    = $this->create_action_link( $active['needs'], $ti_customizer_notify_recommended_action['plugin_slug'] );
+				$ti_customizer_notify_recommended_action['url'] = $this->create_action_link( $active['needs'], $ti_customizer_notify_recommended_action['plugin_slug'] );
 				if ( $active['needs'] !== 'install' && $active['status'] ) {
 					$ti_customizer_notify_recommended_action['class'] = 'active';
 				} else {
@@ -198,7 +216,7 @@ class Ti_Customizer_Notify_Section extends WP_Customize_Section {
 				continue;
 			}
 
-			$ti_customizer_notify_recommended_plugin['url']    = $this->create_action_link( $active['needs'], $slug );
+			$ti_customizer_notify_recommended_plugin['url'] = $this->create_action_link( $active['needs'], $slug );
 			if ( $active['needs'] !== 'install' && $active['status'] ) {
 				$ti_customizer_notify_recommended_plugin['class'] = 'active';
 			} else {
@@ -219,8 +237,8 @@ class Ti_Customizer_Notify_Section extends WP_Customize_Section {
 					$ti_customizer_notify_recommended_plugin['button_label'] = $deactivate_button_label;
 					break;
 			}
-			$info   = $this->call_plugin_api( $slug );
-			$ti_customizer_notify_recommended_plugin['id'] = $slug;
+			$info = $this->call_plugin_api( $slug );
+			$ti_customizer_notify_recommended_plugin['id']          = $slug;
 			$ti_customizer_notify_recommended_plugin['plugin_slug'] = $slug;
 
 			if ( ! empty( $plugin_opt['description'] ) ) {
@@ -237,9 +255,9 @@ class Ti_Customizer_Notify_Section extends WP_Customize_Section {
 
 		$json['recommended_actions'] = $formatted_array;
 		$json['recommended_plugins'] = $customize_plugins;
-		$json['total_actions'] = count( $ti_customizer_notify_recommended_actions );
-		$json['plugin_text'] = $this->plugin_text;
-		$json['dismiss_button'] = $this->dismiss_button;
+		$json['total_actions']       = count( $ti_customizer_notify_recommended_actions );
+		$json['plugin_text']         = $this->plugin_text;
+		$json['dismiss_button']      = $this->dismiss_button;
 		return $json;
 
 	}
@@ -328,5 +346,6 @@ class Ti_Customizer_Notify_Section extends WP_Customize_Section {
 				</div>
 			</li>
 		<# } #>
-	<?php }
+	<?php
+	}
 }

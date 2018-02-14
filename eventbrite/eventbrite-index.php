@@ -21,7 +21,9 @@ get_header(); ?>
 					<?php
 					if ( class_exists( 'Eventbrite_Query' ) ) {
 						// Set up and call our Eventbrite query.
-						$events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
+						$events = new Eventbrite_Query(
+							apply_filters(
+							'eventbrite_query_args', array(
 							// 'display_private' => false, // boolean
 							// 'nopaging' => false,        // boolean
 							// 'limit' => null,            // integer
@@ -32,10 +34,13 @@ get_header(); ?>
 							// 'category_id' => null,      // integer
 							// 'subcategory_id' => null,   // integer
 							// 'format_id' => null,        // integer
-						) ) );
+							)
+							)
+						);
 
 						if ( $events->have_posts() ) :
-							while ( $events->have_posts() ) : $events->the_post();
+							while ( $events->have_posts() ) :
+$events->the_post();
 								?>
 								<article id="event-<?php the_ID(); ?>" <?php post_class(); ?>>
 									<header class="entry-header">
@@ -59,14 +64,17 @@ get_header(); ?>
 
 							<?php endwhile; ?>
 
-							<?php // Previous/next post navigation.
-							eventbrite_paging_nav( $events ); ?>
+							<?php
+							// Previous/next post navigation.
+							eventbrite_paging_nav( $events );
+							?>
 
 						<?php else : ?>
 
 							<?php get_template_part( 'content', 'none' ); ?>
 
-						<?php endif;
+						<?php
+						endif;
 						// Return $post to its rightful owner.
 						wp_reset_postdata();
 					}// End if().

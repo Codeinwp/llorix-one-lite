@@ -14,9 +14,9 @@
 
 	<div class="llorix-one-lite-tab-pane-half llorix-one-lite-tab-pane-first-half">
 
-		<p><strong><?php esc_html_e( 'Found a bug? Want to contribute with a fix or create a new feature?','llorix-one-lite' ); ?></strong></p>
+		<p><strong><?php esc_html_e( 'Found a bug? Want to contribute with a fix or create a new feature?', 'llorix-one-lite' ); ?></strong></p>
 
-		<p><?php esc_html_e( 'GitHub is the place to go!','llorix-one-lite' ); ?></p>
+		<p><?php esc_html_e( 'GitHub is the place to go!', 'llorix-one-lite' ); ?></p>
 
 		<p>
 			<a href="https://github.com/Codeinwp/llorix-one-lite/" class="github-button button button-primary"><?php esc_html_e( 'Llorix One Lite on GitHub', 'llorix-one-lite' ); ?></a>
