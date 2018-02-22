@@ -285,6 +285,14 @@ jQuery( document ).ready(
 	} else {
 			jQuery( '.post-type-archive-product .products' ).llorix_one_lite_gridpinterest( {columns: 4,selector: '.product', calcMin: false} );
 			jQuery( '.cart-collaterals .products' ).llorix_one_lite_gridpinterest( {columns: 2,selector: '.product', calcMin: false} );
+			/* WooCommerce 3.3.1 */
+			jQuery( '.post-type-archive-product .products.columns-1' ).llorix_one_lite_gridpinterest( {columns: 1,selector: '.product', calcMin: false} );
+			jQuery( '.post-type-archive-product .products.columns-2' ).llorix_one_lite_gridpinterest( {columns: 2,selector: '.product', calcMin: false} );
+			jQuery( '.post-type-archive-product .products.columns-3' ).llorix_one_lite_gridpinterest( {columns: 3,selector: '.product', calcMin: false} );
+			jQuery( '.post-type-archive-product .products.columns-4' ).llorix_one_lite_gridpinterest( {columns: 4,selector: '.product', calcMin: false} );
+			jQuery( '.post-type-archive-product .products.columns-5' ).llorix_one_lite_gridpinterest( {columns: 5,selector: '.product', calcMin: false} );
+			jQuery( '.post-type-archive-product .products.columns-6' ).llorix_one_lite_gridpinterest( {columns: 6,selector: '.product', calcMin: false} );
+			/* End of WooCommerce 3.3.1 */
 	}
 }
 	);
@@ -302,6 +310,14 @@ jQuery( window ).resize(
 				} else {
 				jQuery( '.post-type-archive-product .products' ).llorix_one_lite_gridpinterest( {columns: 4,selector: '.product', calcMin: false} );
 				jQuery( '.cart-collaterals .products' ).llorix_one_lite_gridpinterest( {columns: 2,selector: '.product', calcMin: false} );
+                /* WooCommerce 3.3.1 */
+                jQuery( '.post-type-archive-product .products.columns-1' ).llorix_one_lite_gridpinterest( {columns: 1,selector: '.product', calcMin: false} );
+                jQuery( '.post-type-archive-product .products.columns-2' ).llorix_one_lite_gridpinterest( {columns: 2,selector: '.product', calcMin: false} );
+                jQuery( '.post-type-archive-product .products.columns-3' ).llorix_one_lite_gridpinterest( {columns: 3,selector: '.product', calcMin: false} );
+                jQuery( '.post-type-archive-product .products.columns-4' ).llorix_one_lite_gridpinterest( {columns: 4,selector: '.product', calcMin: false} );
+                jQuery( '.post-type-archive-product .products.columns-5' ).llorix_one_lite_gridpinterest( {columns: 5,selector: '.product', calcMin: false} );
+                jQuery( '.post-type-archive-product .products.columns-6' ).llorix_one_lite_gridpinterest( {columns: 6,selector: '.product', calcMin: false} );
+                /* End of WooCommerce 3.3.1 */
 				}
 	}
 }
