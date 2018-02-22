@@ -4,7 +4,7 @@ Theme URI: http://themeisle.com/themes/llorix-one/
 Author: ThemeIsle
 Author URI: http://themeisle.com/
 Description: Llorix One Lite is a free and beautiful one page business WordPress theme, with a flat and clean bootstrap based design and an elegant parallax effect. It provides a simple,minimal and modern look that can be used for any kind of personal businesses or startup mobile app. The landing page has a fullscreen hero image and blue & orange appearance with buttons and icons promoting simplicity and elegance at their best. The theme provides a responsive blog section, is eCommerce ready (WooCommerce store compatible), WPML, bbPress, Photo Gallery Grid,Contact Form 7,Meta Slider,SiteOrigin Page Builder, JetPack compatible  and SEO friendly. You can use it for your business / startup shop, agency, corporate website, or photography portfolio.
-Version: 0.2.16
+Version: 0.2.17
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: llorix-one-lite
@@ -3659,6 +3659,112 @@ div.wpcf7-mail-sent-ng {
 .woocommerce div.product div.images .flex-control-thumbs {
 	padding-top: 20px;
 }
+
+/* WooCommerce 3.3.1 */
+.woocommerce .products.columns-6 .llorix_one_lite_grid_col_6,
+.woocommerce-page .products.columns-6 .llorix_one_lite_grid_col_6 {
+	float: left;
+	width: 15%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+.woocommerce .products.columns-6 .llorix_one_lite_grid_col_6:nth-of-type(6n+1),
+.woocommerce-page .products.columns-6 .llorix_one_lite_grid_col_6:nth-of-type(6n+1) {
+	margin-left: 0;
+}
+.woocommerce .products.columns-6 .llorix_one_lite_grid_col_6:nth-of-type(6n+6),
+.woocommerce-page .products.columns-6 .llorix_one_lite_grid_col_6:nth-of-type(6n+6) {
+	margin-right: 0;
+}
+
+.woocommerce .products.columns-5 .llorix_one_lite_grid_col_5,
+.woocommerce-page .products.columns-5 .llorix_one_lite_grid_col_5 {
+	float: left;
+	width: 18%;
+	margin-left: 1.25%;
+	margin-right: 1.25%;
+}
+.woocommerce .products.columns-5 .llorix_one_lite_grid_col_5:nth-of-type(5n+1),
+.woocommerce-page .products.columns-5 .llorix_one_lite_grid_col_5:nth-of-type(5n+1) {
+	margin-left: 0;
+}
+.woocommerce .products.columns-5 .llorix_one_lite_grid_col_5:nth-of-type(5n+5),
+.woocommerce-page .products.columns-5 .llorix_one_lite_grid_col_5:nth-of-type(5n+5) {
+	margin-right: 0;
+}
+
+.woocommerce .products.columns-4 .llorix_one_lite_grid_col_4,
+.woocommerce-page .products.columns-4 .llorix_one_lite_grid_col_4 {
+	width: 22.5%;
+	margin-left: 1.66%;
+	margin-right: 1.66%;
+}
+.woocommerce .products.columns-4 .llorix_one_lite_grid_col_4:nth-of-type(4n+1),
+.woocommerce-page .products.columns-4 .llorix_one_lite_grid_col_4:nth-of-type(4n+1) {
+	margin-left: 0;
+}
+.woocommerce .products.columns-4 .llorix_one_lite_grid_col_4:nth-of-type(4n+4),
+.woocommerce-page .products.columns-4 .llorix_one_lite_grid_col_4:nth-of-type(4n+4) {
+	margin-right: 0;
+}
+
+.woocommerce .products.columns-3 .llorix_one_lite_grid_col_3,
+.woocommerce-page .products.columns-3 .llorix_one_lite_grid_col_3 {
+	width: 32%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+.woocommerce .products.columns-3 .llorix_one_lite_grid_col_3:nth-of-type(3n+1),
+.woocommerce-page .products.columns-3 .llorix_one_lite_grid_col_3:nth-of-type(3n+1) {
+	margin-left: 0;
+}
+.woocommerce .products.columns-3 .llorix_one_lite_grid_col_3:nth-of-type(3n+3),
+.woocommerce-page .products.columns-3 .llorix_one_lite_grid_col_3:nth-of-type(3n+3) {
+	margin-right: 0;
+}
+
+.woocommerce .products.columns-2 .llorix_one_lite_grid_col_2,
+.woocommerce-page .products.columns-2 .llorix_one_lite_grid_col_2 {
+	width: 48%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.woocommerce .products.columns-2 .llorix_one_lite_grid_col_2:nth-of-type(2n+1),
+.woocommerce-page .products.columns-2 .llorix_one_lite_grid_col_2:nth-of-type(2n+1) {
+	margin-left: 0;
+}
+.woocommerce .products.columns-2 .llorix_one_lite_grid_col_2:nth-of-type(2n+2),
+.woocommerce-page .products.columns-2 .llorix_one_lite_grid_col_2:nth-of-type(2n+2) {
+	margin-right: 0;
+}
+
+.woocommerce .products.columns-1 .llorix_one_lite_grid_col_1,
+.woocommerce-page .products.columns-1 .llorix_one_lite_grid_col_1 {
+	width: 100%;
+}
+@media (max-width: 992px) {
+	.woocommerce .products.columns-1 .llorix_one_lite_grid_col_2,
+	.woocommerce-page .products.columns-1 .llorix_one_lite_grid_col_2 {
+		width: 100%;
+	}
+}
+@media (max-width: 750px) {
+	.woocommerce .products[class*="columns-"] .llorix_one_lite_grid_col_2,
+	.woocommerce-page .products[class*="columns-"] .llorix_one_lite_grid_col_2 {
+		width: 48%;
+	}
+	.woocommerce .products.columns-1 .llorix_one_lite_grid_col_2,
+	.woocommerce-page .products.columns-1 .llorix_one_lite_grid_col_2 {
+		width: 100%;
+	}
+}
+@media (max-width: 477px) {
+	.woocommerce .products[class*="columns-"] .llorix_one_lite_grid_col_1,
+	.woocommerce-page .products[class*="columns-"] .llorix_one_lite_grid_col_1 {
+		width: 100%;
+	}
+}
+/* End of WooCommerce 3.3.1 */
 
 
 /*---------------------------------------
