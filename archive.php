@@ -49,40 +49,51 @@ get_header(); ?>
 <div role="main" id="content" class="content-wrap">
 	<div class="container">
 
-		<div id="primary" class="content-area col-md-8 post-list">
-			<?php
+		<?php
+			$llorix_one_lite_change_to_full_width = get_theme_mod( 'llorix_one_lite_change_to_full_width' );
+			echo '<div id="primary" class="content-area post-list ';
+			if ( is_active_sidebar( 'sidebar-1' ) && empty( $llorix_one_lite_change_to_full_width ) ) {
+			echo 'col-md-8';
+			} else {
+			echo 'col-md-12';
+			}
+			echo '">';
 			echo '<main ';
 			if ( have_posts() ) {
-				echo ' itemscope itemtype="http://schema.org/Blog" ';
+			echo ' itemscope itemtype="http://schema.org/Blog" ';
 			}
 			echo ' id="main" class="site-main" role="main">';
 
 			if ( have_posts() ) {
 
-				echo '<header class="page-header">';
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				echo '</header>';
-				while ( have_posts() ) {
-					the_post();
-					/**
+			echo '<header class="page-header">';
+			the_archive_title( '<h1 class="page-title">', '</h1>' );
+			the_archive_description( '<div class="taxonomy-description">', '</div>' );
+			echo '</header>';
+			while ( have_posts() ) {
+				the_post();
+				/**
 					 *  Include the Post-Format-specific template for the content.
 					 *  If you want to override this in a child theme, then include a file
 					 *  called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'content', get_post_format() );
+				get_template_part( 'content', get_post_format() );
 				}
-				the_posts_navigation();
+			the_posts_navigation();
 
 			} else {
-				get_template_part( 'content', 'none' );
+			get_template_part( 'content', 'none' );
 			}
 			?>
 
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
-		<?php get_sidebar(); ?>
+		<?php
+		if ( empty( $llorix_one_lite_change_to_full_width ) ) {
+			get_sidebar();
+		}
+		?>
 
 	</div>
 </div><!-- .content-wrap -->
