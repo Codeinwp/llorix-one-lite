@@ -367,7 +367,6 @@ strong,
 --------------------------------------------------------------*/
 
 html {
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -375,7 +374,6 @@ html {
 *:before,
 *:after {
 	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	-webkit-box-sizing: inherit;
 	box-sizing: inherit;
 }
 
@@ -385,6 +383,11 @@ body {
 
 body.custom-background {
 	background-size: cover;
+}
+
+body.custom-background #content > .container,
+body.custom-background .content-wrap > .container {
+	background: #fff;
 }
 
 .skip-link {
@@ -796,7 +799,6 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	border-color: #aaa #bbb #bbb;
-	-webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -845,7 +847,6 @@ textarea {
 	border-radius: 3px;
 	outline: 0;
 	color: #999;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	line-height: auto;
 }
@@ -868,7 +869,6 @@ textarea.form-control {
 .input-box:focus,
 .textarea-box:focus {
 	color: #272727;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -976,7 +976,6 @@ header .navbar-brand {
 	margin-bottom: 0 !important;
 	border: none;
 	background: #fff;
-	-webkit-box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
 	box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
 	font-weight: 400;
 	-webkit-backface-visibility: hidden;
@@ -1206,7 +1205,6 @@ button.dropdown-toggle:active {
 	height: 45px;
 	padding: 10px;
 	background: none;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	line-height: 25px;
 }
@@ -1421,7 +1419,6 @@ button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner {
 	padding: 15px 32px 32px 32px;
 	border-radius: 3px;
 	background: #fff;
-	-webkit-box-shadow: 0 0 3px 0 #000;
 	box-shadow: 0 0 3px 0 #000;
 }
 .header-style-two .vertical-registration-form form button {
@@ -2141,7 +2138,6 @@ button.control_next:focus,
 button.control_prev:active,
 button.control_prev:focus {
 	outline: 1px dotted #f16c20;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -2428,7 +2424,6 @@ div.wpcf7-mail-sent-ng {
 	background-image: url(images/tr-btn.png);
 	background-repeat: repeat-x;
 	background-size: contain;
-	-webkit-box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.3);
 	box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.3);
 	font-size: 14px;
 	font-weight: normal;
@@ -2555,7 +2550,6 @@ div.wpcf7-mail-sent-ng {
 }
 
 .product .comment-form #review_form #respond textarea {
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
 }
@@ -2622,6 +2616,7 @@ div.wpcf7-mail-sent-ng {
 }
 
 .product .comment-form p.stars {
+	left: 100px;
 	width: 100px;
 }
 
@@ -2715,7 +2710,6 @@ div.wpcf7-mail-sent-ng {
 	background-image: url(images/tr-btn.png);
 	background-repeat: repeat-x;
 	background-size: contain;
-	-webkit-box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.3);
 	box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.3);
 	font-size: 16px;
 	line-height: 1.6;
@@ -2889,7 +2883,6 @@ div.wpcf7-mail-sent-ng {
 }
 
 .woocommerce div.product .woocommerce-tabs .panel {
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -2926,7 +2919,6 @@ div.wpcf7-mail-sent-ng {
 	border-radius: 3px;
 	color: #fff;
 	background: #f16c20;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	text-shadow: none;
 	font-weight: 500;
@@ -3118,7 +3110,6 @@ div.wpcf7-mail-sent-ng {
 	border-radius: 3px;
 	color: #fff;
 	background: #f16c20;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	text-shadow: none;
 	font-weight: 500;
@@ -3215,7 +3206,6 @@ div.wpcf7-mail-sent-ng {
 	border-radius: 3px;
 	color: #fff;
 	background: #f16c20;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	text-shadow: none;
 	font-weight: 500;
@@ -3341,7 +3331,6 @@ div.wpcf7-mail-sent-ng {
 	border-radius: 3px;
 	color: #fff;
 	background: #f16c20;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	text-shadow: none;
 	font-weight: 500;
@@ -3367,7 +3356,6 @@ div.wpcf7-mail-sent-ng {
 	border-radius: 3px;
 	color: #fff;
 	background: #f16c20;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	text-shadow: none;
 	font-weight: 500;
@@ -3417,7 +3405,6 @@ div.wpcf7-mail-sent-ng {
 	border: 1px solid rgb(218, 218, 218);
 	border-radius: 3px;
 	background-color: rgb(231, 231, 231);
-	-webkit-box-shadow: 0 3px 0 #005885;
 	box-shadow: 0 3px 0 rgb(218, 218, 218);
 	font-size: 13px;
 	line-height: 16px;
@@ -3630,7 +3617,6 @@ div.wpcf7-mail-sent-ng {
 	width: 65px;
 	height: auto;
 	margin-left: 4px;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -3665,8 +3651,8 @@ div.wpcf7-mail-sent-ng {
 .woocommerce-page .products.columns-6 .llorix_one_lite_grid_col_6 {
 	float: left;
 	width: 15%;
-	margin-left: 1%;
 	margin-right: 1%;
+	margin-left: 1%;
 }
 .woocommerce .products.columns-6 .llorix_one_lite_grid_col_6:nth-of-type(6n+1),
 .woocommerce-page .products.columns-6 .llorix_one_lite_grid_col_6:nth-of-type(6n+1) {
@@ -3681,8 +3667,8 @@ div.wpcf7-mail-sent-ng {
 .woocommerce-page .products.columns-5 .llorix_one_lite_grid_col_5 {
 	float: left;
 	width: 18%;
-	margin-left: 1.25%;
 	margin-right: 1.25%;
+	margin-left: 1.25%;
 }
 .woocommerce .products.columns-5 .llorix_one_lite_grid_col_5:nth-of-type(5n+1),
 .woocommerce-page .products.columns-5 .llorix_one_lite_grid_col_5:nth-of-type(5n+1) {
@@ -3696,8 +3682,8 @@ div.wpcf7-mail-sent-ng {
 .woocommerce .products.columns-4 .llorix_one_lite_grid_col_4,
 .woocommerce-page .products.columns-4 .llorix_one_lite_grid_col_4 {
 	width: 22.5%;
-	margin-left: 1.66%;
 	margin-right: 1.66%;
+	margin-left: 1.66%;
 }
 .woocommerce .products.columns-4 .llorix_one_lite_grid_col_4:nth-of-type(4n+1),
 .woocommerce-page .products.columns-4 .llorix_one_lite_grid_col_4:nth-of-type(4n+1) {
@@ -3711,8 +3697,8 @@ div.wpcf7-mail-sent-ng {
 .woocommerce .products.columns-3 .llorix_one_lite_grid_col_3,
 .woocommerce-page .products.columns-3 .llorix_one_lite_grid_col_3 {
 	width: 32%;
-	margin-left: 1%;
 	margin-right: 1%;
+	margin-left: 1%;
 }
 .woocommerce .products.columns-3 .llorix_one_lite_grid_col_3:nth-of-type(3n+1),
 .woocommerce-page .products.columns-3 .llorix_one_lite_grid_col_3:nth-of-type(3n+1) {
@@ -3726,8 +3712,8 @@ div.wpcf7-mail-sent-ng {
 .woocommerce .products.columns-2 .llorix_one_lite_grid_col_2,
 .woocommerce-page .products.columns-2 .llorix_one_lite_grid_col_2 {
 	width: 48%;
-	margin-left: 2%;
 	margin-right: 2%;
+	margin-left: 2%;
 }
 .woocommerce .products.columns-2 .llorix_one_lite_grid_col_2:nth-of-type(2n+1),
 .woocommerce-page .products.columns-2 .llorix_one_lite_grid_col_2:nth-of-type(2n+1) {
@@ -3764,6 +3750,7 @@ div.wpcf7-mail-sent-ng {
 		width: 100%;
 	}
 }
+
 /* End of WooCommerce 3.3.1 */
 
 
@@ -3987,7 +3974,6 @@ li.bbp-topic-freshness {
 	padding: 5px;
 	border: 1px solid #e7e7e7;
 	background-color: #fbfbfb;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -4321,14 +4307,12 @@ footer.footer #wp-calendar td {
 	padding: 0;
 	border: none;
 	background: transparent;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	text-indent: -99999999px;
 }
 
 .widget_search .search-submit:hover {
 	background: none;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -4431,7 +4415,6 @@ a:hover {
 .navbar-register-button:active {
 	border-color: inherit !important;
 	background: #f16c20 !important;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -4950,7 +4933,6 @@ h2.screen-reader-text {
 	border-radius: 3px;
 	color: #fff;
 	background: #f16c20;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	text-shadow: none;
 	font-weight: 500;
@@ -5272,13 +5254,11 @@ h2.screen-reader-text {
 	padding: 0;
 	border: none;
 	background: transparent;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	text-indent: -99999999px;
 }
 
 .widget_search .search-submit:hover {
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -5761,7 +5741,6 @@ h2.screen-reader-text {
 		margin: 0;
 		padding: 0;
 		background: #fff;
-		-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 		list-style: none;
 	}
@@ -5901,7 +5880,6 @@ h2.screen-reader-text {
 	.navbar-inverse .navbar-toggle:hover,
 	.navbar-inverse .navbar-toggle:focus {
 		background-color: inherit;
-		-webkit-box-shadow: none;
 		box-shadow: none;
 	}
 
@@ -6027,7 +6005,6 @@ h2.screen-reader-text {
 
 	.sticky-navigation .main-navigation ul {
 		padding: 0;
-		-webkit-box-shadow: none;
 		box-shadow: none;
 	}
 
@@ -6256,7 +6233,6 @@ h2.screen-reader-text {
 		padding: 7px 16px 16px 16px;
 		border-radius: 0;
 		background: #fff;
-		-webkit-box-shadow: none;
 		box-shadow: none;
 	}
 
@@ -6571,7 +6547,6 @@ h2.screen-reader-text {
 	border-radius: 3px !important;
 	color: #fff !important;
 	background: #f16c20 !important;
-	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 	text-shadow: none !important;
 	font-size: 14px !important;

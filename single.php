@@ -16,14 +16,8 @@
 <div class="content-wrap">
 	<div class="container">
 
-		<div id="primary" class="content-area 
-		<?php
-		if ( is_active_sidebar( 'sidebar-1' ) ) {
-echo 'col-md-8';
-} else {
-				echo 'col-md-12';}
-?>
-">
+		<div id="primary" class="content-area <?php echo esc_attr( llorix_one_lite_content_area_class() ); ?>">
+
 			<main itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage" id="main" class="site-main" role="main">
 
 			<?php
@@ -42,7 +36,7 @@ echo 'col-md-8';
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
-		<?php get_sidebar(); ?>
+		<?php llorix_one_lite_display_sidebar(); ?>
 
 	</div>
 </div><!-- .content-wrap -->

@@ -15,8 +15,9 @@ get_header(); ?>
 <div role="main" id="content" class="content-wrap">
 	<div class="container">
 
-		<div id="primary" class="content-area col-md-8">
-			<main id="main" class="site-main" role="main">
+		<div id="primary" class="content-area <?php echo esc_attr( llorix_one_lite_content_area_class() ); ?>">
+
+		<main id="main" class="site-main" role="main">
 
 					<?php
 					if ( class_exists( 'Eventbrite_Query' ) ) {
@@ -83,7 +84,7 @@ $events->the_post();
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
-		<?php get_sidebar(); ?>
+		<?php llorix_one_lite_display_sidebar(); ?>
 
 	</div>
 </div><!-- .content-wrap -->
