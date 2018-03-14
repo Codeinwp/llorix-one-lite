@@ -57,17 +57,10 @@
 
 <div role="main" id="content" class="content-wrap">
 	<div class="container">
+
+		<div id="primary" class="content-area post-list <?php echo esc_attr( llorix_one_lite_content_area_class() ); ?>">
+
 		<?php
-		$llorix_one_lite_change_to_full_width = get_theme_mod( 'llorix_one_lite_change_to_full_width' );
-		echo '<div id="primary" class="content-area post-list ';
-			if ( is_active_sidebar( 'sidebar-1' ) && empty( $llorix_one_lite_change_to_full_width ) ) {
-			echo 'col-md-8';
-			} else {
-			echo 'col-md-12';
-			}
-			echo '">';
-		?>
-			<?php
 			echo '<main ';
 			if ( have_posts() ) {
 				echo ' itemscope itemtype="http://schema.org/Blog" ';
@@ -91,11 +84,7 @@
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
-		<?php
-		if ( empty( $llorix_one_lite_change_to_full_width ) ) {
-			get_sidebar();
-		}
-		?>
+		<?php llorix_one_lite_display_sidebar(); ?>
 
 	</div>
 </div><!-- .content-wrap -->

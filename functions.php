@@ -180,8 +180,8 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		add_theme_support( 'wc-product-gallery-slider' );
 
 		/*
-         * Notifications in customize
-         */
+		 * Notifications in customize
+		 */
 		if ( ! defined( 'LLORIX_ONE_PLUS_PATH' ) ) {
 			require get_template_directory() . '/ti-customizer-notify/class-ti-customizer-notify.php';
 
@@ -817,3 +817,22 @@ function llorix_one_lite_admin_notice() {
 	}
 }
 add_action( 'admin_notices', 'llorix_one_lite_admin_notice', 99 );
+
+
+/** Generate the content area class based on boxed/full-screen layout */
+function llorix_one_lite_content_area_class() {
+	$llorix_one_lite_change_to_full_width = get_theme_mod( 'llorix_one_lite_change_to_full_width' );
+	$md_class                             = 'col-md-12';
+	if ( is_active_sidebar( 'sidebar-1' ) && empty( $llorix_one_lite_change_to_full_width ) ) {
+		$md_class = 'col-md-8';
+	}
+	return $md_class;
+}
+
+/** Generate the sidebar based on boxed/full-screen layout */
+function llorix_one_lite_display_sidebar() {
+	$llorix_one_lite_change_to_full_width = get_theme_mod( 'llorix_one_lite_change_to_full_width' );
+	if ( empty( $llorix_one_lite_change_to_full_width ) ) {
+		get_sidebar();
+	}
+}

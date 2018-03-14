@@ -14,20 +14,10 @@
 </header>
 <!-- /END HOME / HEADER  -->
 
-<?php $llorix_one_lite_change_to_full_width = get_theme_mod( 'llorix_one_lite_change_to_full_width' ); ?>
-
 <div class="content-wrap">
 	<div class="container">
 
-			<?php
-			echo '<div id="primary" class="content-area ';
-				if ( is_active_sidebar( 'sidebar-1' ) && empty( $llorix_one_lite_change_to_full_width ) ) {
-				echo 'col-md-8';
-				} else {
-				echo 'col-md-12';
-				}
-				echo '">';
-			?>
+		<div id="primary" class="content-area <?php echo esc_attr( llorix_one_lite_content_area_class() ); ?>">
 
 			<main id="main" class="site-main" role="main">
 
@@ -47,11 +37,7 @@
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
-		<?php
-		if ( empty( $llorix_one_lite_change_to_full_width ) ) {
-			get_sidebar();
-		}
-		?>
+		<?php llorix_one_lite_display_sidebar(); ?>
 
 	</div>
 </div><!-- .content-wrap -->
