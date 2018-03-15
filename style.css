@@ -3252,7 +3252,6 @@ div.wpcf7-mail-sent-ng {
 
 .woocommerce-shipping-fields h3 {
 	position: relative;
-	padding-left: 35px;
 }
 
 .woocommerce-billing-fields h3:after,
@@ -3276,11 +3275,9 @@ div.wpcf7-mail-sent-ng {
 
 .woocommerce .woocommerce-shipping-fields input[type="checkbox"] {
 	display: inline-block;
-	position: absolute;
-	top: 14px;
-	left: 0;
+	position: static;
 	width: auto;
-	margin-left: 10px;
+	margin: -2px 3px 0 0;
 }
 
 .woocommerce table.shop_table th.product-total {
@@ -3638,6 +3635,7 @@ div.wpcf7-mail-sent-ng {
 	width: 30.75%;
 	margin-right: 3.8%;
 	margin-bottom: 1em;
+	clear: none !important;
 }
 .woocommerce div.product div.images .flex-control-thumbs li:nth-child(3n) {
 	margin-right: 0;
@@ -3752,6 +3750,44 @@ div.wpcf7-mail-sent-ng {
 }
 
 /* End of WooCommerce 3.3.1 */
+
+/* WooCommerce 3.3.3 */
+
+#customer_details {
+	width: 48%;
+	float: left;
+	margin-right: 2%;
+}
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1,
+.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
+	width: 100%;
+	float: none;
+}
+#order_review_heading {
+	float: left;
+	width: 50%;
+}
+#order_review {
+	float: right;
+	clear: right;
+	width: 50%;
+}
+.woocommerce form .form-row .input-checkbox {
+	position: static;
+}
+#ship-to-different-address span {
+	color: #000;
+	font-weight: 700;
+	line-height: 22px;
+}
+#ship-to-different-address label.checkbox {
+	margin-bottom: 0;
+}
+.woocommerce form .form-row .input-checkbox,
+.woocommerce-checkout #payment ul.payment_methods li input {
+	margin: -2px 3px 0 0;
+}
+/* End of WooCommerce 3.3.3 */
 
 
 /*---------------------------------------
@@ -6159,6 +6195,16 @@ h2.screen-reader-text {
 		background-attachment: initial;
 		background-position: center;
 		background-size: cover;
+	}
+	#customer_details {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+	#order_review_heading,
+	#order_review {
+		width: 100%;
+		float: none;
 	}
 }
 

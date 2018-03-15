@@ -836,3 +836,25 @@ function llorix_one_lite_display_sidebar() {
 		get_sidebar();
 	}
 }
+
+add_action( 'woocommerce_before_checkout_form', 'llorix_one_lite_coupon_after_order_table_js' );
+/**
+ * Checkout page
+ * Move the coupon field and message info after the order table
+ **/
+function llorix_one_lite_coupon_after_order_table_js() {
+	wc_enqueue_js(
+		'
+		$( $( "div.woocommerce-info, .checkout_coupon" ).detach() ).appendTo( "#llorix-checkout-coupon" );
+	'
+	);
+}
+
+add_action( 'woocommerce_checkout_order_review', 'llorix_one_lite_coupon_after_order_table' );
+/**
+ * Checkout page
+ * Add the id llorix-checkout-coupon to be able to Move the coupon field and message info after the order table
+ **/
+function llorix_one_lite_coupon_after_order_table() {
+	echo '<div id="llorix-checkout-coupon"></div><div style="clear:both"></div>';
+}
