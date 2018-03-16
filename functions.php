@@ -187,10 +187,10 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 
 			$config_customizer = array(
 				'recommended_plugins'       => array(
-					'llorix-one-companion' => array(
+					'themeisle-companion' => array(
 						'recommended' => true,
 						'description' => /* translators: %1$s is the name for the theme */
-							sprintf( esc_html__( 'If you want to take full advantage of the options this theme has to offer, please install and activate %s', 'llorix-one-lite' ), sprintf( '<strong>%s</strong>', 'Llorix One Companion' ) ),
+							sprintf( esc_html__( 'If you want to take full advantage of the options this theme has to offer, please install and activate %s', 'llorix-one-lite' ), sprintf( '<strong>%s</strong>', 'Orbit Fox' ) ),
 					),
 				),
 				'recommended_actions'       => array(),
