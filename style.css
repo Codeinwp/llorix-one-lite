@@ -3102,6 +3102,14 @@ div.wpcf7-mail-sent-ng {
 	width: 100px;
 }
 
+.woocommerce .cart_item dd.variation-size {
+	float: left;
+}
+.woocommerce .cart_item dd.variation-size p {
+	font-size: 14px;
+	line-height: 1.42857143;
+}
+
 .woocommerce .cart .button,
 .woocommerce .cart input.button {
 	float: none;
@@ -3355,10 +3363,17 @@ div.wpcf7-mail-sent-ng {
 	background: #f16c20;
 	box-shadow: none;
 	text-shadow: none;
+	font-size: 16px;
 	font-weight: 500;
 	line-height: 28px;
 	text-align: center;
 	text-transform: uppercase;
+}
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	font-size: 16px;
 }
 
 .woocommerce #respond input#submit:hover,
@@ -3632,10 +3647,10 @@ div.wpcf7-mail-sent-ng {
 
 /* WooCommerce 3.0.1 fixes */
 .woocommerce div.product div.images .flex-control-thumbs li {
+	clear: none !important;
 	width: 30.75%;
 	margin-right: 3.8%;
 	margin-bottom: 1em;
-	clear: none !important;
 }
 .woocommerce div.product div.images .flex-control-thumbs li:nth-child(3n) {
 	margin-right: 0;
@@ -3754,14 +3769,16 @@ div.wpcf7-mail-sent-ng {
 /* WooCommerce 3.3.3 */
 
 #customer_details {
-	width: 48%;
 	float: left;
+	width: 48%;
 	margin-right: 2%;
 }
-.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1,
-.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
-	width: 100%;
+.woocommerce .col2-set .col-1,
+.woocommerce-page .col2-set .col-1,
+.woocommerce .col2-set .col-2,
+.woocommerce-page .col2-set .col-2 {
 	float: none;
+	width: 100%;
 }
 #order_review_heading {
 	float: left;
@@ -3787,6 +3804,7 @@ div.wpcf7-mail-sent-ng {
 .woocommerce-checkout #payment ul.payment_methods li input {
 	margin: -2px 3px 0 0;
 }
+
 /* End of WooCommerce 3.3.3 */
 
 
@@ -6197,14 +6215,14 @@ h2.screen-reader-text {
 		background-size: cover;
 	}
 	#customer_details {
-		width: 100%;
 		float: none;
+		width: 100%;
 		margin-right: 0;
 	}
 	#order_review_heading,
 	#order_review {
-		width: 100%;
 		float: none;
+		width: 100%;
 	}
 }
 
