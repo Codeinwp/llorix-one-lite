@@ -437,8 +437,8 @@ function llorix_one_lite_register_required_plugins() {
 
 	$plugins = array(
 		array(
-			'name'     => 'Llorix One Companion',
-			'slug'     => 'llorix-one-companion',
+			'name'     => 'Orbit Fox',
+			'slug'     => 'themeisle-companion',
 			'required' => false,
 		),
 	);
