@@ -3330,7 +3330,7 @@ div.wpcf7-mail-sent-ng {
 .woocommerce-checkout #payment div.payment_box:after {
 	display: block;
 	position: absolute;
-	top: -3px;
+	top: -2px;
 	left: 0;
 	margin: -1em 0 0 2em;
 	border: 8px solid #fff;
@@ -3844,7 +3844,56 @@ div.wpcf7-mail-sent-ng {
 .woocommerce-checkout #payment ul.payment_methods li input {
 	margin: -2px 3px 0 0;
 }
-
+#add_payment_method #payment div.payment_box::before, .woocommerce-cart #payment div.payment_box::before, .woocommerce-checkout #payment div.payment_box::before {
+	display: none;
+}
+@media (max-width: 1199px) {
+	#payment .place-order {
+		flex-wrap: wrap;
+	}
+	.place-order .wc-terms-and-conditions,
+	.place-order #place_order {
+		width: 100%;
+	}
+	.place-order .woocommerce-terms-and-conditions {
+		position: static;
+	}
+	.place-order #place_order {
+		margin-top: 10px;
+	}
+}
+@media (max-width: 991px) {
+	#llorix-checkout-coupon .form-row-first,
+	#llorix-checkout-coupon .form-row-last,
+	#llorix-checkout-coupon .form-row-last > button {
+		width: 100% !important;
+	}
+}
+@media (max-width: 768px) {
+	.woocommerce-page .coupon #coupon_code {
+		width: 51% !important;
+	}
+}
+@media (max-width: 480px) {
+	.woocommerce-page .coupon input.button,
+	.woocommerce-page .coupon #coupon_code {
+		width: 100% !important;
+	}
+	.woocommerce-page .coupon #coupon_code {
+		margin-bottom: 7px;
+	}
+	.woocommerce-form-login button {
+		width: 100%;
+	}
+	.woocommerce-form-login .woocommerce-form__label {
+		margin-left: 0 !important;
+		margin-top: 10px;
+		display: block !important;
+	}
+	.wc-proceed-to-checkout .button {
+		width: 100%;
+	}
+}
 /* End of WooCommerce 3.3.3 */
 
 
