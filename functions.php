@@ -180,17 +180,17 @@ if ( ! function_exists( 'llorix_one_lite_setup' ) ) :
 		add_theme_support( 'wc-product-gallery-slider' );
 
 		/*
-         * Notifications in customize
-         */
+		 * Notifications in customize
+		 */
 		if ( ! defined( 'LLORIX_ONE_PLUS_PATH' ) ) {
 			require get_template_directory() . '/ti-customizer-notify/class-ti-customizer-notify.php';
 
 			$config_customizer = array(
 				'recommended_plugins'       => array(
-					'llorix-one-companion' => array(
+					'themeisle-companion' => array(
 						'recommended' => true,
 						'description' => /* translators: %1$s is the name for the theme */
-							sprintf( esc_html__( 'If you want to take full advantage of the options this theme has to offer, please install and activate %s', 'llorix-one-lite' ), sprintf( '<strong>%s</strong>', 'Llorix One Companion' ) ),
+							sprintf( esc_html__( 'If you want to take full advantage of the options this theme has to offer, please install and activate %s', 'llorix-one-lite' ), sprintf( '<strong>%s</strong>', 'Orbit Fox' ) ),
 					),
 				),
 				'recommended_actions'       => array(),
@@ -437,8 +437,8 @@ function llorix_one_lite_register_required_plugins() {
 
 	$plugins = array(
 		array(
-			'name'     => 'Llorix One Companion',
-			'slug'     => 'llorix-one-companion',
+			'name'     => 'Orbit Fox',
+			'slug'     => 'themeisle-companion',
 			'required' => false,
 		),
 	);
@@ -817,3 +817,44 @@ function llorix_one_lite_admin_notice() {
 	}
 }
 add_action( 'admin_notices', 'llorix_one_lite_admin_notice', 99 );
+
+
+/** Generate the content area class based on boxed/full-screen layout */
+function llorix_one_lite_content_area_class() {
+	$llorix_one_lite_change_to_full_width = get_theme_mod( 'llorix_one_lite_change_to_full_width' );
+	$md_class                             = 'col-md-12';
+	if ( is_active_sidebar( 'sidebar-1' ) && empty( $llorix_one_lite_change_to_full_width ) ) {
+		$md_class = 'col-md-8';
+	}
+	return $md_class;
+}
+
+/** Generate the sidebar based on boxed/full-screen layout */
+function llorix_one_lite_display_sidebar() {
+	$llorix_one_lite_change_to_full_width = get_theme_mod( 'llorix_one_lite_change_to_full_width' );
+	if ( empty( $llorix_one_lite_change_to_full_width ) ) {
+		get_sidebar();
+	}
+}
+
+add_action( 'woocommerce_before_checkout_form', 'llorix_one_lite_coupon_after_order_table_js' );
+/**
+ * Checkout page
+ * Move the coupon field and message info after the order table
+ **/
+function llorix_one_lite_coupon_after_order_table_js() {
+	wc_enqueue_js(
+		'
+		$( $( "div.woocommerce-info, .checkout_coupon" ).detach() ).appendTo( "#llorix-checkout-coupon" );
+	'
+	);
+}
+
+add_action( 'woocommerce_checkout_order_review', 'llorix_one_lite_coupon_after_order_table' );
+/**
+ * Checkout page
+ * Add the id llorix-checkout-coupon to be able to Move the coupon field and message info after the order table
+ **/
+function llorix_one_lite_coupon_after_order_table() {
+	echo '<div id="llorix-checkout-coupon"></div><div style="clear:both"></div>';
+}

@@ -57,8 +57,10 @@
 
 <div role="main" id="content" class="content-wrap">
 	<div class="container">
-		<div id="primary" class="content-area col-md-8 post-list">
-			<?php
+
+		<div id="primary" class="content-area post-list <?php echo esc_attr( llorix_one_lite_content_area_class() ); ?>">
+
+		<?php
 			echo '<main ';
 			if ( have_posts() ) {
 				echo ' itemscope itemtype="http://schema.org/Blog" ';
@@ -82,7 +84,7 @@
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
-		<?php get_sidebar(); ?>
+		<?php llorix_one_lite_display_sidebar(); ?>
 
 	</div>
 </div><!-- .content-wrap -->

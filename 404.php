@@ -17,7 +17,8 @@
 <div class="content-wrap">
 	<div class="container">
 
-		<div id="primary" class="content-area col-md-8">
+		<div id="primary" class="content-area <?php echo esc_attr( llorix_one_lite_content_area_class() ); ?>">
+
 			<main id="main" class="site-main" role="main">
 
 				<section class="error-404 not-found">
@@ -36,7 +37,7 @@
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
-		<?php get_sidebar(); ?>
+		<?php llorix_one_lite_display_sidebar(); ?>
 
 	</div>
 </div><!-- .content-wrap -->
